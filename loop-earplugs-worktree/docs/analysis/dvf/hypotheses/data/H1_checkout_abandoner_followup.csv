@@ -1,0 +1,5 @@
+device,abandoning_visitors,returned_within_14d,bought_within_14d,share_returned,share_bought,later_revenue,median_days_to_purchase
+desktop,273,157,47,0.5751,0.1722,26568.2802,0.0830
+mobile,1011,526,99,0.5203,0.0979,45062.8499,0.3808
+tablet,197,120,33,0.6091,0.1675,16955.2500,0.2710
+all,1481,803,179,0.5422,0.1209,88586.3801,0.2714

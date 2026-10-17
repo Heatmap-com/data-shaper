@@ -1,0 +1,5 @@
+{
+  "id": "viewport-dead",
+  "purpose": "Builds a site's traffic-exclusion model for one window: dead sessions, and very large viewport patterns with no orders and no clicks.",
+  "data": "One rule per model version. Dead sessions are one page, zero clicks, zero scroll, and no transaction, excluded at any size. The same shape with a transaction is retained: a consent refusal that purchased. A viewport pattern is square, or wider than the site descriptor's phone maximum on a phone device code. Zero orders and zero clicks are required. Very large patterns are excluded. Large patterns are watched. s37.traffic_exclusion sets large and very large; the shipped defaults apply when that descriptor is absent or low confidence."
+}

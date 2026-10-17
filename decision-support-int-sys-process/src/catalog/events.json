@@ -1,0 +1,417 @@
+{
+  "contract_version": "2026-10-04.1",
+  "common_properties": [
+    "ts_ms",
+    "selector",
+    "element_class",
+    "item_id",
+    "item_index",
+    "is_default",
+    "value",
+    "viewport_h",
+    "scroll_y_rel"
+  ],
+  "families": [
+    {
+      "code": "T01",
+      "family": "T01 disclosure",
+      "events": [
+        "faq.expand",
+        "faq.collapse",
+        "accordion.expand",
+        "accordion.collapse",
+        "size_guide.open",
+        "spec.expand",
+        "comparison.row_expand",
+        "policy.open"
+      ],
+      "required_properties": [
+        "default_expanded",
+        "visible_ms on collapse or unload"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`module-events-weekly`"
+      ]
+    },
+    {
+      "code": "T02",
+      "family": "T02 multi-state media",
+      "events": [
+        "tab.switch",
+        "carousel.slide_view",
+        "carousel.rotate",
+        "gallery.view",
+        "gallery.swipe",
+        "gallery.zoom",
+        "table.hscroll"
+      ],
+      "required_properties": [
+        "from_index",
+        "to_index",
+        "auto (auto-advance)"
+      ],
+      "volume_rule": "slide views deduplicated per pageview and slide",
+      "feeds": [
+        "`module-events-weekly`"
+      ]
+    },
+    {
+      "code": "T03",
+      "family": "T03 choice",
+      "events": [
+        "variant.select",
+        "quantity.change",
+        "subscription.toggle",
+        "tier.select",
+        "sort.change",
+        "filter.apply",
+        "filter.clear",
+        "atc.invalid_selection"
+      ],
+      "required_properties": [
+        "option_name",
+        "from_value",
+        "to_value"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`module-events-weekly`"
+      ]
+    },
+    {
+      "code": "T04",
+      "family": "T04 reviews",
+      "events": [
+        "review.expand",
+        "review.helpful",
+        "review.filter",
+        "review.theme_chip",
+        "review.jump",
+        "review.distribution_click"
+      ],
+      "required_properties": [
+        "review_id",
+        "theme (if the widget exposes it)",
+        "rating"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`module-events-weekly`"
+      ]
+    },
+    {
+      "code": "T05",
+      "family": "T05 menus",
+      "events": [
+        "menu.open",
+        "menu.close",
+        "submenu.open",
+        "submenu.close"
+      ],
+      "required_properties": [
+        "method (hover or click)",
+        "clicked_child on close"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`module-events-weekly`"
+      ]
+    },
+    {
+      "code": "T06",
+      "family": "T06 hover (desktop only)",
+      "events": [
+        "hover.dwell"
+      ],
+      "required_properties": [
+        "dwell_ms"
+      ],
+      "volume_rule": "emit only when dwell ≥ 300 ms; one per element per pageview, with total dwell",
+      "feeds": [
+        "`hover-weekly`"
+      ]
+    },
+    {
+      "code": "T07",
+      "family": "T07 pop-ups",
+      "events": [
+        "popup.impression",
+        "popup.dismiss",
+        "popup.submit"
+      ],
+      "required_properties": [
+        "popup_id",
+        "trigger (time",
+        "scroll",
+        "exit",
+        "click)",
+        "ms_since_load",
+        "offer_id",
+        "holdout"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`popup-weekly`"
+      ]
+    },
+    {
+      "code": "T08",
+      "family": "T08 video",
+      "events": [
+        "video.play",
+        "video.quartile"
+      ],
+      "required_properties": [
+        "video_id",
+        "quartile (25",
+        "50",
+        "75",
+        "100)"
+      ],
+      "volume_rule": "one per quartile per pageview",
+      "feeds": [
+        "`module-events-weekly`"
+      ]
+    },
+    {
+      "code": "T09",
+      "family": "T09 cart",
+      "events": [
+        "cart.open",
+        "cart.close",
+        "cart.continue_shopping",
+        "cart.empty_view",
+        "cart.post_atc_view",
+        "cart.upsell_impression"
+      ],
+      "required_properties": [
+        "item_count",
+        "cart_value",
+        "open_ms on close",
+        "upsell_rank",
+        "checkout_btn_below_fold"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`cart-state-weekly`"
+      ]
+    },
+    {
+      "code": "T10",
+      "family": "T10 sticky ATC and scroll-back",
+      "events": [
+        "sticky_atc.exposed",
+        "sticky_atc.click",
+        "scroll.reversal"
+      ],
+      "required_properties": [
+        "from_y_rel",
+        "to_y_rel for reversal ≥ 150 units"
+      ],
+      "volume_rule": "reversal at most 5 per pageview",
+      "feeds": [
+        "`module-events-weekly`",
+        "`scroll-reversal-weekly`"
+      ]
+    },
+    {
+      "code": "T11",
+      "family": "T11 form fields",
+      "events": [
+        "field.focus",
+        "field.blur",
+        "field.error",
+        "field.retype",
+        "form.abandon_last_field",
+        "coupon.focus",
+        "coupon.apply"
+      ],
+      "required_properties": [
+        "form_id",
+        "field_name (name attribute",
+        "never the value)",
+        "required",
+        "result (success or failure) for coupon"
+      ],
+      "volume_rule": "every event; never capture field values",
+      "feeds": [
+        "`form-field-weekly`"
+      ]
+    },
+    {
+      "code": "T12",
+      "family": "T12 search and null states",
+      "events": [
+        "search.open",
+        "search.query",
+        "search.zero_results",
+        "search.refilter",
+        "quick_add.click",
+        "oos.view",
+        "notfound.view"
+      ],
+      "required_properties": [
+        "query_hash (never raw query text unless the operator enables raw capture)",
+        "result_count"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`search-nullstate-weekly`"
+      ]
+    },
+    {
+      "code": "T13",
+      "family": "T13 dead click",
+      "events": [
+        "click.no_response"
+      ],
+      "required_properties": [
+        "wait_ms (1",
+        "000)",
+        "mutation (0 or 1)",
+        "network (0 or 1)"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`click-derived-weekly`"
+      ]
+    },
+    {
+      "code": "T14",
+      "family": "T14 element exposure",
+      "events": [
+        "element.in_view",
+        "page.hidden",
+        "page.visible"
+      ],
+      "required_properties": [
+        "visible_ms",
+        "first_in_view_ms"
+      ],
+      "volume_rule": "one per named element per pageview",
+      "feeds": [
+        "`exposure-weekly`"
+      ]
+    },
+    {
+      "code": "T15",
+      "family": "T15 offers",
+      "events": [
+        "offer.impression",
+        "offer.accept_click",
+        "offer.line_added",
+        "offer.decline"
+      ],
+      "required_properties": [
+        "placement",
+        "offer_id",
+        "offer_type",
+        "anchor_product_id",
+        "rank",
+        "exposure_index",
+        "checkout_token or order_id",
+        "payment_method"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`offer-events-weekly`"
+      ]
+    },
+    {
+      "code": "T16",
+      "family": "T16 checkout (web pixel)",
+      "events": [
+        "Shopify standard events checkout_started",
+        "checkout_contact_info_submitted",
+        "checkout_address_info_submitted",
+        "checkout_shipping_info_submitted",
+        "payment_info_submitted",
+        "checkout_completed; custom checkout.cost_reveal",
+        "checkout.extension_render"
+      ],
+      "required_properties": [
+        "checkout_token",
+        "step",
+        "payment_method",
+        "express (0 or 1)",
+        "extension_id"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`checkout-funnel-weekly`"
+      ]
+    },
+    {
+      "code": "T17",
+      "family": "T17 identity",
+      "events": [
+        "identity.resolved"
+      ],
+      "required_properties": [
+        "surface",
+        "method"
+      ],
+      "volume_rule": "one per session per surface",
+      "feeds": [
+        "`identity-resolution`"
+      ]
+    },
+    {
+      "code": "T18",
+      "family": "T18 recommendation slots",
+      "events": [
+        "rec.impression",
+        "rec.click"
+      ],
+      "required_properties": [
+        "slot_rank",
+        "product_id",
+        "price_band",
+        "source_tool"
+      ],
+      "volume_rule": "impression deduplicated per pageview and slot",
+      "feeds": [
+        "`rec-slots-weekly`"
+      ]
+    },
+    {
+      "code": "T19",
+      "family": "T19 first-party tool surfaces",
+      "events": [
+        "tracking.block_impression",
+        "tracking.block_click",
+        "thankyou.block_impression",
+        "thankyou.block_click",
+        "portal.step",
+        "portal.help_click"
+      ],
+      "required_properties": [
+        "block_id",
+        "step",
+        "outcome",
+        "reason_code"
+      ],
+      "volume_rule": "every event",
+      "feeds": [
+        "`tool-surface-weekly`"
+      ]
+    },
+    {
+      "code": "T20",
+      "family": "T20 urgency and BNPL",
+      "events": [
+        "urgency.impression",
+        "bnpl.interact"
+      ],
+      "required_properties": [
+        "displayed_value (for example \"only 3 left\"",
+        "timer remaining)"
+      ],
+      "volume_rule": "one per pageview",
+      "feeds": [
+        "`module-events-weekly`"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "id": "funnel",
+  "extends": "general:analysis-only",
+  "description": "Analyze the site under the funnel profile. Its cards are the output.",
+  "patch": { "analysis": { "params": { "profile": "funnel" } } }
+}

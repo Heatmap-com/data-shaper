@@ -1,0 +1,1407 @@
+<!doctype html>
+<!--
+  Experiment Intelligence — vision and dashboard mock.
+  Companion to docs/experiments/EXPERIMENT-INTELLIGENCE.md (vision, requirements, data contract, market brief).
+
+  What this file is:
+    A standalone, dependency-free mock of the experiment analysis dashboard and the planning flow.
+    All numbers are illustrative. They are embedded as JSON in <script id="experiment-data"> so a reader
+    (human or LLM) can parse the exact data behind every chart. Every statistic shown is computed in the
+    browser from those counts with the formulas the requirements specify (two-proportion z-test, Holm and
+    Benjamini–Hochberg corrections, Cochran's Q heterogeneity, delta-method confidence intervals,
+    log decomposition of revenue-per-visit lift, sample-size estimates).
+
+  Views:
+    Vision    — goals G1–G4, architecture, the four definition conditions, causal classes, requirements board.
+    Dashboard — experiment list and tabs: Insights, Site, Segments, Page, Funnel, Journeys, Sections,
+                Elements, Plan, Data (the flat machine-readable readout rows, exportable as JSONL).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experiment Intelligence — vision and dashboard mock</title>
+<meta name="description" content="Mock of an experiment analysis product that attributes A/B test revenue at site, journey, funnel, page, section and element level, with planned segmentation and machine-readable readouts.">
+<style>
+  :root {
+    --bg: #ffffff; --bg2: #f6f7f9; --fg: #16181d; --fg2: #4a4f5a; --fg3: #7a808c; --fg4: #a9aeb8;
+    --border: #e3e6eb; --border2: #d0d4db; --accent: #2f6fde; --accent-fill: #e8f0fd;
+    --good: #1c8a5a; --bad: #c4423b; --warn: #b7791f; --info: #2f6fde;
+    --c-control: #8d94a3; --c-variant: #2f6fde; --c3: #1c8a5a; --c4: #b7791f; --c5: #8b5cc4; --c6: #c4423b;
+    --radius: 6px; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15171b; --bg2: #1c1f24; --fg: #eceef2; --fg2: #b9bec8; --fg3: #8a909c; --fg4: #5d636e;
+      --border: #2a2e35; --border2: #383d45; --accent: #6a9cf0; --accent-fill: #1d2a40;
+      --good: #4cc08a; --bad: #e8736b; --warn: #e0a84a; --info: #6a9cf0;
+      --c-control: #7d8494; --c-variant: #6a9cf0; --c3: #4cc08a; --c4: #e0a84a; --c5: #a989dc; --c6: #e8736b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/20px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--accent); }
+  h1 { font-size: 22px; line-height: 28px; margin: 0; font-weight: 650; }
+  h2 { font-size: 18px; line-height: 24px; margin: 0; font-weight: 620; }
+  h3 { font-size: 15px; line-height: 20px; margin: 0; font-weight: 600; }
+  p { margin: 0; }
+  code, pre { font-family: var(--mono); font-size: 12px; }
+  code { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 24px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: var(--bg); z-index: 5; }
+  .sub { color: var(--fg3); font-size: 12px; }
+  main { padding: 20px 24px 64px; max-width: 1280px; margin: 0 auto; }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .stack.tight { gap: 8px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .grid2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  @media (max-width: 900px) { .grid2, .grid3, .grid4 { grid-template-columns: 1fr; } }
+  .pill { border: 1px solid var(--border2); background: transparent; color: var(--fg2); border-radius: 999px; padding: 3px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+  .pill.active { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+  .pill.sm { padding: 1px 8px; font-size: 12px; }
+  .card { border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+  .card.soft { background: var(--bg2); border-color: transparent; }
+  .muted { color: var(--fg3); }
+  .small { font-size: 12px; line-height: 16px; }
+  .caption { font-size: 12px; line-height: 16px; color: var(--fg3); }
+  .stats { display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-end; }
+  .stat .v { font-size: 22px; line-height: 28px; font-weight: 600; }
+  .stat .l { font-size: 12px; color: var(--fg3); max-width: 240px; }
+  .good { color: var(--good); } .bad { color: var(--bad); } .warn { color: var(--warn); }
+  .sig { font-weight: 650; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  .tbl { border: 1px solid var(--border); border-radius: var(--radius); overflow-x: auto; }
+  th, td { padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th { font-weight: 600; color: var(--fg2); background: var(--bg2); font-size: 12px; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.hl td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+  tr.dim td { color: var(--fg3); }
+  .sel { font-family: var(--mono); font-size: 11px; color: var(--fg2); word-break: break-all; }
+  .tag { display: inline-block; font-size: 11px; line-height: 16px; padding: 0 6px; border-radius: 4px; border: 1px solid var(--border2); color: var(--fg2); white-space: nowrap; }
+  .tag.treated { border-color: var(--accent); color: var(--accent); }
+  .tag.guardrail { border-color: var(--warn); color: var(--warn); }
+  .tag.planned { border-color: var(--good); color: var(--good); }
+  .tag.expl { color: var(--fg3); }
+  .req { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-family: var(--mono); color: var(--fg3); border: 1px dashed var(--border2); border-radius: 4px; padding: 0 5px; margin: 0 4px 4px 0; }
+  .st { font-family: system-ui, sans-serif; font-weight: 600; }
+  .st-Built { color: var(--good); } .st-Partial { color: var(--warn); } .st-Proposed { color: var(--accent); }
+  .reqs { display: flex; flex-wrap: wrap; }
+  .panel-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .callout { border-left: 3px solid var(--accent); background: var(--accent-fill); padding: 10px 14px; border-radius: 0 var(--radius) var(--radius) 0; font-size: 13px; }
+  .callout.warn { border-color: var(--warn); background: color-mix(in srgb, var(--warn) 10%, transparent); }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--fg2); margin-top: 4px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .ins { border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+  .ins .sev { font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: .04em; }
+  .sev-health { color: var(--bad); } .sev-warn { color: var(--warn); } .sev-effect { color: var(--good); } .sev-locate { color: var(--accent); } .sev-info { color: var(--fg3); }
+  details summary { cursor: pointer; color: var(--fg3); font-size: 12px; }
+  pre.json { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; overflow: auto; max-height: 420px; margin: 0; white-space: pre; line-height: 16px; color: var(--fg2); }
+  input[type=range] { width: 160px; }
+  select, input[type=text] { font: inherit; font-size: 13px; padding: 3px 6px; border: 1px solid var(--border2); border-radius: 4px; background: var(--bg); color: var(--fg); }
+  button.btn { font: inherit; font-size: 13px; padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border2); background: var(--bg2); color: var(--fg); cursor: pointer; }
+  svg text { font-family: system-ui, sans-serif; }
+  .story { counter-reset: s; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  @media (max-width: 900px) { .story { grid-template-columns: 1fr; } }
+  .story .card::before { counter-increment: s; content: counter(s); display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: var(--fg); color: var(--bg); text-align: center; font-size: 12px; line-height: 20px; margin-right: 8px; }
+  .goal { border-top: 3px solid var(--accent); }
+  .divider { height: 1px; background: var(--border); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Experiment Intelligence</h1>
+    <p class="sub">Vision and requirements mock · illustrative data · companion to <code>EXPERIMENT-INTELLIGENCE.md</code></p>
+  </div>
+  <nav class="row" id="mainnav"></nav>
+</header>
+<main id="app">
+  <noscript>
+    <p>This mock needs JavaScript to draw the dashboard. The data behind it is the JSON in the <code>experiment-data</code> script block in this file, and the full narrative is <code>EXPERIMENT-INTELLIGENCE.md</code>.</p>
+  </noscript>
+</main>
+
+<script id="experiment-data" type="application/json">
+{
+  "meta": {
+    "product": "Experiment Intelligence (working name)",
+    "data_status": "illustrative",
+    "store": "Example Coffee Co. (hypothetical Shopify store)",
+    "levels": ["site", "segment", "page", "funnel", "journey", "section", "element"],
+    "currency": "USD"
+  },
+  "requirements": [
+    {"id": "R-EXT-1", "area": "Extension", "status": "Proposed", "title": "Detect experiment mode: two A/B compare slots with the same experienceId"},
+    {"id": "R-EXT-2", "area": "Extension", "status": "Proposed", "title": "Keep each compare slot's variant_id and experiment_id"},
+    {"id": "R-EXT-3", "area": "Extension", "status": "Proposed", "title": "Limit the second pane's arm picker to the same experiment"},
+    {"id": "R-EXT-4", "area": "Extension", "status": "Proposed", "title": "Label panes Control/Variant from the engine's observed descriptor"},
+    {"id": "R-EXT-5", "area": "Extension", "status": "Proposed", "title": "Experiment details form incl. primary metric, guardrails, planned segments, MDE"},
+    {"id": "R-EXT-6", "area": "Extension", "status": "Proposed", "title": "Element panel Experiment section: include, auto arm, role, zone vs element"},
+    {"id": "R-EXT-7", "area": "Extension", "status": "Proposed", "title": "Zone images from both panes, stored by reference"},
+    {"id": "R-EXT-8", "area": "Extension", "status": "Proposed", "title": "Save an experiment-v1 descriptor package with validation"},
+    {"id": "R-EXT-9", "area": "Extension", "status": "Proposed", "title": "Show the readout for the open experiment in the extension"},
+    {"id": "R-EXT-10", "area": "Extension", "status": "Proposed", "title": "Zone selectors that match in every arm (theme-independent)"},
+    {"id": "R-CAP-1", "area": "Capture", "status": "Proposed", "title": "Publish declared zones to the tracker's section_level config"},
+    {"id": "R-CAP-2", "area": "Capture", "status": "Proposed", "title": "Report zone visibility from publish; state the first day of zone data"},
+    {"id": "R-CAP-3", "area": "Capture", "status": "Proposed", "title": "Explain and raise (or equalize) the ~4% section capture rate"},
+    {"id": "R-CAP-4", "area": "Capture", "status": "Proposed", "title": "Assignment sources beyond partner tags (data layer, cookie, API)"},
+    {"id": "R-ATT-1", "area": "Attribution", "status": "Proposed", "title": "Every readout metric carries causal_class"},
+    {"id": "R-ATT-2", "area": "Attribution", "status": "Built", "title": "Balance checks: SRM, section capture, seen rate (exposure balance proposed)"},
+    {"id": "R-ATT-3", "area": "Attribution", "status": "Proposed", "title": "Revenue-per-visit lift decomposition along the funnel"},
+    {"id": "R-ATT-4", "area": "Attribution", "status": "Built", "title": "Zone/element attribution states causal rate change and descriptive clicker revenue separately"},
+    {"id": "R-LVL-PAGE-1", "area": "Levels", "status": "Partial", "title": "Per-page readout rows per arm"},
+    {"id": "R-LVL-FUN-1", "area": "Levels", "status": "Partial", "title": "Per-arm, per-segment ordered funnel step counts"},
+    {"id": "R-LVL-JRN-1", "area": "Levels", "status": "Partial", "title": "Journey flags and next-page clusters per arm"},
+    {"id": "R-LVL-JRN-2", "area": "Levels", "status": "Proposed", "title": "Next page after clicking a role-paired element"},
+    {"id": "R-LVL-SEC-1", "area": "Levels", "status": "Proposed", "title": "Zone click rollup from the full click table by selector containment"},
+    {"id": "R-LVL-SEC-2", "area": "Levels", "status": "Proposed", "title": "Zone aliases for a section renamed in the variant"},
+    {"id": "R-LVL-EL-1", "area": "Levels", "status": "Proposed", "title": "Compare elements by role across arms"},
+    {"id": "R-STAT-1", "area": "Statistics", "status": "Built", "title": "Two-proportion z-test for rates; Welch test for revenue per visit"},
+    {"id": "R-STAT-2", "area": "Statistics", "status": "Built", "title": "SRM against declared or even allocation"},
+    {"id": "R-STAT-3", "area": "Statistics", "status": "Proposed", "title": "Confidence intervals on every lift"},
+    {"id": "R-STAT-4", "area": "Statistics", "status": "Proposed", "title": "Holm for planned segments, Benjamini–Hochberg for exploratory"},
+    {"id": "R-STAT-5", "area": "Statistics", "status": "Proposed", "title": "Heterogeneity (interaction) test across segment values"},
+    {"id": "R-STAT-6", "area": "Statistics", "status": "Proposed", "title": "Fixed-horizon by default; optional sequential p-values"},
+    {"id": "R-STAT-7", "area": "Statistics", "status": "Proposed", "title": "CUPED variance reduction"},
+    {"id": "R-STAT-8", "area": "Statistics", "status": "Built", "title": "Minimum cell sizes (selection floors built; display floors proposed)"},
+    {"id": "R-DATA-1", "area": "Data contract", "status": "Partial", "title": "Fact rows at every level with additive counts and canonical identities"},
+    {"id": "R-DATA-2", "area": "Data contract", "status": "Proposed", "title": "Flat readout table: one metric per row"},
+    {"id": "R-DATA-3", "area": "Data contract", "status": "Proposed", "title": "JSONL export and MCP tool for readout rows"},
+    {"id": "R-DATA-4", "area": "Data contract", "status": "Proposed", "title": "Published metric dictionary"},
+    {"id": "R-DATA-5", "area": "Data contract", "status": "Proposed", "title": "Descriptor versioning cited by each readout"},
+    {"id": "R-DATA-6", "area": "Data contract", "status": "Partial", "title": "Cross-experiment history for meta-analysis"},
+    {"id": "R-SEG-1", "area": "Segments", "status": "Proposed", "title": "Segments only from pre-assignment attributes"},
+    {"id": "R-SEG-2", "area": "Segments", "status": "Partial", "title": "Segment catalog, partitions with volume floors"},
+    {"id": "R-SEG-3", "area": "Segments", "status": "Proposed", "title": "Planned segments computed at every level"},
+    {"id": "R-SEG-4", "area": "Segments", "status": "Proposed", "title": "Custom segment rules on pre-assignment fields"},
+    {"id": "R-SEG-5", "area": "Segments", "status": "Proposed", "title": "Feasibility (sample size, days) per planned segment before launch"},
+    {"id": "R-SEG-6", "area": "Segments", "status": "Proposed", "title": "Planned vs exploratory labels and corrections"},
+    {"id": "R-SEG-7", "area": "Segments", "status": "Proposed", "title": "Heterogeneity readout on planned segments"},
+    {"id": "R-SEG-8", "area": "Segments", "status": "Proposed", "title": "Segment cost control"},
+    {"id": "R-UI-1", "area": "Dashboard", "status": "Proposed", "title": "Every number shows its base and causal class"},
+    {"id": "R-UI-2", "area": "Dashboard", "status": "Proposed", "title": "Color only significant lifts"},
+    {"id": "R-UI-3", "area": "Dashboard", "status": "Proposed", "title": "Descriptive metrics secondary; non-comparable greyed with reason"},
+    {"id": "R-UI-4", "area": "Dashboard", "status": "Proposed", "title": "Single-arm elements marked; role pair preferred"},
+    {"id": "R-UI-5", "area": "Dashboard", "status": "Proposed", "title": "Screens state which plan fields they depend on"},
+    {"id": "R-UI-6", "area": "Dashboard", "status": "Proposed", "title": "CSV / JSONL / image export"},
+    {"id": "R-UI-7", "area": "Dashboard", "status": "Proposed", "title": "Same screens in the extension and the web app"},
+    {"id": "R-INS-1", "area": "Insights", "status": "Built", "title": "Experiment readouts available to site analysis as a dataset family"},
+    {"id": "R-INS-2", "area": "Insights", "status": "Proposed", "title": "Configurable insight rules"},
+    {"id": "R-INS-3", "area": "Insights", "status": "Proposed", "title": "Insights cite evidence row keys"},
+    {"id": "R-INS-4", "area": "Insights", "status": "Proposed", "title": "One LLM bundle per experiment: readouts, insights, plan"},
+    {"id": "R-INS-5", "area": "Insights", "status": "Partial", "title": "Same segment conventions as ae_trend_row for Facet / Talk to My Data"},
+    {"id": "R-NFR-1", "area": "Non-functional", "status": "Built", "title": "Within batch query limits (300 s/query today)"},
+    {"id": "R-NFR-2", "area": "Non-functional", "status": "Built", "title": "Idempotent rows per identity and day"},
+    {"id": "R-NFR-3", "area": "Non-functional", "status": "Built", "title": "No visitor-level output"},
+    {"id": "R-NFR-4", "area": "Non-functional", "status": "Built", "title": "Robust to Shopify section ids changing per publish"},
+    {"id": "R-NFR-5", "area": "Non-functional", "status": "Proposed", "title": "Every readout reproducible from facts plus descriptor version"}
+  ],
+  "experiments": [
+    {
+      "key": "shoplift:01a1b2c3-hero-photo-cta",
+      "name": "Hero: photo with a real CTA button",
+      "partner": "shoplift",
+      "status": "running",
+      "scope": "template · home",
+      "start": "2026-09-28",
+      "days": 14,
+      "planned_end": "2026-10-19",
+      "hypothesis": "A real, tappable CTA button under a clean hero photo gets more visitors into a collection than a CTA drawn onto the image.",
+      "primary_metric": "rpv",
+      "mock": "hero",
+      "arms": [
+        {"id": "control", "label": "Drawn-on CTA", "control": true, "alloc": 0.5},
+        {"id": "sl-7c21e9b0", "label": "Photo + button", "alloc": 0.5}
+      ],
+      "assigned": [{"s": 48210, "b": 1258, "r": 111330}, {"s": 48020, "b": 1340, "r": 118610}],
+      "exposed": [{"s": 41300, "b": 1150, "r": 101800}, {"s": 41150, "b": 1236, "r": 109400}],
+      "rpv_p": 0.118,
+      "pages": [{"id": 47889565, "path": "/", "template": "home", "cells": [{"s": 41300, "b": 1150, "r": 101800}, {"s": 41150, "b": 1236, "r": 109400}]}],
+      "segments": [
+        {"strategy": "device", "label": "Device", "values": [
+          {"value": "mobile", "planned": true, "cells": [{"s": 31340, "b": 690, "r": 55900}, {"s": 31210, "b": 762, "r": 62300}]},
+          {"value": "desktop", "planned": true, "cells": [{"s": 16870, "b": 568, "r": 55430}, {"s": 16810, "b": 578, "r": 56310}]}
+        ]},
+        {"strategy": "traffic_source", "label": "Traffic source", "values": [
+          {"value": "meta", "planned": true, "cells": [{"s": 14100, "b": 270, "r": 21600}, {"s": 14050, "b": 318, "r": 25400}]},
+          {"value": "search", "planned": true, "cells": [{"s": 12900, "b": 380, "r": 34500}, {"s": 12840, "b": 392, "r": 35900}]},
+          {"value": "direct", "planned": false, "cells": [{"s": 9800, "b": 330, "r": 30200}, {"s": 9760, "b": 338, "r": 31100}]},
+          {"value": "campaign", "planned": false, "cells": [{"s": 4600, "b": 150, "r": 13300}, {"s": 4580, "b": 160, "r": 14500}]},
+          {"value": "other", "planned": false, "cells": [{"s": 6810, "b": 128, "r": 11730}, {"s": 6790, "b": 132, "r": 11710}]}
+        ]},
+        {"strategy": "returning", "label": "New vs returning", "values": [
+          {"value": "new", "planned": true, "cells": [{"s": 33400, "b": 640, "r": 52800}, {"s": 33250, "b": 712, "r": 58900}]},
+          {"value": "returning", "planned": true, "cells": [{"s": 14810, "b": 618, "r": 58530}, {"s": 14770, "b": 628, "r": 59710}]}
+        ]}
+      ],
+      "funnel": {
+        "steps": ["Assigned", "Viewed home", "Viewed a collection or product", "Added to cart", "Started checkout", "Purchased"],
+        "reach": [[48210, 41300, 19820, 3960, 2290, 1150], [48020, 41150, 21400, 4240, 2440, 1236]]
+      },
+      "journey": {
+        "entry": "Home",
+        "clusters": [
+          {"page": "Collection", "s": [14200, 15600], "b": [520, 590]},
+          {"page": "Exit (bounce)", "s": [13900, 12650], "b": [0, 0]},
+          {"page": "Content / other", "s": [5800, 5270], "b": [100, 100]},
+          {"page": "Product", "s": [5100, 5300], "b": [300, 310]},
+          {"page": "Search", "s": [1400, 1380], "b": [70, 68]},
+          {"page": "Cart", "s": [900, 950], "b": [160, 168]}
+        ],
+        "next_after": {"role": "hero_cta", "label": "Hero CTA", "dest": ["Collection", "Product", "Search", "Back to home", "Exit"], "counts": [[3020, 980, 90, 260, 520], [4610, 1250, 110, 170, 440]]},
+        "flags": [
+          {"flag": "u_turn", "label": "U-turn back to home", "lower_is_better": true, "count": [4047, 3333]},
+          {"flag": "back_within_10s", "label": "Back within 10 s", "lower_is_better": true, "count": [2561, 2099]},
+          {"flag": "multi_pdp", "label": "Viewed 2+ products", "count": [5823, 6173]},
+          {"flag": "saw_cart", "label": "Reached cart or checkout", "count": [3965, 4238]}
+        ]
+      },
+      "captured": [1980, 1945],
+      "sections": [
+        {"section": "custom-hero-v1", "role": "treated", "seen": [1742, 1729], "clicked": [214, 290], "seen_b": [52, 60]},
+        {"section": "header", "role": "guardrail", "seen": [1960, 1925], "clicked": [380, 352], "seen_b": [58, 64]},
+        {"section": "featured-collection", "seen": [1180, 1090], "clicked": [240, 228], "seen_b": [44, 47]},
+        {"section": "reviews-carousel", "seen": [760, 700], "clicked": [40, 38], "seen_b": [27, 29]},
+        {"section": "footer", "seen": [410, 372], "clicked": [30, 27], "seen_b": [9, 10]}
+      ],
+      "elements": [
+        {"name": "Hero CTA button", "selector": "#shopify-section-template--__custom_hero_v1 a.hero__cta", "cls": "hero_cta", "role": "hero_cta", "section": "custom-hero-v1", "only_arm": 1, "clickers": [0, 6580], "clicks": [0, 7040], "b": [0, 454]},
+        {"name": "Hero image (CTA drawn on it)", "selector": "#shopify-section-template--__custom_hero_v1 a.hero__link > img", "cls": "hero_cta", "role": "hero_cta", "section": "custom-hero-v1", "only_arm": 0, "clickers": [4870, 0], "clicks": [5650, 0], "b": [312, 0]},
+        {"name": "Hero image", "selector": "#shopify-section-template--__custom_hero_v1 div.hero__media > img", "cls": "content_section", "role": "hero_image", "section": "custom-hero-v1", "only_arm": 1, "not_link": true, "clickers": [0, 1010], "clicks": [0, 1480], "b": [0, 39]},
+        {"name": "Featured product tile", "selector": "#shopify-section-template--__featured_collection div.card__media a", "cls": "product_tile", "section": "featured-collection", "clickers": [4000, 3650], "clicks": [4800, 4400], "b": [330, 312]},
+        {"name": "Menu toggle", "selector": "details#Details-menu-drawer-container > summary", "cls": "nav_toggle", "section": "header", "clickers": [3090, 2980], "clicks": [3600, 3450], "b": [70, 69]},
+        {"name": "Cart icon", "selector": "a#cart-icon-bubble", "cls": "cart_icon", "section": "header", "clickers": [1500, 1540], "clicks": [1700, 1760], "b": [410, 436]}
+      ],
+      "conditions": [
+        {"label": "Experiment descriptor", "state": "met", "adds": "Hypothesis, labels, declared allocation for SRM, primary metric, guardrails, planned end"},
+        {"label": "Page under test: home (47889565)", "state": "met", "adds": "Exposed basis, per-page readout, funnel 'Viewed home' step, journey entry page, scan limits"},
+        {"label": "Rollup zones: custom-hero-v1 (treated), header (guardrail)", "state": "met", "adds": "Zones always reported with roles; zone published to the tracker for seen data"},
+        {"label": "Elements: hero image and CTA in each arm, paired by role", "state": "met", "adds": "Role-paired CTA comparison; next page after the CTA; dead-click check on the new image"},
+        {"label": "Planned segments: device, traffic source (meta, search), new vs returning", "state": "met", "adds": "Confirmatory readout with Holm correction and feasibility before launch"}
+      ],
+      "next_test": [
+        "Keep the real button: the role-paired CTA click rate rose from 10.1% to 13.7% of visits.",
+        "Make the hero image link to the same collection, or remove its clickable look, to recover the dead clicks on it.",
+        "Test a shorter hero on mobile to recover featured-collection reach (seen rate fell about 6%)."
+      ],
+      "descriptor": {
+        "package": "experiment-v1",
+        "idsite": 5769,
+        "experiment_key": "shoplift:01a1b2c3-hero-photo-cta",
+        "name": "Hero: photo with a real CTA button",
+        "hypothesis": "A real, tappable CTA under a clean hero photo gets more visitors into a collection than a CTA drawn on the image.",
+        "primary_metric": "rpv",
+        "guardrails": [{"metric": "cvr"}, {"level": "section", "entity": "header", "metric": "click_rate"}],
+        "pages": [47889565],
+        "arms": [
+          {"arm": "control", "is_control": true, "allocation": 0.5, "label": "Drawn-on CTA"},
+          {"arm": "sl-7c21e9b0", "allocation": 0.5, "label": "Photo + button"}
+        ],
+        "zones": [
+          {"section": "custom-hero-v1", "role": "treated", "selector": "[id$='__custom_hero_v1']", "images": {"control": "store://zones/hero-control.png", "sl-7c21e9b0": "store://zones/hero-variant.png", "captured_at": "2026-09-28T15:02:00Z"}},
+          {"section": "header", "role": "guardrail"}
+        ],
+        "elements": [
+          {"selector": "#shopify-section-template--20045246103645__custom_hero_v1 a.hero__link > img", "arm": "control", "role": "hero_cta", "element_class": "hero_cta", "section": "custom-hero-v1"},
+          {"selector": "#shopify-section-template--20045246103645__custom_hero_v1 a.hero__cta", "arm": "sl-7c21e9b0", "role": "hero_cta", "element_class": "hero_cta", "section": "custom-hero-v1"},
+          {"selector": "#shopify-section-template--20045246103645__custom_hero_v1 div.hero__media > img", "arm": "sl-7c21e9b0", "role": "hero_image", "element_class": "content_section", "section": "custom-hero-v1"}
+        ],
+        "funnel": ["viewed_page", "viewed_collection_or_product", "add_to_cart", "checkout_started", "purchased"],
+        "segments": {
+          "planned": [
+            {"strategy": "device", "values": ["mobile", "desktop"], "expected": "larger_on_mobile", "mde_rel": 0.10},
+            {"strategy": "traffic_source", "values": ["meta", "search"], "mde_rel": 0.15},
+            {"strategy": "returning", "values": ["new", "returning"]}
+          ],
+          "custom": [{"key": "landing_home", "label": "Landed on home", "rule": {"field": "entry_template", "op": "eq", "value": "home"}}]
+        },
+        "start": "2026-09-28",
+        "planned_end": "2026-10-19",
+        "created_by": "extension",
+        "version": 3
+      }
+    },
+    {
+      "key": "shoplift:01a1d4e5-free-ship-bar",
+      "name": "Announcement bar: free-shipping threshold copy",
+      "partner": "shoplift",
+      "status": "running",
+      "scope": "site",
+      "start": "2026-10-02",
+      "days": 10,
+      "planned_end": "2026-10-23",
+      "hypothesis": "Stating the $50 free-shipping threshold in the bar lifts cart value and conversion.",
+      "primary_metric": "rpv",
+      "arms": [
+        {"id": "control", "label": "Free shipping on orders", "control": true, "alloc": 0.5},
+        {"id": "sl-2b90c4d1", "label": "Spend $50, ship free", "alloc": 0.5}
+      ],
+      "assigned": [{"s": 61200, "b": 1590, "r": 140900}, {"s": 61050, "b": 1652, "r": 146800}],
+      "rpv_p": 0.21,
+      "pages": [],
+      "segments": [
+        {"strategy": "device", "label": "Device", "values": [
+          {"value": "mobile", "planned": true, "cells": [{"s": 40100, "b": 920, "r": 77500}, {"s": 40000, "b": 975, "r": 82400}]},
+          {"value": "desktop", "planned": true, "cells": [{"s": 21100, "b": 670, "r": 63400}, {"s": 21050, "b": 677, "r": 64400}]}
+        ]},
+        {"strategy": "returning", "label": "New vs returning", "values": [
+          {"value": "new", "planned": true, "cells": [{"s": 42800, "b": 960, "r": 82100}, {"s": 42700, "b": 1010, "r": 86900}]},
+          {"value": "returning", "planned": true, "cells": [{"s": 18400, "b": 630, "r": 58800}, {"s": 18350, "b": 642, "r": 59900}]}
+        ]}
+      ],
+      "funnel": {
+        "steps": ["Assigned", "Viewed a product", "Added to cart", "Viewed cart", "Started checkout", "Purchased"],
+        "reach": [[61200, 30100, 6020, 4870, 3010, 1590], [61050, 30000, 6110, 5060, 3170, 1652]]
+      },
+      "captured": [2510, 2490],
+      "sections": [
+        {"section": "announcement-bar", "role": "treated", "seen": [2380, 2371], "clicked": [120, 166], "seen_b": [66, 70]},
+        {"section": "header", "role": "guardrail", "seen": [2470, 2455], "clicked": [470, 455], "seen_b": [68, 71]},
+        {"section": "main-cart-items", "seen": [520, 560], "clicked": [210, 236], "seen_b": [60, 66]}
+      ],
+      "elements": [
+        {"name": "Announcement link", "selector": "#shopify-section-sections--__announcement-bar a.announcement-bar__link", "cls": "announcement_bar", "section": "announcement-bar", "clickers": [610, 842], "clicks": [640, 880], "b": [31, 44]},
+        {"name": "Cart icon", "selector": "a#cart-icon-bubble", "cls": "cart_icon", "section": "header", "clickers": [1910, 1985], "clicks": [2150, 2240], "b": [520, 548]},
+        {"name": "Menu toggle", "selector": "details#Details-menu-drawer-container > summary", "cls": "nav_toggle", "section": "header", "clickers": [3900, 3870], "clicks": [4500, 4460], "b": [88, 90]}
+      ],
+      "conditions": [
+        {"label": "Experiment descriptor", "state": "met", "adds": "Labels, declared allocation, guardrail role"},
+        {"label": "Page under test", "state": "n/a", "adds": "Site-wide test: every page is under test, so there is no exposed basis or page tab"},
+        {"label": "Rollup zones: announcement-bar (treated), header (guardrail)", "state": "met", "adds": "Always reported with their role"},
+        {"label": "Element: announcement link", "state": "met", "adds": "Same selector in both arms, so its lift is a clean comparison"},
+        {"label": "Planned segments: device, new vs returning", "state": "met", "adds": "Confirmatory readout with Holm correction"}
+      ],
+      "next_test": [
+        "If the cart-view gain holds to the planned end, ship the threshold copy.",
+        "Test a progress bar toward the $50 threshold in the cart drawer, where the gain appears."
+      ],
+      "descriptor": {
+        "package": "experiment-v1",
+        "experiment_key": "shoplift:01a1d4e5-free-ship-bar",
+        "scope": "site",
+        "primary_metric": "rpv",
+        "arms": [{"arm": "control", "is_control": true, "allocation": 0.5}, {"arm": "sl-2b90c4d1", "allocation": 0.5}],
+        "zones": [{"section": "announcement-bar", "role": "treated"}, {"section": "header", "role": "guardrail"}],
+        "elements": [{"selector": "#shopify-section-sections--20045245579357__announcement-bar a.announcement-bar__link", "element_class": "announcement_bar", "section": "announcement-bar"}],
+        "segments": {"planned": [{"strategy": "device", "values": ["mobile", "desktop"]}, {"strategy": "returning", "values": ["new", "returning"]}]},
+        "start": "2026-10-02",
+        "planned_end": "2026-10-23",
+        "version": 1
+      }
+    },
+    {
+      "key": "shoplift:019f8e11-sticky-atc",
+      "name": "PDP sticky add-to-cart",
+      "partner": "shoplift",
+      "status": "ended",
+      "scope": "template · pdp (inferred from tags)",
+      "start": "2026-09-10",
+      "days": 12,
+      "hypothesis": "No hypothesis: no plan was created for this experiment.",
+      "primary_metric": "rpv",
+      "arms": [
+        {"id": "control", "label": "Control", "control": true, "alloc": null},
+        {"id": "sl-8e11a7f2", "label": "Sticky ATC", "alloc": null}
+      ],
+      "assigned": [{"s": 30500, "b": 850, "r": 72300}, {"s": 30410, "b": 905, "r": 77100}],
+      "rpv_p": 0.15,
+      "pages": [],
+      "segments": [
+        {"strategy": "device", "label": "Device", "values": [
+          {"value": "mobile", "planned": false, "cells": [{"s": 21400, "b": 540, "r": 44100}, {"s": 21330, "b": 600, "r": 49300}]},
+          {"value": "desktop", "planned": false, "cells": [{"s": 9100, "b": 310, "r": 28200}, {"s": 9080, "b": 305, "r": 27800}]}
+        ]},
+        {"strategy": "returning", "label": "New vs returning", "values": [
+          {"value": "new", "planned": false, "cells": [{"s": 22100, "b": 560, "r": 46000}, {"s": 22030, "b": 600, "r": 50100}]},
+          {"value": "returning", "planned": false, "cells": [{"s": 8400, "b": 290, "r": 26300}, {"s": 8380, "b": 305, "r": 27000}]}
+        ]}
+      ],
+      "funnel": {
+        "steps": ["Assigned", "Viewed a product", "Added to cart", "Started checkout", "Purchased"],
+        "reach": [[30500, 24400, 3660, 1700, 850], [30410, 24330, 4010, 1810, 905]]
+      },
+      "captured": [1210, 1050],
+      "sections": [
+        {"section": "main-product", "seen": [1190, 1035], "clicked": [610, 560], "seen_b": [40, 41]},
+        {"section": "header", "seen": [1200, 1043], "clicked": [180, 150], "seen_b": [41, 42]},
+        {"section": "product-recommendations", "seen": [480, 380], "clicked": [95, 70], "seen_b": [18, 15]}
+      ],
+      "elements": [
+        {"name": "", "selector": "#shopify-section-template--__main form.product-form button[name=\"add\"]", "cls": "", "section": "main-product", "clickers": [2740, 1790], "clicks": [3010, 1950], "b": [620, 410]},
+        {"name": "", "selector": "div.sticky-atc button.sticky-atc__button", "cls": "", "section": "", "clickers": [0, 1480], "clicks": [0, 1590], "b": [0, 402]},
+        {"name": "", "selector": "a#cart-icon-bubble", "cls": "", "section": "header", "clickers": [1210, 1190], "clicks": [1380, 1350], "b": [300, 306]}
+      ],
+      "conditions": [
+        {"label": "Experiment descriptor", "state": "missing", "adds": "Without it: arms and dates inferred from tags, SRM assumes an even split, nothing named"},
+        {"label": "Page under test", "state": "missing", "adds": "No exposed basis and no page tab"},
+        {"label": "Rollup zones", "state": "missing", "adds": "Busiest 40 sections appear with no treated or guardrail role"},
+        {"label": "Elements", "state": "missing", "adds": "Busiest 40 selectors appear as bare selectors; no role pairing"},
+        {"label": "Planned segments", "state": "missing", "adds": "Every segment is exploratory (Benjamini–Hochberg)"}
+      ],
+      "next_test": [
+        "Re-run with a plan: section capture was unbalanced between arms, so section results cannot be read.",
+        "The sticky button took over a third of in-page add-to-cart clicks; test a sticky bar that appears only after the in-page button scrolls out of view."
+      ],
+      "descriptor": {
+        "provenance": "observed",
+        "experiment_key": "shoplift:019f8e11-sticky-atc",
+        "scope": "template",
+        "scope_source": "tags",
+        "templates": ["pdp"],
+        "pages": [],
+        "elements": [],
+        "zones": [],
+        "observed_start": "2026-09-10",
+        "observed_end": "2026-09-21"
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("experiment-data").textContent);
+const REQS = new Map(DATA.requirements.map((r) => [r.id, r]));
+const EXPS = DATA.experiments;
+
+// ------------------------------------------------------------------ statistics
+function normCdf(z) {
+  const t = 1 / (1 + 0.2316419 * Math.abs(z));
+  const d = 0.3989423 * Math.exp((-z * z) / 2);
+  const tail = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+  return z > 0 ? 1 - tail : tail;
+}
+const Z = { 0.05: 1.959964, 0.1: 1.644854 };
+const ZB = { 0.8: 0.841621, 0.9: 1.281552 };
+
+/** Two-proportion test, variant (x1/n1) against control (x0/n0). */
+function twoProp(x1, n1, x0, n0) {
+  if (!(n1 > 0) || !(n0 > 0)) return { lift: null, p: null };
+  const p1 = x1 / n1, p0 = x0 / n0;
+  const lift = p0 > 0 ? p1 / p0 - 1 : null;
+  const pooled = (x1 + x0) / (n1 + n0);
+  const se = Math.sqrt(pooled * (1 - pooled) * (1 / n1 + 1 / n0));
+  const p = se > 0 ? 2 * (1 - normCdf(Math.abs((p1 - p0) / se))) : null;
+  const v1 = (p1 * (1 - p1)) / n1, v0 = (p0 * (1 - p0)) / n0;
+  const seRel = p0 > 0 ? Math.sqrt(v1 / (p0 * p0) + (p1 * p1 * v0) / Math.pow(p0, 4)) : null;
+  return { lift, p, p1, p0, diff: p1 - p0, seDiff: Math.sqrt(v1 + v0), lo: lift == null ? null : lift - 1.96 * seRel, hi: lift == null ? null : lift + 1.96 * seRel };
+}
+function srmP(n0, n1, a0) {
+  const total = n0 + n1;
+  const z = (n0 - total * a0) / Math.sqrt(total * a0 * (1 - a0));
+  return 2 * (1 - normCdf(Math.abs(z)));
+}
+function holm(ps) {
+  const idx = ps.map((p, i) => [p, i]).sort((a, b) => a[0] - b[0]);
+  const m = ps.length, out = new Array(m);
+  let running = 0;
+  idx.forEach(([p, i], k) => { running = Math.max(running, Math.min(1, (m - k) * p)); out[i] = running; });
+  return out;
+}
+function bh(ps) {
+  const idx = ps.map((p, i) => [p, i]).sort((a, b) => a[0] - b[0]);
+  const m = ps.length, out = new Array(m);
+  let running = 1;
+  for (let k = m - 1; k >= 0; k--) { const [p, i] = idx[k]; running = Math.min(running, (p * m) / (k + 1)); out[i] = Math.min(1, running); }
+  return out;
+}
+function gammaln(x) {
+  const c = [76.18009172947146, -86.50532032941677, 24.01409824083091, -1.231739572450155, 0.1208650973866179e-2, -0.5395239384953e-5];
+  let y = x, tmp = x + 5.5; tmp -= (x + 0.5) * Math.log(tmp);
+  let ser = 1.000000000190015;
+  for (const ci of c) { y += 1; ser += ci / y; }
+  return -tmp + Math.log((2.5066282746310005 * ser) / x);
+}
+function gammaP(a, x) {
+  if (x <= 0) return 0;
+  if (x < a + 1) {
+    let sum = 1 / a, del = sum, ap = a;
+    for (let n = 0; n < 300; n++) { ap += 1; del *= x / ap; sum += del; if (Math.abs(del) < Math.abs(sum) * 1e-12) break; }
+    return sum * Math.exp(-x + a * Math.log(x) - gammaln(a));
+  }
+  let b = x + 1 - a, c = 1e300, d = 1 / b, h = d;
+  for (let i = 1; i < 300; i++) {
+    const an = -i * (i - a); b += 2;
+    d = an * d + b; if (Math.abs(d) < 1e-300) d = 1e-300;
+    c = b + an / c; if (Math.abs(c) < 1e-300) c = 1e-300;
+    d = 1 / d; const del = d * c; h *= del; if (Math.abs(del - 1) < 1e-12) break;
+  }
+  return 1 - Math.exp(-x + a * Math.log(x) - gammaln(a)) * h;
+}
+const chi2Sf = (x, k) => 1 - gammaP(k / 2, x / 2);
+/** Cochran's Q on absolute CVR differences across the values of one strategy. */
+function heterogeneity(tests) {
+  const w = tests.map((t) => 1 / (t.seDiff * t.seDiff));
+  const mean = tests.reduce((s, t, i) => s + w[i] * t.diff, 0) / w.reduce((a, b) => a + b, 0);
+  const q = tests.reduce((s, t, i) => s + w[i] * Math.pow(t.diff - mean, 2), 0);
+  return { q, df: tests.length - 1, p: chi2Sf(q, tests.length - 1) };
+}
+
+// ------------------------------------------------------------------ formatting
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = (v, d = 1) => (v == null || !isFinite(v) ? "—" : `${(v * 100).toFixed(d)}%`);
+const signed = (v, d = 1) => (v == null || !isFinite(v) ? "—" : `${v > 0 ? "+" : ""}${(v * 100).toFixed(d)}%`);
+const pfmt = (p) => (p == null ? "—" : p < 0.001 ? "&lt;0.001" : p.toFixed(3));
+const int = (n) => Math.round(n).toLocaleString("en-US");
+const money = (n) => `$${n.toFixed(2)}`;
+const rate = (x, n) => (n > 0 ? x / n : null);
+function lift(t, adjP, opts = {}) {
+  if (!t || t.lift == null) return `<span class="muted">—</span>`;
+  const p = adjP ?? t.p;
+  const sig = p != null && p < 0.05;
+  const better = opts.lowerIsBetter ? t.lift < 0 : t.lift > 0;
+  const cls = sig ? (better ? "good sig" : "bad sig") : "";
+  return `<span class="${cls}">${signed(t.lift)}</span>`;
+}
+function reqs(ids) {
+  return `<div class="reqs">${ids.map((id) => {
+    const r = REQS.get(id);
+    return r ? `<span class="req" title="${esc(r.title)}">${id} <span class="st st-${r.status}">${r.status}</span></span>` : "";
+  }).join("")}</div>`;
+}
+const stat = (v, l, cls = "") => `<div class="stat"><div class="v ${cls}">${v}</div><div class="l">${l}</div></div>`;
+function table(headers, rows, opts = {}) {
+  const align = opts.align || [];
+  const head = headers.map((h, i) => `<th class="${align[i] === "r" ? "num" : ""}">${h}</th>`).join("");
+  const body = rows.map((r, ri) => `<tr class="${(opts.rowClass && opts.rowClass[ri]) || ""}">${r.map((c, i) => `<td class="${align[i] === "r" ? "num" : ""}">${c}</td>`).join("")}</tr>`).join("");
+  return `<div class="tbl"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+const caption = (t) => `<p class="caption">${t}</p>`;
+const ARM_COLORS = ["var(--c-control)", "var(--c-variant)"];
+const MULTI = ["var(--c-variant)", "var(--c3)", "var(--c4)", "var(--c5)", "var(--c-control)", "var(--c6)"];
+const legend = (names, colors) => `<div class="legend">${names.map((n, i) => `<span><i style="background:${colors[i % colors.length]}"></i>${esc(n)}</span>`).join("")}</div>`;
+
+// ------------------------------------------------------------------ charts (inline SVG)
+function niceMax(v) {
+  if (v <= 0) return 1;
+  const e = Math.pow(10, Math.floor(Math.log10(v)));
+  const f = v / e;
+  return ([1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10].find((s) => f <= s) ?? 10) * e;
+}
+function wrap(label, max = 16) {
+  const words = String(label).split(" ");
+  const lines = [""];
+  for (const w of words) {
+    if ((lines[lines.length - 1] + " " + w).trim().length > max && lines[lines.length - 1]) lines.push(w);
+    else lines[lines.length - 1] = (lines[lines.length - 1] + " " + w).trim();
+  }
+  return lines.slice(0, 3);
+}
+function barChart({ categories, series, suffix = "%", height = 240, horizontal = false, colors = ARM_COLORS, decimals = 1, showValues = true, width = 620 }) {
+  const W = width;
+  const all = series.flatMap((s) => s.data);
+  const top = Math.max(...all);
+  const max = suffix === "%" && top <= 100 && top > 80 ? 100 : niceMax(top * 1.08);
+  let svg = "";
+  if (!horizontal) {
+    const padL = 44, padR = 8, padT = 12, padB = 50;
+    const pw = W - padL - padR, ph = height - padT - padB;
+    for (let k = 0; k <= 4; k++) {
+      const y = padT + ph * (1 - k / 4);
+      svg += `<line x1="${padL}" x2="${W - padR}" y1="${y}" y2="${y}" stroke="var(--border)"/>`;
+      svg += `<text x="${padL - 6}" y="${y + 3}" font-size="10" text-anchor="end" fill="var(--fg3)">${((max * k) / 4).toFixed(max < 10 ? 1 : 0)}${suffix}</text>`;
+    }
+    const gw = pw / categories.length;
+    const bw = Math.min(30, (gw * 0.72) / series.length);
+    categories.forEach((cat, i) => {
+      series.forEach((s, j) => {
+        const v = s.data[i];
+        const x = padL + i * gw + (gw - bw * series.length) / 2 + j * bw;
+        const h = (ph * v) / max;
+        svg += `<rect x="${x}" y="${padT + ph - h}" width="${bw - 2}" height="${Math.max(0, h)}" fill="${colors[j % colors.length]}" rx="2"><title>${esc(s.name)} · ${esc(cat)}: ${v.toFixed(decimals)}${suffix}</title></rect>`;
+        if (showValues && series.length <= 2 && categories.length <= 8) svg += `<text x="${x + (bw - 2) / 2}" y="${padT + ph - h - 3}" font-size="9" text-anchor="middle" fill="var(--fg2)">${v.toFixed(decimals)}</text>`;
+      });
+      wrap(cat).forEach((line, li) => { svg += `<text x="${padL + i * gw + gw / 2}" y="${padT + ph + 14 + li * 11}" font-size="10" text-anchor="middle" fill="var(--fg2)">${esc(line)}</text>`; });
+    });
+  } else {
+    const padL = 190, padR = 40, padT = 6, padB = 22;
+    const rowH = Math.max(22, series.length * 12 + 10);
+    height = padT + padB + rowH * categories.length;
+    const pw = W - padL - padR;
+    for (let k = 0; k <= 4; k++) {
+      const x = padL + (pw * k) / 4;
+      svg += `<line x1="${x}" x2="${x}" y1="${padT}" y2="${height - padB}" stroke="var(--border)"/>`;
+      svg += `<text x="${x}" y="${height - 6}" font-size="10" text-anchor="middle" fill="var(--fg3)">${((max * k) / 4).toFixed(max < 10 ? 1 : 0)}${suffix}</text>`;
+    }
+    categories.forEach((cat, i) => {
+      const y0 = padT + i * rowH + 5;
+      svg += `<text x="${padL - 8}" y="${y0 + (series.length * 12) / 2 + 3}" font-size="11" text-anchor="end" fill="var(--fg2)">${esc(String(cat).length > 30 ? String(cat).slice(0, 29) + "…" : cat)}</text>`;
+      series.forEach((s, j) => {
+        const v = s.data[i];
+        const w = (pw * v) / max;
+        svg += `<rect x="${padL}" y="${y0 + j * 12}" width="${Math.max(0, w)}" height="10" fill="${colors[j % colors.length]}" rx="2"><title>${esc(s.name)} · ${esc(cat)}: ${v.toFixed(decimals)}${suffix}</title></rect>`;
+        svg += `<text x="${padL + w + 4}" y="${y0 + j * 12 + 9}" font-size="9" fill="var(--fg3)">${v.toFixed(decimals)}</text>`;
+      });
+    });
+  }
+  return `<svg viewBox="0 0 ${W} ${height}" width="100%" role="img">${svg}</svg>${series.length > 1 ? legend(series.map((s) => s.name), colors) : ""}`;
+}
+function lineChart({ categories, series, suffix = "%", height = 220, ref = null, colors = ARM_COLORS }) {
+  const W = 620, padL = 46, padR = 10, padT = 10, padB = 36;
+  const pw = W - padL - padR, ph = height - padT - padB;
+  const all = series.flatMap((s) => s.data).concat(ref == null ? [] : [ref]);
+  let lo = Math.min(...all), hi = Math.max(...all);
+  const pad = (hi - lo) * 0.12 || 1; lo -= pad; hi += pad;
+  const y = (v) => padT + ph * (1 - (v - lo) / (hi - lo));
+  const x = (i) => padL + (pw * i) / Math.max(1, categories.length - 1);
+  let svg = "";
+  for (let k = 0; k <= 4; k++) {
+    const v = lo + ((hi - lo) * k) / 4;
+    svg += `<line x1="${padL}" x2="${W - padR}" y1="${y(v)}" y2="${y(v)}" stroke="var(--border)"/><text x="${padL - 6}" y="${y(v) + 3}" font-size="10" text-anchor="end" fill="var(--fg3)">${v.toFixed(1)}${suffix}</text>`;
+  }
+  if (ref != null) svg += `<line x1="${padL}" x2="${W - padR}" y1="${y(ref)}" y2="${y(ref)}" stroke="var(--fg3)" stroke-dasharray="4 3"/>`;
+  const step = Math.ceil(categories.length / 8);
+  categories.forEach((c, i) => { if (i % step === 0 || i === categories.length - 1) svg += `<text x="${x(i)}" y="${height - 14}" font-size="10" text-anchor="middle" fill="var(--fg3)">${esc(c)}</text>`; });
+  series.forEach((s, j) => {
+    svg += `<polyline fill="none" stroke="${colors[j % colors.length]}" stroke-width="2" points="${s.data.map((v, i) => `${x(i)},${y(v)}`).join(" ")}"/>`;
+    s.data.forEach((v, i) => { svg += `<circle cx="${x(i)}" cy="${y(v)}" r="2.5" fill="${colors[j % colors.length]}"><title>${esc(s.name)} · ${esc(categories[i])}: ${v.toFixed(2)}${suffix}</title></circle>`; });
+  });
+  return `<svg viewBox="0 0 ${W} ${height}" width="100%" role="img">${svg}</svg>${legend(series.map((s) => s.name), colors)}`;
+}
+function stacked100({ categories, series, colors = MULTI }) {
+  const W = 620, padL = 120, padR = 10, rowH = 30, padT = 6;
+  const H = padT + rowH * categories.length + 22;
+  const pw = W - padL - padR;
+  let svg = "";
+  categories.forEach((cat, i) => {
+    const total = series.reduce((s, ser) => s + ser.data[i], 0);
+    let x = padL;
+    const y = padT + i * rowH;
+    svg += `<text x="${padL - 8}" y="${y + 15}" font-size="11" text-anchor="end" fill="var(--fg2)">${esc(cat)}</text>`;
+    series.forEach((ser, j) => {
+      const w = (pw * ser.data[i]) / total;
+      svg += `<rect x="${x}" y="${y + 3}" width="${w}" height="18" fill="${colors[j % colors.length]}"><title>${esc(ser.name)}: ${pct(ser.data[i] / total)}</title></rect>`;
+      if (w > 34) svg += `<text x="${x + w / 2}" y="${y + 16}" font-size="10" text-anchor="middle" fill="#fff">${pct(ser.data[i] / total, 0)}</text>`;
+      x += w;
+    });
+  });
+  [0, 0.25, 0.5, 0.75, 1].forEach((f) => { svg += `<text x="${padL + pw * f}" y="${H - 6}" font-size="10" text-anchor="middle" fill="var(--fg3)">${f * 100}%</text>`; });
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${svg}</svg>${legend(series.map((s) => s.name), colors)}`;
+}
+/** Forest plot of relative lifts with 95% intervals. */
+function forest(rows) {
+  const W = 620, padL = 200, padR = 70, rowH = 24, padT = 8;
+  const H = padT + rowH * rows.length + 24;
+  const ext = Math.max(0.05, ...rows.flatMap((r) => [Math.abs(r.lo ?? 0), Math.abs(r.hi ?? 0)]));
+  const dom = niceMax(ext);
+  const pw = W - padL - padR;
+  const x = (v) => padL + pw * ((v + dom) / (2 * dom));
+  let svg = `<line x1="${x(0)}" x2="${x(0)}" y1="${padT}" y2="${H - 20}" stroke="var(--fg3)"/>`;
+  [-dom, -dom / 2, 0, dom / 2, dom].forEach((v) => { svg += `<text x="${x(v)}" y="${H - 6}" font-size="10" text-anchor="middle" fill="var(--fg3)">${signed(v, 0)}</text>`; });
+  rows.forEach((r, i) => {
+    const y = padT + i * rowH + 12;
+    const color = r.sig ? (r.lift > 0 ? "var(--good)" : "var(--bad)") : "var(--fg2)";
+    svg += `<text x="${padL - 8}" y="${y + 4}" font-size="11" text-anchor="end" fill="var(--fg2)">${esc(r.label)}</text>`;
+    if (r.lo != null) svg += `<line x1="${x(Math.max(-dom, r.lo))}" x2="${x(Math.min(dom, r.hi))}" y1="${y}" y2="${y}" stroke="${color}" stroke-width="2"/>`;
+    svg += `<rect x="${x(r.lift) - (r.planned ? 5 : 4)}" y="${y - (r.planned ? 5 : 4)}" width="${r.planned ? 10 : 8}" height="${r.planned ? 10 : 8}" fill="${r.planned ? color : "var(--bg)"}" stroke="${color}" stroke-width="1.5"/>`;
+    svg += `<text x="${W - padR + 6}" y="${y + 4}" font-size="10" fill="${color}">${signed(r.lift)}</text>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${svg}</svg>`;
+}
+/** Diverging horizontal bars around zero (values in percentage points). */
+function diverging(items, suffix = " pp") {
+  const W = 620, padL = 220, padR = 60, rowH = 24, padT = 6;
+  const H = padT + rowH * items.length + 22;
+  const dom = niceMax(Math.max(0.5, ...items.map((i) => Math.abs(i.value))));
+  const pw = W - padL - padR;
+  const x = (v) => padL + pw * ((v + dom) / (2 * dom));
+  let svg = `<line x1="${x(0)}" x2="${x(0)}" y1="${padT}" y2="${H - 18}" stroke="var(--fg3)"/>`;
+  items.forEach((it, i) => {
+    const y = padT + i * rowH + 4;
+    const x0 = x(Math.min(0, it.value)), w = Math.abs(x(it.value) - x(0));
+    svg += `<text x="${padL - 8}" y="${y + 12}" font-size="11" text-anchor="end" fill="var(--fg2)">${esc(it.label)}</text>`;
+    svg += `<rect x="${x0}" y="${y + 2}" width="${Math.max(1, w)}" height="14" fill="${it.value >= 0 ? "var(--good)" : "var(--bad)"}" fill-opacity="0.8" rx="2"/>`;
+    svg += `<text x="${it.value >= 0 ? x(it.value) + 4 : x(it.value) - 4}" y="${y + 13}" font-size="10" text-anchor="${it.value >= 0 ? "start" : "end"}" fill="var(--fg2)">${it.value > 0 ? "+" : ""}${it.value.toFixed(2)}${suffix}</text>`;
+  });
+  [-dom, 0, dom].forEach((v) => { svg += `<text x="${x(v)}" y="${H - 4}" font-size="10" text-anchor="middle" fill="var(--fg3)">${v > 0 ? "+" : ""}${v}${suffix}</text>`; });
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${svg}</svg>`;
+}
+function sankey(columns, links, H = 270) {
+  const W = 460, nodeW = 10, gap = 6, labelW = 110;
+  const xs = columns.map((_, i) => 4 + (i * (W - nodeW - 8 - labelW)) / (columns.length - 1));
+  const val = (name, col) => {
+    const out = links.filter((l) => l.from === name).reduce((n, l) => n + l.value, 0);
+    const inn = links.filter((l) => l.to === name).reduce((n, l) => n + l.value, 0);
+    return col === 0 ? out : Math.max(out, inn);
+  };
+  const total = columns[0].reduce((n, name) => n + val(name, 0), 0);
+  const maxGaps = Math.max(...columns.map((c) => c.length - 1));
+  const scale = (H - 8 - maxGaps * gap) / total;
+  const nodes = new Map();
+  columns.forEach((col, ci) => {
+    let y = 4;
+    col.forEach((name) => { const h = Math.max(2, val(name, ci) * scale); nodes.set(name, { x: xs[ci], y, h, out: y, inn: y, v: val(name, ci) }); y += h + gap; });
+  });
+  let svg = "";
+  links.forEach((l) => {
+    const a = nodes.get(l.from), b = nodes.get(l.to);
+    const h = Math.max(1, l.value * scale);
+    const x0 = a.x + nodeW, x1 = b.x, y0 = a.out, y1 = b.inn, xm = (x0 + x1) / 2;
+    a.out += h; b.inn += h;
+    const color = l.tone === "good" ? "var(--good)" : l.tone === "accent" ? "var(--accent)" : "var(--fg4)";
+    svg += `<path d="M${x0},${y0} C${xm},${y0} ${xm},${y1} ${x1},${y1} L${x1},${y1 + h} C${xm},${y1 + h} ${xm},${y0 + h} ${x0},${y0 + h} Z" fill="${color}" fill-opacity="${l.tone === "good" ? 0.6 : 0.3}"><title>${esc(l.from)} → ${esc(l.to)}: ${int(l.value)}</title></path>`;
+  });
+  nodes.forEach((n, name) => {
+    svg += `<rect x="${n.x}" y="${n.y}" width="${nodeW}" height="${n.h}" fill="var(--fg3)" rx="1"/>`;
+    svg += `<text x="${n.x + nodeW + 4}" y="${n.y + Math.max(n.h / 2, 5) + 3}" font-size="10" fill="var(--fg2)" stroke="var(--bg)" stroke-width="3" paint-order="stroke">${esc(name)} ${int(n.v)}</text>`;
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${svg}</svg>`;
+}
+function heroMock() {
+  const box = (arm) => `
+    <div class="stack tight">
+      <p class="small"><b>${arm === 0 ? "Control · Drawn-on CTA" : "Variant · Photo + button"}</b></p>
+      <svg viewBox="0 0 320 150" width="100%" role="img" aria-label="hero zone image">
+        <rect x="0.5" y="0.5" width="319" height="149" rx="6" fill="var(--bg2)" stroke="var(--border2)"/>
+        ${arm === 0 ? `
+          <rect x="12" y="12" width="296" height="126" rx="4" fill="var(--border)"/>
+          <text x="160" y="62" text-anchor="middle" font-size="16" font-weight="600" fill="var(--fg2)">Fresh roast, every week</text>
+          <rect x="110" y="78" width="100" height="24" rx="3" fill="none" stroke="var(--fg3)" stroke-dasharray="3 3"/>
+          <text x="160" y="94" text-anchor="middle" font-size="11" fill="var(--fg2)">SHOP NOW</text>
+          <rect x="12" y="12" width="296" height="126" rx="4" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="300" y="130" text-anchor="end" font-size="9" fill="var(--accent)">whole image is the link: a.hero__link &gt; img</text>` : `
+          <rect x="12" y="12" width="296" height="92" rx="4" fill="var(--border)"/>
+          <text x="160" y="62" text-anchor="middle" font-size="16" font-weight="600" fill="var(--fg2)">Fresh roast, every week</text>
+          <text x="20" y="98" font-size="9" fill="var(--fg3)">div.hero__media &gt; img (not a link)</text>
+          <rect x="110" y="112" width="100" height="26" rx="4" fill="var(--accent)"/>
+          <text x="160" y="129" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Shop now</text>
+          <text x="300" y="130" text-anchor="end" font-size="9" fill="var(--accent)">a.hero__cta</text>`}
+      </svg>
+    </div>`;
+  return `<div class="grid2" style="gap:12px">${box(0)}${box(1)}</div><p class="caption">Zone images captured from both panes of the extension's A/B comparison view (R-EXT-7).</p>`;
+}
+
+// ------------------------------------------------------------------ derived data
+function dayLabels(start, days) {
+  const t0 = Date.parse(start + "T00:00:00Z");
+  return Array.from({ length: days }, (_, i) => {
+    const d = new Date(t0 + i * 86400000);
+    return `${d.toLocaleString("en-US", { month: "short", timeZone: "UTC" })} ${d.getUTCDate()}`;
+  });
+}
+function daysBetween(a, b) { return Math.round((Date.parse(b) - Date.parse(a)) / 86400000) + 1; }
+function rng(seed) { let s = seed; return () => { s = (s * 1664525 + 1013904223) % 4294967296; return s / 4294967296; }; }
+function spread(total, days, next, jitter) {
+  const w = Array.from({ length: days }, () => 1 + jitter * (next() * 2 - 1));
+  const sum = w.reduce((a, b) => a + b, 0);
+  return w.map((x) => (total * x) / sum);
+}
+function seedOf(key) { let h = 7; for (const ch of key) h = (h * 31 + ch.charCodeAt(0)) % 100000; return h; }
+
+/** Segment readout with planned (Holm) and exploratory (BH) corrections and heterogeneity per strategy. */
+function segmentAnalysis(exp) {
+  const rows = [];
+  for (const seg of exp.segments) {
+    for (const v of seg.values) {
+      const [c, t] = v.cells;
+      const test = twoProp(t.b, t.s, c.b, c.s);
+      rows.push({ strategy: seg.strategy, label: seg.label, value: v.value, planned: v.planned, c, t, test, rpvLift: t.r / t.s / (c.r / c.s) - 1 });
+    }
+  }
+  const planned = rows.filter((r) => r.planned), expl = rows.filter((r) => !r.planned);
+  holm(planned.map((r) => r.test.p)).forEach((p, i) => { planned[i].adj = p; planned[i].correction = "holm"; });
+  bh(expl.map((r) => r.test.p)).forEach((p, i) => { expl[i].adj = p; expl[i].correction = "bh"; });
+  const het = exp.segments.map((seg) => {
+    const tests = rows.filter((r) => r.strategy === seg.strategy).map((r) => r.test);
+    return { strategy: seg.strategy, label: seg.label, planned: seg.values.some((v) => v.planned), ...heterogeneity(tests) };
+  });
+  return { rows, het };
+}
+function funnelAnalysis(exp) {
+  const { steps, reach } = exp.funnel;
+  const [c, v] = reach;
+  const transitions = steps.slice(1).map((to, k) => {
+    const i = k + 1;
+    return { from: steps[i - 1], to, i, cont: [c[i] / c[i - 1], v[i] / v[i - 1]], test: twoProp(v[i], v[i - 1], c[i], c[i - 1]), reachTest: twoProp(v[i], v[0], c[i], c[0]) };
+  });
+  const rpb = [exp.assigned[0].r / exp.assigned[0].b, exp.assigned[1].r / exp.assigned[1].b];
+  const factors = transitions.map((t) => ({ label: `${short(t.from)} → ${short(t.to)}`, ratio: t.cont[1] / t.cont[0] })).concat([{ label: "Revenue per buyer", ratio: rpb[1] / rpb[0] }]);
+  const total = factors.reduce((p, f) => p * f.ratio, 1);
+  const logT = Math.log(total);
+  const contributions = factors.map((f) => ({ label: f.label, value: logT === 0 ? 0 : (Math.log(f.ratio) / logT) * (total - 1) * 100 }));
+  const biggest = [...transitions].filter((t) => (t.test.p ?? 1) < 0.05).sort((a, b) => Math.abs(b.test.lift) - Math.abs(a.test.lift))[0] || null;
+  return { steps, reach, transitions, contributions, total, biggest };
+}
+function short(step) {
+  const s = step.replace(/^Viewed a collection or product$/, "Collection / product").replace(/^Viewed (a |an )?/, "").replace(/^Added to cart$/, "Add to cart").replace(/^Started checkout$/, "Checkout");
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+function sectionAnalysis(exp) {
+  const assigned = exp.assigned.map((a) => a.s);
+  const capTest = twoProp(exp.captured[1], assigned[1], exp.captured[0], assigned[0]);
+  const balanced = (capTest.p ?? 1) >= 0.05;
+  const rows = exp.sections.map((s) => {
+    const seenT = twoProp(s.seen[1], exp.captured[1], s.seen[0], exp.captured[0]);
+    const clickT = twoProp(s.clicked[1], exp.captured[1], s.clicked[0], exp.captured[0]);
+    const cvrT = twoProp(s.seen_b[1], s.seen[1], s.seen_b[0], s.seen[0]);
+    return { s, seenT, clickT, cvrT, comparable: balanced && (seenT.p ?? 1) >= 0.05 };
+  });
+  return { capTest, balanced, rows };
+}
+function rolePairs(exp) {
+  const roles = new Map();
+  for (const e of exp.elements) if (e.role) { if (!roles.has(e.role)) roles.set(e.role, []); roles.get(e.role).push(e); }
+  const assigned = exp.assigned.map((a) => a.s);
+  const out = [];
+  roles.forEach((members, role) => {
+    const sum = (i, k) => members.reduce((n, e) => n + e[k][i], 0);
+    const clickers = [sum(0, "clickers"), sum(1, "clickers")];
+    if (clickers[0] === 0 || clickers[1] === 0) return;
+    const buyers = [sum(0, "b"), sum(1, "b")];
+    out.push({ role, members, clickers, buyers, test: twoProp(clickers[1], assigned[1], clickers[0], assigned[0]), cvr: [rate(buyers[0], clickers[0]), rate(buyers[1], clickers[1])] });
+  });
+  return out;
+}
+function feasibility(exp, mde, alpha, power) {
+  const za = Z[alpha], zb = ZB[power];
+  const plannedDays = exp.planned_end ? daysBetween(exp.start, exp.planned_end) : exp.days;
+  const declared = exp.descriptor.segments?.planned ?? [];
+  const items = [{ label: "All visits (site)", c: exp.assigned[0], t: exp.assigned[1], mde }];
+  for (const seg of exp.segments) {
+    const segMde = declared.find((d) => d.strategy === seg.strategy)?.mde_rel ?? mde;
+    for (const v of seg.values) if (v.planned) items.push({ label: `${seg.label}: ${v.value}`, c: v.cells[0], t: v.cells[1], mde: segMde, declaredMde: segMde !== mde });
+  }
+  return items.map((it) => {
+    const p = it.c.b / it.c.s;
+    const n = (Math.pow(za + zb, 2) * 2 * p * (1 - p)) / Math.pow(p * it.mde, 2);
+    const daily = (it.c.s + it.t.s) / 2 / exp.days;
+    const daysNeeded = Math.ceil(n / daily);
+    return { ...it, p, n, daily, daysNeeded, plannedDays, status: daysNeeded <= plannedDays ? "feasible" : daysNeeded <= plannedDays * 2 ? `needs ${daysNeeded - plannedDays} more day${daysNeeded - plannedDays > 1 ? "s" : ""}` : "not detectable at this traffic" };
+  });
+}
+
+// ------------------------------------------------------------------ readout rows (the machine-readable contract)
+const CAUSAL = {
+  visits: "—", cvr: "causal", rpv: "causal", aov: "descriptive", reach: "causal", continuation: "descriptive",
+  next_page_share: "causal", path_cvr: "descriptive", journey_flag_rate: "conditionally_causal", next_after_click_share: "descriptive",
+  capture_rate: "balance_check", seen_rate: "conditionally_causal", section_click_rate: "conditionally_causal", seen_cvr: "descriptive",
+  click_rate: "causal", clicks_per_clicker: "descriptive", clicked_cvr: "descriptive", rpv_lift_contribution: "decomposition",
+};
+const UNIT = { rpv: "currency", aov: "currency", clicks_per_clicker: "per_visit", rpv_lift_contribution: "percentage_points" };
+function buildReadout(exp) {
+  const rows = [];
+  const variant = exp.arms.find((a) => !a.control);
+  const base = { experiment_key: exp.key, experiment_name: exp.name, status: exp.status, window_start: exp.start, days: exp.days, arm: variant.id, arm_label: variant.label, viewport_type: "all" };
+  const push = (r) => rows.push({ ...base, segment: "all", segment_value: "all", segment_planned: null, entity_role: "", unit: UNIT[r.metric] || "ratio", causal_class: CAUSAL[r.metric] ?? "—", comparable: 1, ...r });
+  const rel = (v, c) => (c ? v / c - 1 : null);
+  const r4 = (x) => (x == null ? null : Math.round(x * 1e4) / 1e4);
+  const r6 = (x) => (x == null ? null : Math.round(x * 1e6) / 1e6);
+  const rateRow = (level, entity_key, basis, metric, x1, n1, x0, n0, extra = {}) => {
+    const t = twoProp(x1, n1, x0, n0);
+    push({ level, entity_key, basis, metric, value: r4(rate(x1, n1)), control_value: r4(rate(x0, n0)), n: n1, n_control: n0, lift_rel: r4(t.lift), ci_low_rel: r4(t.lo), ci_high_rel: r4(t.hi), p_value: r6(t.p), ...extra });
+  };
+  const [ac, at] = exp.assigned;
+  rateRow("site", "site", "assigned", "cvr", at.b, at.s, ac.b, ac.s);
+  push({ level: "site", entity_key: "site", basis: "assigned", metric: "rpv", value: r4(at.r / at.s), control_value: r4(ac.r / ac.s), n: at.s, n_control: ac.s, lift_rel: r4(rel(at.r / at.s, ac.r / ac.s)), p_value: exp.rpv_p });
+  push({ level: "site", entity_key: "site", basis: "assigned", metric: "aov", value: r4(at.r / at.b), control_value: r4(ac.r / ac.b), n: at.b, n_control: ac.b, lift_rel: r4(rel(at.r / at.b, ac.r / ac.b)) });
+  if (exp.exposed) { const [ec, et] = exp.exposed; rateRow("site", "site", "exposed", "cvr", et.b, et.s, ec.b, ec.s, { causal_class: "conditionally_causal" }); }
+  for (const s of segmentAnalysis(exp).rows) {
+    push({ level: "segment", entity_key: "site", basis: "assigned", metric: "cvr", segment: s.strategy, segment_value: s.value, segment_planned: s.planned ? 1 : 0, value: r4(s.t.b / s.t.s), control_value: r4(s.c.b / s.c.s), n: s.t.s, n_control: s.c.s, lift_rel: r4(s.test.lift), ci_low_rel: r4(s.test.lo), ci_high_rel: r4(s.test.hi), p_value: r6(s.test.p), p_adjusted: r6(s.adj), correction: s.correction });
+  }
+  for (const pg of exp.pages) rateRow("page", String(pg.id), "exposed", "cvr", pg.cells[1].b, pg.cells[1].s, pg.cells[0].b, pg.cells[0].s, { entity_label: pg.path, causal_class: "conditionally_causal" });
+  const fa = funnelAnalysis(exp);
+  fa.transitions.forEach((t) => {
+    const key = `step:${t.to.toLowerCase().replace(/[^a-z]+/g, "_")}`;
+    rateRow("funnel", key, "funnel_step", "reach", fa.reach[1][t.i], fa.reach[1][0], fa.reach[0][t.i], fa.reach[0][0], { entity_label: t.to });
+    rateRow("funnel", key, "funnel_step", "continuation", fa.reach[1][t.i], fa.reach[1][t.i - 1], fa.reach[0][t.i], fa.reach[0][t.i - 1], { entity_label: t.to });
+  });
+  fa.contributions.forEach((c) => push({ level: "funnel", entity_key: `factor:${c.label.toLowerCase().replace(/[^a-z]+/g, "_")}`, entity_label: c.label, basis: "assigned", metric: "rpv_lift_contribution", value: Math.round(c.value * 100) / 100 }));
+  if (exp.journey) {
+    const j = exp.journey;
+    const tot = j.clusters.reduce((a, cl) => [a[0] + cl.s[0], a[1] + cl.s[1]], [0, 0]);
+    j.clusters.forEach((cl) => {
+      const key = `next:${cl.page.toLowerCase().replace(/[^a-z]+/g, "_")}`;
+      rateRow("journey", key, "exposed", "next_page_share", cl.s[1], tot[1], cl.s[0], tot[0], { entity_label: `${j.entry} → ${cl.page}`, causal_class: "conditionally_causal" });
+      if (cl.b[0] + cl.b[1] > 0) rateRow("journey", key, "path", "path_cvr", cl.b[1], cl.s[1], cl.b[0], cl.s[0], { entity_label: `${j.entry} → ${cl.page}` });
+    });
+    j.flags.forEach((f) => rateRow("journey", `flag:${f.flag}`, "exposed", "journey_flag_rate", f.count[1], tot[1], f.count[0], tot[0], { entity_label: f.label }));
+    const na = j.next_after, cl0 = na.counts[0].reduce((a, b) => a + b, 0), cl1 = na.counts[1].reduce((a, b) => a + b, 0);
+    na.dest.forEach((d, i) => rateRow("journey", `role:${na.role}>${d.toLowerCase().replace(/[^a-z]+/g, "_")}`, "clicked", "next_after_click_share", na.counts[1][i], cl1, na.counts[0][i], cl0, { entity_label: `${na.label} → ${d}` }));
+  }
+  const sa = sectionAnalysis(exp);
+  push({ level: "section", entity_key: "captured", basis: "assigned", metric: "capture_rate", value: r4(exp.captured[1] / at.s), control_value: r4(exp.captured[0] / ac.s), n: at.s, n_control: ac.s, lift_rel: r4(sa.capTest.lift), p_value: r6(sa.capTest.p), quality_flags: sa.balanced ? [] : ["capture_imbalance"] });
+  sa.rows.forEach(({ s, comparable }) => {
+    const flags = ["sample_section_tracker"].concat(sa.balanced ? [] : ["capture_imbalance"]);
+    rateRow("section", s.section, "section_captured", "seen_rate", s.seen[1], exp.captured[1], s.seen[0], exp.captured[0], { entity_role: s.role || "", comparable: sa.balanced ? 1 : 0, quality_flags: flags });
+    rateRow("section", s.section, "section_captured", "section_click_rate", s.clicked[1], exp.captured[1], s.clicked[0], exp.captured[0], { entity_role: s.role || "", comparable: sa.balanced ? 1 : 0, quality_flags: flags });
+    rateRow("section", s.section, "section_seen", "seen_cvr", s.seen_b[1], s.seen[1], s.seen_b[0], s.seen[0], { entity_role: s.role || "", comparable: comparable ? 1 : 0, quality_flags: flags });
+  });
+  for (const e of exp.elements) {
+    const single = e.only_arm != null || e.clickers[0] === 0;
+    rateRow("element", e.selector, "assigned", "click_rate", e.clickers[1], at.s, e.clickers[0], ac.s, { entity_label: e.name || "", element_class: e.cls || "", section: e.section, comparable: single ? 0 : 1, quality_flags: single ? ["single_arm_element"] : [] });
+  }
+  for (const rp of rolePairs(exp)) {
+    rateRow("element", `role:${rp.role}`, "assigned", "click_rate", rp.clickers[1], at.s, rp.clickers[0], ac.s, { entity_label: rp.role, entity_role: "treated" });
+    rateRow("element", `role:${rp.role}`, "clicked", "clicked_cvr", rp.buyers[1], rp.clickers[1], rp.buyers[0], rp.clickers[0], { entity_label: rp.role });
+  }
+  return rows.map((r) => ({ ...r, row_key: [r.level, r.entity_key, r.basis, r.metric, r.arm, `${r.segment}:${r.segment_value}`].join("|") }));
+}
+
+// ------------------------------------------------------------------ insights (rules over readout rows)
+function buildInsights(exp) {
+  const out = [];
+  const readout = buildReadout(exp);
+  const find = (pred) => readout.filter(pred).map((r) => r.row_key);
+  const variant = exp.arms.find((a) => !a.control);
+  const [ac, at] = exp.assigned;
+  const a0 = exp.arms[0].alloc;
+  const srm = srmP(ac.s, at.s, a0 ?? 0.5);
+  out.push(srm < 0.01
+    ? { sev: "health", rule: "health.srm", title: "Assignment split is off", finding: `The split differs from ${a0 == null ? "an assumed" : "the declared"} 50/50 (SRM p ${pfmt(srm)}). Results are unreliable until the cause is found.`, evidence: [] }
+    : { sev: "info", rule: "health.srm", title: "Assignment split is healthy", finding: `SRM p ${pfmt(srm)} against ${a0 == null ? "an assumed (no plan)" : "the declared"} 50/50 split.`, evidence: [] });
+  const sa = sectionAnalysis(exp);
+  if (!sa.balanced) out.push({ sev: "health", rule: "health.capture_imbalance", title: "Section data sampled the arms unequally", finding: `Section capture ${pct(exp.captured[0] / ac.s, 2)} vs ${pct(exp.captured[1] / at.s, 2)} (p ${pfmt(sa.capTest.p)}). Section seen and click rates, and seen-visitor outcomes, are not comparable between arms.`, evidence: find((r) => r.metric === "capture_rate") });
+  const cvr = twoProp(at.b, at.s, ac.b, ac.s);
+  const rpvL = at.r / at.s / (ac.r / ac.s) - 1;
+  out.push({ sev: (exp.rpv_p ?? 1) < 0.05 ? "effect" : "info", rule: "effect.headline", title: `${variant.label}: revenue per visit ${signed(rpvL)}`, finding: `RPV ${money(ac.r / ac.s)} → ${money(at.r / at.s)} (p ${pfmt(exp.rpv_p)}); conversion ${pct(ac.b / ac.s, 2)} → ${pct(at.b / at.s, 2)} (${signed(cvr.lift)}, p ${pfmt(cvr.p)}). ${(exp.rpv_p ?? 1) < 0.05 ? "Significant." : exp.status === "running" ? "Not yet significant; keep running to the planned end." : "Not significant."}`, evidence: find((r) => r.level === "site" && r.basis === "assigned") });
+  const fa = funnelAnalysis(exp);
+  if (fa.biggest) {
+    const contrib = fa.contributions.find((c) => c.label === `${short(fa.biggest.from)} → ${short(fa.biggest.to)}`);
+    out.push({ sev: "locate", rule: "locate.funnel_step", title: `The change happens at ${short(fa.biggest.from)} → ${short(fa.biggest.to)}`, finding: `Continuation ${pct(fa.biggest.cont[0])} → ${pct(fa.biggest.cont[1])} (${signed(fa.biggest.test.lift)}, p ${pfmt(fa.biggest.test.p)}). It accounts for ${contrib ? contrib.value.toFixed(1) : "—"} pp of the ${signed(fa.total - 1)} funnel-path RPV lift; other steps are within noise.`, evidence: find((r) => r.level === "funnel" && r.entity_label === fa.biggest.to) });
+  }
+  if (sa.balanced) {
+    for (const r of sa.rows) {
+      if (r.s.role === "treated" && (r.clickT.p ?? 1) < 0.05) out.push({ sev: "locate", rule: "locate.zone", title: `Treated zone ${r.s.section}: click rate ${signed(r.clickT.lift)}`, finding: `Visits clicking inside the zone ${pct(r.clickT.p0)} → ${pct(r.clickT.p1)} of captured visits (p ${pfmt(r.clickT.p)}). Seen rate ${signed(r.seenT.lift)} (p ${pfmt(r.seenT.p)}).`, evidence: find((x) => x.level === "section" && x.entity_key === r.s.section) });
+      if (r.s.role !== "treated" && ((r.seenT.p ?? 1) < 0.05 && r.seenT.lift < 0 || (r.clickT.p ?? 1) < 0.05 && r.clickT.lift < 0)) out.push({ sev: "warn", rule: "guardrail.regression", title: `${r.s.role === "guardrail" ? "Guardrail" : "Untreated"} zone ${r.s.section} regressed`, finding: `Seen rate ${pct(r.seenT.p0)} → ${pct(r.seenT.p1)} (${signed(r.seenT.lift)}, p ${pfmt(r.seenT.p)}); click rate ${signed(r.clickT.lift)} (p ${pfmt(r.clickT.p)}). Fewer visitors reach it, which suggests the change above it pushed it down the page.`, evidence: find((x) => x.level === "section" && x.entity_key === r.s.section) });
+    }
+  }
+  for (const rp of rolePairs(exp)) {
+    if ((rp.test.p ?? 1) < 0.05) out.push({ sev: "locate", rule: "locate.element_role", title: `Role ${rp.role}: click rate ${signed(rp.test.lift)}`, finding: `${pct(rp.test.p0)} → ${pct(rp.test.p1)} of all assigned visits clicked it (p ${pfmt(rp.test.p)}). The role pairs ${rp.members.map((m) => `<code>${esc(m.selector.split(" ").slice(-3).join(" "))}</code>`).join(" and ")}. Clicker conversion ${pct(rp.cvr[0])} → ${pct(rp.cvr[1])} (descriptive).`, evidence: find((r) => r.entity_key === `role:${rp.role}`) });
+  }
+  for (const e of exp.elements) {
+    if (e.not_link && e.clickers[1] > 0) out.push({ sev: "warn", rule: "element.dead_click", title: `${e.name} draws clicks but is not a link`, finding: `${pct(e.clickers[1] / at.s)} of variant visits clicked it, ${(e.clicks[1] / e.clickers[1]).toFixed(2)} clicks per clicker: it looks clickable.`, evidence: find((r) => r.entity_key === e.selector) });
+  }
+  if (exp.elements.some((e) => e.clickers[0] === 0 && !e.role && e.clickers[1] > 0)) {
+    const added = exp.elements.find((e) => e.clickers[0] === 0 && !e.role);
+    const lost = exp.elements.filter((e) => e.clickers[0] > e.clickers[1] * 1.2);
+    if (added && lost.length) out.push({ sev: "locate", rule: "element.cannibalization", title: "New element took over an existing one's clicks", finding: `<code>${esc(added.selector)}</code> appears only in the variant (${int(added.clickers[1])} clicking visits) while <code>${esc(lost[0].selector.split(" ").slice(-2).join(" "))}</code> fell ${pct(1 - lost[0].clickers[1] / lost[0].clickers[0])}. Without a role pairing these cannot be compared directly.`, evidence: find((r) => r.level === "element") });
+  }
+  const seg = segmentAnalysis(exp);
+  const plannedRows = seg.rows.filter((r) => r.planned);
+  if (plannedRows.length) {
+    const best = [...plannedRows].sort((a, b) => b.test.lift - a.test.lift)[0];
+    const het = seg.het.find((h) => h.strategy === best.strategy);
+    const sigAdj = plannedRows.filter((r) => r.adj < 0.05);
+    out.push({ sev: sigAdj.length ? "effect" : "info", rule: "segment.heterogeneity", title: sigAdj.length ? `Planned segments with a confirmed effect: ${sigAdj.map((r) => `${r.value}`).join(", ")}` : `No planned segment confirmed after correction`, finding: `Largest planned lift: ${best.label} = ${best.value}, ${signed(best.test.lift)} (nominal p ${pfmt(best.test.p)}, Holm-adjusted ${pfmt(best.adj)}). Heterogeneity across ${best.label.toLowerCase()} values: p ${pfmt(het.p)}${het.p < 0.05 ? ", so the effect differs by segment" : ", so the difference between segments is not established; treat it as a hypothesis"}.`, evidence: find((r) => r.level === "segment" && r.segment === best.strategy) });
+  } else {
+    out.push({ sev: "warn", rule: "segment.unplanned", title: "No planned segments", finding: "Every segment cut is exploratory and corrected with Benjamini–Hochberg. Declare segments in the plan next time to get confirmatory reads.", evidence: [] });
+  }
+  if (exp.journey) {
+    const j = exp.journey, na = j.next_after;
+    const ci = na.dest.indexOf("Collection");
+    const c0 = na.counts[0].reduce((a, b) => a + b, 0), c1 = na.counts[1].reduce((a, b) => a + b, 0);
+    const t = twoProp(na.counts[1][ci], c1, na.counts[0][ci], c0);
+    const tot = j.clusters.reduce((a, cl) => [a[0] + cl.s[0], a[1] + cl.s[1]], [0, 0]);
+    const bounce = j.clusters.find((cl) => cl.page.startsWith("Exit"));
+    const bt = twoProp(bounce.s[1], tot[1], bounce.s[0], tot[0]);
+    out.push({ sev: "locate", rule: "journey.redirect", title: `${na.label} clickers land on collections more often`, finding: `${pct(t.p0)} → ${pct(t.p1)} went to a collection next (p ${pfmt(t.p)}). Bounce after ${j.entry.toLowerCase()} ${pct(bt.p0)} → ${pct(bt.p1)} (p ${pfmt(bt.p)}).`, evidence: find((r) => r.level === "journey" && (r.entity_key.startsWith(`role:${na.role}`) || r.entity_key.startsWith("next:exit"))) });
+  }
+  if (exp.planned_end) {
+    const shortfalls = feasibility(exp, 0.1, 0.05, 0.8).filter((f) => f.status !== "feasible");
+    if (shortfalls.length) out.push({ sev: "warn", rule: "health.underpowered", title: `${shortfalls.length} planned segment${shortfalls.length > 1 ? "s" : ""} cannot reach ${shortfalls.length > 1 ? "their" : "its"} MDE by the planned end`, finding: shortfalls.map((f) => `${f.label}: ${f.status} (${Math.round(f.mde * 100)}% MDE needs ${int(f.n)} visits per arm at a ${pct(f.p, 2)} baseline)`).join("; ") + ". The plan flagged this before launch; read these segments as directional.", evidence: [] });
+  }
+  out.push({ sev: "effect", rule: "next_test", title: "Recommended next steps", finding: `<ul style="margin:0;padding-left:18px">${exp.next_test.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>`, evidence: [] });
+  return out;
+}
+
+// ------------------------------------------------------------------ state and views
+const state = { view: "vision", exp: EXPS[0].key, tab: "Insights", mde: 0.1, alpha: 0.05, power: 0.8, showExpl: true, dataLevel: "all", reqArea: "all", reqStatus: "all" };
+const current = () => EXPS.find((e) => e.key === state.exp) || EXPS[0];
+
+function tabsFor(exp) {
+  return ["Insights", "Site", "Segments", ...(exp.pages.length ? ["Page"] : []), "Funnel", ...(exp.journey ? ["Journeys"] : []), "Sections", "Elements", "Plan", "Data"];
+}
+
+function viewVision() {
+  const counts = { Built: 0, Partial: 0, Proposed: 0 };
+  DATA.requirements.forEach((r) => counts[r.status]++);
+  const areas = [...new Set(DATA.requirements.map((r) => r.area))];
+  const filtered = DATA.requirements.filter((r) => (state.reqArea === "all" || r.area === state.reqArea) && (state.reqStatus === "all" || r.status === state.reqStatus));
+  const goal = (g, title, body, tabs) => `<div class="card goal stack tight"><p class="small muted"><b>${g}</b></p><h3>${title}</h3><p class="small">${body}</p><div class="row">${tabs.map((t) => `<button class="pill sm" data-action="goto" data-tab="${t}">${t}</button>`).join("")}</div></div>`;
+  return `
+  <div class="stack" style="gap:28px">
+    <div class="stack tight" style="max-width:880px">
+      <h2>Know where your test made money</h2>
+      <p>Experiment Intelligence reads the A/B tests a merchant already runs in their testing tool (Shoplift, Intelligems, ABConvert and similar) and shows each arm against control at six levels: <b>site, user journey, funnel, page, section (rollup zone) and element</b>, with revenue attached. The user defines the experiment, its zones and elements, and the segments that matter <b>inside the Heatmap extension's side-by-side A/B comparison view</b>, before results arrive. Every outcome is also published as flat, normalized, machine-readable rows, so the site-analysis engine and AI analysts can turn each test into the next hypothesis.</p>
+    </div>
+    <div class="grid4">
+      ${goal("G1", "Revenue attribution at every level", "Site, journey, funnel, page, section and element views, each comparing every arm to control with conversion, revenue per visit, and the right statistical test. Each metric is labelled causal or descriptive.", ["Site", "Funnel", "Journeys", "Sections", "Elements"])}
+      ${goal("G2", "Machine-readable outcomes", "One metric per row, canonical identities (arms, theme-independent selectors, section names, roles), one segmentation vector per row, additive counts, provenance. Ready for LLMs, BI and MCP.", ["Data"])}
+      ${goal("G3", "Segments declared when planning", "Pick the segments that matter before launch, with an expected direction and minimum detectable effect. See whether each can be detected by the planned end. Planned segments get Holm correction; everything else is labelled exploratory.", ["Plan", "Segments"])}
+      ${goal("G4", "Insights for the site-analysis tool", "Rules read the readout rows and produce findings with evidence: where the lift came from, which guardrail regressed, which segment drove it, what to test next.", ["Insights"])}
+    </div>
+    <div class="stack tight">
+      <h2>How it fits together</h2>
+      ${archDiagram()}
+      ${caption("The plan is the contract between the extension and the engine. The flat readout is the contract between the engine and every reader.")}
+    </div>
+    <div class="grid2">
+      <div class="stack tight">
+        <h3>The definition, and what each part adds</h3>
+        ${table(["Condition", "What it adds"], [
+          ["Experiment descriptor (created in A/B comparison mode)", "Hypothesis, labels, declared allocation (SRM), primary metric, guardrails, planned end. Without it, the engine still infers arms, dates and scope from tags."],
+          ["Page under test", "Exposed basis, per-page readout, the funnel's first step, the journey's entry page."],
+          ["Rollup zone (a flagged container)", "The zone is always reported with its role, published to the tracker for seen data, and imaged in both arms."],
+          ["Elements, paired by role across arms", "Role-paired comparison when the element differs per arm, plus the next page after the click and dead-click checks."],
+          ["Planned segments", "Confirmatory segment readout with corrections and feasibility before launch."],
+        ])}
+      </div>
+      <div class="stack tight">
+        <h3>Causal classes (every metric carries one)</h3>
+        ${table(["Class", "Meaning", "Examples"], [
+          ["<b>causal</b>", "Base fixed before treatment; a difference is an effect", "RPV, CVR, funnel reach, element click rate per assigned visit"],
+          ["<b>conditionally causal</b>", "Pre-treatment subset, balance-tested", "Exposed visits, section rates when capture is balanced"],
+          ["<b>descriptive</b>", "Base selected by post-treatment behavior", "Clicker conversion, seen-visitor conversion, step continuation, path CVR"],
+        ])}
+        <p class="caption">Segments are only allowed on attributes known before assignment (device, source, geography, new or returning, landing). Post-assignment behavior is an outcome, never a segment (R-SEG-1).</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <div class="panel-head">
+        <div class="stack tight"><h2>Requirements board</h2><p class="small muted">${DATA.requirements.length} requirements · <span class="st-Built st">${counts.Built} built</span> · <span class="st-Partial st">${counts.Partial} partial</span> · <span class="st-Proposed st">${counts.Proposed} proposed</span>. IDs match the narrative document.</p></div>
+        <div class="row">
+          <select data-action="req-area"><option value="all">All areas</option>${areas.map((a) => `<option ${state.reqArea === a ? "selected" : ""}>${a}</option>`).join("")}</select>
+          <select data-action="req-status"><option value="all">All statuses</option>${["Built", "Partial", "Proposed"].map((s) => `<option ${state.reqStatus === s ? "selected" : ""}>${s}</option>`).join("")}</select>
+        </div>
+      </div>
+      ${table(["ID", "Area", "Requirement", "Status"], filtered.map((r) => [`<code>${r.id}</code>`, r.area, esc(r.title), `<span class="st st-${r.status}">${r.status}</span>`]))}
+    </div>
+    <div class="callout">Switch to <b>Dashboard</b> to see the hypothetical hero-CTA experiment end to end. Every screen lists the requirements it depends on, and the <b>Data</b> tab shows the exact rows an AI analyst would read.</div>
+  </div>`;
+}
+function archDiagram() {
+  const boxes = [
+    { x: 10, t: "1 · Plan", s: ["Chrome extension", "A/B comparison mode", "zones, elements, roles,", "planned segments"] },
+    { x: 250, t: "2 · Capture", s: ["Heatmap tracker", "clicks, journeys, orders,", "section visibility"] },
+    { x: 490, t: "3 · Measure", s: ["Analysis engine", "normalize tags → arms", "facts + readouts + stats", "insight rules"] },
+    { x: 730, t: "4 · Read", s: ["Dashboard · extension", "site-analysis engine", "LLMs via MCP / JSONL"] },
+  ];
+  let svg = "";
+  boxes.forEach((b, i) => {
+    svg += `<rect x="${b.x}" y="10" width="210" height="104" rx="6" fill="var(--bg2)" stroke="var(--border2)"/>`;
+    svg += `<text x="${b.x + 14}" y="34" font-size="13" font-weight="600" fill="var(--fg)">${b.t}</text>`;
+    b.s.forEach((line, k) => { svg += `<text x="${b.x + 14}" y="${54 + k * 15}" font-size="11" fill="var(--fg2)">${line}</text>`; });
+    if (i < boxes.length - 1) svg += `<path d="M${b.x + 214},62 L${b.x + 244},62" stroke="var(--accent)" stroke-width="2" marker-end="url(#arr)"/>`;
+  });
+  svg += `<path d="M115,118 C115,150 595,150 595,118" fill="none" stroke="var(--fg3)" stroke-dasharray="4 3" marker-end="url(#arr2)"/>`;
+  svg += `<text x="355" y="164" font-size="10" text-anchor="middle" fill="var(--fg3)">experiment-v1 package to the engine (hypothesis, page, arms, zones, elements + roles, segments, MDE); zones also go to the tracker</text>`;
+  return `<svg viewBox="0 0 950 170" width="100%" role="img" aria-label="architecture"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/></marker><marker id="arr2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="var(--fg3)"/></marker></defs>${svg}</svg>`;
+}
+
+function viewDashboard() {
+  const exp = current();
+  const tabs = tabsFor(exp);
+  if (!tabs.includes(state.tab)) state.tab = "Insights";
+  const list = table(["Experiment", "Status", "Scope", "Started", "Assigned visits", "CVR lift", "Plan"], EXPS.map((e) => {
+    const t = twoProp(e.assigned[1].b, e.assigned[1].s, e.assigned[0].b, e.assigned[0].s);
+    return [`<button class="pill ${e.key === exp.key ? "active" : ""}" data-action="exp" data-key="${e.key}">${esc(e.name)}</button>`, e.status, esc(e.scope), e.start, int(e.assigned[0].s + e.assigned[1].s), lift(t), e.conditions[0].state === "met" ? `${e.conditions.filter((c) => c.state === "met").length} of ${e.conditions.length} parts` : `<span class="muted">observed only</span>`];
+  }), { align: ["", "", "", "", "r", "r", ""] });
+  const header = `
+    <div class="${exp.mock ? "grid2" : ""}" style="align-items:start">
+      <div class="stack tight">
+        <h2>${esc(exp.name)}</h2>
+        <p class="small muted">${esc(exp.key)} · ${exp.status} · started ${exp.start}${exp.planned_end ? ` · planned end ${exp.planned_end}` : ""}</p>
+        <p>${esc(exp.hypothesis)}</p>
+        <div class="row">${exp.arms.map((a) => `<span class="tag">${a.control ? "Control" : "Variant"}: ${esc(a.label)}${a.alloc != null ? ` · ${a.alloc * 100}%` : ""}</span>`).join("")}</div>
+      </div>
+      ${exp.mock ? heroMock() : ""}
+    </div>`;
+  const nav = `<div class="row">${tabs.map((t) => `<button class="pill ${t === state.tab ? "active" : ""}" data-action="tab" data-tab="${t}">${t}</button>`).join("")}</div>`;
+  const body = { Insights: tabInsights, Site: tabSite, Segments: tabSegments, Page: tabPage, Funnel: tabFunnel, Journeys: tabJourneys, Sections: tabSections, Elements: tabElements, Plan: tabPlan, Data: tabData }[state.tab](exp);
+  return `<div class="stack" style="gap:20px">${list}<div class="divider"></div>${header}${nav}${body}</div>`;
+}
+
+function tabInsights(exp) {
+  const ins = buildInsights(exp);
+  return `<div class="stack">
+    <div class="panel-head"><p class="small muted" style="max-width:720px">Insight rules read the flat readout rows (Data tab) and fire when their condition holds. Each finding cites the row keys it read, so a person or an LLM can check every number.</p>${reqs(["R-INS-2", "R-INS-3", "R-INS-4"])}</div>
+    <div class="grid2">${ins.map((i) => `
+      <div class="ins">
+        <div class="row" style="justify-content:space-between"><span class="sev sev-${i.sev}">${{ health: "Data health", warn: "Watch", effect: "Effect", locate: "Where", info: "Context" }[i.sev]}</span><code class="small">${i.rule}</code></div>
+        <h3>${i.title}</h3>
+        <div class="small">${i.finding}</div>
+        ${i.evidence.length ? `<details><summary>Evidence: ${i.evidence.length} readout row${i.evidence.length > 1 ? "s" : ""}</summary><pre class="json" style="max-height:160px">${i.evidence.map(esc).join("\n")}</pre></details>` : ""}
+      </div>`).join("")}
+    </div>
+  </div>`;
+}
+
+function tabSite(exp) {
+  const [c, v] = exp.assigned;
+  const cvr = twoProp(v.b, v.s, c.b, c.s);
+  const rpvL = v.r / v.s / (c.r / c.s) - 1;
+  const srm = srmP(c.s, v.s, exp.arms[0].alloc ?? 0.5);
+  const days = dayLabels(exp.start, exp.days);
+  const next = rng(seedOf(exp.key));
+  const sess = exp.assigned.map((a) => spread(a.s, exp.days, next, 0.1));
+  const buy = exp.assigned.map((a) => spread(a.b, exp.days, next, 0.25));
+  const daily = exp.arms.map((_, i) => sess[i].map((s, d) => (buy[i][d] / s) * 100));
+  let cs = [0, 0], cb = [0, 0];
+  const cum = days.map((_, d) => { cs = [cs[0] + sess[0][d], cs[1] + sess[1][d]]; cb = [cb[0] + buy[0][d], cb[1] + buy[1][d]]; return ((cb[1] / cs[1]) / (cb[0] / cs[0]) - 1) * 100; });
+  const bases = [["assigned", exp.assigned]].concat(exp.exposed ? [["exposed", exp.exposed]] : []);
+  const rows = bases.flatMap(([basis, cells]) => exp.arms.map((arm, i) => {
+    const a = cells[i], t = i === 0 ? null : twoProp(a.b, a.s, cells[0].b, cells[0].s);
+    return [`<b>${esc(arm.label)}</b><br><span class="small muted">${arm.id}</span>`, basis, int(a.s), pct(a.s / (cells[0].s + cells[1].s)), int(a.b), pct(a.b / a.s, 2), t ? lift(t) : "—", t ? pfmt(t.p) : "—", t ? `${signed(t.lo)} … ${signed(t.hi)}` : "—", money(a.r / a.s), money(a.r / a.b)];
+  }));
+  return `<div class="stack">
+    <div class="panel-head">
+      <div class="stats">
+        ${stat(signed(rpvL), `Revenue per visit · p ${pfmt(exp.rpv_p)} · causal`, (exp.rpv_p ?? 1) < 0.05 ? "good" : "")}
+        ${stat(signed(cvr.lift), `Conversion · p ${pfmt(cvr.p)} · 95% CI ${signed(cvr.lo)} … ${signed(cvr.hi)}`, (cvr.p ?? 1) < 0.05 ? "good" : "")}
+        ${stat(int(c.s + v.s), "Assigned visits")}
+        ${stat(pfmt(srm), exp.arms[0].alloc == null ? "SRM p (assumes 50/50)" : "SRM p (declared 50/50)", srm < 0.01 ? "bad" : "")}
+        ${stat(String(exp.days), exp.status === "running" ? "Days running" : "Days ran")}
+      </div>
+      ${reqs(["R-STAT-1", "R-STAT-2", "R-STAT-3", "R-ATT-1"])}
+    </div>
+    <div class="stack tight"><h3>Arms by basis</h3>
+      ${table(["Arm", "Basis", "Visits", "Share", "Buyers", "CVR", "CVR lift", "p", "95% CI (lift)", "RPV", "AOV"], rows, { align: ["", "", "r", "r", "r", "r", "r", "r", "r", "r", "r"] })}
+      ${caption("Assigned: every visit the testing tool tagged into the arm on the experiment's surface (causal). Exposed: assigned visits that viewed the tested page (conditionally causal). Bold green or red lifts are significant at p < 0.05.")}
+    </div>
+    <div class="grid2">
+      <div class="stack tight"><h3>Cumulative conversion lift</h3>${lineChart({ categories: days, series: [{ name: `${exp.arms[1].label} vs control`, data: cum }], colors: ["var(--c-variant)"], ref: 0 })}${caption("Y: variant CVR ÷ control CVR − 1, cumulative (%) · X: day of experiment · dashed: no change")}</div>
+      <div class="stack tight"><h3>Daily conversion rate by arm</h3>${lineChart({ categories: days, series: exp.arms.map((a, i) => ({ name: a.label, data: daily[i] })) })}${caption("Y: buyers ÷ assigned visits that day (%) · X: day. Daily rows (day_index) also feed the novelty-decay rule.")}</div>
+    </div>
+  </div>`;
+}
+
+function tabSegments(exp) {
+  const seg = segmentAnalysis(exp);
+  const rows = seg.rows.filter((r) => state.showExpl || r.planned);
+  const forestRows = rows.map((r) => ({ label: `${r.label}: ${r.value}`, lift: r.test.lift, lo: r.test.lo, hi: r.test.hi, sig: r.adj < 0.05, planned: r.planned }));
+  return `<div class="stack">
+    <div class="panel-head">
+      <p class="small muted" style="max-width:760px">Segments come only from what was known before assignment. <b>Planned</b> segments were declared in the experiment plan and are corrected together with Holm. <b>Exploratory</b> segments are corrected with Benjamini–Hochberg and labelled as hypotheses. Heterogeneity asks whether the lift differs between a strategy's values, which is a different question from "significant in one value and not another".</p>
+      ${reqs(["R-SEG-1", "R-SEG-2", "R-SEG-3", "R-SEG-6", "R-SEG-7", "R-STAT-4", "R-STAT-5"])}
+    </div>
+    <label class="row small"><input type="checkbox" data-action="toggle-expl" ${state.showExpl ? "checked" : ""}> Show exploratory segments</label>
+    <div class="grid2">
+      <div class="stack tight"><h3>Conversion lift by segment, with 95% intervals</h3>${forest(forestRows)}${caption("Filled square: planned segment; hollow: exploratory. Green or red only when the corrected p < 0.05. X: relative CVR lift, variant vs control.")}</div>
+      <div class="stack tight"><h3>Does the lift differ by segment?</h3>
+        ${table(["Strategy", "Type", "Cochran's Q", "df", "Heterogeneity p", "Reading"], seg.het.map((h) => [h.label, h.planned ? `<span class="tag planned">planned</span>` : `<span class="tag expl">exploratory</span>`, h.q.toFixed(2), h.df, pfmt(h.p), h.p < 0.05 ? "The effect differs across values" : "No evidence the effect differs"]), { align: ["", "", "r", "r", "r", ""] })}
+        ${caption("Q is computed on absolute CVR differences, weighted by inverse variance. With two values it equals the interaction z-test squared.")}
+      </div>
+    </div>
+    <div class="stack tight"><h3>Segment readout</h3>
+      ${table(["Segment", "Type", "Visits C / V", "CVR C → V", "CVR lift", "95% CI", "p", "Adjusted p", "RPV C → V", "RPV lift"], rows.map((r) => [
+        `<b>${r.label}</b>: ${r.value}`, r.planned ? `<span class="tag planned">planned</span>` : `<span class="tag expl">exploratory</span>`, `${int(r.c.s)} / ${int(r.t.s)}`, `${pct(r.c.b / r.c.s, 2)} → ${pct(r.t.b / r.t.s, 2)}`, lift(r.test, r.adj), `${signed(r.test.lo)} … ${signed(r.test.hi)}`, pfmt(r.test.p), `${pfmt(r.adj)} <span class="small muted">${r.correction}</span>`, `${money(r.c.r / r.c.s)} → ${money(r.t.r / r.t.s)}`, signed(r.rpvLift),
+      ]), { align: ["", "", "r", "r", "r", "r", "r", "r", "r", "r"], rowClass: rows.map((r) => (r.planned ? "" : "dim")) })}
+      ${caption("Readout rows with level segment: one strategy and value per row. Values of one strategy partition the visits; summing across strategies double-counts by design.")}
+    </div>
+  </div>`;
+}
+
+function tabPage(exp) {
+  return `<div class="stack">
+    <div class="panel-head"><p class="small muted">Visits that viewed each declared page, by arm.</p>${reqs(["R-LVL-PAGE-1"])}</div>
+    ${table(["Page", "Template", "Arm", "Visits", "Buyers", "CVR", "CVR lift", "p", "RPV"], exp.pages.flatMap((pg) => exp.arms.map((arm, i) => {
+      const a = pg.cells[i], t = i === 0 ? null : twoProp(a.b, a.s, pg.cells[0].b, pg.cells[0].s);
+      return [`<b>${pg.path}</b><br><span class="small muted">${pg.id}</span>`, pg.template, esc(arm.label), int(a.s), int(a.b), pct(a.b / a.s, 2), t ? lift(t) : "—", t ? pfmt(t.p) : "—", money(a.r / a.s)];
+    })), { align: ["", "", "", "r", "r", "r", "r", "r", "r"] })}
+    <div class="callout">Engine today: per-page cells are stored daily in <code>ae_experiment_row</code> (idsitehsr set), but the readout only sums them into the exposed basis. This table is the per-page readout to add.</div>
+  </div>`;
+}
+
+function tabFunnel(exp) {
+  const fa = funnelAnalysis(exp);
+  const [c, v] = fa.reach;
+  const last = fa.steps.length - 1;
+  const e2e = twoProp(v[last], v[0], c[last], c[0]);
+  return `<div class="stack">
+    <div class="panel-head">
+      <div class="stats">
+        ${stat(signed(e2e.lift), `Assigned → purchased (ordered funnel) · p ${pfmt(e2e.p)}`, (e2e.p ?? 1) < 0.05 ? "good" : "")}
+        ${fa.biggest ? stat(signed(fa.biggest.test.lift), `Largest step change: ${short(fa.biggest.from)} → ${short(fa.biggest.to)} · p ${pfmt(fa.biggest.test.p)}`, fa.biggest.test.lift > 0 ? "good" : "bad") : stat("—", "No step changed significantly")}
+      </div>
+      ${reqs(["R-LVL-FUN-1", "R-ATT-3", "R-SEG-3"])}
+    </div>
+    <div class="grid2">
+      <div class="stack tight"><h3>Continuation rate at each step</h3>${barChart({ categories: fa.transitions.map((t) => `${short(t.from)} → ${short(t.to)}`), series: exp.arms.map((a, i) => ({ name: a.label, data: fa.transitions.map((t) => t.cont[i] * 100) })) })}${caption("Y: visits reaching the next step ÷ visits at the previous step (%) · X: step · descriptive")}</div>
+      <div class="stack tight"><h3>Where the revenue-per-visit lift came from</h3>${diverging(fa.contributions)}${caption(`Log decomposition of the ${signed(fa.total - 1)} lift in revenue per visit along the ordered funnel path: each step's continuation ratio plus revenue per buyer. Contributions sum exactly to the total (percentage points).`)}</div>
+    </div>
+    <div class="stack tight"><h3>Funnel by arm</h3>
+      ${table(["Step", "Control visits", "Variant visits", "Reach C → V", "Reach lift", "p", "Continuation C → V", "Continuation lift", "p"], fa.steps.map((step, i) => {
+        const t = i === 0 ? null : fa.transitions[i - 1];
+        return [step, int(c[i]), int(v[i]), i === 0 ? "100%" : `${pct(c[i] / c[0], 2)} → ${pct(v[i] / v[0], 2)}`, t ? lift(t.reachTest) : "—", t ? pfmt(t.reachTest.p) : "—", t ? `${pct(t.cont[0])} → ${pct(t.cont[1])}` : "—", t ? lift(t.test) : "—", t ? pfmt(t.test.p) : "—"];
+      }), { align: ["", "r", "r", "r", "r", "r", "r", "r", "r"], rowClass: fa.steps.map((_, i) => (fa.biggest && fa.biggest.i === i ? "hl" : "")) })}
+      ${caption("Reach: share of assigned visits that reached the step after every earlier one (causal). Continuation: share of the previous step's visits (descriptive). Steps come from journey_events_map and orders, joined to the arm's assigned visits.")}
+    </div>
+    <div class="callout">Engine today: experiment rows carry checkout started and purchase per arm. The other steps exist per visit in <code>journey_events_map</code>, and <code>funnel-sequence-weekly</code> orders them per site, but not per arm.</div>
+  </div>`;
+}
+
+function tabJourneys(exp) {
+  const j = exp.journey, na = j.next_after;
+  const tot = j.clusters.reduce((a, cl) => [a[0] + cl.s[0], a[1] + cl.s[1]], [0, 0]);
+  const flow = (arm) => {
+    const links = j.clusters.map((cl) => ({ from: j.entry, to: cl.page, value: cl.s[arm], tone: cl.page.startsWith("Exit") ? "muted" : "accent" }));
+    j.clusters.filter((cl) => !cl.page.startsWith("Exit")).forEach((cl) => { links.push({ from: cl.page, to: "Purchased", value: cl.b[arm], tone: "good" }); links.push({ from: cl.page, to: "Did not buy", value: cl.s[arm] - cl.b[arm], tone: "muted" }); });
+    return sankey([[j.entry], j.clusters.map((cl) => cl.page), ["Purchased", "Did not buy"]], links);
+  };
+  return `<div class="stack">
+    <div class="panel-head"><p class="small muted" style="max-width:720px">Visitors who viewed ${j.entry.toLowerCase()}: where they went next, whether they bought, where the tested CTA sent them, and how often they bounced back.</p>${reqs(["R-LVL-JRN-1", "R-LVL-JRN-2", "R-LVL-EL-1"])}</div>
+    <div class="stack tight"><h3>${j.entry} visitors: second page, then purchase</h3>
+      <div class="grid2">${exp.arms.map((a, i) => `<div class="stack tight"><p class="small"><b>${esc(a.label)}</b></p>${flow(i)}</div>`).join("")}</div>
+      ${caption("Band width: visits. Green bands are buyers.")}
+    </div>
+    <div class="grid2">
+      <div class="stack tight"><h3>Where ${na.label} clickers went next</h3>${stacked100({ categories: exp.arms.map((a) => a.label), series: na.dest.map((d, k) => ({ name: d, data: na.counts.map((row) => row[k]) })), colors: ["var(--c-variant)", "var(--c3)", "var(--c5)", "var(--c4)", "var(--c6)"] })}${caption(`Share of visits that clicked the role-paired ${na.label} (control: the hero image link; variant: the button). Descriptive.`)}</div>
+      <div class="stack tight"><h3>Second page after ${j.entry.toLowerCase()}</h3>
+        ${table(["Next page", "Share C → V", "Lift", "p", "Path CVR C → V"], j.clusters.map((cl) => {
+          const t = twoProp(cl.s[1], tot[1], cl.s[0], tot[0]);
+          return [cl.page, `${pct(cl.s[0] / tot[0])} → ${pct(cl.s[1] / tot[1])}`, lift(t, null, { lowerIsBetter: cl.page.startsWith("Exit") }), pfmt(t.p), cl.b[0] + cl.b[1] ? `${pct(cl.b[0] / cl.s[0], 2)} → ${pct(cl.b[1] / cl.s[1], 2)}` : "—"];
+        }), { align: ["", "r", "r", "r", "r"] })}
+      </div>
+    </div>
+    <div class="stack tight"><h3>Journey behaviors</h3>
+      ${table(["Behavior", "Control", "Variant", "Lift", "p"], j.flags.map((f) => { const t = twoProp(f.count[1], tot[1], f.count[0], tot[0]); return [f.label, pct(f.count[0] / tot[0]), pct(f.count[1] / tot[1]), lift(t, null, { lowerIsBetter: f.lower_is_better }), pfmt(t.p)]; }), { align: ["", "r", "r", "r", "r"] })}
+      ${caption(`Share of ${j.entry.toLowerCase()} visitors with each journey flag (journey-weekly definitions). For U-turns and quick backs, lower is better.`)}
+    </div>
+  </div>`;
+}
+
+function tabSections(exp) {
+  const sa = sectionAnalysis(exp);
+  const assigned = exp.assigned.map((a) => a.s);
+  return `<div class="stack">
+    <div class="panel-head">
+      <div class="stats">
+        ${exp.arms.map((a, i) => stat(pct(exp.captured[i] / assigned[i], 2), `${esc(a.label)}: ${int(exp.captured[i])} visits captured`)).join("")}
+        ${stat(pfmt(sa.capTest.p), "Capture balance p", sa.balanced ? "" : "bad")}
+      </div>
+      ${reqs(["R-ATT-2", "R-CAP-1", "R-CAP-3", "R-LVL-SEC-1", "R-LVL-SEC-2"])}
+    </div>
+    ${sa.balanced ? "" : `<div class="callout warn">The section tracker captured the arms at different rates. Every section comparison below is shown greyed out: the captured visitors are not the same kind of visitor in both arms.</div>`}
+    <div class="grid2">
+      <div class="stack tight"><h3>Seen rate by section</h3>${barChart({ categories: exp.sections.map((s) => s.section), series: exp.arms.map((a, i) => ({ name: a.label, data: exp.sections.map((s) => (s.seen[i] / exp.captured[i]) * 100) })) })}${caption("Y: captured visits with the section ≥ 50% visible for 1 s (%) · X: rollup section")}</div>
+      <div class="stack tight"><h3>Click rate by section</h3>${barChart({ categories: exp.sections.map((s) => s.section), series: exp.arms.map((a, i) => ({ name: a.label, data: exp.sections.map((s) => (s.clicked[i] / exp.captured[i]) * 100) })) })}${caption("Y: captured visits that clicked anywhere inside the section (%) · X: rollup section")}</div>
+    </div>
+    <div class="stack tight"><h3>Rollup sections, variant vs control</h3>
+      ${table(["Section", "Role", "Seen C → V", "Seen lift", "p", "Clicked C → V", "Click lift", "p", "Seen-visitor CVR", "Comparable"], sa.rows.map(({ s, seenT, clickT, cvrT, comparable }) => [
+        `<b>${s.section}</b>`, s.role ? `<span class="tag ${s.role}">${s.role}</span>` : `<span class="tag expl">auto</span>`, `${pct(seenT.p0)} → ${pct(seenT.p1)}`, sa.balanced ? lift(seenT) : `<span class="muted">${signed(seenT.lift)}</span>`, pfmt(seenT.p), `${pct(clickT.p0)} → ${pct(clickT.p1)}`, sa.balanced ? lift(clickT) : `<span class="muted">${signed(clickT.lift)}</span>`, pfmt(clickT.p), comparable ? `${pct(cvrT.p0, 2)} → ${pct(cvrT.p1, 2)} (${signed(cvrT.lift)})` : `<span class="muted">${pct(cvrT.p0, 2)} → ${pct(cvrT.p1, 2)}</span>`, comparable ? "yes" : `<span class="warn">no: ${sa.balanced ? "seen rate differs" : "capture differs"}</span>`,
+      ]), { align: ["", "", "r", "r", "r", "r", "r", "r", "r", ""], rowClass: sa.rows.map((r) => (r.s.role === "treated" ? "hl" : "")) })}
+      ${caption("Base: captured visits (a sample, about 4% of assigned visits on the measured store). Seen and click rates are conditionally causal when capture is balanced. Seen-visitor conversion is descriptive and is shown only when the audiences match.")}
+    </div>
+  </div>`;
+}
+
+function tabElements(exp) {
+  const assigned = exp.assigned.map((a) => a.s);
+  const pairs = rolePairs(exp);
+  const label = (e) => e.name || e.selector.split(" ").slice(-1)[0];
+  return `<div class="stack">
+    <div class="panel-head"><p class="small muted" style="max-width:720px">Element rows read every click, so the base is every assigned visit. Selectors drop Shopify's per-publish template ids so both arms share one key. An element that is different in each arm is compared by its <b>role</b>, declared in the extension.</p>${reqs(["R-LVL-EL-1", "R-EXT-6", "R-UI-4", "R-ATT-4"])}</div>
+    ${pairs.map((rp) => `
+      <div class="card stack tight">
+        <div class="row" style="justify-content:space-between"><h3>Role <code>${rp.role}</code>, paired across arms</h3><span class="small muted">${rp.members.map((m) => `${exp.arms[m.only_arm ?? 0].label}: <code>${esc(m.selector.split(" ").slice(-3).join(" "))}</code>`).join(" · ")}</span></div>
+        <div class="stats">${stat(`${pct(rp.test.p0)} → ${pct(rp.test.p1)}`, "Visits that clicked it")}${stat(signed(rp.test.lift), `Click lift · p ${pfmt(rp.test.p)} · 95% CI ${signed(rp.test.lo)} … ${signed(rp.test.hi)}`, (rp.test.p ?? 1) < 0.05 ? "good" : "")}${stat(`${pct(rp.cvr[0])} → ${pct(rp.cvr[1])}`, "Clicker conversion (descriptive)")}</div>
+      </div>`).join("")}
+    <div class="stack tight"><h3>Click rate by element</h3>${barChart({ categories: exp.elements.map(label), series: exp.arms.map((a, i) => ({ name: a.label, data: exp.elements.map((e) => (e.clickers[i] / assigned[i]) * 100) })), horizontal: true, decimals: 2, width: 1100 })}${caption("X: assigned visits that clicked the element (%) · a zero bar means the element does not exist in that arm")}</div>
+    <div class="stack tight"><h3>Elements, variant vs control</h3>
+      ${table(["Element", "Class · role", "Section", "Clicked C → V", "Click lift", "p", "Clicks per clicker", "Clicker CVR"], exp.elements.map((e) => {
+        const t = twoProp(e.clickers[1], assigned[1], e.clickers[0], assigned[0]);
+        const single = e.only_arm != null || e.clickers[0] === 0;
+        return [`${e.name ? `<b>${esc(e.name)}</b><br>` : ""}<span class="sel">${esc(e.selector)}</span>${single ? `<br><span class="small warn">only in ${esc(exp.arms[e.only_arm ?? 1].label)}</span>` : ""}`, `${e.cls || '<span class="muted">unclassed</span>'}${e.role ? ` · <code>${e.role}</code>` : ""}`, e.section || '<span class="muted">none</span>', `${pct(e.clickers[0] / assigned[0], 2)} → ${pct(e.clickers[1] / assigned[1], 2)}`, single ? `<span class="muted">${signed(t.lift)}</span>` : lift(t), single ? "—" : pfmt(t.p), `${e.clickers[0] ? (e.clicks[0] / e.clickers[0]).toFixed(2) : "—"} → ${e.clickers[1] ? (e.clicks[1] / e.clickers[1]).toFixed(2) : "—"}`, `${pct(rate(e.b[0], e.clickers[0]))} → ${pct(rate(e.b[1], e.clickers[1]))}`];
+      }), { align: ["", "", "", "r", "r", "r", "r", "r"], rowClass: exp.elements.map((e) => (e.only_arm != null || e.clickers[0] === 0 ? "dim" : "")) })}
+    </div>
+  </div>`;
+}
+
+function tabPlan(exp) {
+  const feas = exp.planned_end ? feasibility(exp, state.mde, state.alpha, state.power) : [];
+  const story = [
+    ["Open A/B comparison", "Filter → A/B → Compare → A/B. Two windows open side by side, each loading its arm's version of the page. Same experiment id in both panes = experiment mode."],
+    ["Confirm the panes", "Panes are labelled Control and Variant from the engine's observed descriptor; the user confirms or swaps."],
+    ["Experiment details", "Name, hypothesis, primary metric, guardrails, page, dates, allocations, planned segments, minimum detectable effect."],
+    ["Flag zones", "Right-click → Edit on the hero section → Rollup zone on → Include in experiment. It becomes a treated zone, and its image is captured in both panes."],
+    ["Flag elements with a role", "Right-click the control's hero image and the variant's button → Include → role \"Hero CTA\". The arm is filled in from the pane."],
+    ["Save the plan", "An experiment-v1 package is saved and versioned. The next site analysis reads it; zones are published to the tracker."],
+  ];
+  return `<div class="stack">
+    <div class="panel-head"><p class="small muted" style="max-width:720px">The plan is made in the Heatmap Chrome extension's A/B comparison mode, before results exist. Planned segments are declared here, with a feasibility check from the site's baselines.</p>${reqs(["R-EXT-1", "R-EXT-5", "R-EXT-6", "R-EXT-8", "R-SEG-4", "R-SEG-5"])}</div>
+    <div class="story">${story.map(([t, d]) => `<div class="card stack tight"><h3 style="display:inline">${t}</h3><p class="small">${d}</p></div>`).join("")}</div>
+    ${exp.planned_end ? `
+    <div class="stack tight">
+      <div class="panel-head"><h3>Planned segments: can the test detect the effect by ${exp.planned_end}?</h3>
+        <div class="row small">
+          <label>MDE <input type="range" min="0.03" max="0.3" step="0.01" value="${state.mde}" data-action="mde"> <b>${Math.round(state.mde * 100)}%</b> relative</label>
+          <label>α <select data-action="alpha">${[0.05, 0.1].map((a) => `<option ${state.alpha === a ? "selected" : ""}>${a}</option>`).join("")}</select></label>
+          <label>Power <select data-action="power">${[0.8, 0.9].map((p) => `<option ${state.power === p ? "selected" : ""}>${p}</option>`).join("")}</select></label>
+        </div>
+      </div>
+      ${table(["Segment", "MDE", "Baseline CVR", "Visits per arm per day", "Needed per arm", "Days needed", "Planned days", "Status"], feas.map((f) => [f.label, `${Math.round(f.mde * 100)}%${f.declaredMde ? ' <span class="small muted">declared</span>' : ""}`, pct(f.p, 2), int(f.daily), int(f.n), String(f.daysNeeded), String(f.plannedDays), f.status === "feasible" ? `<span class="good">feasible</span>` : `<span class="${f.status.startsWith("needs") ? "warn" : "bad"}">${f.status}</span>`]), { align: ["", "r", "r", "r", "r", "r", "r", ""] })}
+      ${caption("n = (z₁₋α/₂ + z₁₋β)² · 2p(1−p) / (p · MDE)², from the site's baseline conversion per segment. In production the baselines come from the site's last 28 days before launch; here they are the control arm's rates.")}
+    </div>` : `<div class="callout warn">This experiment has no plan, so there are no planned segments, no feasibility check and no planned end. Every segment is exploratory.</div>`}
+    <div class="grid2">
+      <div class="stack tight"><h3>Definition parts and what each adds</h3>${table(["Part", "State", "What it adds"], exp.conditions.map((c) => [c.label, c.state === "met" ? `<span class="good">met</span>` : c.state === "missing" ? `<span class="warn">missing</span>` : `<span class="muted">n/a</span>`, c.adds]))}</div>
+      <div class="stack tight"><h3>Descriptor</h3><pre class="json">${esc(JSON.stringify(exp.descriptor, null, 2))}</pre>${caption("Selectors are stored as captured; the engine strips Shopify template ids when matching clicks. Zone images are stored by reference.")}</div>
+    </div>
+  </div>`;
+}
+
+function tabData(exp) {
+  const all = buildReadout(exp);
+  const levels = ["all", ...new Set(all.map((r) => r.level))];
+  const rows = all.filter((r) => state.dataLevel === "all" || r.level === state.dataLevel);
+  const cols = ["level", "entity_key", "entity_role", "basis", "metric", "segment", "segment_value", "segment_planned", "value", "control_value", "lift_rel", "ci_low_rel", "ci_high_rel", "p_value", "p_adjusted", "causal_class", "comparable"];
+  const fmt = (v) => (v == null ? '<span class="muted">null</span>' : typeof v === "number" ? String(v) : esc(Array.isArray(v) ? JSON.stringify(v) : v));
+  const jsonl = rows.map((r) => JSON.stringify(r)).join("\n");
+  return `<div class="stack">
+    <div class="panel-head">
+      <p class="small muted" style="max-width:760px">The flat readout contract: one metric per row, with canonical identities, base, causal class, planned flag, corrections and provenance. This is what the site-analysis engine and AI analysts read through MCP or JSONL. Rows are generated in this page from the embedded counts.</p>
+      ${reqs(["R-DATA-2", "R-DATA-3", "R-DATA-4", "R-ATT-1", "R-INS-5"])}
+    </div>
+    <div class="row small">
+      <label>Level <select data-action="data-level">${levels.map((l) => `<option ${state.dataLevel === l ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+      <span class="muted">${rows.length} rows</span>
+      <button class="btn" data-action="copy">Copy JSONL</button>
+      <button class="btn" data-action="download">Download JSONL</button>
+    </div>
+    ${table(cols, rows.map((r) => cols.map((c) => (c === "entity_key" ? `<span class="sel" style="white-space:nowrap;word-break:normal">${fmt(r[c])}</span>` : fmt(r[c])))), { align: cols.map((c) => (["value", "control_value", "lift_rel", "ci_low_rel", "ci_high_rel", "p_value", "p_adjusted"].includes(c) ? "r" : "")) })}
+    <div class="stack tight"><h3>JSON Lines (first 12 rows of this filter)</h3><pre class="json">${esc(rows.slice(0, 12).map((r) => JSON.stringify(r)).join("\n"))}</pre></div>
+    <textarea id="jsonl" style="position:absolute;left:-9999px">${esc(jsonl)}</textarea>
+  </div>`;
+}
+
+// ------------------------------------------------------------------ render and events
+function render() {
+  document.getElementById("mainnav").innerHTML = ["vision", "dashboard"].map((v) => `<button class="pill ${state.view === v ? "active" : ""}" data-action="view" data-view="${v}">${v === "vision" ? "Vision & requirements" : "Dashboard"}</button>`).join("");
+  document.getElementById("app").innerHTML = state.view === "vision" ? viewVision() : viewDashboard();
+}
+document.addEventListener("click", (ev) => {
+  const el = ev.target.closest("[data-action]");
+  if (!el) return;
+  const a = el.dataset.action;
+  if (a === "view") state.view = el.dataset.view;
+  else if (a === "exp") { state.exp = el.dataset.key; }
+  else if (a === "tab") state.tab = el.dataset.tab;
+  else if (a === "goto") { state.view = "dashboard"; state.tab = el.dataset.tab; }
+  else if (a === "copy") { const t = document.getElementById("jsonl"); navigator.clipboard?.writeText(t.value); el.textContent = "Copied"; return; }
+  else if (a === "download") {
+    const blob = new Blob([document.getElementById("jsonl").value], { type: "application/x-ndjson" });
+    const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = `${current().key.replace(/[^a-z0-9]+/gi, "-")}-readout.jsonl`; link.click(); return;
+  } else return;
+  render();
+  if (a === "goto" || a === "view") window.scrollTo(0, 0);
+});
+document.addEventListener("change", (ev) => {
+  const el = ev.target.closest("[data-action]");
+  if (!el) return;
+  const a = el.dataset.action;
+  if (a === "mde") state.mde = Number(el.value);
+  else if (a === "alpha") state.alpha = Number(el.value);
+  else if (a === "power") state.power = Number(el.value);
+  else if (a === "toggle-expl") state.showExpl = el.checked;
+  else if (a === "data-level") state.dataLevel = el.value;
+  else if (a === "req-area") state.reqArea = el.value;
+  else if (a === "req-status") state.reqStatus = el.value;
+  else return;
+  render();
+});
+render();
+</script>
+</body>
+</html>

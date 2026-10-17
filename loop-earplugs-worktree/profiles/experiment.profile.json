@@ -1,0 +1,9 @@
+{
+  "id": "experiment",
+  "subject_type": "experiment",
+  "label": "Partner experiments",
+  "selector": { "use": "active-experiments", "criteria": { "state": "active" } },
+  "datasets": { "include": ["experiment-readout", "cards-xp"], "exclude": [] },
+  "catalogs": ["XP"],
+  "steps": ["select-subjects", "subject-datasets", "site-datasets", "analysis"]
+}

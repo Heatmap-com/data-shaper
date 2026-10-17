@@ -1,0 +1,14 @@
+{
+  "slug": "vitasei",
+  "name": "Vitasei",
+  "domain": "vitasei.com.co",
+  "origin": "https://vitasei.com.co/",
+  "idsite": 5933,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/",
+    "label": "Homepage",
+    "idsitehsr": 59744352
+  }
+}

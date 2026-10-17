@@ -1,0 +1,1 @@
+Analyze {{site.domain}} generally.

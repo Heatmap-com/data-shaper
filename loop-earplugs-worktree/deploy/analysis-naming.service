@@ -1,0 +1,17 @@
+# Deprecated: runs the v1 path (src/index.js). Phase 5 of
+# docs/ORCHESTRATOR-PLAN.md replaces this unit with the orchestrator's (R4.3).
+[Unit]
+Description=Analysis engine naming consumer
+After=network-online.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/home/ec2-user/analysis-engine
+EnvironmentFile=/home/ec2-user/analysis-engine/.env
+ExecStart=/usr/local/bin/node src/index.js --naming-agents 1
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

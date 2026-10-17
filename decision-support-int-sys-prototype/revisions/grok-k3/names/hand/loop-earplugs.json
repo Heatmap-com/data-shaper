@@ -1,0 +1,24 @@
+{
+  "_note": "Hand-written placeholder names for the most-clicked selectors. seed.mjs prefers these over generated names.",
+  "selector": {
+    "644": "Homepage hero — slide 2 Shop now",
+    "301": "Market selector — close icon",
+    "329": "Market selector — close button",
+    "321": "Market selector — language label",
+    "439": "Mobile menu — Shop by need (arrow)",
+    "459": "Mobile menu — Shop by need",
+    "318": "Mobile menu — Shop by need (label)",
+    "504": "Mobile menu — Shop by product (arrow)",
+    "558": "Mobile menu — Shop by product",
+    "319": "Mobile menu — Shop by product (label)",
+    "691": "Mobile menu — Bestsellers",
+    "560": "Engagement toast — close icon",
+    "756": "Engagement toast — close button",
+    "767": "Product carousel — Loop Switch 2 card",
+    "610": "Product carousel — Loop Dream card",
+    "784": "Product carousel — Loop Quiet 2 card",
+    "690": "Product carousel — Loop Engage 2 card",
+    "818": "Product carousel — Loop Experience 2 card",
+    "677": "Product carousel — next arrow"
+  }
+}

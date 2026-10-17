@@ -1,0 +1,29 @@
+{
+  "catalog_version": "2026-10-14.1",
+  "source": "requirements.json H12: the journey_events_map event types the engine reads",
+  "events": [
+    "product_viewed",
+    "collection_viewed",
+    "add_to_cart",
+    "cart_viewed",
+    "checkout_started",
+    "checkout_completed"
+  ],
+  "funnels": [
+    {
+      "id": "purchase",
+      "title": "Product to order",
+      "steps": ["product_viewed", "add_to_cart", "checkout_started", "checkout_completed"]
+    },
+    {
+      "id": "browse",
+      "title": "Collection to cart",
+      "steps": ["collection_viewed", "product_viewed", "add_to_cart", "cart_viewed"]
+    },
+    {
+      "id": "checkout",
+      "title": "Cart to order",
+      "steps": ["cart_viewed", "checkout_started", "checkout_completed"]
+    }
+  ]
+}

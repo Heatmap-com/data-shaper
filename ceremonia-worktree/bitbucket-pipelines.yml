@@ -1,0 +1,29 @@
+# Tests on pull requests into main, and on every push to development.
+# A merge to main deploys by SSH. The key on the box is limited to
+# ~/analysis-engine/scripts/ci-deploy.sh and does not run the landing-page deploy.
+image: node:22
+
+definitions:
+  steps:
+    - step: &test
+        name: test
+        caches: [node]
+        script:
+          - npm ci --no-audit --no-fund
+          - npm test
+
+pipelines:
+  pull-requests:
+    main:
+      - step: *test
+  branches:
+    development:
+      - step: *test
+    main:
+      - step: *test
+      - step:
+          name: deploy
+          image: atlassian/default-image:4
+          script:
+            - echo "$DEPLOY_SSH_KEY" > /tmp/deploy_key && chmod 600 /tmp/deploy_key
+            - ssh -i /tmp/deploy_key -o StrictHostKeyChecking=accept-new -o IdentitiesOnly=yes "$DEPLOY_USER@$DEPLOY_HOST" bash ~/analysis-engine/scripts/ci-deploy.sh

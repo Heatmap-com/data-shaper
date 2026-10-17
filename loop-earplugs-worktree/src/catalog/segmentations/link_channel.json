@@ -1,0 +1,7 @@
+{
+  "id": "link_channel",
+  "label": "Campaign link",
+  "purpose": "Which campaign link the visit carried, by its UTM source, medium, and campaign. Tells automated flows from campaign sends, and Meta links that carried a campaign from those that did not.",
+  "data": "The bundle's link channel rules, first match wins: automated_email_flow, affiliate, google_ads (a cpc medium), campaign_email_sms, meta (a Meta source or paid medium with a medium or campaign set), meta_no_link (the same without either), no_campaign_link (no medium and no campaign); anything else is other_tagged.",
+  "base": "link"
+}

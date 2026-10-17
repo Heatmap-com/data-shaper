@@ -1,0 +1,5 @@
+{
+  "id": "robust-z",
+  "purpose": "Finds rows whose measure is far from the median in robust standard deviations; less swayed than a mean and standard deviation by the outliers it is looking for.",
+  "data": "One candidate per side with rows beyond the threshold. The score is 0.6745 x (value - median) / MAD (Iglewicz and Hoaglin), and 3.5 is the shipped threshold. Skipped under minRows rows, and when the MAD is 0."
+}

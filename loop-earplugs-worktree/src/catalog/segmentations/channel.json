@@ -1,0 +1,7 @@
+{
+  "id": "channel",
+  "label": "Channel",
+  "purpose": "The marketing channel the visit arrived through, as the analyst bundle reads it. Separates email and SMS, paid and untagged Meta, and affiliates, which traffic_source folds into website or other.",
+  "data": "The bundle's visit channel rules, first match wins: direct and search by referrer type; email_sms by a Klaviyo or flow referrer or an email, flow, or SMS medium; meta_paid by a Facebook or Instagram referrer with a paid medium; meta_untagged by that referrer alone; affiliate by an affiliate referrer or medium; anything else is other.",
+  "base": "visit"
+}

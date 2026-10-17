@@ -1,0 +1,16 @@
+{
+  "selectors": [
+    {
+      "idsite": 5795,
+      "idsitehsr": 51247422,
+      "status": "active",
+      "trendSelectors": [
+        "main#MainContent > div.shopify-section.index-section > div > div > div > div:nth-child(1) > div > div.column__content > h2 > a > span",
+        "main#MainContent > div:nth-child(2) > section > div > div.featured-lifestyle-text__carousel-outer > button.slider__button.slider__button--next",
+        "main#MainContent > div:nth-child(1) > div > div > div > div > div > a > span",
+        "button#md-btn__form__onSubmit",
+        "main#MainContent > div:nth-child(5) > div > div > div > div > div > a > span"
+      ]
+    }
+  ]
+}

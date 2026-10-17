@@ -1,0 +1,7 @@
+{
+  "id": "analysis",
+  "label": "Analyze the named pages",
+  "handler": { "use": "command", "command": "bin/analyze.sh" },
+  "check": { "use": "files-exist" },
+  "fallback": { "agent": "fake" }
+}

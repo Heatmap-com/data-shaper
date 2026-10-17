@@ -1,0 +1,1 @@
+{ "id": "bundle", "label": "Full analyst bundle", "phase": "export", "handler": { "use": "pending" }, "check": { "use": "pending" }, "errors": [ { "match": "no handler yet", "class": "blocked", "reason": "this stage lands in a later phase" } ] }

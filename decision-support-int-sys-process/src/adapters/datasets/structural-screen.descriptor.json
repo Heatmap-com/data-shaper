@@ -1,0 +1,6 @@
+{
+  "id": "structural-screen",
+  "purpose": "Evaluates each catalog's screen rules against the descriptor snapshot and requirement status.",
+  "data": "One row per rule: present, addable, blocked, unknown, or not evaluable, with the detail the cards read.",
+  "replay": "recollect"
+}

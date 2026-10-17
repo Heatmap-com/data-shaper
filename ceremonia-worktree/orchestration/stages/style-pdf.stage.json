@@ -1,0 +1,45 @@
+{
+  "id": "style-pdf",
+  "label": "Style reports as PDF",
+  "phase": "report",
+  "skill": "skills/style-reports/SKILL.md",
+  "resources": ["chromium"],
+  "timeoutMs": 600000,
+  "handler": {
+    "use": "command",
+    "command": "node",
+    "args": [
+      "scripts/report-style/style-reports.mjs",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Site Opportunity Report.md",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Today Opportunities.md",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — User Journey Opportunity Analysis.md",
+      "--chrome", "{{config.report.chromePath}}"
+    ]
+  },
+  "check": {
+    "use": "files-exist",
+    "minBytes": 20000,
+    "paths": [
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Site Opportunity Report.pdf",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Today Opportunities.pdf",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — User Journey Opportunity Analysis.pdf"
+    ],
+    "newerThan": [
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Site Opportunity Report.md",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Today Opportunities.md",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — User Journey Opportunity Analysis.md"
+    ]
+  },
+  "errors": [
+    { "match": "spawn .*ENOENT|Failed to launch|Chrome .* not found", "class": "blocked", "reason": "Chrome is not at config.report.chromePath" },
+    { "match": "ENOENT: no such file .*\\.md", "class": "blocked", "reason": "a report is missing; run the report stages first" }
+  ],
+  "fallback": {
+    "agent": "kimi-cli",
+    "prompt": "fallback/stage.md",
+    "maxAttempts": { "standard": 1, "top": 2 },
+    "timeoutMs": 1800000,
+    "rerunPrimary": true,
+    "addDirs": ["{{paths.reports}}/{{site.slug}}"]
+  }
+}

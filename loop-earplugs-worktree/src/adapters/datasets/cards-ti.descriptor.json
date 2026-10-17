@@ -1,0 +1,8 @@
+{
+  "id": "cards-ti",
+  "purpose": "Builds the technical-implementation strategy cards after the gates and requirements pass.",
+  "data": "One card per TI strategy. A failed gate is blocked, and a structural contradiction excludes the card.",
+  "role": "card",
+  "catalogId": "TI",
+  "replay": "recollect"
+}

@@ -1,0 +1,1652 @@
+{
+  "batch_id": "f7cdd67e-88dc-496a-a9f9-66ccb7af1a8c",
+  "exported_rows": 43990,
+  "datasets": {
+    "audit-context": {
+      "rows": 3940,
+      "csv": "audit-context.csv",
+      "jsonl": "audit-context.jsonl",
+      "queries": {
+        "X1": {
+          "rows": 3160,
+          "brands": {
+            "hyperlite": 1040,
+            "dennys": 957,
+            "ceremonia": 944,
+            "dvf": 200,
+            "peter-thomas-roth": 19
+          },
+          "metric_keys": {
+            "sessions": 3160,
+            "share": 3160
+          },
+          "dim_keys": {
+            "query": 3160
+          }
+        },
+        "X8": {
+          "rows": 130,
+          "brands": {
+            "hyperlite": 26,
+            "dennys": 26,
+            "ceremonia": 26,
+            "dvf": 26,
+            "peter-thomas-roth": 26
+          },
+          "metric_keys": {
+            "conversion_rate": 130,
+            "rps": 130,
+            "aov": 130,
+            "sessions": 130,
+            "purchasers": 130
+          },
+          "dim_keys": {
+            "query": 130
+          }
+        },
+        "X6": {
+          "rows": 163,
+          "brands": {
+            "hyperlite": 52,
+            "dennys": 52,
+            "ceremonia": 48,
+            "dvf": 10,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "sessions": 163,
+            "cr": 163,
+            "session_index": 163,
+            "cr_index": 163
+          },
+          "dim_keys": {
+            "query": 163
+          }
+        },
+        "X2": {
+          "rows": 487,
+          "brands": {
+            "hyperlite": 100,
+            "dennys": 93,
+            "ceremonia": 94,
+            "dvf": 100,
+            "peter-thomas-roth": 100
+          },
+          "metric_keys": {
+            "sessions": 487,
+            "buyers": 487,
+            "revenue": 487
+          },
+          "dim_keys": {
+            "query": 487,
+            "utm_source": 487,
+            "utm_medium": 487,
+            "utm_campaign": 487
+          }
+        }
+      }
+    },
+    "audit-funnel": {
+      "rows": 16704,
+      "csv": "audit-funnel.csv",
+      "jsonl": "audit-funnel.jsonl",
+      "queries": {
+        "F3": {
+          "rows": 3160,
+          "brands": {
+            "hyperlite": 1040,
+            "dennys": 957,
+            "ceremonia": 944,
+            "dvf": 200,
+            "peter-thomas-roth": 19
+          },
+          "metric_keys": {
+            "sessions": 3160,
+            "buyers": 3160,
+            "revenue": 3160,
+            "reach_homepage_viewed": 3160,
+            "revenue_homepage_viewed": 3160,
+            "reach_collection_viewed": 3160,
+            "revenue_collection_viewed": 3160,
+            "reach_product_viewed": 3160,
+            "revenue_product_viewed": 3160,
+            "reach_add_to_cart": 3160,
+            "revenue_add_to_cart": 3160,
+            "reach_cart_viewed": 3160,
+            "revenue_cart_viewed": 3160,
+            "reach_checkout_started": 3160,
+            "revenue_checkout_started": 3160,
+            "reach_checkout_completed": 3160,
+            "revenue_checkout_completed": 3160,
+            "prog_homepage_viewed": 3160,
+            "prog_collection_viewed": 3160,
+            "prog_product_viewed": 3160,
+            "prog_add_to_cart": 3160,
+            "prog_cart_viewed": 3160,
+            "prog_checkout_started": 3160,
+            "prog_checkout_completed": 3160
+          },
+          "dim_keys": {
+            "query": 3160
+          }
+        },
+        "F12": {
+          "rows": 652,
+          "brands": {
+            "hyperlite": 208,
+            "dennys": 208,
+            "ceremonia": 192,
+            "dvf": 40,
+            "peter-thomas-roth": 4
+          },
+          "metric_keys": {
+            "atc_no_checkout": 652,
+            "checkout_no_purchase": 652,
+            "completed_revenue": 652,
+            "completed_sessions": 652
+          },
+          "dim_keys": {
+            "query": 652
+          }
+        },
+        "F1": {
+          "rows": 3771,
+          "brands": {
+            "hyperlite": 1628,
+            "dennys": 977,
+            "ceremonia": 945,
+            "dvf": 201,
+            "peter-thomas-roth": 20
+          },
+          "metric_keys": {
+            "sessions": 3771,
+            "buyers": 3766,
+            "orders": 3766,
+            "revenue": 3771,
+            "cr": 3766,
+            "rps": 3766,
+            "aov": 3766,
+            "directional": 3766,
+            "slope_13w_cr_pct": 5,
+            "yoy_cr_change": 5,
+            "trend": 5
+          },
+          "dim_keys": {
+            "query": 3771
+          }
+        },
+        "F7": {
+          "rows": 864,
+          "brands": {
+            "hyperlite": 234,
+            "dennys": 260,
+            "ceremonia": 260,
+            "dvf": 100,
+            "peter-thomas-roth": 10
+          },
+          "metric_keys": {
+            "sessions": 864
+          },
+          "dim_keys": {
+            "query": 864,
+            "path": 864
+          }
+        },
+        "F5": {
+          "rows": 2821,
+          "brands": {
+            "hyperlite": 840,
+            "dennys": 1025,
+            "ceremonia": 736,
+            "dvf": 208,
+            "peter-thomas-roth": 12
+          },
+          "metric_keys": {
+            "sessions": 2821,
+            "buyers": 2821,
+            "revenue": 2821
+          },
+          "dim_keys": {
+            "query": 2821
+          }
+        },
+        "F8": {
+          "rows": 505,
+          "brands": {
+            "hyperlite": 95,
+            "dennys": 144,
+            "ceremonia": 91,
+            "dvf": 139,
+            "peter-thomas-roth": 36
+          },
+          "metric_keys": {
+            "moves": 505
+          },
+          "dim_keys": {
+            "query": 505,
+            "next_template": 505
+          }
+        },
+        "F9": {
+          "rows": 2830,
+          "brands": {
+            "hyperlite": 840,
+            "dennys": 1026,
+            "ceremonia": 744,
+            "dvf": 208,
+            "peter-thomas-roth": 12
+          },
+          "metric_keys": {
+            "exits": 2830
+          },
+          "dim_keys": {
+            "query": 2830
+          }
+        },
+        "F10": {
+          "rows": 652,
+          "brands": {
+            "hyperlite": 208,
+            "dennys": 208,
+            "ceremonia": 192,
+            "dvf": 40,
+            "peter-thomas-roth": 4
+          },
+          "metric_keys": {
+            "sessions": 652,
+            "pdp_then_plp": 652,
+            "cart_then_pdp": 652,
+            "pdp_views": 652,
+            "pdp_views_buyers": 652,
+            "pdp_views_non_buyers": 652
+          },
+          "dim_keys": {
+            "query": 652
+          }
+        },
+        "F13": {
+          "rows": 326,
+          "brands": {
+            "hyperlite": 104,
+            "dennys": 104,
+            "ceremonia": 96,
+            "dvf": 20,
+            "peter-thomas-roth": 2
+          },
+          "metric_keys": {
+            "sessions": 326,
+            "buyers": 326,
+            "orders": 326,
+            "revenue": 326,
+            "cr": 326,
+            "revenue_share": 326,
+            "order_share": 326
+          },
+          "dim_keys": {
+            "query": 326
+          }
+        },
+        "F2": {
+          "rows": 652,
+          "brands": {
+            "hyperlite": 208,
+            "dennys": 208,
+            "ceremonia": 192,
+            "dvf": 40,
+            "peter-thomas-roth": 4
+          },
+          "metric_keys": {
+            "sessions": 652,
+            "buyers": 652,
+            "revenue": 652,
+            "reach_homepage_viewed": 652,
+            "prog_homepage_viewed": 652,
+            "prog_rate_homepage_viewed": 652,
+            "reach_collection_viewed": 652,
+            "prog_collection_viewed": 652,
+            "prog_rate_collection_viewed": 652,
+            "reach_product_viewed": 652,
+            "prog_product_viewed": 652,
+            "prog_rate_product_viewed": 652,
+            "reach_add_to_cart": 652,
+            "prog_add_to_cart": 652,
+            "prog_rate_add_to_cart": 652,
+            "reach_cart_viewed": 652,
+            "prog_cart_viewed": 652,
+            "prog_rate_cart_viewed": 652,
+            "reach_checkout_started": 652,
+            "prog_checkout_started": 652,
+            "prog_rate_checkout_started": 652,
+            "reach_checkout_completed": 652,
+            "prog_checkout_completed": 652,
+            "prog_rate_checkout_completed": 652
+          },
+          "dim_keys": {
+            "query": 652
+          }
+        },
+        "F11": {
+          "rows": 163,
+          "brands": {
+            "hyperlite": 52,
+            "dennys": 52,
+            "ceremonia": 48,
+            "dvf": 10,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "median_pdp_to_atc_seconds": 163,
+            "p75_pdp_to_atc_seconds": 163,
+            "median_atc_to_checkout_seconds": 163,
+            "p75_atc_to_checkout_seconds": 163,
+            "median_checkout_to_purchase_seconds": 163,
+            "p75_checkout_to_purchase_seconds": 163
+          },
+          "dim_keys": {
+            "query": 163
+          }
+        },
+        "F4": {
+          "rows": 35,
+          "brands": {
+            "hyperlite": 7,
+            "dennys": 7,
+            "ceremonia": 7,
+            "dvf": 7,
+            "peter-thomas-roth": 7
+          },
+          "metric_keys": {
+            "sessions": 35,
+            "progressed": 35,
+            "reached": 35,
+            "rate": 35,
+            "z_prior": 35,
+            "significant_prior": 35,
+            "z_yoy": 35,
+            "significant_yoy": 35,
+            "directional": 35
+          },
+          "dim_keys": {
+            "query": 35,
+            "step": 35
+          }
+        },
+        "F6": {
+          "rows": 125,
+          "brands": {
+            "hyperlite": 25,
+            "dennys": 25,
+            "ceremonia": 25,
+            "dvf": 25,
+            "peter-thomas-roth": 25
+          },
+          "metric_keys": {
+            "sessions": 125,
+            "buyers": 125,
+            "revenue": 125
+          },
+          "dim_keys": {
+            "query": 125,
+            "path": 125
+          }
+        },
+        "F14": {
+          "rows": 140,
+          "brands": {
+            "hyperlite": 28,
+            "dennys": 28,
+            "ceremonia": 28,
+            "dvf": 28,
+            "peter-thomas-roth": 28
+          },
+          "metric_keys": {
+            "sessions_lost": 140,
+            "progressed": 140,
+            "reached": 140,
+            "rps_reached": 140,
+            "revenue_at_stake": 140,
+            "directional": 140
+          },
+          "dim_keys": {
+            "query": 140,
+            "step": 140
+          }
+        },
+        "F15": {
+          "rows": 8,
+          "brands": {
+            "hyperlite": 2,
+            "dennys": 2,
+            "ceremonia": 2,
+            "dvf": 2
+          },
+          "metric_keys": {
+            "rate_effect": 8,
+            "mix_effect": 8,
+            "interaction": 8,
+            "base_weeks": 8,
+            "next_weeks": 8
+          },
+          "dim_keys": {
+            "query": 8,
+            "measure": 8
+          }
+        }
+      }
+    },
+    "audit-rank": {
+      "rows": 835,
+      "csv": "audit-rank.csv",
+      "jsonl": "audit-rank.jsonl",
+      "queries": {
+        "X10": {
+          "rows": 774,
+          "brands": {
+            "ceremonia": 219,
+            "dvf": 64,
+            "dennys": 229,
+            "hyperlite": 234,
+            "peter-thomas-roth": 28
+          },
+          "metric_keys": {
+            "rank": 774,
+            "revenue_at_stake": 774,
+            "trend": 774
+          },
+          "dim_keys": {
+            "query": 774,
+            "brand": 774,
+            "label": 774,
+            "source": 774
+          }
+        },
+        "X5": {
+          "rows": 10,
+          "brands": {
+            "ceremonia": 6,
+            "hyperlite": 2,
+            "dennys": 2
+          },
+          "metric_keys": {
+            "week_avg": 10,
+            "prior_mean": 10,
+            "prior_sd": 10,
+            "events": 10
+          },
+          "dim_keys": {
+            "query": 10,
+            "brand": 10,
+            "metric": 10
+          }
+        },
+        "X9": {
+          "rows": 5,
+          "brands": {
+            "peter-thomas-roth": 1,
+            "ceremonia": 1,
+            "hyperlite": 1,
+            "dvf": 1,
+            "dennys": 1
+          },
+          "metric_keys": {
+            "verdict": 5,
+            "revenue_at_stake": 5,
+            "reportable_share": 5,
+            "completeness": 5,
+            "pilot": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "X7": {
+          "rows": 46,
+          "brands": {
+            "dvf": 10,
+            "dennys": 10,
+            "hyperlite": 10,
+            "ceremonia": 10,
+            "peter-thomas-roth": 6
+          },
+          "metric_keys": {
+            "cr": 46,
+            "median_cr": 46,
+            "vs_median": 46,
+            "sessions": 46
+          },
+          "dim_keys": {
+            "query": 46,
+            "brand": 46
+          }
+        }
+      }
+    },
+    "audit-readiness": {
+      "rows": 288,
+      "csv": "audit-readiness.csv",
+      "jsonl": "audit-readiness.jsonl",
+      "queries": {
+        "R10": {
+          "rows": 168,
+          "brands": {
+            "hyperlite": 53,
+            "dennys": 53,
+            "ceremonia": 49,
+            "dvf": 11,
+            "peter-thomas-roth": 2
+          },
+          "metric_keys": {
+            "sessions_raw": 163,
+            "sessions_kept": 163,
+            "removed_share": 163,
+            "weeks": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 168,
+            "brand": 168
+          }
+        },
+        "R2": {
+          "rows": 60,
+          "brands": {
+            "hyperlite": 12,
+            "dennys": 12,
+            "ceremonia": 12,
+            "dvf": 12,
+            "peter-thomas-roth": 12
+          },
+          "metric_keys": {
+            "max_date": 60,
+            "current": 60,
+            "required": 60,
+            "error": 60
+          },
+          "dim_keys": {
+            "query": 60,
+            "brand": 60,
+            "table": 60
+          }
+        },
+        "R4": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "orders": 5,
+            "zero_revenue_share": 5,
+            "duplicate_orders": 5,
+            "unmatched_share": 5,
+            "trust": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R11": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "weeks": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R7": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "first_date": 5,
+            "pages": 5,
+            "elements": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R8": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "quadrants": 5,
+            "reportable": 5,
+            "reportable_share": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R3": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "days_with_sessions": 5,
+            "gap_days": 5,
+            "gap_sample": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R9": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "matrix_entries": 5,
+            "clicks": 5,
+            "matched": 5,
+            "match_share": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R6": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "by_event": 5,
+            "checkout_completed": 5,
+            "orders": 5,
+            "reconcile_gap": 5,
+            "cart_viewed": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R13": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "rows": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R12": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "event_ids": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R5": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "by_template": 5,
+            "covered": 5,
+            "unclassified_share": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "readiness": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "verdict": 5,
+            "reasons": 5,
+            "idsite": 5,
+            "bot_exclusion": 5,
+            "window_start": 5,
+            "window_end": 5,
+            "snapshot_start": 5,
+            "snapshot_end": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        },
+        "R1": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "found": 5,
+            "idsite": 5,
+            "name": 5,
+            "main_url": 5,
+            "platform": 5,
+            "currency": 5,
+            "status": 5,
+            "candidates": 5,
+            "error": 5
+          },
+          "dim_keys": {
+            "query": 5,
+            "brand": 5
+          }
+        }
+      }
+    },
+    "audit-template": {
+      "rows": 22223,
+      "csv": "audit-template.csv",
+      "jsonl": "audit-template.jsonl",
+      "queries": {
+        "H1progress": {
+          "rows": 2845,
+          "brands": {
+            "hyperlite": 840,
+            "dennys": 1025,
+            "ceremonia": 760,
+            "dvf": 208,
+            "peter-thomas-roth": 12
+          },
+          "metric_keys": {
+            "sessions": 2845,
+            "progressed": 2845
+          },
+          "dim_keys": {
+            "query": 2845
+          }
+        },
+        "L2": {
+          "rows": 326,
+          "brands": {
+            "hyperlite": 104,
+            "dennys": 104,
+            "ceremonia": 96,
+            "dvf": 20,
+            "peter-thomas-roth": 2
+          },
+          "metric_keys": {
+            "scroll_depth": 326,
+            "past_fold": 326,
+            "time_on_page_seconds": 326,
+            "pageviews": 326
+          },
+          "dim_keys": {
+            "query": 326
+          }
+        },
+        "L6": {
+          "rows": 229,
+          "brands": {
+            "hyperlite": 50,
+            "dennys": 50,
+            "ceremonia": 29,
+            "dvf": 50,
+            "peter-thomas-roth": 50
+          },
+          "metric_keys": {
+            "sessions": 229,
+            "buyers": 229,
+            "revenue": 229,
+            "exits": 229
+          },
+          "dim_keys": {
+            "query": 229,
+            "page": 229
+          }
+        },
+        "P7": {
+          "rows": 3151,
+          "brands": {
+            "hyperlite": 1040,
+            "dennys": 952,
+            "ceremonia": 940,
+            "dvf": 200,
+            "peter-thomas-roth": 19
+          },
+          "metric_keys": {
+            "pdp_sessions": 3151,
+            "atc_sessions": 3151
+          },
+          "dim_keys": {
+            "query": 3151
+          }
+        },
+        "H1exit": {
+          "rows": 2830,
+          "brands": {
+            "hyperlite": 840,
+            "dennys": 1026,
+            "ceremonia": 744,
+            "dvf": 208,
+            "peter-thomas-roth": 12
+          },
+          "metric_keys": {
+            "exits": 2830
+          },
+          "dim_keys": {
+            "query": 2830
+          }
+        },
+        "L1": {
+          "rows": 650,
+          "brands": {
+            "hyperlite": 208,
+            "dennys": 206,
+            "ceremonia": 192,
+            "dvf": 40,
+            "peter-thomas-roth": 4
+          },
+          "metric_keys": {
+            "sessions": 650,
+            "buyers": 650,
+            "revenue": 650,
+            "cr": 650,
+            "page_rps": 650,
+            "directional": 650,
+            "exits": 650,
+            "exit_rate": 650,
+            "progressed": 649,
+            "progression_rate": 649
+          },
+          "dim_keys": {
+            "query": 650
+          }
+        },
+        "H1": {
+          "rows": 2605,
+          "brands": {
+            "hyperlite": 840,
+            "dennys": 825,
+            "ceremonia": 760,
+            "dvf": 168,
+            "peter-thomas-roth": 12
+          },
+          "metric_keys": {
+            "sessions": 2605,
+            "buyers": 2605,
+            "revenue": 2605,
+            "cr": 2605,
+            "page_rps": 2605,
+            "directional": 2605,
+            "exits": 2589,
+            "exit_rate": 2589,
+            "progressed": 2604,
+            "progression_rate": 2604
+          },
+          "dim_keys": {
+            "query": 2605
+          }
+        },
+        "K1": {
+          "rows": 3151,
+          "brands": {
+            "hyperlite": 1040,
+            "dennys": 952,
+            "ceremonia": 940,
+            "dvf": 200,
+            "peter-thomas-roth": 19
+          },
+          "metric_keys": {
+            "started": 3151,
+            "completed": 3151
+          },
+          "dim_keys": {
+            "query": 3151
+          }
+        },
+        "C12": {
+          "rows": 163,
+          "brands": {
+            "hyperlite": 52,
+            "dennys": 52,
+            "ceremonia": 48,
+            "dvf": 10,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "abandoned_sessions": 163,
+            "abandoned_item_value": 163,
+            "completed_sessions": 163,
+            "completed_revenue": 163
+          },
+          "dim_keys": {
+            "query": 163
+          }
+        },
+        "C1": {
+          "rows": 1276,
+          "brands": {
+            "hyperlite": 416,
+            "dennys": 408,
+            "ceremonia": 368,
+            "dvf": 80,
+            "peter-thomas-roth": 4
+          },
+          "metric_keys": {
+            "sessions": 1276,
+            "progressed": 1276,
+            "buyers": 1276,
+            "revenue": 1276,
+            "cr": 624,
+            "page_rps": 624,
+            "directional": 624,
+            "exits": 609,
+            "exit_rate": 609,
+            "progression_rate": 624
+          },
+          "dim_keys": {
+            "query": 1276
+          }
+        },
+        "P1": {
+          "rows": 650,
+          "brands": {
+            "hyperlite": 208,
+            "dennys": 206,
+            "ceremonia": 192,
+            "dvf": 40,
+            "peter-thomas-roth": 4
+          },
+          "metric_keys": {
+            "sessions": 650,
+            "buyers": 650,
+            "revenue": 650,
+            "cr": 650,
+            "page_rps": 650,
+            "directional": 650,
+            "exits": 650,
+            "exit_rate": 650,
+            "progressed": 650,
+            "progression_rate": 650
+          },
+          "dim_keys": {
+            "query": 650
+          }
+        },
+        "K5": {
+          "rows": 291,
+          "brands": {
+            "hyperlite": 100,
+            "dennys": 96,
+            "ceremonia": 77,
+            "dvf": 18
+          },
+          "metric_keys": {
+            "median_minutes": 291,
+            "p75_minutes": 291
+          },
+          "dim_keys": {
+            "query": 291
+          }
+        },
+        "H2": {
+          "rows": 326,
+          "brands": {
+            "hyperlite": 104,
+            "dennys": 104,
+            "ceremonia": 96,
+            "dvf": 20,
+            "peter-thomas-roth": 2
+          },
+          "metric_keys": {
+            "scroll_depth": 326,
+            "past_fold": 326,
+            "time_on_page_seconds": 326,
+            "pageviews": 326
+          },
+          "dim_keys": {
+            "query": 326
+          }
+        },
+        "C2": {
+          "rows": 320,
+          "brands": {
+            "hyperlite": 104,
+            "dennys": 100,
+            "ceremonia": 96,
+            "dvf": 20
+          },
+          "metric_keys": {
+            "scroll_depth": 320,
+            "past_fold": 320,
+            "time_on_page_seconds": 320,
+            "pageviews": 320
+          },
+          "dim_keys": {
+            "query": 320
+          }
+        },
+        "K2": {
+          "rows": 869,
+          "brands": {
+            "hyperlite": 221,
+            "dennys": 219,
+            "ceremonia": 196,
+            "dvf": 198,
+            "peter-thomas-roth": 35
+          },
+          "metric_keys": {
+            "started": 869,
+            "completed": 869,
+            "rate": 2,
+            "z_prior": 2,
+            "significant_prior": 2,
+            "z_yoy": 2,
+            "significant_yoy": 2
+          },
+          "dim_keys": {
+            "query": 869,
+            "measure": 869
+          }
+        },
+        "P2": {
+          "rows": 325,
+          "brands": {
+            "hyperlite": 104,
+            "dennys": 103,
+            "ceremonia": 96,
+            "dvf": 20,
+            "peter-thomas-roth": 2
+          },
+          "metric_keys": {
+            "scroll_depth": 325,
+            "past_fold": 325,
+            "time_on_page_seconds": 325,
+            "pageviews": 325
+          },
+          "dim_keys": {
+            "query": 325
+          }
+        },
+        "P8": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "atc_sessions": 5,
+            "variant_before": 5,
+            "guide_before": 5,
+            "review_before": 5,
+            "gallery_before": 5
+          },
+          "dim_keys": {
+            "query": 5
+          }
+        },
+        "P16": {
+          "rows": 21,
+          "brands": {
+            "hyperlite": 5,
+            "dennys": 5,
+            "ceremonia": 5,
+            "dvf": 5,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "sessions": 21,
+            "atc_sessions": 21
+          },
+          "dim_keys": {
+            "query": 21,
+            "band": 21
+          }
+        },
+        "L13": {
+          "rows": 229,
+          "brands": {
+            "hyperlite": 50,
+            "dennys": 50,
+            "ceremonia": 29,
+            "dvf": 50,
+            "peter-thomas-roth": 50
+          },
+          "metric_keys": {
+            "sessions": 229,
+            "pogo_sessions": 229
+          },
+          "dim_keys": {
+            "query": 229,
+            "page": 229
+          }
+        },
+        "H7": {
+          "rows": 50,
+          "brands": {
+            "hyperlite": 10,
+            "dennys": 12,
+            "ceremonia": 10,
+            "dvf": 12,
+            "peter-thomas-roth": 6
+          },
+          "metric_keys": {
+            "sessions": 50,
+            "revenue": 50
+          },
+          "dim_keys": {
+            "query": 50,
+            "next_template": 50
+          }
+        },
+        "L12": {
+          "rows": 326,
+          "brands": {
+            "hyperlite": 104,
+            "dennys": 104,
+            "ceremonia": 96,
+            "dvf": 20,
+            "peter-thomas-roth": 2
+          },
+          "metric_keys": {
+            "sessions": 326,
+            "search_sessions": 326,
+            "search_to_pdp": 326,
+            "search_buyers": 326,
+            "other_buyers": 326,
+            "other_sessions": 326,
+            "search_revenue": 326
+          },
+          "dim_keys": {
+            "query": 326
+          }
+        },
+        "G6": {
+          "rows": 242,
+          "brands": {
+            "hyperlite": 50,
+            "dennys": 43,
+            "ceremonia": 49,
+            "dvf": 50,
+            "peter-thomas-roth": 50
+          },
+          "metric_keys": {
+            "clicks": 242
+          },
+          "dim_keys": {
+            "query": 242,
+            "path": 242
+          }
+        },
+        "L8": {
+          "rows": 110,
+          "brands": {
+            "hyperlite": 22,
+            "dennys": 22,
+            "ceremonia": 22,
+            "dvf": 22,
+            "peter-thomas-roth": 22
+          },
+          "metric_keys": {
+            "sessions": 110,
+            "buyers": 110,
+            "revenue": 110
+          },
+          "dim_keys": {
+            "query": 110,
+            "band": 110
+          }
+        },
+        "P6": {
+          "rows": 250,
+          "brands": {
+            "hyperlite": 50,
+            "dennys": 50,
+            "ceremonia": 50,
+            "dvf": 50,
+            "peter-thomas-roth": 50
+          },
+          "metric_keys": {
+            "sessions": 250,
+            "atc_sessions": 250,
+            "buyers": 250,
+            "revenue": 250
+          },
+          "dim_keys": {
+            "query": 250,
+            "page": 250
+          }
+        },
+        "C4": {
+          "rows": 140,
+          "brands": {
+            "hyperlite": 28,
+            "dennys": 28,
+            "ceremonia": 28,
+            "dvf": 28,
+            "peter-thomas-roth": 28
+          },
+          "metric_keys": {
+            "absent": 140,
+            "clicks": 140,
+            "clicking_sessions": 140,
+            "rage_clicks": 140,
+            "revenue": 140,
+            "click_rate": 140,
+            "lift": 140,
+            "directional": 140,
+            "attribution": 140
+          },
+          "dim_keys": {
+            "query": 140
+          }
+        },
+        "L3": {
+          "rows": 110,
+          "brands": {
+            "hyperlite": 22,
+            "dennys": 22,
+            "ceremonia": 22,
+            "dvf": 22,
+            "peter-thomas-roth": 22
+          },
+          "metric_keys": {
+            "sessions": 110,
+            "buyers": 110,
+            "revenue": 110
+          },
+          "dim_keys": {
+            "query": 110,
+            "band": 110
+          }
+        },
+        "H3": {
+          "rows": 110,
+          "brands": {
+            "hyperlite": 22,
+            "dennys": 22,
+            "ceremonia": 22,
+            "dvf": 22,
+            "peter-thomas-roth": 22
+          },
+          "metric_keys": {
+            "sessions": 110,
+            "buyers": 110,
+            "revenue": 110
+          },
+          "dim_keys": {
+            "query": 110,
+            "band": 110
+          }
+        },
+        "C3": {
+          "rows": 87,
+          "brands": {
+            "hyperlite": 21,
+            "dennys": 22,
+            "ceremonia": 22,
+            "dvf": 22
+          },
+          "metric_keys": {
+            "sessions": 87,
+            "buyers": 87,
+            "revenue": 87
+          },
+          "dim_keys": {
+            "query": 87,
+            "band": 87
+          }
+        },
+        "H10": {
+          "rows": 40,
+          "brands": {
+            "hyperlite": 8,
+            "dennys": 8,
+            "ceremonia": 8,
+            "dvf": 8,
+            "peter-thomas-roth": 8
+          },
+          "metric_keys": {
+            "sessions": 40,
+            "buyers": 40,
+            "revenue": 40
+          },
+          "dim_keys": {
+            "query": 40,
+            "entry_template": 40
+          }
+        },
+        "H4": {
+          "rows": 60,
+          "brands": {
+            "hyperlite": 12,
+            "dennys": 12,
+            "ceremonia": 12,
+            "dvf": 12,
+            "peter-thomas-roth": 12
+          },
+          "metric_keys": {
+            "absent": 60,
+            "clicks": 60,
+            "clicking_sessions": 60,
+            "rage_clicks": 60,
+            "revenue": 60,
+            "click_rate": 60,
+            "lift": 60,
+            "directional": 60,
+            "attribution": 60
+          },
+          "dim_keys": {
+            "query": 60
+          }
+        },
+        "P3": {
+          "rows": 110,
+          "brands": {
+            "hyperlite": 22,
+            "dennys": 22,
+            "ceremonia": 22,
+            "dvf": 22,
+            "peter-thomas-roth": 22
+          },
+          "metric_keys": {
+            "sessions": 110,
+            "buyers": 110,
+            "revenue": 110
+          },
+          "dim_keys": {
+            "query": 110,
+            "band": 110
+          }
+        },
+        "P4": {
+          "rows": 115,
+          "brands": {
+            "hyperlite": 23,
+            "dennys": 23,
+            "ceremonia": 23,
+            "dvf": 23,
+            "peter-thomas-roth": 23
+          },
+          "metric_keys": {
+            "absent": 115,
+            "clicks": 115,
+            "clicking_sessions": 115,
+            "rage_clicks": 115,
+            "revenue": 115,
+            "click_rate": 115,
+            "lift": 115,
+            "directional": 115,
+            "attribution": 115
+          },
+          "dim_keys": {
+            "query": 115
+          }
+        },
+        "G1": {
+          "rows": 65,
+          "brands": {
+            "hyperlite": 13,
+            "dennys": 13,
+            "ceremonia": 13,
+            "dvf": 13,
+            "peter-thomas-roth": 13
+          },
+          "metric_keys": {
+            "absent": 65,
+            "clicks": 65,
+            "clicking_sessions": 65,
+            "rage_clicks": 65,
+            "revenue": 65,
+            "click_rate": 65,
+            "lift": 65,
+            "directional": 65,
+            "attribution": 65
+          },
+          "dim_keys": {
+            "query": 65
+          }
+        },
+        "L4": {
+          "rows": 65,
+          "brands": {
+            "hyperlite": 13,
+            "dennys": 13,
+            "ceremonia": 13,
+            "dvf": 13,
+            "peter-thomas-roth": 13
+          },
+          "metric_keys": {
+            "absent": 65,
+            "clicks": 65,
+            "clicking_sessions": 65,
+            "rage_clicks": 65,
+            "revenue": 65,
+            "click_rate": 65,
+            "lift": 65,
+            "directional": 65,
+            "attribution": 65
+          },
+          "dim_keys": {
+            "query": 65
+          }
+        },
+        "C10": {
+          "rows": 19,
+          "brands": {
+            "hyperlite": 5,
+            "dennys": 5,
+            "ceremonia": 5,
+            "dvf": 4
+          },
+          "metric_keys": {
+            "orders": 19,
+            "revenue": 19
+          },
+          "dim_keys": {
+            "query": 19,
+            "band": 19
+          }
+        },
+        "L11": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "quick_add_sessions": 5,
+            "quick_add_atc": 5,
+            "pdp_atc": 5,
+            "quick_add_revenue": 5,
+            "quick_add_buyers": 5,
+            "pdp_revenue": 5,
+            "pdp_buyers": 5
+          },
+          "dim_keys": {
+            "query": 5
+          }
+        },
+        "K4": {
+          "rows": 35,
+          "brands": {
+            "hyperlite": 7,
+            "dennys": 7,
+            "ceremonia": 7,
+            "dvf": 7,
+            "peter-thomas-roth": 7
+          },
+          "metric_keys": {
+            "absent": 35,
+            "clicks": 35,
+            "clicking_sessions": 35,
+            "rage_clicks": 35,
+            "revenue": 35,
+            "click_rate": 35,
+            "lift": 35,
+            "directional": 35,
+            "attribution": 35
+          },
+          "dim_keys": {
+            "query": 35
+          }
+        },
+        "K6": {
+          "rows": 10,
+          "brands": {
+            "hyperlite": 2,
+            "dennys": 2,
+            "ceremonia": 2,
+            "dvf": 2,
+            "peter-thomas-roth": 2
+          },
+          "metric_keys": {
+            "started": 10,
+            "returned": 10,
+            "returned_buyers": 10,
+            "buyers": 10
+          },
+          "dim_keys": {
+            "query": 10
+          }
+        },
+        "C7": {
+          "rows": 5,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "dvf": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "icon_then_cart": 5,
+            "cart_without_icon": 5
+          },
+          "dim_keys": {
+            "query": 5
+          }
+        },
+        "L10": {
+          "rows": 4,
+          "brands": {
+            "hyperlite": 1,
+            "dennys": 1,
+            "ceremonia": 1,
+            "peter-thomas-roth": 1
+          },
+          "metric_keys": {
+            "filter_clicks": 4,
+            "rage_clicks": 4,
+            "filter_sessions": 4,
+            "filter_then_no_pdp": 4
+          },
+          "dim_keys": {
+            "query": 4
+          }
+        },
+        "P11": {
+          "rows": 3,
+          "brands": {
+            "hyperlite": 1,
+            "ceremonia": 1,
+            "dvf": 1
+          },
+          "metric_keys": {
+            "pdp_sessions": 3,
+            "review_sessions": 3,
+            "review_atc": 3,
+            "other_atc": 3,
+            "review_revenue": 3,
+            "other_revenue": 3
+          },
+          "dim_keys": {
+            "query": 3
+          }
+        }
+      }
+    }
+  }
+}

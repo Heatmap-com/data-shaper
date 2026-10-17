@@ -1,0 +1,5 @@
+{
+  "id": "static-idsites",
+  "purpose": "Lists the idsites the run was given (--sites). A run without them is an error.",
+  "data": "One site per row: idsite and, when the lookup succeeds, the site name."
+}

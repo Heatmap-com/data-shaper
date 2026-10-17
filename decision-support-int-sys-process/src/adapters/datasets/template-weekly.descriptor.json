@@ -1,0 +1,6 @@
+{
+  "id": "template-weekly",
+  "purpose": "Rolls this batch's page totals up by template family.",
+  "data": "Sessions, orders, and revenue per template family and week.",
+  "replay": "keep"
+}

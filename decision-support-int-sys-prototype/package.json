@@ -1,0 +1,9 @@
+{
+  "name": "decision-support-int-sys-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs --port 8765",
+    "check": "node revisions/grok-k3/check.mjs && node revisions/chatgpt-v1/check.mjs && node revisions/cursor-opus-5-5-v1/check.mjs && node revisions/quick-concept/check.mjs && node revisions/chatgpt-v1/selftest.mjs && node revisions/cursor-opus-5-5-v1/selftest.mjs"
+  }
+}

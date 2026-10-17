@@ -1,0 +1,53 @@
+{
+  "id": "kimi",
+  "baseUrlEnv": "KIMI_API_BASE_URL",
+  "defaultBaseUrl": "https://api.moonshot.cn",
+  "apiKeyEnv": "KIMI_API_KEY",
+  "versionHeader": "kimi-api-version",
+  "version": "2026-09-01-beta",
+  "routes": {
+    "memoryStores": "/v1/memory-stores",
+    "memories": "/v1/memory-stores/{storeId}/memories",
+    "memory": "/v1/memory-stores/{storeId}/memories/{memoryId}",
+    "agents": "/v1/agents",
+    "environments": "/v1/environments",
+    "environment": "/v1/environments/{environmentId}",
+    "sessions": "/v1/sessions",
+    "session": "/v1/sessions/{sessionId}",
+    "events": "/v1/sessions/{sessionId}/events",
+    "filesystem": "/v1/sessions/{sessionId}/filesystem",
+    "filesystemRaw": "/v1/sessions/{sessionId}/filesystem/raw"
+  },
+  "run": {
+    "agentName": "report-analyst",
+    "model": "kimi-k3",
+    "system": "You analyse the files in the mounted project. Numbers come only from those files. Write every requested document as a markdown file in the project at the path the user gives. A document that appears only in the reply is not delivered.",
+    "environmentName": "report-workspace",
+    "environmentConfig": { "type": "cloud" },
+    "access": "read_write",
+    "mountInstructions": "The project files are this memory store, mounted in the session. Read them from the mount. Write new markdown files back into this store at the relative paths the user names, such as enhanced/Report.md. A document that is only in the reply is not saved.",
+    "pollIntervalMs": 5000,
+    "timeoutMs": 2700000,
+    "outputPrefixes": ["enhanced/"]
+  },
+  "name": {
+    "maxLength": 64,
+    "pattern": "^[\\p{L}\\p{N}][\\p{L}\\p{N}_-]{0,63}$"
+  },
+  "descriptionMaxLength": 500,
+  "maxFileBytes": 20971520,
+  "files": {
+    "readme": {
+      "path": "README.md",
+      "content": "{name}\n"
+    },
+    "index": {
+      "path": "index.md",
+      "content": "# {name}\n\n{files}\n"
+    },
+    "instructions": {
+      "path": "instructions.md",
+      "content": "{instructions}\n"
+    }
+  }
+}

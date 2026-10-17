@@ -1,0 +1,98 @@
+{
+  "catalog_version": "2026-10-14.1",
+  "catalog_id": "QZ",
+  "source": "docs/plans/execution-profiles.md",
+  "strategies": [
+    {
+      "id": "QZ:A1",
+      "family": "A",
+      "title": "Shorten or reorder the quiz step where most sessions leave",
+      "requirement_keys": [
+        "H01",
+        "Q01"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H01, Q01",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {}
+    },
+    {
+      "id": "QZ:A2",
+      "family": "A",
+      "title": "Simplify the quiz step that holds sessions longest before an answer",
+      "requirement_keys": [
+        "Q01"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "Q01",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {}
+    },
+    {
+      "id": "QZ:A3",
+      "family": "A",
+      "title": "Break the restart loop where sessions answer and return to the first step",
+      "requirement_keys": [
+        "Q01",
+        "Q03"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "Q01, Q03",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {}
+    },
+    {
+      "id": "QZ:A4",
+      "family": "A",
+      "title": "Lift quiz completion into the recommended product",
+      "requirement_keys": [
+        "H01",
+        "Q02"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H01, Q02",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {}
+    }
+  ]
+}

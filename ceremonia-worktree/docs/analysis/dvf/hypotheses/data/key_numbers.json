@@ -1,0 +1,71 @@
+{
+ "revenue": {
+  "desktop": {
+   "sep_orders": 236,
+   "sep_revenue": 132534.25999999998,
+   "sep_aov": 561.585847457627,
+   "full_price_days": 17,
+   "full_price_orders": 103,
+   "full_price_revenue": 79597.70999999999,
+   "full_price_aov": 772.7933009708737,
+   "full_price_revenue_per_30_days": 140466.54705882352
+  },
+  "mobile": {
+   "sep_orders": 1764,
+   "sep_revenue": 854781.29,
+   "sep_aov": 484.56989229024947,
+   "full_price_days": 17,
+   "full_price_orders": 704,
+   "full_price_revenue": 405533.54,
+   "full_price_aov": 576.0419602272727,
+   "full_price_revenue_per_30_days": 715647.4235294118
+  },
+  "tablet": {
+   "sep_orders": 398,
+   "sep_revenue": 212638.88,
+   "sep_aov": 534.2685427135679,
+   "full_price_days": 17,
+   "full_price_orders": 144,
+   "full_price_revenue": 90689.08,
+   "full_price_aov": 629.7852777777778,
+   "full_price_revenue_per_30_days": 160039.5529411765
+  },
+  "all": {
+   "sep_orders": 2398,
+   "sep_revenue": 1199954.43,
+   "sep_aov": 500.3980108423686,
+   "full_price_days": 17,
+   "full_price_orders": 951,
+   "full_price_revenue": 575820.33,
+   "full_price_aov": 605.4893059936908,
+   "full_price_revenue_per_30_days": 1016153.5235294116
+  }
+ },
+ "promo_days_sep": [
+  "2026-09-01",
+  "2026-09-02",
+  "2026-09-03",
+  "2026-09-04",
+  "2026-09-05",
+  "2026-09-06",
+  "2026-09-07",
+  "2026-09-25",
+  "2026-09-26",
+  "2026-09-27",
+  "2026-09-28",
+  "2026-09-29",
+  "2026-09-30"
+ ],
+ "model_inventory": {
+  "pages": 40,
+  "with_model": 39,
+  "with_advice": 2,
+  "sizes_worn": {
+   "XS": 39,
+   "": 1
+  }
+ },
+ "home_revenue_share": {
+  "mobile": 0.3555825207056754
+ }
+}

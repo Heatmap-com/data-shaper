@@ -1,0 +1,5 @@
+{
+  "id": "prefer-non-home",
+  "purpose": "Chooses the landing page for a site, preferring a non-home page that has orders and enough of the homepage's entry sessions.",
+  "data": "A qualification: the chosen page id and URL, why it was chosen or skipped, and bot-filtered sessions, orders, and revenue."
+}

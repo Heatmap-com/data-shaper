@@ -1,0 +1,62 @@
+{
+  "title": "CRO query tool",
+  "intro": "Each revision is a separate take on the same snapshot data. Older revisions are kept unchanged, so they can be compared.",
+  "revisions": [
+    {
+      "id": "grok-k3",
+      "name": "Grok - K3",
+      "date": "2026-10-16",
+      "status": "current",
+      "basis": "GrokIdeas.md: answer-first home, global context bar, drill everywhere",
+      "summary": "Keeps the ten question tabs and adds a 'This week' home and a 'What moved?' tab. Every change carries a wobble badge with its arithmetic, every number drills with the context, and campaigns, creatives, selectors and test arms carry readable placeholder names.",
+      "changes": [
+        "This week home: answer line, five movers, revenue split, verdict summary",
+        "What moved? tab: movers by measure and by segmentation, with the split",
+        "Context bar (week, compare, split, device) inherited by every panel; drill links with breadcrumbs",
+        "Wobble band on every change figure, judged against each row's own history, with the arithmetic in the tooltip",
+        "Placeholder names for campaigns, ads, elements and test arms; square-root funnel bars; comparable small multiples; landing-page scatter",
+        "Verdicts as finding, so what, next move, plus a ranked unblock queue"
+      ]
+    },
+    {
+      "id": "chatgpt-v1",
+      "name": "ChatGPT - V1",
+      "date": "2026-10-15",
+      "status": "current",
+      "basis": "External review (15 Oct 2026): Weekly Brief → Evidence → Next move; views-v2-proposal.json",
+      "summary": "Opens on at most three findings worth reviewing, each with its comparison, volume, limits and next step. Every number opens its evidence. The funnel is shown as event reach, because the data records actions, not their order.",
+      "changes": [
+        "Weekly Brief: outcome strip, up to three findings, improvements and limits",
+        "Event reach replaces the funnel; journeys open one path at a time",
+        "Explain: exact four-factor revenue bridge and mix-versus-rate split",
+        "Evidence drawer with breakdowns, definitions and provenance",
+        "Context bar with real Back/Forward history; pins and a client-brief export",
+        "Earlier panels kept, unchanged, under Reference"
+      ]
+    },
+    {
+      "id": "cursor-opus-5-5-v1",
+      "name": "Cursor - Opus 5.5 - V1",
+      "date": "2026-10-15",
+      "status": "current",
+      "basis": "6-ANALYSIS.md, Slice 1: Brief, Explain, Drill",
+      "summary": "Opens on a weekly brief: whole-week headline numbers, ranked movements labelled for noise, and why revenue changed. One context bar sets week, comparison, segment and device for every panel.",
+      "changes": [
+        "Brief home tab: headline, ranked movers, revenue decomposition",
+        "Context bar: week, compare, segment and device, inherited by panels",
+        "Whole-week coverage: partial weeks marked 6/7 days and kept out of changes",
+        "Noise labels on every change: unusual, sliding or climbing, normal, too thin",
+        "Shorter labels for experiment arms and URLs"
+      ]
+    },
+    {
+      "id": "quick-concept",
+      "name": "Quick Concept",
+      "date": "2026-10-15",
+      "status": "frozen",
+      "basis": "query-tool-information-hierarchy.md",
+      "summary": "The first prototype: ten question tabs and 48 panels over nine data shapes, with portal-style journeys and funnels.",
+      "changes": []
+    }
+  ]
+}

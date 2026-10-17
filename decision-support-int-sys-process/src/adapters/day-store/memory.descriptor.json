@@ -1,0 +1,5 @@
+{
+  "id": "memory",
+  "purpose": "Keeps the day scan's stored days in process memory so tests run the same contract as the other stores.",
+  "data": "One entry per site, kind, key, and day: the day's rows as the scan read them, with the format version, the shape, and whether the day was final."
+}

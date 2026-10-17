@@ -1,0 +1,39 @@
+{
+  "id": "remote-enhance",
+  "label": "Remote enhancement of the three reports",
+  "phase": "report",
+  "skill": "skills/kimi-analysis/SKILL.md",
+  "timeoutMs": 5400000,
+  "params": { "provider": "kimi" },
+  "handler": {
+    "use": "command",
+    "command": "node",
+    "args": [
+      "scripts/remote-llm-projects/analyze-site.mjs",
+      "--provider", "{{params.provider}}",
+      "--site", "{{site.slug}}",
+      "--data", "{{paths.analysis}}/{{site.slug}}",
+      "--reports", "{{paths.reports}}/{{site.slug}}"
+    ]
+  },
+  "check": {
+    "use": "files-exist",
+    "minBytes": 2000,
+    "paths": [
+      "{{paths.reports}}/{{site.slug}}/enhanced/{{site.name}} — Site Opportunity Report.md",
+      "{{paths.reports}}/{{site.slug}}/enhanced/{{site.name}} — Today Opportunities.md",
+      "{{paths.reports}}/{{site.slug}}/enhanced/{{site.name}} — User Journey Opportunity Analysis.md"
+    ],
+    "newerThan": [
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Site Opportunity Report.md",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — Today Opportunities.md",
+      "{{paths.reports}}/{{site.slug}}/{{site.name}} — User Journey Opportunity Analysis.md"
+    ]
+  },
+  "retry": { "maxAttempts": 3, "backoffMs": 300000, "factor": 2, "maxBackoffMs": 3600000 },
+  "errors": [
+    { "match": "KIMI_API_KEY|\\b401\\b|\\b403\\b|invalid api key", "class": "blocked", "reason": "the remote provider key is missing or refused" },
+    { "match": "\\b429\\b|rate limit|\\b50[234]\\b|ECONNRESET|ETIMEDOUT|fetch failed", "class": "transient", "reason": "the remote provider is busy or unreachable" },
+    { "match": "no site profile|no data guide|missing (Site Opportunity Report|Today Opportunities|User Journey Opportunity Analysis)", "class": "blocked", "reason": "the bundle or a source report is missing" }
+  ]
+}

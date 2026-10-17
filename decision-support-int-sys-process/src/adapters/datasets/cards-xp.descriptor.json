@@ -1,0 +1,8 @@
+{
+  "id": "cards-xp",
+  "purpose": "Builds the experiment strategy cards for one experiment subject from its readout.",
+  "data": "One card per XP strategy: the sample-ratio check, the order floor per arm, a reversal between the assigned and exposed lifts, and element click-rate lifts, each with its value, threshold, and missing requirements.",
+  "role": "card",
+  "catalogId": "XP",
+  "replay": "recollect"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "recordings-sample",
+  "purpose": "Samples session recordings of this page.",
+  "data": "Up to 50 recording ids, with median time on page, click count, and device.",
+  "replay": "keep"
+}

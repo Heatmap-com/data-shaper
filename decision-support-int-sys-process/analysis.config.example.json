@@ -1,0 +1,10 @@
+{
+  "agents": { "analysis": 1, "naming": 1 },
+  "naming": {
+    "botDir": "/home/ec2-user/naming-bot",
+    "container": "naming-bot",
+    "command": "/home/ec2-user/analysis-engine/bin/name-page.sh {url} {idsite}",
+    "datasetRoot": "/home/ec2-user/naming-bot/dataset",
+    "botTimeoutMs": 600000
+  }
+}

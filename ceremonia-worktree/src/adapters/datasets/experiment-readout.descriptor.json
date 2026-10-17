@@ -1,0 +1,9 @@
+{
+  "id": "experiment-readout",
+  "purpose": "Reads out one selected experiment subject: its lifecycle, and its readout against the control on every arm and basis, rollup section, and element.",
+  "data": "Per experiment subject, one lifecycle row and the experiment-analysis readout rows: per arm and basis the sessions, assigned share, sample-ratio p-value, conversion, revenue per session, and lift with p-value; per arm the section capture; per rollup section and arm the seen and click rates; per element and arm the click rate and clicker conversion. Daily rows are in ae_experiment_row.",
+  "factTables": {
+    "section_level_data": { "date": "server_date", "idsite": true, "idsitehsr": true }
+  },
+  "replay": "keep"
+}

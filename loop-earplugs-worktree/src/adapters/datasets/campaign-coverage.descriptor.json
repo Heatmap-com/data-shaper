@@ -1,0 +1,6 @@
+{
+  "id": "campaign-coverage",
+  "purpose": "Measures how much of a page's entry traffic carries a campaign tag.",
+  "data": "Per source, the share of entry sessions that have a utm or session tag. Campaign weekly stays empty when the tagged share is under 5 percent.",
+  "replay": "keep"
+}

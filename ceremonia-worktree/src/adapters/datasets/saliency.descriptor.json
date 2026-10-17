@@ -1,0 +1,6 @@
+{
+  "id": "saliency",
+  "purpose": "Reads predicted visual saliency for the page's render nodes.",
+  "data": "Per selector or section: the saliency share and quartile, only for nodes a model has scored.",
+  "replay": "keep"
+}

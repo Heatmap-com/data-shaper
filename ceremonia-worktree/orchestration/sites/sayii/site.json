@@ -1,0 +1,19 @@
+{
+  "slug": "sayii",
+  "name": "Sayii",
+  "domain": "sayiioficial.com",
+  "origin": "https://www.sayiioficial.com/",
+  "idsite": 5680,
+  "platform": "shopify",
+  "currency": "USD",
+  "run": "naming-only",
+  "pages": {
+    "include": [
+      { "url": "https://www.sayiioficial.com/", "role": "home" },
+      { "url": "https://sayiioficial.com/products/coctel-capilar-complex-hyaluron-en-frio", "role": "focus" },
+      { "url": "https://sayiioficial.com/collections/kits", "role": "compare" }
+    ]
+  },
+  "focus": { "path": "/products/coctel-capilar-complex-hyaluron-en-frio", "label": "Cóctel Capilar Complex Hyaluron", "idsitehsr": 42334083 },
+  "context": { "country": "CO", "language": "es", "cartNoun": "carrito", "notes": "Hair care. Domain has two i's." }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "custom-event-inventory",
+  "purpose": "Lists the custom events emitted on the page.",
+  "data": "Per event name and week: how many times it fired, when it was first and last seen, and whether the name is in the event registry.",
+  "replay": "keep"
+}

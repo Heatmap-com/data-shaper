@@ -1,0 +1,66 @@
+{
+  "bundle": "/Users/kennpalm/work/analysis/laticoleathers",
+  "report_window": {
+    "start": "2026-09-14",
+    "end": "2026-10-13"
+  },
+  "generated_at": "2026-10-14T20:38:19+00:00",
+  "charts": [
+    {
+      "file": "sor-fig1-daily-orders.png",
+      "stage": "site-opportunity-report",
+      "type": "daily-orders",
+      "status": "rendered",
+      "title": "Daily orders, 14 September – 13 October 2026"
+    },
+    {
+      "file": "sor-fig2-device-funnel.png",
+      "stage": "site-opportunity-report",
+      "type": "device-funnel",
+      "status": "rendered",
+      "title": "Checkout funnel by device, 14 September – 13 October 2026"
+    },
+    {
+      "file": "sor-fig3-channel-rpv.png",
+      "stage": "site-opportunity-report",
+      "type": "channel-rpv",
+      "status": "rendered",
+      "title": "Revenue per visit by channel, 14 September – 13 October 2026"
+    },
+    {
+      "file": "sor-fig4-pdp-scroll.png",
+      "stage": "site-opportunity-report",
+      "type": "scroll-depth",
+      "status": "rendered",
+      "title": "Mobile scroll on Callie Sling Crossbody, entry sessions summed across weeks"
+    },
+    {
+      "file": "sor-fig5-cart-recovery.png",
+      "stage": "site-opportunity-report",
+      "type": "cart-recovery",
+      "status": "rendered",
+      "title": "Abandoned-cart chains that purchased, closed 14-day window"
+    },
+    {
+      "file": "today-fig1-meta-weekly.png",
+      "stage": "today-opportunities",
+      "type": "channel-weekly-rpv",
+      "status": "rendered",
+      "title": "Meta paid against the site, by week"
+    },
+    {
+      "file": "uj-fig1-weekly-revenue.png",
+      "stage": "user-journey",
+      "type": "weekly-revenue",
+      "status": "rendered",
+      "title": "Order-file revenue by week, 14 September – 13 October 2026"
+    },
+    {
+      "file": "uj-fig2-journey-rpv.png",
+      "stage": "user-journey",
+      "type": "journey-rpv",
+      "status": "rendered",
+      "title": "Revenue per visit by journey, 14 September – 13 October 2026"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "requests": [
+    {
+      "id": "funnel_by_channel",
+      "question": "Show me the funnel for all traffic, Meta, email, and Google, week over week.",
+      "idsite": 5795,
+      "window": { "start": "2026-08-31", "end": "2026-10-11" },
+      "period": { "grain": "week", "compare": "previous" },
+      "segmentations": ["channel"],
+      "measures": ["sessions", "checkout_rate", "conversion_rate", "revenue_per_session"]
+    },
+    {
+      "id": "meta_campaign_payback",
+      "question": "Which Meta campaigns are we paying for that do not bring buyers?",
+      "idsite": 5795,
+      "window": { "start": "2026-08-31", "end": "2026-10-11" },
+      "by": ["utm_campaign"],
+      "measures": ["sessions", "orders", "revenue", "meta_ads.spend", "meta_ads.purchases", "roas", "cost_per_order"],
+      "derived": [
+        { "id": "roas", "label": "Return on ad spend", "data": "Tracker revenue over Meta spend.", "ratio": ["revenue", "meta_ads.spend"] },
+        { "id": "cost_per_order", "label": "Cost per order", "data": "Meta spend over tracker orders.", "ratio": ["meta_ads.spend", "orders"] }
+      ],
+      "rank": { "by": "meta_ads.spend", "limit": 15 },
+      "floor": { "sessions": 30 }
+    },
+    {
+      "id": "meta_daily_trend",
+      "question": "When did Meta conversion start falling?",
+      "idsite": 5795,
+      "window": { "start": "2026-08-01", "end": "2026-10-11" },
+      "period": { "grain": "day", "rolling": 7 },
+      "segmentations": ["channel"],
+      "measures": ["sessions", "buyers", "conversion_rate"]
+    },
+    {
+      "id": "landing_product_type",
+      "question": "Does Meta traffic land on the products that sell?",
+      "idsite": 5795,
+      "window": { "start": "2026-09-01", "end": "2026-09-30" },
+      "period": { "grain": "month", "compare": "previous" },
+      "by": ["site_catalog.product_type"],
+      "segmentations": ["channel"],
+      "measures": ["sessions", "conversion_rate", "revenue_per_session"],
+      "floor": { "sessions": 50 }
+    },
+    {
+      "id": "ga4_reconciliation",
+      "question": "How far apart are GA4 and Heatmap on sessions by source?",
+      "idsite": 5795,
+      "window": { "start": "2026-09-01", "end": "2026-09-30" },
+      "period": { "grain": "window" },
+      "by": ["source_or_referrer", "utm_medium"],
+      "measures": ["sessions", "ga4.sessions", "ga4.conversions", "orders"],
+      "rank": { "by": "sessions", "limit": 20 }
+    },
+    {
+      "id": "money_paths",
+      "question": "Which journeys make money, by traffic source, week over week?",
+      "idsite": 5795,
+      "window": { "start": "2026-08-31", "end": "2026-10-11" },
+      "subject": "journeys",
+      "segmentations": ["traffic_source"],
+      "measures": ["sessions", "orders", "revenue"]
+    },
+    {
+      "id": "new_visitor_cohorts",
+      "question": "Do new visitors from each source come back and buy, and on which visit?",
+      "idsite": 5795,
+      "window": { "start": "2026-08-31", "end": "2026-10-11" },
+      "period": { "grain": "cohort" },
+      "segmentations": ["traffic_source"],
+      "measures": ["sessions", "buyers"]
+    }
+  ]
+}

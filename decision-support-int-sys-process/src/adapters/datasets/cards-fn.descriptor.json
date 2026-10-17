@@ -1,0 +1,8 @@
+{
+  "id": "cards-fn",
+  "purpose": "Builds the funnel strategy cards for one funnel subject from its step readout.",
+  "data": "One card per FN strategy: the step that keeps the smallest share of the step before it, the slowest step by median minutes, and the latest week's completion drop, each with its value, threshold, and missing requirements.",
+  "role": "card",
+  "catalogId": "FN",
+  "replay": "recollect"
+}

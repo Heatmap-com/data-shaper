@@ -1,0 +1,6 @@
+{
+  "id": "entry-by-channel",
+  "purpose": "Compares entry sessions across the site's pages by referrer.",
+  "data": "Sessions per entry page and referrer. Small cells are dropped unless they are the chosen page or a top page for that referrer.",
+  "replay": "keep"
+}

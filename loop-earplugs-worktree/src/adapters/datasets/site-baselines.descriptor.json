@@ -1,0 +1,6 @@
+{
+  "id": "site-baselines",
+  "purpose": "Computes the site's own entry-session baseline for the batch window.",
+  "data": "Per week and referrer group: entry sessions, the share that left from the first page, the share that pogoed, and revenue per session.",
+  "replay": "keep"
+}

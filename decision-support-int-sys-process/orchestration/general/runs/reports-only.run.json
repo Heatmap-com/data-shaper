@@ -1,0 +1,6 @@
+{
+  "id": "reports-only",
+  "description": "From an existing full bundle: draw the charts, write the three reports, and style them as PDFs.",
+  "defaults": { "window": { "days": 30, "end": "yesterday" }, "priority": "normal", "resilience": "standard" },
+  "stages": ["chart-render", "site-opportunity-report", "today-opportunities", "user-journey", "style-pdf"]
+}

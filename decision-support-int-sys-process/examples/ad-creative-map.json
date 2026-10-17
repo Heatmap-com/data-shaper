@@ -1,0 +1,39 @@
+{
+  "_schema": "ae operator ad-creative map (Phase 5, plan §4.6 / Q13). Example, not seeded data.",
+  "_description": "One entry per ad the operator can map from UTMs to the promise the landing page must keep. Feed for ae_src_ad_creative until the meta/google/tiktok API connectors land (Phase 9); ingest maps these rows with provenance 'operator_map'.",
+  "_fields": {
+    "idsite": "pilot site id",
+    "platform": "meta | google | tiktok | email | organic ...",
+    "ad_id": "the platform's ad id",
+    "campaign_id": "campaign slug as the operator names it",
+    "utm_source": "utm_source the ad's links carry",
+    "utm_campaign": "utm_campaign the ad's links carry",
+    "utm_content": "utm_content the ad's links carry (per-ad discriminator)",
+    "destination_url": "landing URL including UTMs",
+    "offer_text": "the offer as the ad states it",
+    "claim_text": "the claim the landing page must support",
+    "has_code": "1 when the offer needs a discount code",
+    "offer_led": "1 when the ad leads with the offer rather than the product",
+    "creator": "creator handle for UGC ads, empty otherwise",
+    "angle": "message angle (durability, gift, comparison, ...)",
+    "temperature": "cold_paid_social | retargeting | email | organic"
+  },
+  "_example_entry": {
+    "idsite": 3228,
+    "platform": "meta",
+    "ad_id": "1200012345678901",
+    "campaign_id": "cmp-leather-gifts-q4",
+    "utm_source": "facebook",
+    "utm_campaign": "leather_gifts_q4",
+    "utm_content": "ad01_angle_durability",
+    "destination_url": "https://example.com/products/briefcase?utm_campaign=leather_gifts_q4&utm_content=ad01_angle_durability",
+    "offer_text": "20% off briefcases this week",
+    "claim_text": "full-grain leather, 25-year warranty",
+    "has_code": 1,
+    "offer_led": 1,
+    "creator": "",
+    "angle": "durability",
+    "temperature": "cold_paid_social"
+  },
+  "entries": []
+}

@@ -1,0 +1,5 @@
+{
+  "id": "synthetic-file",
+  "purpose": "Stands in for a real connector (Meta Marketing API, GA4 Data API, a store catalog export) by reading a source kind's rows from JSON Lines on the local disk, so shaped datasets that join external data can be built and tested before any connector exists.",
+  "data": "One raw row per line of <dir>/<kind>.jsonl, with the columns the kind declares; <dir>/<kind>.coverage.json names the days the file vouches for. The domain types the rows and refuses bad ones."
+}

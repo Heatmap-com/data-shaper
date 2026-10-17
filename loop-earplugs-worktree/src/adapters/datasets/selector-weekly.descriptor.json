@@ -1,0 +1,6 @@
+{
+  "id": "selector-weekly",
+  "purpose": "Counts clicks on each selector for this page's entry sessions.",
+  "data": "Clicks, orders, and revenue per week, selector, device, and bot filter. Revenue is the revenue of sessions that clicked, so it is not additive across selectors.",
+  "replay": "restamp"
+}

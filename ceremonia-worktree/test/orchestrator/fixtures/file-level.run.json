@@ -1,0 +1,5 @@
+{
+  "id": "file-level",
+  "extends": "general:full",
+  "patch": { "naming": { "params": { "seedTimeoutMs": 60000 } } }
+}

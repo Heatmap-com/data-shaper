@@ -1,0 +1,43 @@
+{
+  "id": "user-journey",
+  "label": "User Journey Opportunity Analysis",
+  "phase": "report",
+  "skill": "skills/user-journey-opportunity-analysis/SKILL.md",
+  "timeoutMs": 3600000,
+  "report": {
+    "title": "User Journey Opportunity Analysis",
+    "order": 3,
+    "job": "how shoppers move, and where that path leaks"
+  },
+  "charts": {
+    "uj-fig1-weekly-revenue": { "type": "weekly-revenue" },
+    "uj-fig2-journey-rpv": { "type": "journey-rpv" }
+  },
+  "handler": {
+    "use": "agent",
+    "agent": "kimi-cli",
+    "prompt": "report/user-journey.md",
+    "addDirs": ["{{paths.analysis}}/{{site.slug}}", "{{paths.reports}}/{{site.slug}}"]
+  },
+  "check": {
+    "use": "markdown-report",
+    "file": "{{paths.reports}}/{{site.slug}}/{{site.name}} — {{stage.report.title}}.md",
+    "bundle": "{{paths.analysis}}/{{site.slug}}",
+    "rules": {
+      "minWords": 1000,
+      "sections": ["Contents", "01", "02", "03", "04", "05", "06", "07", "A Data and Method"],
+      "placeholders": true,
+      "figures": true,
+      "anchors": ["orders in report window", "revenue in report window"],
+      "windowEnd": true,
+      "fresh": true
+    }
+  },
+  "fallback": {
+    "agent": "kimi-cli",
+    "prompt": "fallback/stage.md",
+    "maxAttempts": { "standard": 1, "top": 2 },
+    "timeoutMs": 3600000,
+    "addDirs": ["{{paths.analysis}}/{{site.slug}}", "{{paths.reports}}/{{site.slug}}"]
+  }
+}

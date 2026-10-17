@@ -1,0 +1,6 @@
+{
+  "id": "funnel-sequence-weekly",
+  "purpose": "Measures how entry sessions move from one commerce step to the next.",
+  "data": "Per week and step pair: sessions that reached the later step after the earlier one.",
+  "replay": "keep"
+}

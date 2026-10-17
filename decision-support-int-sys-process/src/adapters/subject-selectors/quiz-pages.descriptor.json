@@ -1,0 +1,15 @@
+{
+  "id": "quiz-pages",
+  "purpose": "Selects a site's quiz pages: a URL that holds a quiz term, or else a stored page descriptor whose tools name one.",
+  "data": "Quiz subjects, most exclude_confirmed entry sessions first, each with its URL, page type, entry sessions, orders, revenue, and the signal that matched (url or descriptor).",
+  "criteria": {
+    "type": "object",
+    "properties": {
+      "urlContains": { "type": "array", "items": { "type": "string" }, "description": "case-insensitive URL terms; [\"quiz\"] when absent" },
+      "toolTerms": { "type": "array", "items": { "type": "string" }, "description": "case-insensitive terms in the p12.tools descriptor; [\"quiz\"] when absent" },
+      "minEntrySessions": { "type": "integer", "minimum": 0 },
+      "limitPerSite": { "type": "integer", "minimum": 1 }
+    },
+    "additionalProperties": false
+  }
+}

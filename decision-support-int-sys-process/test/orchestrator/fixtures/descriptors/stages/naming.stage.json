@@ -1,0 +1,9 @@
+{
+  "id": "naming",
+  "label": "Name the site",
+  "forEach": "pages",
+  "handler": { "use": "command", "command": "bin/seed-named-page.sh", "args": ["{{unit.page.url}}", "{{site.idsite}}"] },
+  "check": { "use": "naming-complete" },
+  "retry": { "maxAttempts": 2, "backoffMs": 60000, "factor": 2 },
+  "fallback": { "agent": "fake", "prompt": "fallback/naming.md" }
+}

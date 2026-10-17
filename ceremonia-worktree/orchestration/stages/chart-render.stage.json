@@ -1,0 +1,31 @@
+{
+  "id": "chart-render",
+  "label": "Report charts",
+  "phase": "report",
+  "skill": "skills/analysis-doc-standards.md",
+  "timeoutMs": 600000,
+  "handler": {
+    "use": "chart-render",
+    "command": "{{config.report.python}}",
+    "args": [
+      "py/chart-render.py",
+      "--bundle", "{{paths.analysis}}/{{site.slug}}",
+      "--out", "{{paths.reports}}/{{site.slug}}/media",
+      "--tokens", "scripts/report-style/tokens.json"
+    ]
+  },
+  "check": { "use": "charts-rendered", "media": "{{paths.reports}}/{{site.slug}}/media", "bundle": "{{paths.analysis}}/{{site.slug}}" },
+  "errors": [
+    { "match": "has no 00_site_profile.json", "class": "blocked", "reason": "the full bundle is not built" },
+    { "match": "ModuleNotFoundError|No module named", "class": "blocked", "reason": "config.report.python is missing matplotlib or pandas" },
+    { "match": "unknown chart type", "class": "defect", "reason": "a stage declares a chart type py/lib/chart_types.py does not have" }
+  ],
+  "fallback": {
+    "agent": "kimi-cli",
+    "prompt": "fallback/stage.md",
+    "maxAttempts": { "standard": 1, "top": 2 },
+    "timeoutMs": 1800000,
+    "rerunPrimary": true,
+    "addDirs": ["{{paths.analysis}}/{{site.slug}}", "{{paths.reports}}/{{site.slug}}"]
+  }
+}

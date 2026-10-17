@@ -1,0 +1,14 @@
+{
+  "slug": "tennispremium",
+  "name": "Tennis Premium",
+  "domain": "tennispremium.co",
+  "origin": "https://tennispremium.co/",
+  "idsite": 6213,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/search",
+    "label": "Search",
+    "idsitehsr": 65706970
+  }
+}

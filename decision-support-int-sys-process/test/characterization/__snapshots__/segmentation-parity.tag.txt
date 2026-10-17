@@ -1,0 +1,447 @@
+rows 1120, non-zero 282
+
+# grid
+utm_campaign | all | all | all | 8
+utm_campaign | all | buyer | buyer | 8
+utm_campaign | all | buyer | non_buyer | 8
+utm_campaign | all | rager | non_rager | 8
+utm_campaign | all | rager | rager | 8
+utm_campaign | all | return_intent | new | 8
+utm_campaign | all | return_intent | open_cart | 8
+utm_campaign | all | return_intent | prior_browse | 8
+utm_campaign | all | return_intent | prior_buyer | 8
+utm_campaign | all | return_intent | prior_high_intent | 8
+utm_campaign | all | return_intent | returning_unseen | 8
+utm_campaign | all | returning | new | 8
+utm_campaign | all | returning | returning | 8
+utm_campaign | all | traffic_source | campaign | 8
+utm_campaign | all | traffic_source | direct | 8
+utm_campaign | all | traffic_source | meta | 8
+utm_campaign | all | traffic_source | other | 8
+utm_campaign | all | traffic_source | search | 8
+utm_campaign | all | traffic_source | social | 8
+utm_campaign | all | traffic_source | website | 8
+utm_campaign | desktop | all | all | 8
+utm_campaign | desktop | buyer | buyer | 8
+utm_campaign | desktop | buyer | non_buyer | 8
+utm_campaign | desktop | rager | non_rager | 8
+utm_campaign | desktop | rager | rager | 8
+utm_campaign | desktop | return_intent | new | 8
+utm_campaign | desktop | return_intent | open_cart | 8
+utm_campaign | desktop | return_intent | prior_browse | 8
+utm_campaign | desktop | return_intent | prior_buyer | 8
+utm_campaign | desktop | return_intent | prior_high_intent | 8
+utm_campaign | desktop | return_intent | returning_unseen | 8
+utm_campaign | desktop | returning | new | 8
+utm_campaign | desktop | returning | returning | 8
+utm_campaign | desktop | traffic_source | campaign | 8
+utm_campaign | desktop | traffic_source | direct | 8
+utm_campaign | desktop | traffic_source | meta | 8
+utm_campaign | desktop | traffic_source | other | 8
+utm_campaign | desktop | traffic_source | search | 8
+utm_campaign | desktop | traffic_source | social | 8
+utm_campaign | desktop | traffic_source | website | 8
+utm_campaign | mobile | all | all | 8
+utm_campaign | mobile | buyer | buyer | 8
+utm_campaign | mobile | buyer | non_buyer | 8
+utm_campaign | mobile | rager | non_rager | 8
+utm_campaign | mobile | rager | rager | 8
+utm_campaign | mobile | return_intent | new | 8
+utm_campaign | mobile | return_intent | open_cart | 8
+utm_campaign | mobile | return_intent | prior_browse | 8
+utm_campaign | mobile | return_intent | prior_buyer | 8
+utm_campaign | mobile | return_intent | prior_high_intent | 8
+utm_campaign | mobile | return_intent | returning_unseen | 8
+utm_campaign | mobile | returning | new | 8
+utm_campaign | mobile | returning | returning | 8
+utm_campaign | mobile | traffic_source | campaign | 8
+utm_campaign | mobile | traffic_source | direct | 8
+utm_campaign | mobile | traffic_source | meta | 8
+utm_campaign | mobile | traffic_source | other | 8
+utm_campaign | mobile | traffic_source | search | 8
+utm_campaign | mobile | traffic_source | social | 8
+utm_campaign | mobile | traffic_source | website | 8
+utm_campaign | tablet | all | all | 8
+utm_campaign | tablet | buyer | buyer | 8
+utm_campaign | tablet | buyer | non_buyer | 8
+utm_campaign | tablet | rager | non_rager | 8
+utm_campaign | tablet | rager | rager | 8
+utm_campaign | tablet | return_intent | new | 8
+utm_campaign | tablet | return_intent | open_cart | 8
+utm_campaign | tablet | return_intent | prior_browse | 8
+utm_campaign | tablet | return_intent | prior_buyer | 8
+utm_campaign | tablet | return_intent | prior_high_intent | 8
+utm_campaign | tablet | return_intent | returning_unseen | 8
+utm_campaign | tablet | returning | new | 8
+utm_campaign | tablet | returning | returning | 8
+utm_campaign | tablet | traffic_source | campaign | 8
+utm_campaign | tablet | traffic_source | direct | 8
+utm_campaign | tablet | traffic_source | meta | 8
+utm_campaign | tablet | traffic_source | other | 8
+utm_campaign | tablet | traffic_source | search | 8
+utm_campaign | tablet | traffic_source | social | 8
+utm_campaign | tablet | traffic_source | website | 8
+utm_source | all | all | all | 6
+utm_source | all | buyer | buyer | 6
+utm_source | all | buyer | non_buyer | 6
+utm_source | all | rager | non_rager | 6
+utm_source | all | rager | rager | 6
+utm_source | all | return_intent | new | 6
+utm_source | all | return_intent | open_cart | 6
+utm_source | all | return_intent | prior_browse | 6
+utm_source | all | return_intent | prior_buyer | 6
+utm_source | all | return_intent | prior_high_intent | 6
+utm_source | all | return_intent | returning_unseen | 6
+utm_source | all | returning | new | 6
+utm_source | all | returning | returning | 6
+utm_source | all | traffic_source | campaign | 6
+utm_source | all | traffic_source | direct | 6
+utm_source | all | traffic_source | meta | 6
+utm_source | all | traffic_source | other | 6
+utm_source | all | traffic_source | search | 6
+utm_source | all | traffic_source | social | 6
+utm_source | all | traffic_source | website | 6
+utm_source | desktop | all | all | 6
+utm_source | desktop | buyer | buyer | 6
+utm_source | desktop | buyer | non_buyer | 6
+utm_source | desktop | rager | non_rager | 6
+utm_source | desktop | rager | rager | 6
+utm_source | desktop | return_intent | new | 6
+utm_source | desktop | return_intent | open_cart | 6
+utm_source | desktop | return_intent | prior_browse | 6
+utm_source | desktop | return_intent | prior_buyer | 6
+utm_source | desktop | return_intent | prior_high_intent | 6
+utm_source | desktop | return_intent | returning_unseen | 6
+utm_source | desktop | returning | new | 6
+utm_source | desktop | returning | returning | 6
+utm_source | desktop | traffic_source | campaign | 6
+utm_source | desktop | traffic_source | direct | 6
+utm_source | desktop | traffic_source | meta | 6
+utm_source | desktop | traffic_source | other | 6
+utm_source | desktop | traffic_source | search | 6
+utm_source | desktop | traffic_source | social | 6
+utm_source | desktop | traffic_source | website | 6
+utm_source | mobile | all | all | 6
+utm_source | mobile | buyer | buyer | 6
+utm_source | mobile | buyer | non_buyer | 6
+utm_source | mobile | rager | non_rager | 6
+utm_source | mobile | rager | rager | 6
+utm_source | mobile | return_intent | new | 6
+utm_source | mobile | return_intent | open_cart | 6
+utm_source | mobile | return_intent | prior_browse | 6
+utm_source | mobile | return_intent | prior_buyer | 6
+utm_source | mobile | return_intent | prior_high_intent | 6
+utm_source | mobile | return_intent | returning_unseen | 6
+utm_source | mobile | returning | new | 6
+utm_source | mobile | returning | returning | 6
+utm_source | mobile | traffic_source | campaign | 6
+utm_source | mobile | traffic_source | direct | 6
+utm_source | mobile | traffic_source | meta | 6
+utm_source | mobile | traffic_source | other | 6
+utm_source | mobile | traffic_source | search | 6
+utm_source | mobile | traffic_source | social | 6
+utm_source | mobile | traffic_source | website | 6
+utm_source | tablet | all | all | 6
+utm_source | tablet | buyer | buyer | 6
+utm_source | tablet | buyer | non_buyer | 6
+utm_source | tablet | rager | non_rager | 6
+utm_source | tablet | rager | rager | 6
+utm_source | tablet | return_intent | new | 6
+utm_source | tablet | return_intent | open_cart | 6
+utm_source | tablet | return_intent | prior_browse | 6
+utm_source | tablet | return_intent | prior_buyer | 6
+utm_source | tablet | return_intent | prior_high_intent | 6
+utm_source | tablet | return_intent | returning_unseen | 6
+utm_source | tablet | returning | new | 6
+utm_source | tablet | returning | returning | 6
+utm_source | tablet | traffic_source | campaign | 6
+utm_source | tablet | traffic_source | direct | 6
+utm_source | tablet | traffic_source | meta | 6
+utm_source | tablet | traffic_source | other | 6
+utm_source | tablet | traffic_source | search | 6
+utm_source | tablet | traffic_source | social | 6
+utm_source | tablet | traffic_source | website | 6
+
+# non-zero rows
+utm_campaign | (none) | all | all | all | 2026-09-07 | sessions=28 | buyers=6 | orders=6 | revenue=321 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | all | all | 2026-09-14 | sessions=4 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | buyer | buyer | 2026-09-07 | sessions=6 | buyers=6 | orders=6 | revenue=321 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | buyer | buyer | 2026-09-14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | buyer | non_buyer | 2026-09-07 | sessions=22 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | buyer | non_buyer | 2026-09-14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | rager | non_rager | 2026-09-07 | sessions=28 | buyers=6 | orders=6 | revenue=321 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | rager | non_rager | 2026-09-14 | sessions=4 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | new | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=31 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | open_cart | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=76 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | prior_browse | 2026-09-07 | sessions=12 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | prior_browse | 2026-09-14 | sessions=3 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | prior_buyer | 2026-09-07 | sessions=5 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | prior_high_intent | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | return_intent | returning_unseen | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | returning | new | 2026-09-07 | sessions=20 | buyers=5 | orders=5 | revenue=275 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | returning | new | 2026-09-14 | sessions=4 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | returning | returning | 2026-09-07 | sessions=8 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | campaign | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | direct | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=71 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | meta | 2026-09-07 | sessions=15 | buyers=3 | orders=3 | revenue=148 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | meta | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | other | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | other | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | search | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=56 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | social | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | all | traffic_source | website | 2026-09-07 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | all | all | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | all | all | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | buyer | buyer | 2026-09-07 | sessions=3 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | buyer | non_buyer | 2026-09-07 | sessions=11 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | buyer | non_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | rager | non_rager | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | rager | non_rager | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | new | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | open_cart | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | prior_browse | 2026-09-07 | sessions=6 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | prior_browse | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | prior_buyer | 2026-09-07 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | returning | new | 2026-09-07 | sessions=10 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | returning | new | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | returning | returning | 2026-09-07 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | campaign | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | direct | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=71 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | meta | 2026-09-07 | sessions=5 | buyers=1 | orders=1 | revenue=41 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | meta | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | other | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | other | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | search | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=56 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | social | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | mobile | traffic_source | website | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | all | all | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | all | all | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | buyer | buyer | 2026-09-07 | sessions=3 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | buyer | buyer | 2026-09-14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | buyer | non_buyer | 2026-09-07 | sessions=11 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | buyer | non_buyer | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | rager | non_rager | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | rager | non_rager | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | return_intent | new | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=31 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | return_intent | open_cart | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=76 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | return_intent | prior_browse | 2026-09-07 | sessions=6 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | return_intent | prior_browse | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | return_intent | prior_buyer | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | returning | new | 2026-09-07 | sessions=10 | buyers=2 | orders=2 | revenue=107 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | returning | new | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | returning | returning | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | traffic_source | direct | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | traffic_source | meta | 2026-09-07 | sessions=10 | buyers=2 | orders=2 | revenue=107 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | traffic_source | meta | 2026-09-14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | traffic_source | other | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | traffic_source | other | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | traffic_source | search | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | (none) | tablet | traffic_source | website | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":4}
+utm_campaign | c0 | all | all | all | 2026-09-07 | sessions=8 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | all | all | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | buyer | buyer | 2026-09-07 | sessions=2 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | buyer | non_buyer | 2026-09-07 | sessions=6 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | buyer | non_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | rager | non_rager | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | rager | rager | 2026-09-07 | sessions=8 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | return_intent | open_cart | 2026-09-07 | sessions=3 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | return_intent | prior_browse | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | return_intent | prior_buyer | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | return_intent | prior_buyer | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | returning | new | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=36 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | returning | new | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | returning | returning | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=66 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | traffic_source | meta | 2026-09-07 | sessions=8 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | traffic_source | meta | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | all | traffic_source | website | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | all | all | 2026-09-07 | sessions=8 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | all | all | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | buyer | buyer | 2026-09-07 | sessions=2 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | buyer | non_buyer | 2026-09-07 | sessions=6 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | buyer | non_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | rager | non_rager | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | rager | rager | 2026-09-07 | sessions=8 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | return_intent | open_cart | 2026-09-07 | sessions=3 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | return_intent | prior_browse | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | return_intent | prior_buyer | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | return_intent | prior_buyer | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | returning | new | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=36 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | returning | new | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | returning | returning | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=66 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | traffic_source | meta | 2026-09-07 | sessions=8 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | traffic_source | meta | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c0 | desktop | traffic_source | website | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_campaign | c1 | all | all | all | 2026-09-07 | sessions=6 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | all | all | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | buyer | buyer | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | buyer | non_buyer | 2026-09-07 | sessions=5 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | buyer | non_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | rager | non_rager | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | rager | non_rager | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | rager | rager | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | return_intent | new | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | return_intent | open_cart | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | return_intent | prior_browse | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | return_intent | prior_browse | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | return_intent | prior_buyer | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | return_intent | prior_buyer | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | returning | new | 2026-09-07 | sessions=6 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | returning | new | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | traffic_source | meta | 2026-09-07 | sessions=6 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | all | traffic_source | meta | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | all | all | 2026-09-07 | sessions=6 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | all | all | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | buyer | buyer | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | buyer | non_buyer | 2026-09-07 | sessions=5 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | buyer | non_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | rager | non_rager | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | rager | non_rager | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | rager | rager | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | return_intent | new | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | return_intent | open_cart | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | return_intent | prior_browse | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | return_intent | prior_browse | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | return_intent | prior_buyer | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | return_intent | prior_buyer | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | returning | new | 2026-09-07 | sessions=6 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | returning | new | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | traffic_source | meta | 2026-09-07 | sessions=6 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":2}
+utm_campaign | c1 | desktop | traffic_source | meta | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":2}
+utm_source | (none) | all | all | all | 2026-09-07 | sessions=28 | buyers=6 | orders=6 | revenue=321 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | all | all | 2026-09-14 | sessions=4 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | buyer | buyer | 2026-09-07 | sessions=6 | buyers=6 | orders=6 | revenue=321 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | buyer | buyer | 2026-09-14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | buyer | non_buyer | 2026-09-07 | sessions=22 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | buyer | non_buyer | 2026-09-14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | rager | non_rager | 2026-09-07 | sessions=28 | buyers=6 | orders=6 | revenue=321 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | rager | non_rager | 2026-09-14 | sessions=4 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | new | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=31 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | open_cart | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=76 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | prior_browse | 2026-09-07 | sessions=12 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | prior_browse | 2026-09-14 | sessions=3 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | prior_buyer | 2026-09-07 | sessions=5 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | prior_high_intent | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | return_intent | returning_unseen | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | returning | new | 2026-09-07 | sessions=20 | buyers=5 | orders=5 | revenue=275 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | returning | new | 2026-09-14 | sessions=4 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | returning | returning | 2026-09-07 | sessions=8 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | campaign | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | direct | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=71 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | meta | 2026-09-07 | sessions=15 | buyers=3 | orders=3 | revenue=148 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | meta | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | other | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | other | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | search | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=56 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | social | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | all | traffic_source | website | 2026-09-07 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | all | all | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | all | all | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | buyer | buyer | 2026-09-07 | sessions=3 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | buyer | non_buyer | 2026-09-07 | sessions=11 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | buyer | non_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | rager | non_rager | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | rager | non_rager | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | new | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | open_cart | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | prior_browse | 2026-09-07 | sessions=6 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | prior_browse | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | prior_buyer | 2026-09-07 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | returning | new | 2026-09-07 | sessions=10 | buyers=3 | orders=3 | revenue=168 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | returning | new | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | returning | returning | 2026-09-07 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | campaign | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | direct | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=71 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | meta | 2026-09-07 | sessions=5 | buyers=1 | orders=1 | revenue=41 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | meta | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | other | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | other | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | search | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=56 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | social | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | mobile | traffic_source | website | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | all | all | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | all | all | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | buyer | buyer | 2026-09-07 | sessions=3 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | buyer | buyer | 2026-09-14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | buyer | non_buyer | 2026-09-07 | sessions=11 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | buyer | non_buyer | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | rager | non_rager | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | rager | non_rager | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | return_intent | new | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=31 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | return_intent | open_cart | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=76 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | return_intent | prior_browse | 2026-09-07 | sessions=6 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | return_intent | prior_browse | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | return_intent | prior_buyer | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | returning | new | 2026-09-07 | sessions=10 | buyers=2 | orders=2 | revenue=107 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | returning | new | 2026-09-14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | returning | returning | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | traffic_source | direct | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | traffic_source | meta | 2026-09-07 | sessions=10 | buyers=2 | orders=2 | revenue=107 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | traffic_source | meta | 2026-09-14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | traffic_source | other | 2026-09-07 | sessions=1 | buyers=1 | orders=1 | revenue=46 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | traffic_source | other | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | traffic_source | search | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | (none) | tablet | traffic_source | website | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":3}
+utm_source | fb | all | all | all | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | all | all | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | buyer | buyer | 2026-09-07 | sessions=3 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | buyer | non_buyer | 2026-09-07 | sessions=11 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | buyer | non_buyer | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | rager | non_rager | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | rager | non_rager | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | rager | rager | 2026-09-07 | sessions=12 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | new | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | open_cart | 2026-09-07 | sessions=5 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | prior_browse | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | prior_browse | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | prior_buyer | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | prior_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | returning | new | 2026-09-07 | sessions=10 | buyers=2 | orders=2 | revenue=87 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | returning | new | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | returning | returning | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=66 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | traffic_source | meta | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | traffic_source | meta | 2026-09-14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | all | traffic_source | website | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | all | all | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | all | all | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | buyer | buyer | 2026-09-07 | sessions=3 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | buyer | non_buyer | 2026-09-07 | sessions=11 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | buyer | non_buyer | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | rager | non_rager | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | rager | non_rager | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | rager | rager | 2026-09-07 | sessions=12 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | new | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | open_cart | 2026-09-07 | sessions=5 | buyers=2 | orders=2 | revenue=102 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | open_cart | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | prior_browse | 2026-09-07 | sessions=3 | buyers=1 | orders=1 | revenue=51 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | prior_browse | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | prior_buyer | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | prior_buyer | 2026-09-14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | prior_high_intent | 2026-09-07 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | return_intent | returning_unseen | 2026-09-07 | sessions=2 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | returning | new | 2026-09-07 | sessions=10 | buyers=2 | orders=2 | revenue=87 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | returning | new | 2026-09-14 | sessions=4 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | returning | returning | 2026-09-07 | sessions=4 | buyers=1 | orders=1 | revenue=66 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | traffic_source | meta | 2026-09-07 | sessions=14 | buyers=3 | orders=3 | revenue=153 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | traffic_source | meta | 2026-09-14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}
+utm_source | fb | desktop | traffic_source | website | 2026-09-14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | progressed=0 | {"family":"utm","rank":1}

@@ -1,0 +1,5 @@
+{
+  "id": "return_intent",
+  "purpose": "Splits visits by what the same visitor did on earlier visits within the lookback, so a coach can compare a returning buyer, an abandoned cart, and a first visit on the same page or tag value.",
+  "data": "One value per visit, first match wins: prior_buyer when the previous visit inside the lookback bought or completed checkout; open_cart when an earlier visit inside the lookback carted after the last purchase; prior_high_intent or prior_browse by the previous visit's state under the site's showed-interest thresholds; returning_unseen when the tracker flags the visitor as returning but no earlier visit is in the lookback; new otherwise. The visitor is the browser id (config_id); a visit without one has no history."
+}

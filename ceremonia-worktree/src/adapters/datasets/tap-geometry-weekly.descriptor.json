@@ -1,0 +1,6 @@
+{
+  "id": "tap-geometry-weekly",
+  "purpose": "Compares click coordinates with the captured box of the element that was clicked.",
+  "data": "Per week, device, and selector: taps outside the box, distance from the box center, and rapid correction pairs.",
+  "replay": "keep"
+}

@@ -1,0 +1,4 @@
+{
+  "standard": { "fallbackAttempts": 1 },
+  "top": { "fallbackAttempts": 3 }
+}

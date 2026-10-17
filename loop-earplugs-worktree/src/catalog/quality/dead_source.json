@@ -1,0 +1,13 @@
+{
+  "id": "dead_source",
+  "label": "Sources that never buy",
+  "purpose": "A traffic source with a large share of sessions and almost no checkouts or sales is either upper-funnel traffic that converts later, or traffic that is not shoppers at all. The engine cannot tell which; a person who knows the media plan can.",
+  "subject": { "kind": "groups", "by": "source_or_referrer" },
+  "method": { "adapter": "dead-cohort", "params": { "minSessions": 1000, "minShare": 0.01, "maxConversionRatio": 0.1, "maxCheckoutRatio": 0.2, "ignore": [""] } },
+  "triage": { "adapter": "always-ask" },
+  "propose": "include",
+  "pending": "include",
+  "auto": "include",
+  "scope": "session",
+  "question": "{{value}} sent {{sessions}} sessions ({{sessionShare}} of the site), with {{progressed}} checkout sessions and {{orders}} orders: {{conversion}} conversion against {{restConversion}} for the rest of the site. It stays in unless you say otherwise. Is this traffic real shoppers? Answer exclude to drop it from every dataset of the site."
+}

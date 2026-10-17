@@ -1,0 +1,15 @@
+{
+  "id": "traffic_source",
+  "label": "Traffic source",
+  "purpose": "Where the visit came from, as the first trend delivery defined it. Its meaning is frozen so stored weeks compare; a different reading of source is a new segmentation, such as channel.",
+  "data": "meta when the visit's UTM source is a Meta spelling (facebook, ig, fb, instagram, facebookads); otherwise the referrer type: direct, search, website, campaign, or social; anything else is other.",
+  "rules": [
+    { "value": "meta", "when": { "field": "utm_source", "in": "@meta_utm_sources_trend" } },
+    { "value": "direct", "when": { "field": "referer_type", "eq": 1 } },
+    { "value": "search", "when": { "field": "referer_type", "eq": 2 } },
+    { "value": "website", "when": { "field": "referer_type", "eq": 3 } },
+    { "value": "campaign", "when": { "field": "referer_type", "eq": 6 } },
+    { "value": "social", "when": { "field": "referer_type", "eq": 7 } }
+  ],
+  "fallback": "other"
+}

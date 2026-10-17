@@ -1,0 +1,27 @@
+{
+  "id": "ga4",
+  "label": "Google Analytics 4",
+  "purpose": "Daily GA4 sessions, conversions, and revenue by session source and medium, so the tracker's counts can be reconciled with the client's own analytics.",
+  "data": "One row per day, session source, and session medium from the GA4 property. GA4 counts sessions and attributes conversions its own way; the shares between the two systems are the reading, not the levels.",
+  "role": "facts",
+  "grain": "day",
+  "columns": {
+    "date": "date",
+    "session_source": "string",
+    "session_medium": "string",
+    "sessions": "number",
+    "engaged_sessions": "number",
+    "conversions": "number",
+    "purchase_revenue": "number"
+  },
+  "keys": [
+    { "column": "session_source", "attribute": "source_or_referrer", "transform": ["trim", "lower"], "map": { "(direct)": "" } },
+    { "column": "session_medium", "attribute": "utm_medium", "transform": ["trim", "lower"], "map": { "(none)": "", "organic": "", "referral": "" } }
+  ],
+  "measures": {
+    "sessions": { "label": "GA4 sessions", "data": "GA4 sessions summed over the period's days." },
+    "engaged_sessions": { "label": "GA4 engaged sessions", "data": "GA4 engaged sessions summed over the period's days." },
+    "conversions": { "label": "GA4 conversions", "data": "GA4 key events summed over the period's days." },
+    "purchase_revenue": { "label": "GA4 purchase revenue", "data": "GA4 purchase revenue summed over the period's days." }
+  }
+}

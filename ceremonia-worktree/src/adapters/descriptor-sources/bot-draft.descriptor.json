@@ -1,0 +1,6 @@
+{
+  "id": "bot-draft",
+  "purpose": "Drafts page-descriptor fields the schema allows a bot to fill, from the captured render and the datasets already collected.",
+  "data": "Descriptor rows at low confidence, owned by the bot, expiring in 90 days. A missing source is skipped rather than guessed.",
+  "replay": "recollect"
+}

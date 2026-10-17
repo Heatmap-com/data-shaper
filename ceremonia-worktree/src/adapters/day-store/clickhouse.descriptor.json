@@ -1,0 +1,5 @@
+{
+  "id": "clickhouse",
+  "purpose": "Keeps the day scan's stored days in ae_scan_day, so runs on several machines share one store.",
+  "data": "One row per part of an entry: site, kind, key, day, format version, final, shape, and up to 8 MB of the day's rows as JSON. A read takes the latest write's parts."
+}

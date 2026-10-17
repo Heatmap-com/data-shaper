@@ -1,0 +1,219 @@
+rows 163, non-zero 163
+
+# grid
+assigned | all | all | all | 8
+assigned | all | returning | new | 4
+assigned | all | returning | returning | 4
+assigned | all | traffic_source | campaign | 2
+assigned | all | traffic_source | meta | 8
+assigned | all | traffic_source | other | 2
+assigned | all | traffic_source | search | 2
+assigned | all | traffic_source | website | 2
+assigned | desktop | all | all | 8
+assigned | desktop | returning | new | 4
+assigned | desktop | returning | returning | 4
+assigned | desktop | traffic_source | meta | 8
+assigned | mobile | all | all | 8
+assigned | mobile | returning | new | 4
+assigned | mobile | returning | returning | 4
+assigned | mobile | traffic_source | campaign | 2
+assigned | mobile | traffic_source | meta | 6
+assigned | mobile | traffic_source | other | 2
+assigned | mobile | traffic_source | search | 2
+assigned | mobile | traffic_source | website | 2
+assigned | tablet | all | all | 8
+assigned | tablet | returning | new | 4
+assigned | tablet | returning | returning | 4
+assigned | tablet | traffic_source | meta | 8
+assigned | tablet | traffic_source | other | 2
+assigned | tablet | traffic_source | search | 2
+exposed | all | all | all | 4
+exposed | all | returning | new | 2
+exposed | all | returning | returning | 2
+exposed | all | traffic_source | campaign | 1
+exposed | all | traffic_source | meta | 4
+exposed | all | traffic_source | other | 1
+exposed | all | traffic_source | search | 1
+exposed | all | traffic_source | website | 1
+exposed | desktop | all | all | 3
+exposed | desktop | returning | new | 1
+exposed | desktop | returning | returning | 2
+exposed | desktop | traffic_source | meta | 3
+exposed | mobile | all | all | 3
+exposed | mobile | returning | new | 2
+exposed | mobile | returning | returning | 1
+exposed | mobile | traffic_source | campaign | 1
+exposed | mobile | traffic_source | meta | 1
+exposed | mobile | traffic_source | search | 1
+exposed | mobile | traffic_source | website | 1
+exposed | tablet | all | all | 4
+exposed | tablet | returning | new | 2
+exposed | tablet | returning | returning | 2
+exposed | tablet | traffic_source | meta | 4
+exposed | tablet | traffic_source | other | 1
+exposed | tablet | traffic_source | search | 1
+
+# non-zero rows
+assigned:0 | 0 | 2026-09-07 | assigned | all | all | all | sessions=6 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | all | returning | returning | sessions=6 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | all | traffic_source | meta | sessions=3 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | all | traffic_source | other | sessions=3 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | desktop | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | desktop | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | mobile | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | mobile | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | mobile | traffic_source | other | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | tablet | all | all | sessions=2 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | tablet | returning | returning | sessions=2 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | tablet | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-07 | assigned | tablet | traffic_source | other | sessions=1 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | all | all | all | sessions=6 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | all | returning | returning | sessions=6 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | all | traffic_source | campaign | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | all | traffic_source | meta | sessions=5 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | desktop | all | all | sessions=2 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | desktop | returning | returning | sessions=2 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | mobile | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | mobile | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | mobile | traffic_source | campaign | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | mobile | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | tablet | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | tablet | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 0 | 2026-09-11 | assigned | tablet | traffic_source | meta | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | all | all | all | sessions=6 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | all | returning | new | sessions=6 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | all | traffic_source | meta | sessions=4 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | all | traffic_source | search | sessions=2 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | desktop | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | desktop | returning | new | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | mobile | all | all | sessions=2 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | mobile | returning | new | sessions=2 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | mobile | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | mobile | traffic_source | search | sessions=1 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | tablet | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | tablet | returning | new | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | tablet | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-09 | assigned | tablet | traffic_source | search | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | all | all | all | sessions=6 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | all | returning | new | sessions=6 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | all | traffic_source | meta | sessions=5 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | all | traffic_source | website | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | desktop | all | all | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | desktop | returning | new | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | mobile | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | mobile | returning | new | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | mobile | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | mobile | traffic_source | website | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | tablet | all | all | sessions=2 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | tablet | returning | new | sessions=2 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+assigned:0 | 1 | 2026-09-13 | assigned | tablet | traffic_source | meta | sessions=2 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | all | all | all | sessions=6 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | all | returning | returning | sessions=6 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | all | traffic_source | meta | sessions=3 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | all | traffic_source | other | sessions=3 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | desktop | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | desktop | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | mobile | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | mobile | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | mobile | traffic_source | other | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | tablet | all | all | sessions=2 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | tablet | returning | returning | sessions=2 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | tablet | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | assigned | tablet | traffic_source | other | sessions=1 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | all | all | all | sessions=4 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | all | returning | returning | sessions=4 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | all | traffic_source | meta | sessions=3 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | all | traffic_source | other | sessions=1 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | desktop | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | desktop | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | desktop | traffic_source | meta | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | tablet | all | all | sessions=2 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | tablet | returning | returning | sessions=2 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | tablet | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-07 | exposed | tablet | traffic_source | other | sessions=1 | buyers=1 | orders=1 | revenue=46 | revenue_sq=2116 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | all | all | all | sessions=6 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | all | returning | returning | sessions=6 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | all | traffic_source | campaign | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | all | traffic_source | meta | sessions=5 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | desktop | all | all | sessions=2 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | desktop | returning | returning | sessions=2 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | mobile | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | mobile | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | mobile | traffic_source | campaign | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | mobile | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | tablet | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | tablet | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | assigned | tablet | traffic_source | meta | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | all | all | all | sessions=4 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | all | returning | returning | sessions=4 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | all | traffic_source | campaign | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | all | traffic_source | meta | sessions=3 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | desktop | all | all | sessions=1 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | desktop | returning | returning | sessions=1 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | desktop | traffic_source | meta | sessions=1 | buyers=1 | orders=1 | revenue=66 | revenue_sq=4356 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | mobile | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | mobile | returning | returning | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | mobile | traffic_source | campaign | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | mobile | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | tablet | all | all | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | tablet | returning | returning | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 0 | 2026-09-11 | exposed | tablet | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | all | all | all | sessions=6 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | all | returning | new | sessions=6 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | all | traffic_source | meta | sessions=4 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | all | traffic_source | search | sessions=2 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | desktop | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | desktop | returning | new | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | mobile | all | all | sessions=2 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | mobile | returning | new | sessions=2 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | mobile | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | mobile | traffic_source | search | sessions=1 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | tablet | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | tablet | returning | new | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | tablet | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | assigned | tablet | traffic_source | search | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | all | all | all | sessions=3 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | all | returning | new | sessions=3 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | all | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | all | traffic_source | search | sessions=2 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | mobile | all | all | sessions=1 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | mobile | returning | new | sessions=1 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | mobile | traffic_source | search | sessions=1 | buyers=1 | orders=1 | revenue=56 | revenue_sq=3136 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | tablet | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | tablet | returning | new | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | tablet | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-09 | exposed | tablet | traffic_source | search | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | all | all | all | sessions=6 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | all | returning | new | sessions=6 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | all | traffic_source | meta | sessions=5 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | all | traffic_source | website | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | desktop | all | all | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | desktop | returning | new | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | desktop | traffic_source | meta | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | mobile | all | all | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | mobile | returning | new | sessions=2 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | mobile | traffic_source | meta | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | mobile | traffic_source | website | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | tablet | all | all | sessions=2 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | tablet | returning | new | sessions=2 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+viewed:0 | 1 | 2026-09-13 | assigned | tablet | traffic_source | meta | sessions=2 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | all | all | all | sessions=4 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | all | returning | new | sessions=4 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | all | traffic_source | meta | sessions=3 | buyers=2 | orders=2 | revenue=112 | revenue_sq=7072 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | all | traffic_source | website | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | desktop | all | all | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | desktop | returning | new | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | desktop | traffic_source | meta | sessions=2 | buyers=1 | orders=1 | revenue=36 | revenue_sq=1296 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | mobile | all | all | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | mobile | returning | new | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | mobile | traffic_source | website | sessions=1 | buyers=0 | orders=0 | revenue=0 | revenue_sq=0 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | tablet | all | all | sessions=1 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | tablet | returning | new | sessions=1 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0
+viewed:0 | 1 | 2026-09-13 | exposed | tablet | traffic_source | meta | sessions=1 | buyers=1 | orders=1 | revenue=76 | revenue_sq=5776 | progressed=0

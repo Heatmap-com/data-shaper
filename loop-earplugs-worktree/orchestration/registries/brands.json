@@ -1,0 +1,29 @@
+{
+  "brands": [
+    {
+      "key": "ceremonia",
+      "name": "Ceremonia",
+      "domain": "ceremonia.com"
+    },
+    {
+      "key": "peter-thomas-roth",
+      "name": "Peter Thomas Roth",
+      "domain": "peterthomasroth.com"
+    },
+    {
+      "key": "dvf",
+      "name": "DVF",
+      "domain": "dvf.com"
+    },
+    {
+      "key": "hyperlite",
+      "name": "Hyperlite",
+      "domain": "hyperlite.com"
+    },
+    {
+      "key": "dennys",
+      "name": "Dennys",
+      "domain": "dennys.com"
+    }
+  ]
+}

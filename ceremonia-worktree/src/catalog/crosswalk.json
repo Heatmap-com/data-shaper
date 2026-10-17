@@ -1,0 +1,632 @@
+{
+  "catalog_version": "2026-10-04.1",
+  "entries": [
+    {
+      "intent_id": "`section.promote_revenue_signal`",
+      "members": [
+        "PO:A1",
+        "PI:A1",
+        "PG:H1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`section.promote_minority_seen`",
+      "members": [
+        "PI:A3",
+        "PG:H3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`section.demote_zero_revenue`",
+      "members": [
+        "PO:A4",
+        "PI:A2",
+        "PG:H2",
+        "PG:A3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`section.reorder_stack`",
+      "members": [
+        "PO:A3",
+        "PI:A5",
+        "PG:H9"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`hierarchy.revenue_weighted`",
+      "members": [
+        "PI:G2",
+        "PG:S1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`cta.repeat_at_breaks`",
+      "members": [
+        "PI:A4",
+        "PG:H4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`cta.single_primary`",
+      "members": [
+        "PO:C3",
+        "PI:C6",
+        "PG:F12"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`nav.rerank`",
+      "members": [
+        "PO:A5",
+        "PI:B8",
+        "PG:H5",
+        "PG:H6"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`faq.relative_promotion`",
+      "members": [
+        "PO:B1",
+        "PI:B1",
+        "PG:M1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`faq.extract_above_fold`",
+      "members": [
+        "PO:B2",
+        "PI:B2",
+        "PG:M2",
+        "PG:S3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`reviews.theme_promotion`",
+      "members": [
+        "PO:B3",
+        "PI:B4",
+        "PG:M3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`default.variant_or_tab`",
+      "members": [
+        "PO:B4",
+        "PI:B7",
+        "PG:H11"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`gallery.reorder`",
+      "members": [
+        "PO:B5",
+        "PG:H8"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`recs.slot_rerank`",
+      "members": [
+        "PO:B6",
+        "PI:B6",
+        "PG:M7",
+        "PG:M8"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`recs.slot_rerank`",
+      "members": [
+        "TI:B5",
+        "TG:B2"
+      ],
+      "relation": "surface (tool-rendered slots)"
+    },
+    {
+      "intent_id": "`attention.high_predicted_low_measured`",
+      "members": [
+        "PO:C1",
+        "PI:C1",
+        "PG:A1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`attention.low_predicted_high_measured`",
+      "members": [
+        "PO:C2",
+        "PI:C2",
+        "PG:A2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`attention.gap_swap`",
+      "members": [
+        "PI:G3",
+        "PG:A4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`attention.visual_weight`",
+      "members": [
+        "PO:C4",
+        "PI:C3"
+      ],
+      "relation": "related"
+    },
+    {
+      "intent_id": "`layout.f_pattern_banner`",
+      "members": [
+        "PI:C4",
+        "PG:A8",
+        "PG:A9"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`layout.mobile_compression`",
+      "members": [
+        "PI:C7",
+        "PG:A5"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`buybox.sticky_atc`",
+      "members": [
+        "PI:C5",
+        "PG:A6"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`affordance.false`",
+      "members": [
+        "PO:D1",
+        "PI:D2",
+        "PG:F1",
+        "PG:F3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`defect.rage_first`",
+      "members": [
+        "PO:D2",
+        "PI:D1",
+        "PG:F2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`defect.rage_first`",
+      "members": [
+        "TI:D1",
+        "TG:D1"
+      ],
+      "relation": "surface (portal)"
+    },
+    {
+      "intent_id": "`menu.click_not_hover`",
+      "members": [
+        "PO:D3",
+        "PI:D3",
+        "PG:F4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`form.field_reduction`",
+      "members": [
+        "PO:D6",
+        "PI:D7",
+        "PG:F6"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`cart.minicart_vs_full`",
+      "members": [
+        "PI:D4",
+        "PG:F5"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`mobile.tap_targets`",
+      "members": [
+        "PI:D8",
+        "PG:F9"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`proof.brag_bar_cold`",
+      "members": [
+        "PO:E2",
+        "PI:E1",
+        "PG:O1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.risk_reversal`",
+      "members": [
+        "PO:E3",
+        "PI:E2",
+        "PG:O2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`decision.comparison`",
+      "members": [
+        "PO:E5",
+        "PI:E3",
+        "PG:O3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`decision.comparison_row`",
+      "members": [
+        "PI:B5",
+        "PG:M5"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`decision.us_vs_them`",
+      "members": [
+        "PO:G4",
+        "PO:E5"
+      ],
+      "relation": "related"
+    },
+    {
+      "intent_id": "`cart.empty_state`",
+      "members": [
+        "PI:E4",
+        "PG:O5"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.discount_visibility`",
+      "members": [
+        "PI:E6",
+        "PG:O8",
+        "PG:F10",
+        "PG:F11"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.price_test_first`",
+      "members": [
+        "PO:E1",
+        "PI:E7",
+        "PG:S5"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`aov.free_shipping_threshold`",
+      "members": [
+        "PO:G5",
+        "PI:G6",
+        "PG:O9"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`aov.free_shipping_threshold`",
+      "members": [
+        "TI:E2",
+        "TD:Z-E2"
+      ],
+      "relation": "surface (slide cart, tracking page)"
+    },
+    {
+      "intent_id": "`source.message_match`",
+      "members": [
+        "PO:F1",
+        "PI:F1",
+        "PG:J1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`source.message_match`",
+      "members": [
+        "TI:C1",
+        "TD:Z-C1",
+        "TG:C1"
+      ],
+      "relation": "surface (page builder)"
+    },
+    {
+      "intent_id": "`source.cold_presell`",
+      "members": [
+        "PO:F2",
+        "PI:F3",
+        "PG:J3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`source.route_by_channel`",
+      "members": [
+        "PI:F2",
+        "PG:J5",
+        "PG:J6"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`source.route_by_channel`",
+      "members": [
+        "TI:F2",
+        "TG:F3"
+      ],
+      "relation": "surface (built page)"
+    },
+    {
+      "intent_id": "`returning.fast_path`",
+      "members": [
+        "PO:F3",
+        "PI:F4",
+        "PG:J4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returning.no_cold_education`",
+      "members": [
+        "TI:F1",
+        "TG:F1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`router.choose_job`",
+      "members": [
+        "PI:G1",
+        "PG:S2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`event.composite_trigger`",
+      "members": [
+        "PI:G4",
+        "PG:S4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`kind.fleet_rerank`",
+      "members": [
+        "PO:G1",
+        "PG:S7"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`sibling.position_control`",
+      "members": [
+        "PI:G7",
+        "PG:S8"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.exchange_before_refund`",
+      "members": [
+        "TI:A2",
+        "TG:A2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.size_exchange`",
+      "members": [
+        "TI:A3",
+        "TD:A1",
+        "TG:A3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.portal_help`",
+      "members": [
+        "TI:B2",
+        "TG:B1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.portal_recommendation`",
+      "members": [
+        "TI:C3",
+        "TD:C1",
+        "TG:B3",
+        "TG:C3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.bonus_credit`",
+      "members": [
+        "TI:E1",
+        "TD:E1",
+        "TG:E1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.ai_agent`",
+      "members": [
+        "TI:G1",
+        "TD:G1",
+        "TG:G1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.cross_collection`",
+      "members": [
+        "TI:G2",
+        "TD:G2",
+        "TG:G2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`returns.dominant_quadrant_portal`",
+      "members": [
+        "TI:G5",
+        "TG:G4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`tracking.reorder_blocks`",
+      "members": [
+        "TI:A4",
+        "TG:A4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`tracking.offers`",
+      "members": [
+        "TI:C4",
+        "TD:C2",
+        "TG:C4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.ocu_order`",
+      "members": [
+        "TI:A1",
+        "TG:A1"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.post_purchase_chain`",
+      "members": [
+        "TI:G3",
+        "TD:Z-E1",
+        "TG:E2",
+        "TG:G3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.thank_you_blocks`",
+      "members": [
+        "TI:A6",
+        "TD:Z-D2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.segment_checkout`",
+      "members": [
+        "TI:C2",
+        "TD:Z-A2",
+        "TG:C2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`offer.no_repeat_declined`",
+      "members": [
+        "TI:F3",
+        "TI:F5",
+        "TG:F2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`defect.wallet_extension`",
+      "members": [
+        "TI:D3",
+        "TG:D2"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`rescue.order_edit`",
+      "members": [
+        "TI:G4",
+        "TD:G3",
+        "TG:E6",
+        "TG:D3"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`subscription.cancel_save`",
+      "members": [
+        "TI:E3",
+        "TG:A5",
+        "TG:E5"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`protection.attach`",
+      "members": [
+        "TI:E4",
+        "TD:E4",
+        "TG:E4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`protection.widget_friction`",
+      "members": [
+        "TD:D1",
+        "TI:E4"
+      ],
+      "relation": "related"
+    },
+    {
+      "intent_id": "`recovery.double_send`",
+      "members": [
+        "TI:D6",
+        "TG:D4",
+        "TG:F4"
+      ],
+      "relation": "same"
+    },
+    {
+      "intent_id": "`recovery.identified_abandoner`",
+      "members": [
+        "TD:F1",
+        "TG:C5",
+        "TG:G5"
+      ],
+      "relation": "related"
+    }
+  ]
+}

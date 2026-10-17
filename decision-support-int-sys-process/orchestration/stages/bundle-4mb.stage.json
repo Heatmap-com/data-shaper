@@ -1,0 +1,32 @@
+{
+  "id": "bundle-4mb",
+  "label": "Trimmed analyst bundle",
+  "phase": "export",
+  "skill": "skills/analyst-data-bundle-4mb/SKILL.md",
+  "concurrency": 1,
+  "leaseMs": 120000,
+  "timeoutMs": 1800000,
+  "handler": {
+    "use": "command",
+    "command": "node",
+    "args": [
+      "bin/export-bundle-4mb.mjs",
+      "--src", "{{paths.analysis}}/{{site.slug}}",
+      "--out", "{{paths.analysis}}/{{site.slug}}-4mb",
+      "--window-start", "{{window.start}}",
+      "--window-end", "{{window.end}}",
+      "--python", "{{config.report.python}}"
+    ]
+  },
+  "check": {
+    "use": "bundle-anchors",
+    "bundle": "{{paths.analysis}}/{{site.slug}}-4mb"
+  },
+  "retry": { "maxAttempts": 2, "backoffMs": 60000, "factor": 2, "maxBackoffMs": 300000 },
+  "errors": [
+    { "match": "full bundle anchors do not hold", "class": "blocked", "reason": "the full bundle failed its anchors, so the trim was not run" },
+    { "match": "anchor mismatch", "class": "defect", "reason": "the trimmed orders do not meet the profile anchors" },
+    { "match": "export-bundle-4mb: |\\bexit 2\\b", "class": "defect", "reason": "trim command usage error" },
+    { "match": "ModuleNotFoundError|No module named", "class": "blocked", "reason": "config.report.python is missing pandas" }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "cards-tg",
+  "purpose": "Builds the traffic-generation strategy cards after the gates and requirements pass.",
+  "data": "One card per TG strategy. A failed gate is blocked, and an unresolvable descriptor is unknown rather than a silent card.",
+  "role": "card",
+  "catalogId": "TG",
+  "replay": "recollect"
+}

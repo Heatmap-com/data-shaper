@@ -1,0 +1,6 @@
+{
+  "id": "page-primary",
+  "purpose": "Selects the qualifier's landing page as the site's one page subject.",
+  "data": "One page subject with role primary, its URL, and the qualified entry sessions, orders, and revenue.",
+  "criteria": { "type": "object", "properties": {}, "additionalProperties": false }
+}

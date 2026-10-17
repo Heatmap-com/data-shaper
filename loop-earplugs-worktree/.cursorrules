@@ -1,0 +1,29 @@
+# Analysis documents and data bundles
+
+Before creating or rebuilding any of the following, read the matching skill and follow it. Do not start from memory of a previous site.
+
+- Full analyst bundle (`~/work/analysis/<slug>/`): `skills/analyst-data-bundle/SKILL.md`
+- Trimmed bundle (`~/work/analysis/<slug>-4mb/`): `skills/analyst-data-bundle-4mb/SKILL.md`
+- Site Opportunity Report: `skills/site-opportunity-report/SKILL.md`
+- Today Opportunities: `skills/today-opportunities/SKILL.md`
+- User Journey Opportunity Analysis: `skills/user-journey-opportunity-analysis/SKILL.md`
+- Upload a full site to a remote project: `skills/upload-full-site/SKILL.md`
+- Run the remote analysis that enhances the three reports: `skills/kimi-analysis/SKILL.md`
+- Style reports as Heatmap PDFs: `skills/style-reports/SKILL.md`
+- Naming profile (name a site, naming bot): `skills/resilient-naming/SKILL.md`
+- Declare or override a site's segmentation, or check one: `skills/segmentation-authoring/SKILL.md`
+- Site analysis (batch, capture, datasets, descriptors, trends): `skills/site-analysis/SKILL.md`
+- Dataset requests from a question or a transcript (`--shape`): `skills/dataset-requests/SKILL.md`
+- Add a site to the analysis queue: `skills/analysis-queue-add/SKILL.md`
+- Clear the analysis queue: `skills/analysis-queue-clear/SKILL.md`
+- Change a queued site's priority: `skills/analysis-queue-priority/SKILL.md`
+- Work the queued site analyses: `skills/analysis-queue-work/SKILL.md`
+- Monitor the analysis queue: `skills/analysis-queue-monitor/SKILL.md`
+
+The queue is the orchestrator's job store, `process/orchestrator.db`. The journal is `process/journal/`. Change both only through `bin/orchestrator`, after reading the matching skill. The shared contract is `skills/analysis-queue/CONTRACT.md`. `process/queue/queue.json` is the retired queue, kept as history.
+
+Full process order is analyze, then export, then reports. Naming and site analysis store the profile and the data. The two bundle skills write the export files after that. The three report skills are the final stage, and they read the full export. Each step is a stage. One site holds a stage at a time, and the orchestrator's workers start the next site on a stage as soon as it is free.
+
+The three document skills share `skills/analysis-doc-standards.md` (what to compute) and `docs/style-guide.md` (how the finished report reads). Read both before writing any of them.
+
+When the user asks for both data folders, build the full bundle and check its anchors before the trimmed copy. When they ask for the three documents, read all three document skills. Write the documents from the full bundle.

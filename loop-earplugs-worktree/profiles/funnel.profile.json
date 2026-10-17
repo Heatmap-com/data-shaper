@@ -1,0 +1,9 @@
+{
+  "id": "funnel",
+  "subject_type": "funnel",
+  "label": "Catalog funnels",
+  "selector": { "use": "catalog-funnels", "criteria": { "minSessions": 100 } },
+  "datasets": { "include": ["funnel-steps", "cards-fn"], "exclude": [] },
+  "catalogs": ["FN"],
+  "steps": ["select-subjects", "subject-datasets", "site-datasets", "analysis"]
+}

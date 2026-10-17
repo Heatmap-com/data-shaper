@@ -1,0 +1,8 @@
+{
+  "id": "full",
+  "extends": "general:full",
+  "patch": {
+    "naming": { "params": { "seedTimeoutMs": 1200000 } }
+  },
+  "remove": ["analysis"]
+}

@@ -1,0 +1,6 @@
+{
+  "id": "card-history",
+  "purpose": "Reads strategy cards written by earlier batches.",
+  "data": "The latest verdict and trigger state for each catalog, strategy, and segment, plus how many batches have seen that cell.",
+  "replay": "keep"
+}

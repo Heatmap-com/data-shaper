@@ -1,0 +1,7 @@
+{
+  "id": "naming-only",
+  "description": "Name every page in the site's collection.",
+  "defaults": { "window": { "days": 30, "end": "yesterday" }, "priority": "normal", "resilience": "standard" },
+  "pages": { "source": "site", "fallback": "home" },
+  "stages": ["naming"]
+}

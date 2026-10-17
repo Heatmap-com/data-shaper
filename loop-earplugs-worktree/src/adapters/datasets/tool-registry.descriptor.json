@@ -1,0 +1,6 @@
+{
+  "id": "tool-registry",
+  "purpose": "Reads the tools recorded for the site.",
+  "data": "One row per tool: its modules, the surfaces it owns, how it joins to events, and whether its event names are documented.",
+  "replay": "keep"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "viewport-weekly",
+  "purpose": "Counts which viewport class dominated each page session.",
+  "data": "Sessions per week, device, viewport class, and bot filter, and that class's share of the week.",
+  "replay": "keep"
+}

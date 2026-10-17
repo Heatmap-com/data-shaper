@@ -1,0 +1,6 @@
+{
+  "id": "page-segment-weekly",
+  "purpose": "Splits this page's entry sessions by week and by the segments the cards read.",
+  "data": "Sessions, orders, and revenue per week, device, referrer, new or returning, browser, viewport, and bot filter.",
+  "replay": "keep"
+}

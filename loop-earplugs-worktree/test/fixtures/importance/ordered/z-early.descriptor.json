@@ -1,0 +1,5 @@
+{
+  "id": "early",
+  "purpose": "Claims buttons before a broader adapter runs.",
+  "data": "Buttons only: selector and visible text."
+}

@@ -1,0 +1,6 @@
+{
+  "id": "returning-history",
+  "purpose": "Holds a place for a visitor's history across sessions.",
+  "data": "No rows. The requirement is marked missing because the visitor id on pageviews is a per-session token.",
+  "replay": "keep"
+}

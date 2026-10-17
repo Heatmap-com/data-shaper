@@ -1,0 +1,6 @@
+{
+  "id": "line-items",
+  "purpose": "Lists the products inside orders placed by this page's entry sessions.",
+  "data": "One row per order line: sku, quantity, and revenue.",
+  "replay": "keep"
+}

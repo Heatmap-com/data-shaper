@@ -1,0 +1,7 @@
+{
+  "domain": "sayii.com",
+  "origin": "https://sayii.com",
+  "name": "Sayii",
+  "idsite": 42,
+  "pages": { "include": [{ "url": "https://sayii.com/", "role": "home" }] }
+}

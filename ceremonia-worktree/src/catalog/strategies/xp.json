@@ -1,0 +1,110 @@
+{
+  "catalog_version": "2026-10-14.1",
+  "catalog_id": "XP",
+  "source": "docs/plans/execution-profiles.md",
+  "strategies": [
+    {
+      "id": "XP:A1",
+      "family": "A",
+      "title": "Stop reading an experiment whose arms fail the sample-ratio check",
+      "requirement_keys": [
+        "H16",
+        "O04"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H16, O04",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "srm",
+        "threshold": 0.01,
+        "metric": "srm_pvalue"
+      }
+    },
+    {
+      "id": "XP:A2",
+      "family": "A",
+      "title": "Extend an experiment until each arm reaches the order floor",
+      "requirement_keys": [
+        "H16"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H16",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "underpowered",
+        "metric": "min_arm_orders"
+      }
+    },
+    {
+      "id": "XP:A3",
+      "family": "A",
+      "title": "Read the exposed basis when it reverses the assigned lift",
+      "requirement_keys": [
+        "H16"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H16",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "basis-reversal",
+        "metric": "reversed_arms"
+      }
+    },
+    {
+      "id": "XP:A4",
+      "family": "A",
+      "title": "Follow the element whose click rate moved with the treatment",
+      "requirement_keys": [
+        "H16"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H16",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "element-lift",
+        "threshold": 0.05,
+        "metric": "lifted_elements"
+      }
+    }
+  ]
+}

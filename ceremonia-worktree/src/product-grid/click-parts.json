@@ -1,0 +1,8 @@
+{
+  "notes": "Which part of a grid cell a click selector hit. The first part whose selector matches wins; every other click is the image, which is the attention numerator. 'any' matches when one fragment is present, 'all' when every fragment is. Each entry names the theme family its markup comes from.",
+  "fallback": "image",
+  "parts": [
+    { "part": "quick_add", "family": "quick-add buttons", "any": ["quick-add", "quick_add", "quick add"] },
+    { "part": "qv_submit", "family": "rs-qv quick-view panel", "all": ["rs-qv-panel", "button"] }
+  ]
+}

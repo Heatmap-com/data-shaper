@@ -1,0 +1,426 @@
+{
+  "no-site-literals": [
+    {
+      "file": "bin/seed-named-page.sh",
+      "line": 48,
+      "rule": "tmp-path",
+      "snippet": "remote_catalog=\"/tmp/naming-catalog-${idsite}-$$.yaml\""
+    },
+    {
+      "file": "py/build.py",
+      "line": 29,
+      "rule": "tmp-path",
+      "snippet": "df = pd.read_pickle('/tmp/dvf.pkl')"
+    },
+    {
+      "file": "py/build.py",
+      "line": 55,
+      "rule": "tmp-path",
+      "snippet": "orders = pd.DataFrame(json.load(open('/tmp/pc/orders.json')))"
+    },
+    {
+      "file": "py/build.py",
+      "line": 64,
+      "rule": "tmp-path",
+      "snippet": "sc = pd.DataFrame(json.load(open('/tmp/pc/visit_scroll_max.json')))"
+    },
+    {
+      "file": "py/build.py",
+      "line": 65,
+      "rule": "tmp-path",
+      "snippet": "hx = pd.DataFrame(json.load(open('/tmp/pc/history_extra.json')))"
+    },
+    {
+      "file": "py/build.py",
+      "line": 94,
+      "rule": "client-domain",
+      "snippet": "od['eurl'] = od.eurl.fillna('').str.replace('https://dvf.com', '', regex=False)"
+    },
+    {
+      "file": "py/build.py",
+      "line": 155,
+      "rule": "client-domain",
+      "snippet": "ent['entry_path'] = ent.eurl.str.replace('https://dvf.com', '', regex=False).str.replace(r'\\?.*$', '', regex=True)"
+    },
+    {
+      "file": "py/build.py",
+      "line": 166,
+      "rule": "tmp-path",
+      "snippet": "pp = pd.DataFrame(json.load(open('/tmp/pc/page_period.json')))"
+    },
+    {
+      "file": "py/build.py",
+      "line": 167,
+      "rule": "client-domain",
+      "snippet": "pp['url'] = pp.url.str.replace('https://dvf.com', '', regex=False)"
+    },
+    {
+      "file": "py/build.py",
+      "line": 172,
+      "rule": "tmp-path",
+      "snippet": "hv = pd.DataFrame(json.load(open('/tmp/pc/hv_page_reach.json')))"
+    },
+    {
+      "file": "py/build.py",
+      "line": 173,
+      "rule": "client-domain",
+      "snippet": "hv['url'] = hv.url.str.replace('https://dvf.com', '', regex=False)"
+    },
+    {
+      "file": "py/build.py",
+      "line": 207,
+      "rule": "tmp-path",
+      "snippet": "ck = pd.read_pickle('/tmp/dvf_ck.pkl')"
+    },
+    {
+      "file": "py/build.py",
+      "line": 233,
+      "rule": "tmp-path",
+      "snippet": "pl = pd.DataFrame(json.load(open('/tmp/pc/pipeline_datasets.json')))"
+    },
+    {
+      "file": "py/build.py",
+      "line": 302,
+      "rule": "client-domain",
+      "snippet": "'site': {'name': 'DVF (Diane von Furstenberg)', 'domain': 'dvf.com', 'idsite': 5795, 'platform': 'Shopify', 'currency': 'USD'},"
+    },
+    {
+      "file": "py/build.py",
+      "line": 317,
+      "rule": "client-domain",
+      "snippet": "'entry / page classes': {'home': 'dvf.com/', 'private_sale': '/collections/private-sale', 'sale_coll': '/collections/*sale*', 'product': '/products/*',"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 6,
+      "rule": "tmp-path",
+      "snippet": "const out = (name, rows) => { fs.writeFileSync(`/tmp/pc/${name}.json`, JSON.stringify(rows)); console.log(name, rows.length); };"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 10,
+      "rule": "client-domain",
+      "snippet": "SELECT idsitehsr, url, multiIf(url IN ('https://dvf.com','https://dvf.com/'),'home', url LIKE '%/collections/private-sale%','private_sale', url LIKE '%/collections/%sale%','sale_coll', url LIKE '%/products/%','product', url LIKE '%/collections/new%' OR url LIKE '%fall%' OR url LIKE '%zankov%','new_fall_coll', url LIKE '%/collections/%','other_coll', url LIKE '%/search%','search', url LIKE '%/cart%' OR url LIKE '%checkout%','cart', url LIKE '%size-guide%','size_guide', url LIKE '%/account%','account', url LIKE '%/pages/%','content', 'other') pc"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 11,
+      "rule": "idsite-literal",
+      "snippet": "FROM (SELECT idsitehsr, JSONExtractString(arrayElement(JSONExtractArrayRaw(ifNull(any(match_page_rules),'[]')),1),'value') url FROM default.site_hsr WHERE idsite=5795 GROUP BY idsitehsr))`;"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 17,
+      "rule": "idsite-literal",
+      "snippet": "FROM default.udp_hsrce_visits WHERE idsite=5795 AND server_date BETWEEN '${from}' AND '${to}' GROUP BY idvisit"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 23,
+      "rule": "idsite-literal",
+      "snippet": "FROM default.udp_conversions FINAL WHERE idsite=5795 AND server_date BETWEEN '2026-08-01' AND '2026-10-10' GROUP BY idorder),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 25,
+      "rule": "idsite-literal",
+      "snippet": "FROM default.conversion_item WHERE idsite=5795 AND server_time >= '2026-07-31' AND server_time < '2026-10-12' AND deleted=0 GROUP BY idorder)"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 33,
+      "rule": "idsite-literal",
+      "snippet": "FROM default.udp_hsrce_visits WHERE idsite=5795 AND server_date BETWEEN '2026-08-12' AND '2026-08-25' GROUP BY idvisit),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 35,
+      "rule": "idsite-literal",
+      "snippet": "FROM default.udp_hsrce_pageviews WHERE idsite=5795 AND server_date BETWEEN '2026-08-12' AND '2026-08-25' GROUP BY idvisit),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 37,
+      "rule": "idsite-literal",
+      "snippet": "FROM default.journey_events_map WHERE idsite=5795 AND server_date BETWEEN '2026-08-12' AND '2026-08-25' GROUP BY idvisit),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 38,
+      "rule": "idsite-literal",
+      "snippet": "cl AS (SELECT idvisit, count() clicks FROM default.udp_clicksce_clicks WHERE idsite=5795 AND server_date BETWEEN '2026-08-12' AND '2026-08-25' GROUP BY idvisit),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 39,
+      "rule": "idsite-literal",
+      "snippet": "o AS (SELECT idvisit, uniqExact(idorder) n FROM default.udp_conversions FINAL WHERE idsite=5795 AND server_date BETWEEN '2026-08-12' AND '2026-08-25' GROUP BY idvisit)"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 47,
+      "rule": "idsite-literal",
+      "snippet": "FROM default.udp_hsrce_pageviews WHERE idsite=5795 AND server_date BETWEEN '2026-08-26' AND '2026-10-09' GROUP BY idvisit`,"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 51,
+      "rule": "idsite-literal",
+      "snippet": "o AS (SELECT idvisit, uniqExact(idorder) n, sum(r) rev FROM (SELECT idvisit, idorder, any(revenue) r FROM default.udp_conversions FINAL WHERE idsite=5795 AND server_date BETWEEN '2026-09-01' AND '2026-10-09' GROUP BY idvisit, idorder) GROUP BY idvisit),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 53,
+      "rule": "idsite-literal",
+      "snippet": "WHERE p.idsite=5795 AND p.server_date BETWEEN '2026-09-01' AND '2026-10-09' GROUP BY p.idvisit, url, pc),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 55,
+      "rule": "idsite-literal",
+      "snippet": "WHERE p.idsite=5795 AND p.server_date BETWEEN '2026-09-01' AND '2026-10-09' GROUP BY p.idvisit)"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 64,
+      "rule": "idsite-literal",
+      "snippet": "o AS (SELECT idvisit, idorder, any(revenue) r FROM default.udp_conversions FINAL WHERE idsite=5795 AND server_date BETWEEN '2026-09-10' AND '2026-10-09' GROUP BY idvisit, idorder),"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 67,
+      "rule": "idsite-literal",
+      "snippet": "WHERE p.idsite=5795 AND p.server_date BETWEEN '2026-09-10' AND '2026-10-09' AND v.cid != '')"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 75,
+      "rule": "idsite-literal",
+      "snippet": "WHERE idsite=5795 AND (bot_filter IN ('', 'exclude_confirmed', 'portal_11_4')"
+    },
+    {
+      "file": "py/export.mjs",
+      "line": 76,
+      "rule": "idsite-literal",
+      "snippet": "OR (bot_filter='none' AND dataset_id NOT IN (SELECT DISTINCT dataset_id FROM journey_events.ae_dataset_row_current WHERE idsite=5795 AND bot_filter='exclude_confirmed')))`,"
+    },
+    {
+      "file": "py/hypothesis-build.py",
+      "line": 4,
+      "rule": "tmp-path",
+      "snippet": "python3 py/hypothesis-build.py /tmp/hyp/raw docs/analysis/dvf/hypotheses/data"
+    },
+    {
+      "file": "py/hypothesis-export.mjs",
+      "line": 4,
+      "rule": "tmp-path",
+      "snippet": "* Writes /tmp/hyp/raw/<job>.json. py/hypothesis-build.py turns them into the CSV attachments."
+    },
+    {
+      "file": "py/hypothesis-export.mjs",
+      "line": 9,
+      "rule": "idsite-literal",
+      "snippet": "const IDSITE = 5795;"
+    },
+    {
+      "file": "py/hypothesis-export.mjs",
+      "line": 13,
+      "rule": "tmp-path",
+      "snippet": "const OUT = '/tmp/hyp/raw';"
+    },
+    {
+      "file": "py/hypothesis-export.mjs",
+      "line": 22,
+      "rule": "client-domain",
+      "snippet": "multiIf(url IN ('https://dvf.com', 'https://dvf.com/'), 'home',"
+    },
+    {
+      "file": "py/hypothesis-scrape.py",
+      "line": 4,
+      "rule": "tmp-path",
+      "snippet": "python3 py/hypothesis-scrape.py /tmp/hyp/raw"
+    },
+    {
+      "file": "py/hypothesis-scrape.py",
+      "line": 33,
+      "rule": "client-domain",
+      "snippet": "code = subprocess.run(['curl', '-sL', '-A', UA, '-o', str(f), '-w', '%{http_code}', f'https://www.dvf.com/products/{handle}'],"
+    },
+    {
+      "file": "py/split.py",
+      "line": 72,
+      "rule": "client-domain",
+      "snippet": "buf.write(f'# Part of the DVF Site Opportunity Report data (dvf.com, 10 Sep - 9 Oct 2026). See 00_README_data_guide.md for definitions.\\n')"
+    },
+    {
+      "file": "py/split.py",
+      "line": 107,
+      "rule": "client-domain",
+      "snippet": "w(f'- **Site:** DVF (Diane von Furstenberg), dvf.com, Shopify, USD. Internal site id 5795.\\n- **Report window:** 10 Sep - 9 Oct 2026.\\n- **Data coverage:** {d[\"periods\"][\"data_coverage\"]}\\n')"
+    },
+    {
+      "file": "scripts/probe-clickhouse.mjs",
+      "line": 27,
+      "rule": "idsite-literal",
+      "snippet": "WHERE idsite = 3199 AND server_date >= toDate('2026-09-26') AND server_date <= toDate('2026-10-02') AND time_since_load > 0 LIMIT 100000)"
+    },
+    {
+      "file": "scripts/probe-clickhouse.mjs",
+      "line": 34,
+      "rule": "idsite-literal",
+      "snippet": "WHERE idsite = 3199 AND idsitehsr = 63918696 AND server_date >= toDate('2026-09-26') AND server_date <= toDate('2026-10-02')"
+    },
+    {
+      "file": "scripts/probe-clickhouse.mjs",
+      "line": 40,
+      "rule": "idsite-literal",
+      "snippet": "WHERE idsite = 3199 AND server_date >= toDate('2026-09-26') AND server_date <= toDate('2026-10-02')"
+    },
+    {
+      "file": "scripts/probe-clickhouse.mjs",
+      "line": 47,
+      "rule": "idsite-literal",
+      "snippet": "WHERE idsite = 3199 AND server_date >= toDate('2026-09-26') AND server_date <= toDate('2026-10-02') AND custom_var_k5 != ''"
+    },
+    {
+      "file": "scripts/probes/run-probes.mjs",
+      "line": 5,
+      "rule": "tmp-path",
+      "snippet": "// Usage: node scripts/probes/run-probes.mjs > /tmp/probes.json"
+    },
+    {
+      "file": "scripts/probes/run-probes.mjs",
+      "line": 61,
+      "rule": "idsite-literal",
+      "snippet": "`SELECT * FROM default.udp_am_zones WHERE idsite = 3199 AND server_date >= toDate('2026-09-28') LIMIT 3`,"
+    },
+    {
+      "file": "scripts/remote-llm-projects/analyze-site.test.mjs",
+      "line": 183,
+      "rule": "client-domain",
+      "snippet": "domain: 'ceremonia.com',"
+    },
+    {
+      "file": "scripts/remote-llm-projects/analyze-site.test.mjs",
+      "line": 284,
+      "rule": "client-domain",
+      "snippet": "domain: 'ceremonia.com',"
+    },
+    {
+      "file": "scripts/report-style/style-reports.test.mjs",
+      "line": 13,
+      "rule": "client-domain",
+      "snippet": "'<p>tennispremium.co | 13 September \u2013 12 October 2026 | Prepared 13 October 2026</p>',"
+    },
+    {
+      "file": "scripts/report-style/style-reports.test.mjs",
+      "line": 28,
+      "rule": "client-domain",
+      "snippet": "'<p>Tennis Premium \u00b7 tennispremium.co Prepared 13 October 2026 | Data through 12 October 2026 A one-hour ad-account intervention</p>',"
+    },
+    {
+      "file": "scripts/report-style/tokens.mjs",
+      "line": 5,
+      "rule": "users-path",
+      "snippet": "* `/Users/kennpalm/Documents/heatmap-style-guide/style-guide.md`:"
+    },
+    {
+      "file": "src/adapters/persistence/clickhouse/trigger-store.js",
+      "line": 76,
+      "rule": "idsite-literal",
+      "snippet": "/** Latest definition per key. A site row wins over the idsite 0 default. */"
+    },
+    {
+      "file": "src/adapters/persistence/clickhouse/trigger-store.js",
+      "line": 82,
+      "rule": "idsite-literal",
+      "snippet": "WHERE idsite = {idsite:UInt32} OR idsite = 0`,"
+    },
+    {
+      "file": "src/adapters/persistence/memory/trigger-store.js",
+      "line": 35,
+      "rule": "idsite-literal",
+      "snippet": "/** Latest definition per key. A site row wins over the idsite 0 default. */"
+    },
+    {
+      "file": "src/audit/queries/template.js",
+      "line": 1468,
+      "rule": "idsite-literal",
+      "snippet": "AND m.idsite = 0"
+    },
+    {
+      "file": "src/index.js",
+      "line": 16,
+      "rule": "idsite-literal",
+      "snippet": "*   node src/index.js --naming-complete --idsite 3199 --idsitehsr 63918696 --url https://... --names names.json"
+    },
+    {
+      "file": "src/ports/persistence/trigger-store.js",
+      "line": 6,
+      "rule": "idsite-literal",
+      "snippet": "* @property {(idsite: number) => Promise<object[]>} readTriggerDefinitions latest per key; a site row wins over idsite 0"
+    }
+  ],
+  "composition-only": [
+    {
+      "file": "src/adapters/telemetry/localhost.js",
+      "line": 61,
+      "rule": "reads-process-env",
+      "snippet": "if (process.env.VITEST) return 0;"
+    },
+    {
+      "file": "src/adapters/telemetry/localhost.js",
+      "line": 62,
+      "rule": "reads-process-env",
+      "snippet": "const configured = Number(process.env.TELEMETRY_PORT ?? 9474);"
+    },
+    {
+      "file": "src/config.js",
+      "line": 51,
+      "rule": "reads-process-env",
+      "snippet": "export function loadConfig(env = process.env) {"
+    },
+    {
+      "file": "src/index.js",
+      "line": 50,
+      "rule": "reads-process-env",
+      "snippet": "const logger = pino({ level: process.env.LOG_LEVEL ?? 'info' });"
+    },
+    {
+      "file": "src/index.js",
+      "line": 121,
+      "rule": "reads-process-env",
+      "snippet": "harvester: createHarvester({ botRunner: createBotRunner({ env: process.env }) }),"
+    },
+    {
+      "file": "src/index.js",
+      "line": 51,
+      "rule": "reads-process-env",
+      "snippet": "const config = loadConfig(process.env);"
+    },
+    {
+      "file": "src/index.js",
+      "line": 64,
+      "rule": "reads-process-env",
+      "snippet": "flags.persistence ?? process.env.ANALYSIS_PERSISTENCE ?? 'clickhouse',"
+    },
+    {
+      "file": "src/index.js",
+      "line": 73,
+      "rule": "reads-process-env",
+      "snippet": "const store = await openV1ClickHouse({ env: process.env, logger });"
+    },
+    {
+      "file": "src/index.js",
+      "line": 141,
+      "rule": "reads-process-env",
+      "snippet": "flags['site-source'] ?? process.env.ANALYSIS_SITE_SOURCE ?? resumed?.siteSource,"
+    },
+    {
+      "file": "src/index.js",
+      "line": 146,
+      "rule": "reads-process-env",
+      "snippet": "flags.qualifier ?? process.env.ANALYSIS_QUALIFIER ?? resumed?.qualifier ?? 'prefer-non-home',"
+    }
+  ]
+}

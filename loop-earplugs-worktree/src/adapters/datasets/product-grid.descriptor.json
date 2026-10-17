@@ -1,0 +1,6 @@
+{
+  "id": "product-grid",
+  "purpose": "Classifies each product-tile block and flags the cells whose click share, or whose lift against the other blocks, clears the click gate.",
+  "data": "One row per cell, device, and week, plus a leave-one-out column prior and the flags that prior makes available. Orders on a cell are the session's orders and are not additive across cells. The product name is the name captured in the slot.",
+  "replay": "keep"
+}

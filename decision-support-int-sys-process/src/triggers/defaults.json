@@ -1,0 +1,52 @@
+[
+  {
+    "key": "abandoned_cart",
+    "name": "Abandoned Cart",
+    "level": "session",
+    "version": 1,
+    "active": true,
+    "predicate": {
+      "type": "session_events",
+      "intent_events": ["add_to_cart", "checkout_started"],
+      "purchase_events": ["checkout_completed"],
+      "purchase_also_counts_order": true,
+      "recover": true,
+      "chain_window_days": 14
+    }
+  },
+  {
+    "key": "showed_interest",
+    "name": "Showed Interest",
+    "level": "session",
+    "version": 1,
+    "active": true,
+    "predicate": {
+      "type": "session_interest",
+      "min_pages": 3,
+      "min_clicks": 3,
+      "min_scroll_pct": 50,
+      "min_duration_sec": 60,
+      "chain_window_days": 14
+    }
+  },
+  {
+    "key": "super_shopper",
+    "name": "Super-Shopper",
+    "level": "visitor",
+    "version": 1,
+    "active": true,
+    "predicate": {
+      "type": "visitor_window",
+      "window_days": 14,
+      "min_sessions": 2,
+      "min_interest_sessions": 1,
+      "min_atc_sessions": 1,
+      "atc_event": "add_to_cart",
+      "min_product_pages": 3,
+      "interest_trigger": "showed_interest",
+      "purchase_trigger": "abandoned_cart",
+      "prior_purchase_lookback_days": 365,
+      "chain_window_days": 14
+    }
+  }
+]

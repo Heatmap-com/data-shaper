@@ -1,0 +1,6 @@
+{
+  "id": "coverage",
+  "purpose": "Counts each source table over the batch window so a missing source keeps its strategies blocked.",
+  "data": "One row per source: row count and first and last date. A zero count is a result, not a failed query.",
+  "replay": "keep"
+}

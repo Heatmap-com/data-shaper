@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analysis query tool · Grok - K3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <button id="menu-open" class="menu-open" type="button" aria-label="Menu" aria-haspopup="menu" aria-expanded="false"><i></i><i></i><i></i></button>
+      <h1 id="title">Analysis query tool</h1>
+      <span class="tag">Grok - K3</span>
+      <button id="filters-toggle" class="filters-toggle" type="button" aria-expanded="false" aria-controls="top-filters"><span id="filters-summary" class="filters-summary"></span><span class="filters-word">Filters</span></button>
+    </div>
+    <div id="top-filters" class="top-filters">
+      <div class="selectors">
+        <label class="picker"><span>Site</span><select id="site-select"></select></label>
+        <label class="picker wide"><span>Question</span><select id="tab-select"></select></label>
+        <button id="glossary-open" type="button">Definitions</button>
+      </div>
+      <p id="meta" class="meta"></p>
+      <div id="context-bar" class="context-bar"></div>
+    </div>
+    <nav id="crumbs" class="crumbs" hidden></nav>
+  </header>
+
+  <main>
+    <div class="tab-head">
+      <h2 id="tab-title"></h2>
+      <p id="tab-intro"></p>
+    </div>
+    <div class="layout">
+      <div id="panels"></div>
+      <aside id="verdicts" hidden></aside>
+    </div>
+  </main>
+
+  <div id="glossary" class="drawer" hidden>
+    <div class="drawer-inner">
+      <header><h3>Definitions</h3><button id="glossary-close" type="button">Close</button></header>
+      <div id="glossary-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

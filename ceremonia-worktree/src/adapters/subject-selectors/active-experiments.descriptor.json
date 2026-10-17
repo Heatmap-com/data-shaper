@@ -1,0 +1,15 @@
+{
+  "id": "active-experiments",
+  "purpose": "Selects a site's partner experiments with two or more live arms, by lifecycle state, assigned visits, or an exact key or name.",
+  "data": "Experiment subjects, most assigned visits first, each with its state, partner, observed dates, and live arms.",
+  "criteria": {
+    "type": "object",
+    "properties": {
+      "state": { "type": "string", "enum": ["active", "ended", "all"], "description": "active (running, or ended within 14 days) when absent" },
+      "minAssignedVisits": { "type": "integer", "minimum": 0 },
+      "experiment": { "type": "string", "description": "an exact experiment key (partner:id) or name" },
+      "limitPerSite": { "type": "integer", "minimum": 1 }
+    },
+    "additionalProperties": false
+  }
+}

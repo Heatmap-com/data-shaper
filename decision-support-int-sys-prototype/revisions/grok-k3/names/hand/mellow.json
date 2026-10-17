@@ -1,0 +1,32 @@
+{
+  "_note": "Hand-written placeholder names for the most-clicked selectors. seed.mjs prefers these over generated names.",
+  "selector": {
+    "191": "Alia quiz — close (×)",
+    "363": "Alia quiz — close (×), second step",
+    "263": "Alia quiz — Next",
+    "530": "Alia quiz — Get my offer",
+    "734": "Alia quiz — Reveal my discount",
+    "351": "Alia quiz — email field",
+    "75": "Alia quiz — phone field",
+    "1259": "Alia quiz — answer: Side sleeper",
+    "396": "Alia quiz — answer: Back sleeper",
+    "125": "Alia quiz — answer: Stomach sleeper",
+    "1216": "Alia quiz — answer: Runs hot",
+    "100": "Alia quiz — answer: Neck pain",
+    "367": "Alia quiz — answer: Gift",
+    "533": "Scratch card — scratch to reveal",
+    "845": "Buy box — Add to cart (label text)",
+    "642": "Variant picker — gap between colour swatches",
+    "947": "Product gallery — next arrow (second gallery)",
+    "444": "Product gallery — main image",
+    "150": "Product gallery — thumbnail strip",
+    "726": "Bundle picker — size dropdown",
+    "83": "Bundle picker — add-on size dropdown",
+    "45": "Bundle picker — add-on: matching pillowcase",
+    "181": "Bundle picker — add-on name",
+    "518": "Bundle picker — add-on tick box",
+    "334": "Bundle picker — add-on price",
+    "395": "Bundle picker — bundle size label",
+    "380": "Bundle picker — bundle price"
+  }
+}

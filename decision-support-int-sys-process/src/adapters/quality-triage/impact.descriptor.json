@@ -1,0 +1,5 @@
+{
+  "id": "impact",
+  "purpose": "Asks a person when excluding a finding would move the dataset enough to change what a reader concludes; otherwise the screen's auto disposition applies.",
+  "data": "Asks when any declared bar is reached: the finding's share of sessions, orders, revenue, or buying sessions, or the relative shift it causes in conversion or AOV. A bar set to null is not read. maxAutoMembers, when set, also asks when a finding has more members than that."
+}

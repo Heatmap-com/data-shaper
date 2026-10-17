@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+process/queue/queue.lock
+process/queue/status.json
+process/queue/*.tmp
+process/orchestrator.db*
+process/runs/
+
+# Local config and secrets. Commit the *.example files only.
+analysis.config.json
+orchestrator.config.json
+.env
+.env.*
+!.env.example
+naming.env
+*.pem
+deploy-key
+deploy-key.pub
+__pycache__/

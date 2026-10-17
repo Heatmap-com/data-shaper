@@ -1,0 +1,6 @@
+{
+  "id": "scroll-decile",
+  "purpose": "Builds the scroll-reach curve for this page.",
+  "data": "The share of entry sessions that reached each 10-point depth, by week, device, and referrer.",
+  "replay": "keep"
+}

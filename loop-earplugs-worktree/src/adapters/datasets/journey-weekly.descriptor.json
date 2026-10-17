@@ -1,0 +1,6 @@
+{
+  "id": "journey-weekly",
+  "purpose": "Summarizes the paths of sessions that viewed this page.",
+  "data": "Per week, device, and bot filter: the share of sessions with each journey flag, and the top path clusters.",
+  "replay": "keep"
+}

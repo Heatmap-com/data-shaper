@@ -1,0 +1,1264 @@
+rows 3360, non-zero 923
+
+# grid
+page | all | all | all | 10
+page | all | buyer | buyer | 10
+page | all | buyer | non_buyer | 10
+page | all | rager | non_rager | 10
+page | all | rager | rager | 10
+page | all | returning | new | 10
+page | all | returning | returning | 10
+page | all | traffic_source | campaign | 10
+page | all | traffic_source | direct | 10
+page | all | traffic_source | meta | 10
+page | all | traffic_source | other | 10
+page | all | traffic_source | search | 10
+page | all | traffic_source | social | 10
+page | all | traffic_source | website | 10
+page | desktop | all | all | 10
+page | desktop | buyer | buyer | 10
+page | desktop | buyer | non_buyer | 10
+page | desktop | rager | non_rager | 10
+page | desktop | rager | rager | 10
+page | desktop | returning | new | 10
+page | desktop | returning | returning | 10
+page | desktop | traffic_source | campaign | 10
+page | desktop | traffic_source | direct | 10
+page | desktop | traffic_source | meta | 10
+page | desktop | traffic_source | other | 10
+page | desktop | traffic_source | search | 10
+page | desktop | traffic_source | social | 10
+page | desktop | traffic_source | website | 10
+page | mobile | all | all | 10
+page | mobile | buyer | buyer | 10
+page | mobile | buyer | non_buyer | 10
+page | mobile | rager | non_rager | 10
+page | mobile | rager | rager | 10
+page | mobile | returning | new | 10
+page | mobile | returning | returning | 10
+page | mobile | traffic_source | campaign | 10
+page | mobile | traffic_source | direct | 10
+page | mobile | traffic_source | meta | 10
+page | mobile | traffic_source | other | 10
+page | mobile | traffic_source | search | 10
+page | mobile | traffic_source | social | 10
+page | mobile | traffic_source | website | 10
+page | tablet | all | all | 10
+page | tablet | buyer | buyer | 10
+page | tablet | buyer | non_buyer | 10
+page | tablet | rager | non_rager | 10
+page | tablet | rager | rager | 10
+page | tablet | returning | new | 10
+page | tablet | returning | returning | 10
+page | tablet | traffic_source | campaign | 10
+page | tablet | traffic_source | direct | 10
+page | tablet | traffic_source | meta | 10
+page | tablet | traffic_source | other | 10
+page | tablet | traffic_source | search | 10
+page | tablet | traffic_source | social | 10
+page | tablet | traffic_source | website | 10
+path | all | all | all | 6
+path | all | buyer | buyer | 6
+path | all | buyer | non_buyer | 6
+path | all | rager | non_rager | 6
+path | all | rager | rager | 6
+path | all | returning | new | 6
+path | all | returning | returning | 6
+path | all | traffic_source | campaign | 6
+path | all | traffic_source | direct | 6
+path | all | traffic_source | meta | 6
+path | all | traffic_source | other | 6
+path | all | traffic_source | search | 6
+path | all | traffic_source | social | 6
+path | all | traffic_source | website | 6
+path | desktop | all | all | 6
+path | desktop | buyer | buyer | 6
+path | desktop | buyer | non_buyer | 6
+path | desktop | rager | non_rager | 6
+path | desktop | rager | rager | 6
+path | desktop | returning | new | 6
+path | desktop | returning | returning | 6
+path | desktop | traffic_source | campaign | 6
+path | desktop | traffic_source | direct | 6
+path | desktop | traffic_source | meta | 6
+path | desktop | traffic_source | other | 6
+path | desktop | traffic_source | search | 6
+path | desktop | traffic_source | social | 6
+path | desktop | traffic_source | website | 6
+path | mobile | all | all | 6
+path | mobile | buyer | buyer | 6
+path | mobile | buyer | non_buyer | 6
+path | mobile | rager | non_rager | 6
+path | mobile | rager | rager | 6
+path | mobile | returning | new | 6
+path | mobile | returning | returning | 6
+path | mobile | traffic_source | campaign | 6
+path | mobile | traffic_source | direct | 6
+path | mobile | traffic_source | meta | 6
+path | mobile | traffic_source | other | 6
+path | mobile | traffic_source | search | 6
+path | mobile | traffic_source | social | 6
+path | mobile | traffic_source | website | 6
+path | tablet | all | all | 6
+path | tablet | buyer | buyer | 6
+path | tablet | buyer | non_buyer | 6
+path | tablet | rager | non_rager | 6
+path | tablet | rager | rager | 6
+path | tablet | returning | new | 6
+path | tablet | returning | returning | 6
+path | tablet | traffic_source | campaign | 6
+path | tablet | traffic_source | direct | 6
+path | tablet | traffic_source | meta | 6
+path | tablet | traffic_source | other | 6
+path | tablet | traffic_source | search | 6
+path | tablet | traffic_source | social | 6
+path | tablet | traffic_source | website | 6
+selector | all | all | all | 6
+selector | all | buyer | buyer | 6
+selector | all | buyer | non_buyer | 6
+selector | all | rager | non_rager | 6
+selector | all | rager | rager | 6
+selector | all | returning | new | 6
+selector | all | returning | returning | 6
+selector | all | traffic_source | campaign | 6
+selector | all | traffic_source | direct | 6
+selector | all | traffic_source | meta | 6
+selector | all | traffic_source | other | 6
+selector | all | traffic_source | search | 6
+selector | all | traffic_source | social | 6
+selector | all | traffic_source | website | 6
+selector | desktop | all | all | 6
+selector | desktop | buyer | buyer | 6
+selector | desktop | buyer | non_buyer | 6
+selector | desktop | rager | non_rager | 6
+selector | desktop | rager | rager | 6
+selector | desktop | returning | new | 6
+selector | desktop | returning | returning | 6
+selector | desktop | traffic_source | campaign | 6
+selector | desktop | traffic_source | direct | 6
+selector | desktop | traffic_source | meta | 6
+selector | desktop | traffic_source | other | 6
+selector | desktop | traffic_source | search | 6
+selector | desktop | traffic_source | social | 6
+selector | desktop | traffic_source | website | 6
+selector | mobile | all | all | 6
+selector | mobile | buyer | buyer | 6
+selector | mobile | buyer | non_buyer | 6
+selector | mobile | rager | non_rager | 6
+selector | mobile | rager | rager | 6
+selector | mobile | returning | new | 6
+selector | mobile | returning | returning | 6
+selector | mobile | traffic_source | campaign | 6
+selector | mobile | traffic_source | direct | 6
+selector | mobile | traffic_source | meta | 6
+selector | mobile | traffic_source | other | 6
+selector | mobile | traffic_source | search | 6
+selector | mobile | traffic_source | social | 6
+selector | mobile | traffic_source | website | 6
+selector | tablet | all | all | 6
+selector | tablet | buyer | buyer | 6
+selector | tablet | buyer | non_buyer | 6
+selector | tablet | rager | non_rager | 6
+selector | tablet | rager | rager | 6
+selector | tablet | returning | new | 6
+selector | tablet | returning | returning | 6
+selector | tablet | traffic_source | campaign | 6
+selector | tablet | traffic_source | direct | 6
+selector | tablet | traffic_source | meta | 6
+selector | tablet | traffic_source | other | 6
+selector | tablet | traffic_source | search | 6
+selector | tablet | traffic_source | social | 6
+selector | tablet | traffic_source | website | 6
+step | all | all | all | 16
+step | all | buyer | buyer | 16
+step | all | buyer | non_buyer | 16
+step | all | rager | non_rager | 16
+step | all | rager | rager | 16
+step | all | returning | new | 16
+step | all | returning | returning | 16
+step | all | traffic_source | campaign | 16
+step | all | traffic_source | direct | 16
+step | all | traffic_source | meta | 16
+step | all | traffic_source | other | 16
+step | all | traffic_source | search | 16
+step | all | traffic_source | social | 16
+step | all | traffic_source | website | 16
+step | desktop | all | all | 16
+step | desktop | buyer | buyer | 16
+step | desktop | buyer | non_buyer | 16
+step | desktop | rager | non_rager | 16
+step | desktop | rager | rager | 16
+step | desktop | returning | new | 16
+step | desktop | returning | returning | 16
+step | desktop | traffic_source | campaign | 16
+step | desktop | traffic_source | direct | 16
+step | desktop | traffic_source | meta | 16
+step | desktop | traffic_source | other | 16
+step | desktop | traffic_source | search | 16
+step | desktop | traffic_source | social | 16
+step | desktop | traffic_source | website | 16
+step | mobile | all | all | 16
+step | mobile | buyer | buyer | 16
+step | mobile | buyer | non_buyer | 16
+step | mobile | rager | non_rager | 16
+step | mobile | rager | rager | 16
+step | mobile | returning | new | 16
+step | mobile | returning | returning | 16
+step | mobile | traffic_source | campaign | 16
+step | mobile | traffic_source | direct | 16
+step | mobile | traffic_source | meta | 16
+step | mobile | traffic_source | other | 16
+step | mobile | traffic_source | search | 16
+step | mobile | traffic_source | social | 16
+step | mobile | traffic_source | website | 16
+step | tablet | all | all | 16
+step | tablet | buyer | buyer | 16
+step | tablet | buyer | non_buyer | 16
+step | tablet | rager | non_rager | 16
+step | tablet | rager | rager | 16
+step | tablet | returning | new | 16
+step | tablet | returning | returning | 16
+step | tablet | traffic_source | campaign | 16
+step | tablet | traffic_source | direct | 16
+step | tablet | traffic_source | meta | 16
+step | tablet | traffic_source | other | 16
+step | tablet | traffic_source | search | 16
+step | tablet | traffic_source | social | 16
+step | tablet | traffic_source | website | 16
+url_path | all | all | all | 6
+url_path | all | buyer | buyer | 6
+url_path | all | buyer | non_buyer | 6
+url_path | all | rager | non_rager | 6
+url_path | all | rager | rager | 6
+url_path | all | returning | new | 6
+url_path | all | returning | returning | 6
+url_path | all | traffic_source | campaign | 6
+url_path | all | traffic_source | direct | 6
+url_path | all | traffic_source | meta | 6
+url_path | all | traffic_source | other | 6
+url_path | all | traffic_source | search | 6
+url_path | all | traffic_source | social | 6
+url_path | all | traffic_source | website | 6
+url_path | desktop | all | all | 6
+url_path | desktop | buyer | buyer | 6
+url_path | desktop | buyer | non_buyer | 6
+url_path | desktop | rager | non_rager | 6
+url_path | desktop | rager | rager | 6
+url_path | desktop | returning | new | 6
+url_path | desktop | returning | returning | 6
+url_path | desktop | traffic_source | campaign | 6
+url_path | desktop | traffic_source | direct | 6
+url_path | desktop | traffic_source | meta | 6
+url_path | desktop | traffic_source | other | 6
+url_path | desktop | traffic_source | search | 6
+url_path | desktop | traffic_source | social | 6
+url_path | desktop | traffic_source | website | 6
+url_path | mobile | all | all | 6
+url_path | mobile | buyer | buyer | 6
+url_path | mobile | buyer | non_buyer | 6
+url_path | mobile | rager | non_rager | 6
+url_path | mobile | rager | rager | 6
+url_path | mobile | returning | new | 6
+url_path | mobile | returning | returning | 6
+url_path | mobile | traffic_source | campaign | 6
+url_path | mobile | traffic_source | direct | 6
+url_path | mobile | traffic_source | meta | 6
+url_path | mobile | traffic_source | other | 6
+url_path | mobile | traffic_source | search | 6
+url_path | mobile | traffic_source | social | 6
+url_path | mobile | traffic_source | website | 6
+url_path | tablet | all | all | 6
+url_path | tablet | buyer | buyer | 6
+url_path | tablet | buyer | non_buyer | 6
+url_path | tablet | rager | non_rager | 6
+url_path | tablet | rager | rager | 6
+url_path | tablet | returning | new | 6
+url_path | tablet | returning | returning | 6
+url_path | tablet | traffic_source | campaign | 6
+url_path | tablet | traffic_source | direct | 6
+url_path | tablet | traffic_source | meta | 6
+url_path | tablet | traffic_source | other | 6
+url_path | tablet | traffic_source | search | 6
+url_path | tablet | traffic_source | social | 6
+url_path | tablet | traffic_source | website | 6
+url_step | all | all | all | 16
+url_step | all | buyer | buyer | 16
+url_step | all | buyer | non_buyer | 16
+url_step | all | rager | non_rager | 16
+url_step | all | rager | rager | 16
+url_step | all | returning | new | 16
+url_step | all | returning | returning | 16
+url_step | all | traffic_source | campaign | 16
+url_step | all | traffic_source | direct | 16
+url_step | all | traffic_source | meta | 16
+url_step | all | traffic_source | other | 16
+url_step | all | traffic_source | search | 16
+url_step | all | traffic_source | social | 16
+url_step | all | traffic_source | website | 16
+url_step | desktop | all | all | 16
+url_step | desktop | buyer | buyer | 16
+url_step | desktop | buyer | non_buyer | 16
+url_step | desktop | rager | non_rager | 16
+url_step | desktop | rager | rager | 16
+url_step | desktop | returning | new | 16
+url_step | desktop | returning | returning | 16
+url_step | desktop | traffic_source | campaign | 16
+url_step | desktop | traffic_source | direct | 16
+url_step | desktop | traffic_source | meta | 16
+url_step | desktop | traffic_source | other | 16
+url_step | desktop | traffic_source | search | 16
+url_step | desktop | traffic_source | social | 16
+url_step | desktop | traffic_source | website | 16
+url_step | mobile | all | all | 16
+url_step | mobile | buyer | buyer | 16
+url_step | mobile | buyer | non_buyer | 16
+url_step | mobile | rager | non_rager | 16
+url_step | mobile | rager | rager | 16
+url_step | mobile | returning | new | 16
+url_step | mobile | returning | returning | 16
+url_step | mobile | traffic_source | campaign | 16
+url_step | mobile | traffic_source | direct | 16
+url_step | mobile | traffic_source | meta | 16
+url_step | mobile | traffic_source | other | 16
+url_step | mobile | traffic_source | search | 16
+url_step | mobile | traffic_source | social | 16
+url_step | mobile | traffic_source | website | 16
+url_step | tablet | all | all | 16
+url_step | tablet | buyer | buyer | 16
+url_step | tablet | buyer | non_buyer | 16
+url_step | tablet | rager | non_rager | 16
+url_step | tablet | rager | rager | 16
+url_step | tablet | returning | new | 16
+url_step | tablet | returning | returning | 16
+url_step | tablet | traffic_source | campaign | 16
+url_step | tablet | traffic_source | direct | 16
+url_step | tablet | traffic_source | meta | 16
+url_step | tablet | traffic_source | other | 16
+url_step | tablet | traffic_source | search | 16
+url_step | tablet | traffic_source | social | 16
+url_step | tablet | traffic_source | website | 16
+
+# non-zero rows
+element | selector | s0 |  | all | all | all | 2026-09-07 | 12 | sessions=12 | buyers=3 | orders=3 | revenue=153 | clicks=12 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | buyer | buyer | 2026-09-07 | 12 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | buyer | non_buyer | 2026-09-07 | 12 | sessions=9 | buyers=0 | orders=0 | revenue=0 | clicks=9 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | rager | non_rager | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=102 | clicks=8 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | rager | rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | returning | new | 2026-09-07 | 12 | sessions=12 | buyers=3 | orders=3 | revenue=153 | clicks=12 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | traffic_source | direct | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | traffic_source | meta | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=82 | clicks=8 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | all | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | desktop | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | desktop | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | desktop | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | desktop | rager | rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | desktop | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | desktop | traffic_source | meta | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | rager | non_rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | traffic_source | direct | 2026-09-07 | 12 | sessions=2 | buyers=1 | orders=1 | revenue=71 | clicks=2 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | traffic_source | meta | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | mobile | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | tablet | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | tablet | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | tablet | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | tablet | rager | non_rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | tablet | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | tablet | traffic_source | direct | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s0 |  | tablet | traffic_source | meta | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":1}
+element | selector | s1 |  | all | all | all | 2026-09-07 | 12 | sessions=12 | buyers=3 | orders=3 | revenue=153 | clicks=12 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | buyer | buyer | 2026-09-07 | 12 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | buyer | non_buyer | 2026-09-07 | 12 | sessions=9 | buyers=0 | orders=0 | revenue=0 | clicks=9 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | rager | non_rager | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=102 | clicks=8 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | rager | rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | returning | new | 2026-09-07 | 12 | sessions=12 | buyers=3 | orders=3 | revenue=153 | clicks=12 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | traffic_source | direct | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | traffic_source | meta | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=82 | clicks=8 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | all | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | desktop | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | desktop | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | desktop | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | desktop | rager | rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | desktop | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | desktop | traffic_source | meta | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | rager | non_rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | traffic_source | direct | 2026-09-07 | 12 | sessions=2 | buyers=1 | orders=1 | revenue=71 | clicks=2 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | traffic_source | meta | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | mobile | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | tablet | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | tablet | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | tablet | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | tablet | rager | non_rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | tablet | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | tablet | traffic_source | direct | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s1 |  | tablet | traffic_source | meta | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":2}
+element | selector | s2 |  | all | all | all | 2026-09-07 | 12 | sessions=12 | buyers=3 | orders=3 | revenue=153 | clicks=12 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | buyer | buyer | 2026-09-07 | 12 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | buyer | non_buyer | 2026-09-07 | 12 | sessions=9 | buyers=0 | orders=0 | revenue=0 | clicks=9 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | rager | non_rager | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=102 | clicks=8 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | rager | rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | returning | new | 2026-09-07 | 12 | sessions=12 | buyers=3 | orders=3 | revenue=153 | clicks=12 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | traffic_source | direct | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | traffic_source | meta | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=82 | clicks=8 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | all | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | desktop | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | desktop | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | desktop | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | desktop | rager | rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | desktop | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | desktop | traffic_source | meta | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | rager | non_rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=71 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | traffic_source | direct | 2026-09-07 | 12 | sessions=2 | buyers=1 | orders=1 | revenue=71 | clicks=2 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | traffic_source | meta | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | mobile | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | tablet | all | all | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | tablet | buyer | buyer | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | tablet | buyer | non_buyer | 2026-09-07 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | tablet | rager | non_rager | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | tablet | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=31 | clicks=4 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | tablet | traffic_source | direct | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=1 | progressed=0 | {"attribution":"correlational","rank":3}
+element | selector | s2 |  | tablet | traffic_source | meta | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=3 | progressed=0 | {"attribution":"correlational","rank":3}
+journey | path | content > plp > pdp |  | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | all | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=132 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | all | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | all | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | all | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | tablet | all | all | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | content > plp > pdp |  | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | path | pdp > plp > pdp |  | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | all | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | all | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | all | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | desktop | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | pdp > plp > pdp |  | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | path | plp > pdp |  | all | all | all | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | all | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | desktop | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | mobile | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | path | plp > pdp |  | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | step | 1:content | content > plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=12 | buyers=4 | orders=4 | revenue=214 | clicks=0 | progressed=3 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=4 | buyers=4 | orders=4 | revenue=214 | clicks=0 | progressed=3 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=8 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=8 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | rager | rager | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | returning | new | 2026-09-07 | 0 | sessions=9 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | returning | returning | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=8 | buyers=2 | orders=2 | revenue=112 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | traffic_source | other | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | desktop | all | all | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | desktop | buyer | non_buyer | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | desktop | rager | rager | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | desktop | returning | new | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | traffic_source | other | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=3 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:content | content > plp > pdp | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=8 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=6 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=2 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | returning | new | 2026-09-07 | 0 | sessions=8 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | traffic_source | direct | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=4 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=2 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | traffic_source | meta | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | all | traffic_source | social | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | all | all | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | desktop | traffic_source | meta | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | mobile | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | mobile | traffic_source | social | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | tablet | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | tablet | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | step | 1:pdp | pdp > plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=4 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=3 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=3 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | returning | returning | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=4 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=3 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | all | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | all | all | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | desktop | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | mobile | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | mobile | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 1:plp | plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | step | 2:pdp | plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | returning | returning | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | all | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | desktop | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | mobile | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | mobile | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:pdp | plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=132 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | content > plp > pdp | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=2 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | all | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | all | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=2 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | desktop | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 2:plp | pdp > plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | step | 3:pdp | content > plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | all | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=132 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | all | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | all | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | content > plp > pdp | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | all | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | all | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | all | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | desktop | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | step | 3:pdp | pdp > plp > pdp | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_path | /collections/c > /products/a |  | all | all | all | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | all | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | desktop | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | mobile | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /collections/c > /products/a |  | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=132 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | tablet | all | all | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /pages/lp > /collections/c > /products/a |  | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+journey | url_path | /products/a > /collections/c > /products/a |  | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | all | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | all | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | all | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | desktop | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_path | /products/a > /collections/c > /products/a |  | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=4 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=3 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=3 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | returning | returning | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=4 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=3 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | all | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | all | all | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | desktop | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | mobile | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=2 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | mobile | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/collections/c | /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=1 | {"rank":3,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=12 | buyers=4 | orders=4 | revenue=214 | clicks=0 | progressed=3 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=4 | buyers=4 | orders=4 | revenue=214 | clicks=0 | progressed=3 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=8 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=8 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | rager | rager | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | returning | new | 2026-09-07 | 0 | sessions=9 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | returning | returning | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=8 | buyers=2 | orders=2 | revenue=112 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | traffic_source | other | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | desktop | all | all | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | desktop | buyer | non_buyer | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | desktop | rager | rager | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | desktop | returning | new | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=5 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | traffic_source | other | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=3 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/pages/lp | /pages/lp > /collections/c > /products/a | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=8 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=6 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=2 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | returning | new | 2026-09-07 | 0 | sessions=8 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | traffic_source | direct | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=4 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=2 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | traffic_source | meta | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | all | traffic_source | social | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | all | all | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | rager | rager | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | desktop | traffic_source | meta | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | mobile | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | mobile | traffic_source | social | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | tablet | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | tablet | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2,"step_index":1}
+journey | url_step | 1:/products/a | /products/a > /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":1}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=3 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=132 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=2 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /pages/lp > /collections/c > /products/a | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=1 | {"rank":1,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=2 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | all | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=3 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | all | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=2 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | desktop | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/collections/c | /products/a > /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=1 | {"rank":2,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | buyer | non_buyer | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | returning | returning | 2026-09-07 | 0 | sessions=4 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=3 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | all | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | all | all | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | buyer | non_buyer | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | rager | non_rager | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | returning | new | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | desktop | traffic_source | website | 2026-09-14 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | mobile | buyer | non_buyer | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | mobile | returning | returning | 2026-09-07 | 0 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | mobile | traffic_source | campaign | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | mobile | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | tablet | buyer | non_buyer | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 2:/products/a | /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3,"step_index":2}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | returning | new | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=132 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | all | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | mobile | traffic_source | search | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | tablet | returning | returning | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /pages/lp > /collections/c > /products/a | tablet | traffic_source | other | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | all | all | all | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | all | buyer | buyer | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | all | rager | non_rager | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=102 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | all | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | all | returning | new | 2026-09-07 | 0 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | all | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | all | traffic_source | meta | 2026-09-07 | 0 | sessions=2 | buyers=2 | orders=2 | revenue=82 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | desktop | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | desktop | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | desktop | rager | rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | desktop | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | desktop | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | mobile | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | mobile | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | mobile | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | mobile | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | mobile | traffic_source | direct | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | tablet | all | all | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | tablet | buyer | buyer | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | tablet | rager | non_rager | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | tablet | returning | new | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+journey | url_step | 3:/products/a | /products/a > /collections/c > /products/a | tablet | traffic_source | meta | 2026-09-07 | 0 | sessions=1 | buyers=1 | orders=1 | revenue=31 | clicks=0 | progressed=0 | {"rank":2,"step_index":3}
+page | page | 11 | https://one.com/ | all | all | all | 2026-09-07 | 11 | sessions=6 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | all | buyer | buyer | 2026-09-07 | 11 | sessions=1 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | all | buyer | non_buyer | 2026-09-07 | 11 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | all | rager | non_rager | 2026-09-07 | 11 | sessions=6 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | all | returning | new | 2026-09-07 | 11 | sessions=6 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | all | traffic_source | meta | 2026-09-07 | 11 | sessions=4 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | all | traffic_source | website | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | desktop | all | all | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | desktop | buyer | non_buyer | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | desktop | rager | non_rager | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | desktop | returning | new | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | desktop | traffic_source | meta | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | mobile | all | all | 2026-09-07 | 11 | sessions=2 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | mobile | buyer | buyer | 2026-09-07 | 11 | sessions=1 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | mobile | buyer | non_buyer | 2026-09-07 | 11 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | mobile | rager | non_rager | 2026-09-07 | 11 | sessions=2 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | mobile | returning | new | 2026-09-07 | 11 | sessions=2 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | mobile | traffic_source | meta | 2026-09-07 | 11 | sessions=1 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | mobile | traffic_source | website | 2026-09-07 | 11 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | tablet | all | all | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | tablet | buyer | non_buyer | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | tablet | rager | non_rager | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | tablet | returning | new | 2026-09-07 | 11 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | tablet | traffic_source | meta | 2026-09-07 | 11 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 11 | https://one.com/ | tablet | traffic_source | website | 2026-09-07 | 11 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":5}
+page | page | 12 | https://one.com/products/a | all | all | all | 2026-09-07 | 12 | sessions=28 | buyers=8 | orders=8 | revenue=438 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | all | all | 2026-09-14 | 12 | sessions=5 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | buyer | buyer | 2026-09-07 | 12 | sessions=8 | buyers=8 | orders=8 | revenue=438 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | buyer | buyer | 2026-09-14 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | buyer | non_buyer | 2026-09-07 | 12 | sessions=20 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | buyer | non_buyer | 2026-09-14 | 12 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | rager | non_rager | 2026-09-07 | 12 | sessions=21 | buyers=6 | orders=6 | revenue=321 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | rager | non_rager | 2026-09-14 | 12 | sessions=5 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | rager | rager | 2026-09-07 | 12 | sessions=7 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | returning | new | 2026-09-07 | 12 | sessions=20 | buyers=6 | orders=6 | revenue=326 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | returning | new | 2026-09-14 | 12 | sessions=5 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | returning | returning | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=112 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | campaign | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | direct | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | meta | 2026-09-07 | 12 | sessions=18 | buyers=5 | orders=5 | revenue=265 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | meta | 2026-09-14 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | other | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | search | 2026-09-07 | 12 | sessions=2 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | website | 2026-09-07 | 12 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | all | traffic_source | website | 2026-09-14 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | all | all | 2026-09-07 | 12 | sessions=7 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | all | all | 2026-09-14 | 12 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | buyer | buyer | 2026-09-07 | 12 | sessions=2 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | buyer | non_buyer | 2026-09-07 | 12 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | buyer | non_buyer | 2026-09-14 | 12 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | rager | non_rager | 2026-09-14 | 12 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | rager | rager | 2026-09-07 | 12 | sessions=7 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | returning | new | 2026-09-07 | 12 | sessions=4 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | returning | new | 2026-09-14 | 12 | sessions=4 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | returning | returning | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | traffic_source | meta | 2026-09-07 | 12 | sessions=7 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | traffic_source | meta | 2026-09-14 | 12 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | desktop | traffic_source | website | 2026-09-14 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | all | all | 2026-09-07 | 12 | sessions=10 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | buyer | buyer | 2026-09-07 | 12 | sessions=3 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | buyer | non_buyer | 2026-09-07 | 12 | sessions=7 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | rager | non_rager | 2026-09-07 | 12 | sessions=10 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | returning | new | 2026-09-07 | 12 | sessions=8 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | returning | returning | 2026-09-07 | 12 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | traffic_source | campaign | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | traffic_source | direct | 2026-09-07 | 12 | sessions=2 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | traffic_source | meta | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | traffic_source | search | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | traffic_source | social | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | mobile | traffic_source | website | 2026-09-07 | 12 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | all | all | 2026-09-07 | 12 | sessions=11 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | all | all | 2026-09-14 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | buyer | buyer | 2026-09-07 | 12 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | buyer | buyer | 2026-09-14 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | buyer | non_buyer | 2026-09-07 | 12 | sessions=8 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | rager | non_rager | 2026-09-07 | 12 | sessions=11 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | rager | non_rager | 2026-09-14 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | returning | new | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=107 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | returning | new | 2026-09-14 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | returning | returning | 2026-09-07 | 12 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | traffic_source | direct | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | traffic_source | meta | 2026-09-07 | 12 | sessions=8 | buyers=2 | orders=2 | revenue=107 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | traffic_source | meta | 2026-09-14 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | traffic_source | other | 2026-09-07 | 12 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 12 | https://one.com/products/a | tablet | traffic_source | search | 2026-09-07 | 12 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":1}
+page | page | 13 | https://one.com/collections/c | all | all | all | 2026-09-07 | 13 | sessions=13 | buyers=8 | orders=8 | revenue=438 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | all | all | 2026-09-14 | 13 | sessions=2 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | buyer | buyer | 2026-09-07 | 13 | sessions=8 | buyers=8 | orders=8 | revenue=438 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | buyer | buyer | 2026-09-14 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | buyer | non_buyer | 2026-09-07 | 13 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | buyer | non_buyer | 2026-09-14 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | rager | non_rager | 2026-09-07 | 13 | sessions=10 | buyers=6 | orders=6 | revenue=321 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | rager | non_rager | 2026-09-14 | 13 | sessions=2 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | rager | rager | 2026-09-07 | 13 | sessions=3 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | returning | new | 2026-09-07 | 13 | sessions=6 | buyers=6 | orders=6 | revenue=326 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | returning | new | 2026-09-14 | 13 | sessions=2 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | returning | returning | 2026-09-07 | 13 | sessions=7 | buyers=2 | orders=2 | revenue=112 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | traffic_source | campaign | 2026-09-07 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | traffic_source | direct | 2026-09-07 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | traffic_source | meta | 2026-09-07 | 13 | sessions=9 | buyers=5 | orders=5 | revenue=265 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | traffic_source | meta | 2026-09-14 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | traffic_source | other | 2026-09-07 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | traffic_source | search | 2026-09-07 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | all | traffic_source | website | 2026-09-14 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | all | all | 2026-09-07 | 13 | sessions=3 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | all | all | 2026-09-14 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | buyer | buyer | 2026-09-07 | 13 | sessions=2 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | buyer | non_buyer | 2026-09-07 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | buyer | non_buyer | 2026-09-14 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | rager | non_rager | 2026-09-14 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | rager | rager | 2026-09-07 | 13 | sessions=3 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | returning | new | 2026-09-07 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=51 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | returning | new | 2026-09-14 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | returning | returning | 2026-09-07 | 13 | sessions=2 | buyers=1 | orders=1 | revenue=66 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | traffic_source | meta | 2026-09-07 | 13 | sessions=3 | buyers=2 | orders=2 | revenue=117 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | desktop | traffic_source | website | 2026-09-14 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | all | all | 2026-09-07 | 13 | sessions=5 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | buyer | buyer | 2026-09-07 | 13 | sessions=3 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | buyer | non_buyer | 2026-09-07 | 13 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | rager | non_rager | 2026-09-07 | 13 | sessions=5 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | returning | new | 2026-09-07 | 13 | sessions=3 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | returning | returning | 2026-09-07 | 13 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | traffic_source | campaign | 2026-09-07 | 13 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | traffic_source | direct | 2026-09-07 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=71 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | traffic_source | meta | 2026-09-07 | 13 | sessions=2 | buyers=1 | orders=1 | revenue=41 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | mobile | traffic_source | search | 2026-09-07 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | all | all | 2026-09-07 | 13 | sessions=5 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | all | all | 2026-09-14 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | buyer | buyer | 2026-09-07 | 13 | sessions=3 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | buyer | buyer | 2026-09-14 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | buyer | non_buyer | 2026-09-07 | 13 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | rager | non_rager | 2026-09-07 | 13 | sessions=5 | buyers=3 | orders=3 | revenue=153 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | rager | non_rager | 2026-09-14 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | returning | new | 2026-09-07 | 13 | sessions=2 | buyers=2 | orders=2 | revenue=107 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | returning | new | 2026-09-14 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | returning | returning | 2026-09-07 | 13 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | traffic_source | meta | 2026-09-07 | 13 | sessions=4 | buyers=2 | orders=2 | revenue=107 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | traffic_source | meta | 2026-09-14 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 13 | https://one.com/collections/c | tablet | traffic_source | other | 2026-09-07 | 13 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":3}
+page | page | 14 | https://one.com/cart | all | all | all | 2026-09-07 | 14 | sessions=8 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | all | all | 2026-09-14 | 14 | sessions=6 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | buyer | buyer | 2026-09-14 | 14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | buyer | non_buyer | 2026-09-07 | 14 | sessions=8 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | buyer | non_buyer | 2026-09-14 | 14 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | rager | non_rager | 2026-09-07 | 14 | sessions=6 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | rager | non_rager | 2026-09-14 | 14 | sessions=6 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | rager | rager | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | returning | new | 2026-09-07 | 14 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | returning | new | 2026-09-14 | 14 | sessions=6 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | returning | returning | 2026-09-07 | 14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | traffic_source | campaign | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | traffic_source | meta | 2026-09-07 | 14 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | traffic_source | meta | 2026-09-14 | 14 | sessions=4 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | traffic_source | other | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | traffic_source | search | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | all | traffic_source | website | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | all | all | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | all | all | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | buyer | non_buyer | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | buyer | non_buyer | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | rager | non_rager | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | rager | rager | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | returning | new | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | returning | new | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | returning | returning | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | traffic_source | meta | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | desktop | traffic_source | meta | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | all | all | 2026-09-07 | 14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | all | all | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | buyer | non_buyer | 2026-09-07 | 14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | buyer | non_buyer | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | rager | non_rager | 2026-09-07 | 14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | rager | non_rager | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | returning | new | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | returning | new | 2026-09-14 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | returning | returning | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | traffic_source | campaign | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | traffic_source | meta | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | traffic_source | meta | 2026-09-14 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | traffic_source | other | 2026-09-14 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | mobile | traffic_source | website | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | all | all | 2026-09-07 | 14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | all | all | 2026-09-14 | 14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | buyer | buyer | 2026-09-14 | 14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | buyer | non_buyer | 2026-09-07 | 14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | buyer | non_buyer | 2026-09-14 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | rager | non_rager | 2026-09-07 | 14 | sessions=3 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | rager | non_rager | 2026-09-14 | 14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | returning | new | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | returning | new | 2026-09-14 | 14 | sessions=2 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | returning | returning | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | traffic_source | meta | 2026-09-07 | 14 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | traffic_source | meta | 2026-09-14 | 14 | sessions=1 | buyers=1 | orders=1 | revenue=61 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | traffic_source | other | 2026-09-14 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 14 | https://one.com/cart | tablet | traffic_source | search | 2026-09-07 | 14 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":4}
+page | page | 15 | https://one.com/pages/lp | all | all | all | 2026-09-07 | 15 | sessions=23 | buyers=4 | orders=4 | revenue=214 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | all | all | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | buyer | buyer | 2026-09-07 | 15 | sessions=4 | buyers=4 | orders=4 | revenue=214 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | buyer | non_buyer | 2026-09-07 | 15 | sessions=19 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | buyer | non_buyer | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | rager | non_rager | 2026-09-07 | 15 | sessions=16 | buyers=3 | orders=3 | revenue=178 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | rager | non_rager | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | rager | rager | 2026-09-07 | 15 | sessions=7 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | returning | new | 2026-09-07 | 15 | sessions=16 | buyers=3 | orders=3 | revenue=168 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | returning | new | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | returning | returning | 2026-09-07 | 15 | sessions=7 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | traffic_source | meta | 2026-09-07 | 15 | sessions=16 | buyers=2 | orders=2 | revenue=112 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | traffic_source | other | 2026-09-07 | 15 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | traffic_source | other | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | traffic_source | search | 2026-09-07 | 15 | sessions=2 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | all | traffic_source | website | 2026-09-07 | 15 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | all | all | 2026-09-07 | 15 | sessions=8 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | buyer | buyer | 2026-09-07 | 15 | sessions=1 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | buyer | non_buyer | 2026-09-07 | 15 | sessions=7 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | rager | non_rager | 2026-09-07 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | rager | rager | 2026-09-07 | 15 | sessions=7 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | returning | new | 2026-09-07 | 15 | sessions=6 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | returning | returning | 2026-09-07 | 15 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | desktop | traffic_source | meta | 2026-09-07 | 15 | sessions=8 | buyers=1 | orders=1 | revenue=36 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | all | all | 2026-09-07 | 15 | sessions=6 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | all | all | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | buyer | buyer | 2026-09-07 | 15 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | buyer | non_buyer | 2026-09-07 | 15 | sessions=5 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | buyer | non_buyer | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | rager | non_rager | 2026-09-07 | 15 | sessions=6 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | rager | non_rager | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | returning | new | 2026-09-07 | 15 | sessions=4 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | returning | new | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | returning | returning | 2026-09-07 | 15 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | traffic_source | meta | 2026-09-07 | 15 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | traffic_source | other | 2026-09-07 | 15 | sessions=2 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | traffic_source | other | 2026-09-14 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | traffic_source | search | 2026-09-07 | 15 | sessions=1 | buyers=1 | orders=1 | revenue=56 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | mobile | traffic_source | website | 2026-09-07 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | all | all | 2026-09-07 | 15 | sessions=9 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | buyer | buyer | 2026-09-07 | 15 | sessions=2 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | buyer | non_buyer | 2026-09-07 | 15 | sessions=7 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | rager | non_rager | 2026-09-07 | 15 | sessions=9 | buyers=2 | orders=2 | revenue=122 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | returning | new | 2026-09-07 | 15 | sessions=6 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | returning | returning | 2026-09-07 | 15 | sessions=3 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | traffic_source | meta | 2026-09-07 | 15 | sessions=6 | buyers=1 | orders=1 | revenue=76 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | traffic_source | other | 2026-09-07 | 15 | sessions=1 | buyers=1 | orders=1 | revenue=46 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | traffic_source | search | 2026-09-07 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}
+page | page | 15 | https://one.com/pages/lp | tablet | traffic_source | website | 2026-09-07 | 15 | sessions=1 | buyers=0 | orders=0 | revenue=0 | clicks=0 | progressed=0 | {"rank":2}

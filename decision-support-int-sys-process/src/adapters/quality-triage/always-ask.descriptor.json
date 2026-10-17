@@ -1,0 +1,5 @@
+{
+  "id": "always-ask",
+  "purpose": "Sends every finding of a screen to a person, for data where no automatic bar is trusted.",
+  "data": "Every finding is awaiting_decision until a person answers it; the screen's pending disposition applies meanwhile."
+}

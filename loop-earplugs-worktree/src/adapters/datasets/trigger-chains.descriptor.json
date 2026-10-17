@@ -1,0 +1,6 @@
+{
+  "id": "trigger-chains",
+  "purpose": "Classifies sessions and visitors with configurable triggers and follows each hit across later sessions.",
+  "data": "One row per chain still open on the window's last day: whether the visitor returned, purchased, and recovered, and the revenue of the later sessions. The same run writes the hits and chains.",
+  "replay": "keep"
+}

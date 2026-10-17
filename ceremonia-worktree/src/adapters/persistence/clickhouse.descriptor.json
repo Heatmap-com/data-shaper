@@ -1,0 +1,14 @@
+{
+  "adapters": [
+    {
+      "id": "clickhouse",
+      "purpose": "Stores landing-page batches, queues, and dataset rows in ClickHouse.",
+      "data": "The current row for each batch, queue claim, analysis, and dataset key. A later write replaces the earlier one."
+    },
+    {
+      "id": "clickhouse-ae",
+      "purpose": "Stores schema-2 batches, dataset rows, trend rows, descriptors, and the capture queue in ClickHouse.",
+      "data": "The current row for each key. A later write replaces the earlier one, and a claim is kept only when its token wins the re-read."
+    }
+  ]
+}

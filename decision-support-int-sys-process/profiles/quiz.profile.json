@@ -1,0 +1,9 @@
+{
+  "id": "quiz",
+  "subject_type": "quiz",
+  "label": "Quiz pages",
+  "selector": { "use": "quiz-pages", "criteria": { "urlContains": ["quiz"], "minEntrySessions": 50, "limitPerSite": 3 } },
+  "datasets": { "include": ["provides"], "exclude": ["ad-creative"] },
+  "catalogs": ["PI", "QZ"],
+  "steps": ["qualify", "capture-gate", "page-datasets", "descriptors", "site-datasets", "analysis"]
+}

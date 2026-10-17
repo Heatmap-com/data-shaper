@@ -1,0 +1,40 @@
+{
+  "id": "bundle",
+  "label": "Full analyst bundle",
+  "phase": "export",
+  "skill": "skills/analyst-data-bundle/SKILL.md",
+  "concurrency": 1,
+  "resources": ["clickhouse-heavy"],
+  "leaseMs": 120000,
+  "timeoutMs": 14400000,
+  "handler": {
+    "use": "command",
+    "command": "node",
+    "args": [
+      "bin/export-bundle.mjs",
+      "--site", "orchestration/sites/{{site.slug}}/site.json",
+      "--window-start", "{{window.start}}",
+      "--window-end", "{{window.end}}",
+      "--extract", "{{paths.analysis}}/.extract/{{site.slug}}/{{window.start}}_{{window.end}}",
+      "--out", "{{paths.analysis}}/{{site.slug}}",
+      "--job", "{{job.id}}",
+      "--runs", "process/runs",
+      "--attempt", "{{run.attempt}}",
+      "--python", "{{config.report.python}}"
+    ]
+  },
+  "check": {
+    "use": "bundle-anchors",
+    "bundle": "{{paths.analysis}}/{{site.slug}}",
+    "site": "orchestration/sites/{{site.slug}}/site.json",
+    "page": "focus"
+  },
+  "retry": { "maxAttempts": 2, "backoffMs": 300000, "factor": 2, "maxBackoffMs": 1800000 },
+  "errors": [
+    { "match": "ECONNREFUSED|ETIMEDOUT|ECONNRESET|socket hang up|Timeout error", "class": "transient", "reason": "ClickHouse not reachable" },
+    { "match": "MEMORY_LIMIT_EXCEEDED|Code: 241|memory limit", "class": "blocked", "reason": "the visit extract hit a ClickHouse memory limit; do not lower BUNDLE_VISIT_SHARDS" },
+    { "match": "site\\.json has no focus and the analysis batch has no primary page|has no analysis batch", "class": "blocked", "reason": "the analysed page is not in site.json and not in the analysis batch" },
+    { "match": "anchor mismatch", "class": "defect", "reason": "the bundle's orders do not meet the profile anchors" },
+    { "match": "export-bundle: |\\bexit 2\\b", "class": "defect", "reason": "bundle command usage error" }
+  ]
+}

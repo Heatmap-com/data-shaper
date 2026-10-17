@@ -1,0 +1,14 @@
+{
+  "slug": "site-47brand",
+  "name": "'47",
+  "domain": "47brand.com",
+  "origin": "https://47brand.com/",
+  "idsite": 5184,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/collections/fall-collection",
+    "label": "Fall Collection",
+    "idsitehsr": 52185013
+  }
+}

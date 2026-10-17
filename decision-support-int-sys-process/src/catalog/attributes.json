@@ -1,0 +1,202 @@
+{
+  "attributes": [
+    {
+      "id": "referer_type",
+      "kind": "field",
+      "label": "Referrer type",
+      "purpose": "The tracker's referrer class, the base of the shipped channel rules.",
+      "data": "1 direct, 2 search, 3 website, 6 campaign, 7 social; 0 when missing. Taken at the session's first action."
+    },
+    {
+      "id": "referer_name",
+      "kind": "field",
+      "label": "Referrer name",
+      "purpose": "Which site or search engine sent the session.",
+      "data": "The referrer name at the session's first action, lowercased and trimmed; empty when there is none."
+    },
+    {
+      "id": "utm_source",
+      "kind": "field",
+      "label": "UTM source",
+      "purpose": "The utm_source tag the session landed with.",
+      "data": "The session's first utm_source session tag, else custom_var_k5 at its first action; lowercased and trimmed; empty when the session carries neither."
+    },
+    {
+      "id": "source_or_referrer",
+      "kind": "field",
+      "label": "Source or referrer",
+      "purpose": "One source per session whether or not it was tagged; the closest match to GA4's session source.",
+      "data": "utm_source when it is not empty, else the referrer name; empty for a direct session."
+    },
+    {
+      "id": "utm_medium",
+      "kind": "field",
+      "label": "UTM medium",
+      "purpose": "The utm_medium tag the session landed with, such as paid, email, or cpc.",
+      "data": "The session's first utm_medium session tag, else custom_var_v1 at its first action; lowercased and trimmed; empty when untagged."
+    },
+    {
+      "id": "utm_campaign",
+      "kind": "field",
+      "label": "UTM campaign",
+      "purpose": "The campaign the session landed from; the key ad spend joins on.",
+      "data": "The session's first utm_campaign session tag, else custom_var_v4 at its first action; trimmed, case kept; empty when untagged."
+    },
+    {
+      "id": "returning",
+      "kind": "field",
+      "label": "Returning flag",
+      "purpose": "Whether the tracker had seen the browser before.",
+      "data": "1 when the visit's returning flag is set at its first action; 0 for a new or unflagged visit. A browser id, not a person."
+    },
+    {
+      "id": "country",
+      "kind": "field",
+      "label": "Country",
+      "purpose": "Where the session came from.",
+      "data": "The location country code at the session's first action, trimmed; empty when unknown."
+    },
+    {
+      "id": "has_order",
+      "kind": "field",
+      "label": "Ordered",
+      "purpose": "Whether the session placed an order.",
+      "data": "1 when the session has an order in the period; 0 otherwise."
+    },
+    {
+      "id": "has_checkout",
+      "kind": "field",
+      "label": "Started checkout",
+      "purpose": "Whether the session reached checkout.",
+      "data": "1 when the session has a checkout_started event in the period; 0 otherwise."
+    },
+    {
+      "id": "has_rage_click",
+      "kind": "field",
+      "label": "Rage clicked",
+      "purpose": "Whether the session showed frustration.",
+      "data": "1 when the session has a rage click in the period; 0 otherwise."
+    },
+    {
+      "id": "device",
+      "kind": "visit",
+      "label": "Device",
+      "purpose": "The device class of the session, the viewport the trend rows split by.",
+      "data": "desktop, tablet, or mobile from the device type at the session's first action; unknown otherwise.",
+      "column": "config_device_type",
+      "type": "string",
+      "labels": { "1": "desktop", "2": "tablet", "3": "mobile" },
+      "otherwise": "unknown"
+    },
+    {
+      "id": "browser",
+      "kind": "visit",
+      "label": "Browser",
+      "purpose": "The browser of the session; separates in-app browsers from Safari and Chrome.",
+      "data": "The browser name at the session's first action, trimmed; empty when unknown.",
+      "column": "config_browser_name",
+      "type": "string",
+      "normalize": ["trim"]
+    },
+    {
+      "id": "city",
+      "kind": "visit",
+      "label": "City",
+      "purpose": "The city of the session, for a regional question inside one country.",
+      "data": "The location city at the session's first action, trimmed; empty when unknown.",
+      "column": "location_city",
+      "type": "string",
+      "normalize": ["trim"]
+    },
+    {
+      "id": "region",
+      "kind": "visit",
+      "label": "Region",
+      "purpose": "The state or region of the session.",
+      "data": "The location region at the session's first action, trimmed; empty when unknown.",
+      "column": "location_region",
+      "type": "string",
+      "normalize": ["trim"]
+    },
+    {
+      "id": "operating_system",
+      "kind": "visit",
+      "label": "Operating system",
+      "purpose": "The operating system of the session.",
+      "data": "The OS code at the session's first action, trimmed; empty when unknown.",
+      "column": "config_os",
+      "type": "string",
+      "normalize": ["trim"]
+    },
+    {
+      "id": "resolution",
+      "kind": "visit",
+      "label": "Screen resolution",
+      "purpose": "The screen size the session reported; a headless browser or a broken tag reports 0x0 or an impossible size.",
+      "data": "The resolution at the session's first action, such as 1920x1080, trimmed and lowercased; empty when unknown.",
+      "column": "config_resolution",
+      "type": "string",
+      "normalize": ["trim", "lower"]
+    },
+    {
+      "id": "landing_template",
+      "kind": "entry",
+      "label": "Landing page type",
+      "purpose": "What kind of page the session started on, so a source can be read by where it lands.",
+      "data": "The page type of the session's first recorded heatmap page: home, pdp, plp, cart, and the rest. A session whose first page has no heatmap is classed by the first page that has one.",
+      "property": "template"
+    },
+    {
+      "id": "landing_path",
+      "kind": "entry",
+      "label": "Landing path",
+      "purpose": "The page the session started on, as a URL path; the key a site catalog joins on.",
+      "data": "The URL path of the session's first recorded heatmap page, lowercased, without host, query, or a trailing slash; (unknown) when the session has no recorded page.",
+      "property": "path"
+    },
+    {
+      "id": "landing_page",
+      "kind": "entry",
+      "label": "Landing page id",
+      "purpose": "The heatmap page the session started on.",
+      "data": "The idsitehsr of the session's first recorded heatmap page; 0 when the session has no recorded page.",
+      "property": "page"
+    },
+    {
+      "id": "next_template",
+      "kind": "entry",
+      "label": "Second page type",
+      "purpose": "What kind of page the session went to after it landed, so a landing page's next step can be read by source.",
+      "data": "The page type of the session's second recorded heatmap page, counting repeated views of one page as one: home, pdp, plp, cart, and the rest; (exit) when the session saw one page; (unknown) when it has no recorded page.",
+      "property": "template",
+      "step": 2
+    },
+    {
+      "id": "next_path",
+      "kind": "entry",
+      "label": "Second page path",
+      "purpose": "The page the session went to after it landed, as a URL path.",
+      "data": "The URL path of the session's second recorded heatmap page, counting repeated views of one page as one, lowercased, without host, query, or a trailing slash; (exit) when the session saw one page; (unknown) when it has no recorded page.",
+      "property": "path",
+      "step": 2
+    },
+    {
+      "id": "third_template",
+      "kind": "entry",
+      "label": "Third page type",
+      "purpose": "What kind of page the session reached two steps after it landed.",
+      "data": "The page type of the session's third recorded heatmap page, counting repeated views of one page as one; (exit) when the session saw fewer than three pages; (unknown) when it has no recorded page.",
+      "property": "template",
+      "step": 3
+    },
+    {
+      "id": "third_path",
+      "kind": "entry",
+      "label": "Third page path",
+      "purpose": "The page the session reached two steps after it landed, as a URL path.",
+      "data": "The URL path of the session's third recorded heatmap page, counting repeated views of one page as one, lowercased, without host, query, or a trailing slash; (exit) when the session saw fewer than three pages; (unknown) when it has no recorded page.",
+      "property": "path",
+      "step": 3
+    }
+  ]
+}

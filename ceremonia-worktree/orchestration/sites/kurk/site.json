@@ -1,0 +1,22 @@
+{
+  "slug": "kurk",
+  "name": "Kurk Uk",
+  "domain": "kurk.life",
+  "origin": "https://kurk.life/",
+  "idsite": 3616,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/pages/layne-beachley-routine-curcumin-bundle",
+    "label": "Layne Beachley routine curcumin bundle",
+    "idsitehsr": 64391386
+  },
+  "readingNotes": {
+    "profile": [
+      "Kurk in this bundle is Kurk Uk (idsite 3616). Kurk Aus is not included."
+    ],
+    "notIncluded": [
+      "Kurk Aus (idsite 2181). This bundle is Kurk Uk only."
+    ]
+  }
+}

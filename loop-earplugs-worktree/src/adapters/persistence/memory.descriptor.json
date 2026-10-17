@@ -1,0 +1,14 @@
+{
+  "adapters": [
+    {
+      "id": "memory",
+      "purpose": "Stores landing-page batches in process memory so tests can run the same contract as ClickHouse.",
+      "data": "The current row for each batch, queue claim, analysis, and dataset key. The latest write wins."
+    },
+    {
+      "id": "memory-ae",
+      "purpose": "Stores schema-2 batches in process memory so tests can run the same contract as ClickHouse.",
+      "data": "The current row for each schema-2 key. The latest write wins, and claims expire the same way they do in ClickHouse."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "cards-pg",
+  "purpose": "Builds the product-page gallery strategy cards after the gates and requirements pass.",
+  "data": "One card per PG strategy, including the S12 alias of A4, with its gate result and trigger state.",
+  "role": "card",
+  "catalogId": "PG",
+  "replay": "recollect"
+}

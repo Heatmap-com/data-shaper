@@ -1,0 +1,7 @@
+{
+  "id": "requirement-status",
+  "purpose": "Marks each data requirement available, partial, or missing from the datasets this run already collected.",
+  "data": "One row per requirement code and the status the cards use to decide whether they may speak.",
+  "role": "requirements",
+  "replay": "recollect"
+}

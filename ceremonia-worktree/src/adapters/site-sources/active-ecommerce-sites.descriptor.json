@@ -1,0 +1,5 @@
+{
+  "id": "active-ecommerce-sites",
+  "purpose": "Lists the sites table rows with the run's platform and status (shopify and active unless --platform and --status say otherwise).",
+  "data": "One site per row: idsite and name. The source fails if the status or platform column is missing."
+}

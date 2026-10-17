@@ -1,0 +1,5 @@
+{
+  "id": "buttons-and-links",
+  "purpose": "Treats every button and every link on the page as important.",
+  "data": "One element per button or link: its selector, whether it is a button or a link, and the visible text."
+}

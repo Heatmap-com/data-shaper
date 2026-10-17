@@ -1,0 +1,24 @@
+{
+  "name": "analysis-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Landing-page analysis pipeline: queue sites, qualify one landing page per site, pull quantitative datasets, store in ClickHouse.",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "node src/index.js",
+    "reconcile": "node scripts/reconcile.mjs",
+    "orchestrator": "node --disable-warning=ExperimentalWarning src/orchestrator/cli.js"
+  },
+  "dependencies": {
+    "@clickhouse/client": "^1.10.1",
+    "pino": "^9.7.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.9"
+  }
+}

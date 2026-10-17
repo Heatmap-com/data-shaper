@@ -1,0 +1,42 @@
+{
+  "lead": "mellow",
+  "variants": [
+    {
+      "name": "variant-journeys-page-specific",
+      "tab": "journeys",
+      "state": { "jr-flow": { "pickers": { "kind": "page" } } },
+      "what": "Top journeys, page-specific (URL) journeys"
+    },
+    {
+      "name": "variant-journeys-meta-segment",
+      "tab": "journeys",
+      "state": { "jr-flow": { "pickers": { "kind": "general", "segment": "traffic_source", "segment_value": "meta" } } },
+      "what": "Top journeys for Meta visitors only"
+    },
+    {
+      "name": "variant-journeys-trend-rps",
+      "tab": "journeys",
+      "state": { "jr-flow": { "laneMetric": "rps", "compare": "first" }, "jr-trend": { "measure": "end_rps" } },
+      "what": "Lane trend by revenue per session, compared with the first week"
+    },
+    {
+      "name": "variant-funnels-mobile-pdp-entry",
+      "tab": "funnels",
+      "state": { "fn-funnel": { "pickers": { "entry": "pdp", "viewport_type": "mobile" } } },
+      "what": "Purchase funnel for mobile visitors who landed on a product page"
+    },
+    {
+      "name": "variant-funnels-split-by-returning",
+      "tab": "funnels",
+      "state": { "fn-segments": { "pickers": { "segment": "returning" } }, "fn-trend": { "pickers": { "segment": "returning" } } },
+      "what": "Funnel by new against returning visitors"
+    },
+    {
+      "name": "variant-definitions-drawer",
+      "tab": "health",
+      "before": "document.querySelector('#glossary-open').click()",
+      "viewportOnly": true,
+      "what": "The Definitions drawer"
+    }
+  ]
+}

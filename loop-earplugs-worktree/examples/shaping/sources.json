@@ -1,0 +1,8 @@
+{
+  "idsite": 5795,
+  "connections": {
+    "meta_ads": { "adapter": "synthetic-file", "dir": "synthetic" },
+    "ga4": { "adapter": "synthetic-file", "dir": "synthetic" },
+    "site_catalog": { "adapter": "synthetic-file", "dir": "synthetic" }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "full",
+  "description": "Name the site, then analyze, bundle, chart, write the three reports, and style them as PDFs.",
+  "defaults": { "window": { "days": 30, "end": "yesterday" }, "priority": "normal", "resilience": "standard" },
+  "pages": { "source": "site", "fallback": "home" },
+  "stages": ["naming", "analysis", "bundle", "bundle-4mb", "chart-render", "site-opportunity-report", "today-opportunities", "user-journey", "style-pdf"]
+}

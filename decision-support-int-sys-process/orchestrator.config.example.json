@@ -1,0 +1,23 @@
+{
+  "root": "orchestration",
+  "workspace": "process/runs",
+  "journalDir": "process/journal",
+  "store": { "adapter": "sqlite", "path": "process/orchestrator.db" },
+  "siteDirectory": { "adapter": "clickhouse" },
+  "governor": { "capacity": { "chromium": { "limit": 1, "scope": "machine" }, "clickhouse-heavy": 1 }, "leaseMs": 120000 },
+  "worker": { "pollMs": 2000, "maxPollMs": 15000, "heartbeatMs": 15000, "maxDeliveries": 5 },
+  "values": {
+    "analysisRoot": "~/work/analysis",
+    "naming": {
+      "botDir": "~/source/heatmap/cnn-ai-bot",
+      "engineDir": "~/source/heatmap/Heatmap-extension/onsite-heatmap",
+      "assetsDir": "~/work/landing-page-analysis/deploy/context/naming-assets",
+      "datasetRoot": "~/source/heatmap/cnn-ai-bot/dataset",
+      "container": "naming-bot"
+    },
+    "report": {
+      "python": "python3",
+      "chromePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    }
+  }
+}

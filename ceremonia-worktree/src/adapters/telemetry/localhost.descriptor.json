@@ -1,0 +1,5 @@
+{
+  "id": "localhost",
+  "purpose": "Records how long each query, stage, site, batch, and write took, on this machine, so we can see what to optimize.",
+  "data": "A ring of events with name, duration, and outcome, plus a summary of the slow and failed queries. Served only on 127.0.0.1."
+}

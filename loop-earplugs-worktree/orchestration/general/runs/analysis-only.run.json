@@ -1,0 +1,6 @@
+{
+  "id": "analysis-only",
+  "description": "Analyze the site under the analysis stage's profile, landing pages unless the site or a --set names another.",
+  "defaults": { "window": { "days": 30, "end": "yesterday" }, "priority": "normal", "resilience": "standard" },
+  "stages": ["analysis"]
+}

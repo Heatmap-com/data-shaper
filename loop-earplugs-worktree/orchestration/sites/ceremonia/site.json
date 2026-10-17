@@ -1,0 +1,14 @@
+{
+  "slug": "ceremonia",
+  "name": "Ceremonia",
+  "domain": "ceremonia.com",
+  "origin": "https://ceremonia.com/",
+  "idsite": 4820,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/",
+    "label": "Homepage",
+    "idsitehsr": 24748723
+  }
+}

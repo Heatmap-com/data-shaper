@@ -1,0 +1,8 @@
+hypothesis,device_scope,unit,recorded_units_per_30d,baseline_rate,units_per_arm_4_weeks,mde_absolute_pp,mde_relative,note
+H1,mobile,checkout started visits,2728.0000,0.4410,1273.0667,5.5134,0.1250,"Recorded sessions only; full traffic is roughly 20-25% larger, so the true MDE is slightly smaller."
+H1,all,checkout started visits,4158.0000,0.4413,1940.4000,4.4662,0.1012,"Recorded sessions only; full traffic is roughly 20-25% larger, so the true MDE is slightly smaller."
+H4,mobile,add-to-cart visits,5976.0000,0.4565,2788.8000,3.7371,0.0819,"Recorded sessions only; full traffic is roughly 20-25% larger, so the true MDE is slightly smaller."
+H4,all,add-to-cart visits,8890.0000,0.4677,4148.6667,3.0692,0.0656,"Recorded sessions only; full traffic is roughly 20-25% larger, so the true MDE is slightly smaller."
+H8 / H9 / H10,mobile,PDP visits,47562.0000,0.1256,22195.6000,0.8815,0.0702,"Recorded sessions only; full traffic is roughly 20-25% larger, so the true MDE is slightly smaller."
+H8 / H9 / H10,all,PDP visits,77411.0000,0.1148,36125.1333,0.6646,0.0579,"Recorded sessions only; full traffic is roughly 20-25% larger, so the true MDE is slightly smaller."
+H14,mobile,homepage visits,16432.0000,0.4448,7668.2667,2.2484,0.0505,"Recorded sessions only; full traffic is roughly 20-25% larger, so the true MDE is slightly smaller."

@@ -1,0 +1,6 @@
+{
+  "id": "forms-weekly",
+  "purpose": "Measures form start and form submit on the page's entry sessions.",
+  "data": "Per week: sessions that filled a form, sessions that submitted it, and the completion share.",
+  "replay": "keep"
+}

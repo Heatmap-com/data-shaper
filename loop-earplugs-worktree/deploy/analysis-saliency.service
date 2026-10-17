@@ -1,0 +1,38 @@
+# Analysis saliency worker (data-capture-plan.md Phase 4 task 4; decision
+# D-08). This unit ships DISABLED: it stays masked until the saliency model
+# and licence question (Q8) is resolved — `sudo systemctl mask
+# analysis-saliency.service` — so M04 stays `missing` with detail
+# `model_not_selected` in the meantime.
+#
+# Before unmasking, set in ~/analysis-engine/.env (the EnvironmentFile):
+#   AE_SALIENCY_COMMAND  required — model command template; placeholders
+#                        {screenshot} {device} {idsite} {idsitehsr}; the
+#                        command must print one JSON object mapping
+#                        node_id -> {share, quartile} (see
+#                        src/saliency-worker.js for the contract)
+#   AE_SALIENCY_MODEL    optional — model id for ae_render_node.saliency_model
+#                        (default: the command's executable)
+#   AE_SALIENCY_SITES    optional — comma list bounding the sweep; default
+#                        discovers distinct idsites from ae_page_render_current
+#                        (LIMIT 100, fleet label)
+# The AE_SALIENCY_COMMAND placeholder below is intentionally empty: with the
+# flag on and no command the worker logs one line and exits 0, so even an
+# unmasked unit is inert until a real command is configured.
+
+[Unit]
+Description=Analysis saliency worker
+After=network-online.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/home/ec2-user/analysis-engine
+EnvironmentFile=/home/ec2-user/analysis-engine/.env
+Environment=AE_ENABLE_SALIENCY=1
+Environment=AE_SALIENCY_COMMAND=
+ExecStart=/usr/local/bin/node src/cli.js --saliency --once
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

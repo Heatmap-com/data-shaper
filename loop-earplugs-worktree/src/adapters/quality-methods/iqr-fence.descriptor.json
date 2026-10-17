@@ -1,0 +1,5 @@
+{
+  "id": "iqr-fence",
+  "purpose": "Finds rows whose measure sits outside Tukey's fences: an order worth far more than the store's usual order, or a group far above the rest.",
+  "data": "One candidate per side that has rows beyond its fence. The fences are Q1 - k x IQR and Q3 + k x IQR over the subject's rows, with quantiles interpolated linearly (type 7). k is 3 by default, Tukey's far-out fence. Skipped under minRows rows, and when Q1 equals Q3, since the fence would then flag every value off the median."
+}

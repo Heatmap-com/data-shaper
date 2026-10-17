@@ -1,0 +1,5 @@
+{
+  "id": "traffic-variance",
+  "purpose": "Chooses the session tags to trend: keys that describe traffic source, medium, campaign, ad, content, term, channel, or affiliate, whose values differ in revenue per session or average order value.",
+  "data": "One verdict per tag key: its family, selected or rejected with the reason, tagged sessions, distinct values, the RPS and AOV spread tests (F as a z score, and the weighted spread of the value means), and the values that get their own trend row. A value needs 100 sessions to be read and 10 orders to enter the AOV test. A key is selected when either test clears a one-sided 5 percent level split across two tests per candidate key (z 2.81 for ten keys), with a spread of 0.20 (RPS) or 0.15 (AOV)."
+}

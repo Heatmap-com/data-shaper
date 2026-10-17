@@ -1,0 +1,320 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`proportion statistics > Wilson intervals keep their answers 1`] = `
+[
+  {
+    "excludesOne": [
+      false,
+      false,
+      false,
+    ],
+    "input": [
+      "0",
+      "0",
+    ],
+    "interval": [
+      0,
+      1,
+    ],
+  },
+  {
+    "excludesOne": [
+      false,
+      false,
+      true,
+    ],
+    "input": [
+      "0",
+      "10",
+    ],
+    "interval": [
+      0,
+      0.21294197008340698,
+    ],
+  },
+  {
+    "excludesOne": [
+      true,
+      true,
+      false,
+    ],
+    "input": [
+      "3",
+      "10",
+    ],
+    "interval": [
+      0.1268765839031979,
+      0.5583002041301649,
+    ],
+  },
+  {
+    "excludesOne": [
+      true,
+      true,
+      true,
+    ],
+    "input": [
+      "10",
+      "10",
+    ],
+    "interval": [
+      0.787058029916593,
+      1,
+    ],
+  },
+  {
+    "excludesOne": [
+      true,
+      false,
+      true,
+    ],
+    "input": [
+      "45",
+      "900",
+    ],
+    "interval": [
+      0.03934106809020338,
+      0.06335636644572366,
+    ],
+  },
+  {
+    "excludesOne": [
+      true,
+      true,
+      false,
+    ],
+    "input": [
+      "1",
+      "3",
+    ],
+    "interval": [
+      0.07826572633372841,
+      0.7464661317187758,
+    ],
+  },
+  {
+    "excludesOne": [
+      false,
+      false,
+      false,
+    ],
+    "input": [
+      "5",
+      "NaN",
+    ],
+    "interval": [
+      0,
+      1,
+    ],
+  },
+]
+`;
+
+exports[`proportion statistics > two-proportion tests keep their answers 1`] = `
+[
+  {
+    "audit": {
+      "significant": false,
+      "z": 1.4322297480788655,
+    },
+    "experiment": {
+      "lift": 0.5,
+      "p": 0.15207808079301877,
+      "z": 1.4322297480788655,
+    },
+    "input": [
+      "30",
+      "1000",
+      "20",
+      "1000",
+    ],
+  },
+  {
+    "audit": {
+      "significant": true,
+      "z": 2.279010718069489,
+    },
+    "experiment": {
+      "lift": 0.3666666666666667,
+      "p": 0.022666428178045178,
+      "z": 2.279010718069489,
+    },
+    "input": [
+      "120",
+      "4000",
+      "90",
+      "4100",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": 0,
+    },
+    "experiment": {
+      "lift": 0,
+      "p": 1,
+      "z": 0,
+    },
+    "input": [
+      "5",
+      "50",
+      "5",
+      "50",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": 0,
+    },
+    "experiment": {
+      "lift": null,
+      "p": null,
+      "z": null,
+    },
+    "input": [
+      "0",
+      "100",
+      "0",
+      "100",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": 0,
+    },
+    "experiment": {
+      "lift": 0,
+      "p": null,
+      "z": null,
+    },
+    "input": [
+      "100",
+      "100",
+      "100",
+      "100",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": null,
+    },
+    "experiment": {
+      "lift": null,
+      "p": null,
+      "z": null,
+    },
+    "input": [
+      "0",
+      "0",
+      "3",
+      "10",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": null,
+    },
+    "experiment": {
+      "lift": null,
+      "p": null,
+      "z": null,
+    },
+    "input": [
+      "3",
+      "10",
+      "0",
+      "0",
+    ],
+  },
+  {
+    "audit": {
+      "significant": true,
+      "z": -3.0779350562554626,
+    },
+    "experiment": {
+      "lift": -1.5,
+      "p": 0.002084403353381063,
+      "z": -3.0779350562554626,
+    },
+    "input": [
+      "-1",
+      "10",
+      "2",
+      "10",
+    ],
+  },
+  {
+    "audit": {
+      "significant": true,
+      "z": 4.879500364742666,
+    },
+    "experiment": {
+      "lift": 4.999999999999999,
+      "p": 0.000001063549267952675,
+      "z": 4.879500364742666,
+    },
+    "input": [
+      "12",
+      "10",
+      "2",
+      "10",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": null,
+    },
+    "experiment": {
+      "lift": null,
+      "p": null,
+      "z": null,
+    },
+    "input": [
+      "3",
+      "NaN",
+      "2",
+      "10",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": null,
+    },
+    "experiment": {
+      "lift": null,
+      "p": null,
+      "z": null,
+    },
+    "input": [
+      "3",
+      "undefined",
+      "2",
+      "10",
+    ],
+  },
+  {
+    "audit": {
+      "significant": false,
+      "z": -0.5000000019999999,
+    },
+    "experiment": {
+      "lift": -0.2222222222222222,
+      "p": 0.6170750760437309,
+      "z": -0.5000000019999999,
+    },
+    "input": [
+      "7",
+      "1000000000",
+      "9",
+      "1000000000",
+    ],
+  },
+]
+`;

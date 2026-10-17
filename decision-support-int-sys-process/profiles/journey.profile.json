@@ -1,0 +1,9 @@
+{
+  "id": "journey",
+  "subject_type": "journey",
+  "label": "Page-type journeys",
+  "selector": { "use": "journey-paths", "criteria": { "depth": 3, "minSessions": 100, "minClusterShare": 0.02 } },
+  "datasets": { "include": ["journey-path", "cards-jr"], "exclude": [] },
+  "catalogs": ["JR"],
+  "steps": ["select-subjects", "subject-datasets", "site-datasets", "analysis"]
+}

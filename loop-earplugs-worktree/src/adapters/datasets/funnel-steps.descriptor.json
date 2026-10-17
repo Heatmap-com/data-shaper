@@ -1,0 +1,6 @@
+{
+  "id": "funnel-steps",
+  "purpose": "Reads out one selected funnel subject: how the window's sessions walk its catalog steps in order.",
+  "data": "Per funnel subject, week (and the whole window), bot filter, and step: the sessions that reached the step in order, the share that continued from the step before, the median minutes from the step before, and the orders, revenue, and conversion of the sessions that reached it.",
+  "replay": "keep"
+}

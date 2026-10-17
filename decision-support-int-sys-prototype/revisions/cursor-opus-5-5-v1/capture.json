@@ -1,0 +1,11 @@
+{
+  "lead": "mellow",
+  "variants": [
+    { "name": "variant-brief-default", "tab": "brief", "what": "Brief, default context" },
+    { "name": "variant-brief-meta", "tab": "brief", "params": { "seg": "traffic_source", "segv": "meta" }, "what": "Brief for Meta visitors" },
+    { "name": "variant-brief-entry", "tab": "brief", "state": { "br-decompose": { "dimension": "entry" } }, "what": "Brief, decomposition by entry page" },
+    { "name": "variant-funnels-mobile", "tab": "funnels", "params": { "dev": "mobile" }, "what": "Funnels for mobile" },
+    { "name": "variant-health-partial", "tab": "health", "what": "Health, with the partial week labelled" },
+    { "name": "variant-journeys-avg4", "tab": "journeys", "params": { "cmp": "avg4" }, "what": "Journeys compared with the 4-week average" }
+  ]
+}

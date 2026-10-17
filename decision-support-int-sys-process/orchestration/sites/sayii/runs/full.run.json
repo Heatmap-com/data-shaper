@@ -1,0 +1,6 @@
+{
+  "id": "full",
+  "extends": "general:full",
+  "defaults": { "priority": "high" },
+  "patch": { "naming": { "params": { "note": "Spanish storefront" } } }
+}

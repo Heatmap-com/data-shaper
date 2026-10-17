@@ -1,0 +1,6 @@
+{
+  "id": "nav-next-page",
+  "purpose": "Finds the next page after a click on this page.",
+  "data": "Per selector: sessions that clicked, and where the next pageview went, including exit when the session ended.",
+  "replay": "restamp"
+}

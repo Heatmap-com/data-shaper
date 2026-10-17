@@ -1,0 +1,14 @@
+{
+  "slug": "laticoleathers",
+  "name": "Latico Leathers",
+  "domain": "laticoleathers.com",
+  "origin": "https://laticoleathers.com/",
+  "idsite": 1425,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/products/callie-sling-crossbody",
+    "label": "Callie Sling Crossbody",
+    "idsitehsr": 1314502
+  }
+}

@@ -1,0 +1,16 @@
+page,element,observed,hypotheses
+PDP,Purchase buttons,'Add to Bag' plus 'Buy it Now' on 40/40 top PDPs; a hidden 'Waitlist' button replaces Add to Bag for sold-out sizes,H8
+PDP,Quantity,No visible quantity selector; the form posts a hidden quantity=1 on 40/40 top PDPs,"H4, H8"
+PDP,Reassurance line under buttons,'Free Shipping and Returns on All Orders' on 40/40 top PDPs,H1
+PDP,Model height and size,"Stated on 39/40 top PDPs, always inside the collapsed 'Size & Fit' accordion (block 9), never on the images",H9
+PDP,Model size worn,Every stated model wears size XS,"H9, H10"
+PDP,Fit recommendation,"'If in between sizes we recommend sizing down' on 2/40; fit words ('fitted', 'relaxed fit', 'true to size') appear in the Description on 8/40",H10
+PDP,Size guide,"'Size guide' link beside the size selector opens a modal chart (chest, waist, hips, US/UK/EU) on 40/40; the modal says 'please use this chart as a general guide. If you are between sizes or need assistance, please contact Client Services'",H10
+PDP,Block order,"Product form holder (size, colour, size guide) = 5, buttons = 6, reassurance line = 7, Description (open by default) = 8, Size & Fit = 9, Fabric & Care = 10, Reviews = 11, Shop the Print = 12; identical on all top PDPs scraped","H8, H9, H10"
+Cart drawer,Line item,"Image, title, colour, size, price, then quantity counter (minus / input / plus) and a 'Remove' link under the price",H4
+Cart drawer,Header,'Cart N items' with close button and 'Your order qualifies for free shipping' bar,"H1, H4"
+Cart drawer,Footer,"Subtotal, 'Shipping, taxes, and discount codes are calculated at checkout', 'Check Out' button","H1, H4"
+Cart drawer,Recommendations,Tabs 'Recently Viewed' and 'Frequently Bought Together' (Nosto) below the footer,H4
+Cart page,Layout,"Same line item; aside holds free-shipping bar, subtotal, gift note, 'Update Cart', 'Check Out', 'Pair with'",H4
+Checkout,Pay Now step,"Shopify checkout is not recorded by Heatmap on this site: no checkout URL in the tracked pages, so there are no clicks, scroll or time on the payment step",H1
+Homepage,Mobile header,"Hamburger menu and search icon on the left, cart on the right; category links live inside the menu drawer (rs-mobile-nav-columns)",H14

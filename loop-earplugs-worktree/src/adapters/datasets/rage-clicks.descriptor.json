@@ -1,0 +1,6 @@
+{
+  "id": "rage-clicks",
+  "purpose": "Counts entry sessions that clicked the same selector in a burst.",
+  "data": "Sessions per selector under two separate rules: three clicks within two seconds, and clicks the tracker marked as rage.",
+  "replay": "restamp"
+}

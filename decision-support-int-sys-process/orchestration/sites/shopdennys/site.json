@@ -1,0 +1,14 @@
+{
+  "slug": "shopdennys",
+  "name": "Dennys",
+  "domain": "shopdennys.com",
+  "origin": "https://shopdennys.com/",
+  "idsite": 4554,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/",
+    "label": "Shop at Dennys | Childrens Clothing Store | NY, NJ  FL",
+    "idsitehsr": 18509679
+  }
+}

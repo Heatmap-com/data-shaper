@@ -1,0 +1,6 @@
+{
+  "id": "campaign-weekly",
+  "purpose": "Breaks a page's tagged entry sessions down by week and campaign.",
+  "data": "Sessions, orders, and revenue per week and utm source, medium, campaign, content, and term.",
+  "replay": "keep"
+}

@@ -1,0 +1,5 @@
+{"role":"meta","type":"system.version","version":"2.0.1"}
+{"role":"assistant","tool_calls":[{"type":"function","id":"tool_ykfvEXizECZqCPWYyFShejct","function":{"name":"Write","arguments":"{\"path\":\"./out.txt\",\"content\":\"ok\"}"}}]}
+{"role":"tool","tool_call_id":"tool_ykfvEXizECZqCPWYyFShejct","content":"Wrote 2 bytes to ./out.txt"}
+{"role":"assistant","content":"Wrote \"ok\" to `./out.txt`."}
+{"role":"meta","type":"session.resume_hint","session_id":"session_8636bc25-52f1-495a-bd87-cf21d9de4eb4","command":"kimi -r session_8636bc25-52f1-495a-bd87-cf21d9de4eb4","content":"To resume this session: kimi -r session_8636bc25-52f1-495a-bd87-cf21d9de4eb4"}

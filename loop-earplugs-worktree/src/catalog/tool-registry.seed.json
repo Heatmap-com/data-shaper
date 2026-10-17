@@ -1,0 +1,20 @@
+[
+  {
+    "idsite": 3228,
+    "tool": "rebuy",
+    "vendor": "Rebuy",
+    "parent_company": "Rebuy",
+    "installed": 1,
+    "modules": ["cart_drawer"],
+    "plan_tier": "",
+    "pricing_basis": "",
+    "surfaces_owned": ["cart_drawer"],
+    "identity_key": "",
+    "revenue_join_class": "unknown",
+    "event_taxonomy_status": "undocumented",
+    "api_status": "unknown",
+    "detection_sources": ["script_hint"],
+    "detection_confidence": "low",
+    "note": "observed via rebuy-cart-* click selectors; operator to confirm"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "id": "experiments-weekly",
+  "purpose": "Reads experiment arms and joins them to sitewide orders.",
+  "data": "Per week, experience, and variant: sessions assigned to the arm, orders, and revenue.",
+  "replay": "keep"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "exposure-weekly",
+  "purpose": "Measures how many entry sessions actually saw an element or a depth band, and what those sessions bought.",
+  "data": "Exposed sessions, dwell, orders, and revenue per element and per zone depth band.",
+  "replay": "keep"
+}

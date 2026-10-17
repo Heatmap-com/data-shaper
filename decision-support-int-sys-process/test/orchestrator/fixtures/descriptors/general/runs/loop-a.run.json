@@ -1,0 +1,5 @@
+{
+  "id": "loop-a",
+  "extends": "loop-b",
+  "stages": ["naming"]
+}

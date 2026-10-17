@@ -1,0 +1,41 @@
+{
+  "id": "today-opportunities",
+  "label": "Today Opportunities",
+  "phase": "report",
+  "skill": "skills/today-opportunities/SKILL.md",
+  "timeoutMs": 3600000,
+  "report": {
+    "title": "Today Opportunities",
+    "order": 2,
+    "job": "three settings that can be changed this morning"
+  },
+  "charts": {
+    "today-fig1-meta-weekly": { "type": "channel-weekly-rpv", "channel": "meta_paid", "label": "Meta paid" }
+  },
+  "handler": {
+    "use": "agent",
+    "agent": "kimi-cli",
+    "prompt": "report/today-opportunities.md",
+    "addDirs": ["{{paths.analysis}}/{{site.slug}}", "{{paths.reports}}/{{site.slug}}"]
+  },
+  "check": {
+    "use": "markdown-report",
+    "file": "{{paths.reports}}/{{site.slug}}/{{site.name}} — {{stage.report.title}}.md",
+    "bundle": "{{paths.analysis}}/{{site.slug}}",
+    "rules": {
+      "minWords": 600,
+      "sections": ["Contents", "The Situation This Morning", "Action 1", "How to Read Tomorrow", "The Rest of the Week", "A Data and Method"],
+      "placeholders": true,
+      "figures": true,
+      "windowEnd": true,
+      "fresh": true
+    }
+  },
+  "fallback": {
+    "agent": "kimi-cli",
+    "prompt": "fallback/stage.md",
+    "maxAttempts": { "standard": 1, "top": 2 },
+    "timeoutMs": 3600000,
+    "addDirs": ["{{paths.analysis}}/{{site.slug}}", "{{paths.reports}}/{{site.slug}}"]
+  }
+}

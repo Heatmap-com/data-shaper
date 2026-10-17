@@ -1,0 +1,998 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`session reductions on the window path > match the recorded outputs 1`] = `
+{
+  "baselines": {
+    "id": "site-baselines",
+    "rows": [
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "all",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 162,
+          "exit_share": 0.2901,
+          "orders_udp": 9,
+          "pogo_share": 0.2654,
+          "revenue_udp": 408,
+          "rps": 2.5185,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "all",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 175,
+          "exit_share": 0.2857,
+          "orders_udp": 9,
+          "pogo_share": 0.2629,
+          "revenue_udp": 408,
+          "rps": 2.3314,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "direct",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 47,
+          "exit_share": 0,
+          "orders_udp": 3,
+          "pogo_share": 0.0851,
+          "revenue_udp": 139,
+          "rps": 2.9574,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "direct",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 50,
+          "exit_share": 0,
+          "orders_udp": 3,
+          "pogo_share": 0.1,
+          "revenue_udp": 139,
+          "rps": 2.78,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "search",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 68,
+          "exit_share": 0,
+          "orders_udp": 4,
+          "pogo_share": 0.5735,
+          "revenue_udp": 182,
+          "rps": 2.6765,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "search",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 75,
+          "exit_share": 0,
+          "orders_udp": 4,
+          "pogo_share": 0.5467,
+          "revenue_udp": 182,
+          "rps": 2.4267,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "website",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 47,
+          "exit_share": 1,
+          "orders_udp": 2,
+          "pogo_share": 0,
+          "revenue_udp": 87,
+          "rps": 1.8511,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "website",
+          "week": "2026-09-07",
+        },
+        "metrics": {
+          "entry_sessions": 50,
+          "exit_share": 1,
+          "orders_udp": 2,
+          "pogo_share": 0,
+          "revenue_udp": 87,
+          "rps": 1.74,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "all",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 153,
+          "exit_share": 0.2026,
+          "orders_udp": 11,
+          "pogo_share": 0.3203,
+          "revenue_udp": 475,
+          "rps": 3.1046,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "all",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 165,
+          "exit_share": 0.2061,
+          "orders_udp": 11,
+          "pogo_share": 0.3273,
+          "revenue_udp": 475,
+          "rps": 2.8788,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "direct",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 34,
+          "exit_share": 0,
+          "orders_udp": 2,
+          "pogo_share": 0.0882,
+          "revenue_udp": 85,
+          "rps": 2.5,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "direct",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 36,
+          "exit_share": 0,
+          "orders_udp": 2,
+          "pogo_share": 0.0833,
+          "revenue_udp": 85,
+          "rps": 2.3611,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "search",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 88,
+          "exit_share": 0,
+          "orders_udp": 6,
+          "pogo_share": 0.5227,
+          "revenue_udp": 258,
+          "rps": 2.9318,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "search",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 95,
+          "exit_share": 0,
+          "orders_udp": 6,
+          "pogo_share": 0.5368,
+          "revenue_udp": 258,
+          "rps": 2.7158,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "channel": "website",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 31,
+          "exit_share": 1,
+          "orders_udp": 3,
+          "pogo_share": 0,
+          "revenue_udp": 132,
+          "rps": 4.2581,
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "channel": "website",
+          "week": "2026-09-14",
+        },
+        "metrics": {
+          "entry_sessions": 34,
+          "exit_share": 1,
+          "orders_udp": 3,
+          "pogo_share": 0,
+          "revenue_udp": 132,
+          "rps": 3.8824,
+        },
+      },
+    ],
+  },
+  "channels": {
+    "id": "entry-by-channel",
+    "rows": [
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "11",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 48,
+          "sessions": 23,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "11",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 48,
+          "sessions": 24,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "11",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 3,
+          "revenue_udp": 131,
+          "sessions": 44,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "11",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 3,
+          "revenue_udp": 131,
+          "sessions": 46,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "11",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 2,
+          "revenue_udp": 87,
+          "sessions": 23,
+          "single_pageview_sessions": 23,
+          "url": "https://x.com/",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "11",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 2,
+          "revenue_udp": 87,
+          "sessions": 23,
+          "single_pageview_sessions": 23,
+          "url": "https://x.com/",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "12",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 44,
+          "sessions": 14,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "12",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 44,
+          "sessions": 15,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "12",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 2,
+          "revenue_udp": 89,
+          "sessions": 29,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "12",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 2,
+          "revenue_udp": 89,
+          "sessions": 31,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "12",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 45,
+          "sessions": 14,
+          "single_pageview_sessions": 14,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "12",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 45,
+          "sessions": 16,
+          "single_pageview_sessions": 16,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "13",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 7,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/b",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "13",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 8,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/b",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "13",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 47,
+          "sessions": 14,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/b",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "13",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 47,
+          "sessions": 16,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/b",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "13",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "https://x.com/products/b",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "13",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "https://x.com/products/b",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "14",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 8,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/collections/c",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "14",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 8,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/collections/c",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "14",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 46,
+          "sessions": 13,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/collections/c",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "14",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 46,
+          "sessions": 15,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/collections/c",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "14",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 41,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "https://x.com/collections/c",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "14",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 41,
+          "sessions": 8,
+          "single_pageview_sessions": 8,
+          "url": "https://x.com/collections/c",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "15",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 40,
+          "sessions": 7,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/cart",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "15",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 40,
+          "sessions": 7,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/cart",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "15",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 44,
+          "sessions": 15,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/cart",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "15",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 44,
+          "sessions": 16,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/cart",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "15",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "https://x.com/cart",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "15",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 8,
+          "single_pageview_sessions": 8,
+          "url": "https://x.com/cart",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "16",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 47,
+          "sessions": 7,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/pages/about",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "16",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 47,
+          "sessions": 8,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/pages/about",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "16",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 43,
+          "sessions": 14,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/pages/about",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "16",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 43,
+          "sessions": 15,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/pages/about",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "16",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "https://x.com/pages/about",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "16",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 8,
+          "single_pageview_sessions": 8,
+          "url": "https://x.com/pages/about",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "17",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 8,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "17",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 8,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "17",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 14,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "17",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 16,
+          "single_pageview_sessions": 0,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "17",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 46,
+          "sessions": 6,
+          "single_pageview_sessions": 6,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "17",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 46,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "https://x.com/products/a",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "18",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 45,
+          "sessions": 7,
+          "single_pageview_sessions": 0,
+          "url": "",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "18",
+          "referer": "direct",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 45,
+          "sessions": 8,
+          "single_pageview_sessions": 0,
+          "url": "",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "18",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 40,
+          "sessions": 13,
+          "single_pageview_sessions": 0,
+          "url": "",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "18",
+          "referer": "search",
+        },
+        "metrics": {
+          "orders_udp": 1,
+          "revenue_udp": 40,
+          "sessions": 15,
+          "single_pageview_sessions": 0,
+          "url": "",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "exclude_confirmed",
+          "idsitehsr": "18",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "",
+        },
+      },
+      {
+        "dims": {
+          "bot_filter": "none",
+          "idsitehsr": "18",
+          "referer": "website",
+        },
+        "metrics": {
+          "orders_udp": 0,
+          "revenue_udp": 0,
+          "sessions": 7,
+          "single_pageview_sessions": 7,
+          "url": "",
+        },
+      },
+    ],
+  },
+  "qualification": {
+    "entrySessions": 85,
+    "evidence": {
+      "candidates": 6,
+      "hits": 150,
+      "home_candidates": 1,
+      "home_orders": 6,
+      "home_sessions": 90,
+      "share_of_home": 0.9444444444444444,
+      "title": "A",
+      "unfiltered": {
+        "orders": 5,
+        "revenue": 224,
+        "sessions": 93,
+      },
+    },
+    "idsitehsr": 12,
+    "orders": 5,
+    "pageType": "product",
+    "reason": "preferred non-home page",
+    "revenue": 224,
+    "status": "qualified",
+    "url": "https://x.com/products/a",
+  },
+  "targets": [
+    {
+      "entrySessions": 85,
+      "idsitehsr": 12,
+      "orders": 5,
+      "pageTitle": "A",
+      "pageType": "product",
+      "revenue": 224,
+      "role": "primary",
+      "selectionReason": "qualifier choice",
+      "url": "https://x.com/products/a",
+    },
+    {
+      "entrySessions": 90,
+      "idsitehsr": 11,
+      "orders": 6,
+      "pageTitle": "Home",
+      "pageType": "home",
+      "revenue": 266,
+      "role": "sister",
+      "selectionReason": "next-highest entry page (90 exclude_confirmed sessions, search)",
+      "url": "https://x.com/",
+    },
+    {
+      "entrySessions": 28,
+      "idsitehsr": 14,
+      "orders": 2,
+      "pageTitle": "C",
+      "pageType": "collection",
+      "revenue": 87,
+      "role": "template_member",
+      "selectionReason": "template member: highest-entry collection page",
+      "url": "https://x.com/collections/c",
+    },
+    {
+      "entrySessions": 29,
+      "idsitehsr": 15,
+      "orders": 2,
+      "pageTitle": "Cart",
+      "pageType": "cart",
+      "revenue": 84,
+      "role": "template_member",
+      "selectionReason": "template member: highest-entry cart page",
+      "url": "https://x.com/cart",
+    },
+  ],
+}
+`;

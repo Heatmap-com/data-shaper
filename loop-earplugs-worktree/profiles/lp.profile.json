@@ -1,0 +1,9 @@
+{
+  "id": "lp",
+  "subject_type": "page",
+  "label": "Landing pages",
+  "selector": null,
+  "datasets": { "include": ["provides"], "exclude": [] },
+  "catalogs": ["LP", "PG", "PI", "PO", "TD", "TG", "TI"],
+  "steps": ["qualify", "capture-gate", "page-datasets", "descriptors", "site-datasets", "analysis"]
+}

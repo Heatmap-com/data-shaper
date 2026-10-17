@@ -1,0 +1,8 @@
+{
+  "id": "cards-qz",
+  "purpose": "Builds the quiz strategy cards after the gates and requirements pass.",
+  "data": "One card per QZ strategy with its gate result. Each card gates on the quiz events until the event contract records them.",
+  "role": "card",
+  "catalogId": "QZ",
+  "replay": "recollect"
+}

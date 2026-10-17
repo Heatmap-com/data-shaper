@@ -1,0 +1,6 @@
+{
+  "id": "page-speed",
+  "purpose": "Reads lab page-speed measurements for this page's URL.",
+  "data": "Median largest-contentful-paint and first-contentful-paint. Null when no lab row matches the URL.",
+  "replay": "keep"
+}

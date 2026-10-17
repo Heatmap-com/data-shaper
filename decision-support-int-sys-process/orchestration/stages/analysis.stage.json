@@ -1,0 +1,32 @@
+{
+  "id": "analysis",
+  "label": "Analyze the site under its profile",
+  "phase": "analyze",
+  "skill": "skills/site-analysis/SKILL.md",
+  "concurrency": 1,
+  "resources": ["clickhouse-heavy"],
+  "leaseMs": 120000,
+  "timeoutMs": 14400000,
+  "params": { "profile": "lp", "select": {} },
+  "handler": {
+    "use": "command",
+    "command": "node",
+    "args": [
+      "bin/analyze-site.mjs",
+      "--profile", "{{stage.params.profile}}",
+      "--select", "{{stage.params.select}}",
+      "--idsite", "{{site.idsite}}",
+      "--window-start", "{{window.start}}",
+      "--window-end", "{{window.end}}",
+      "--batch-file", "{{run.dir}}/batch.json"
+    ]
+  },
+  "check": { "use": "ae-batch-complete", "batchFile": "{{run.dir}}/batch.json" },
+  "retry": { "maxAttempts": 2, "backoffMs": 300000, "factor": 2, "maxBackoffMs": 1800000 },
+  "errors": [
+    { "match": "ECONNREFUSED|ETIMEDOUT|ECONNRESET|socket hang up|Timeout error", "class": "transient", "reason": "ClickHouse not reachable" },
+    { "match": "still awaiting capture", "class": "blocked", "reason": "a page capture failed; the naming bot could not capture the page" },
+    { "match": "unknown profile|criteria .* (outside|violat)|must be one of|is not allowed|unknown catalogs|outside profile", "class": "blocked", "reason": "the profile or its criteria are invalid" },
+    { "match": "analyze-site: |\\bexit 2\\b", "class": "defect", "reason": "analysis command usage error" }
+  ]
+}

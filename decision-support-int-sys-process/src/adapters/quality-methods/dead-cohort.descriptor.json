@@ -1,0 +1,5 @@
+{
+  "id": "dead-cohort",
+  "purpose": "Finds a large group of sessions that behaves like no shopper does: millions of visits at a 0x0 resolution with no sales, or a traffic source that never checks out.",
+  "data": "One candidate per value of the subject's attribute that holds at least minSessions sessions and minShare of the site, and whose conversion rate is at most maxConversionRatio, and checkout rate at most maxCheckoutRatio, of the rest of the site's. Values in ignore are never flagged. Skipped when the site has fewer than minSiteBuyers buying sessions."
+}

@@ -1,0 +1,6 @@
+{
+  "id": "strategy-triggers",
+  "purpose": "Applies the landing-page trigger rules to the datasets already collected.",
+  "data": "One row per strategy and segment: the trigger state and the metric values the rule read.",
+  "replay": "recollect"
+}

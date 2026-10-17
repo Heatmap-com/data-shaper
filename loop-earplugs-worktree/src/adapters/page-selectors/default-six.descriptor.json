@@ -1,0 +1,5 @@
+{
+  "id": "default-six",
+  "purpose": "Selects the qualifier's page, up to two sister pages in the same channel mix, and one page each of the product, collection, cart, and home kinds that are still missing.",
+  "data": "Page targets with a role of primary, sister, or template member, each with its URL and entry sessions."
+}

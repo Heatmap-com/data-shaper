@@ -1,0 +1,85 @@
+{
+  "catalog_version": "2026-10-14.1",
+  "catalog_id": "JR",
+  "source": "docs/plans/execution-profiles.md",
+  "strategies": [
+    {
+      "id": "JR:A1",
+      "family": "A",
+      "title": "Fix the path step that keeps the smallest share of the step before it",
+      "requirement_keys": [
+        "H20"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H20",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "bottleneck",
+        "threshold": 0.3,
+        "metric": "continued_rate"
+      }
+    },
+    {
+      "id": "JR:A2",
+      "family": "A",
+      "title": "Rework a path whose completers convert below the site",
+      "requirement_keys": [
+        "H20"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H20",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "path-conversion",
+        "threshold": 0.2,
+        "metric": "cvr_ratio_to_site"
+      }
+    },
+    {
+      "id": "JR:A3",
+      "family": "A",
+      "title": "Find what changed in the week the path completion dropped",
+      "requirement_keys": [
+        "H20"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H20",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "weekly-drop",
+        "threshold": 0.2,
+        "metric": "completion_drop"
+      }
+    }
+  ]
+}

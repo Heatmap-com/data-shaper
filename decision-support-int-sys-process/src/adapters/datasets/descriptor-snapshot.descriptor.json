@@ -1,0 +1,6 @@
+{
+  "id": "descriptor-snapshot",
+  "purpose": "Reads the page and store descriptors the gate pipeline uses, including which ones have expired.",
+  "data": "One row per descriptor field: the stored value, its provenance and confidence, and whether it is current.",
+  "replay": "recollect"
+}

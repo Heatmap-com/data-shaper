@@ -1,0 +1,1306 @@
+{
+  "catalog_version": "2026-10-04.1",
+  "catalog_id": "LP",
+  "source": "lp-strategies.md",
+  "strategies": [
+    {
+      "id": "J2",
+      "family": "J",
+      "title": "LP J2 (rules 1)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H26"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          1
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "B1",
+      "family": "B",
+      "title": "LP B1 (rules 2)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          2
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "B6",
+      "family": "B",
+      "title": "LP B6 (rules 2)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          2
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "A1",
+      "family": "A",
+      "title": "LP A1 (rules 2, 12)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24",
+        "H05",
+        "H03"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          2,
+          12
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "J1",
+      "family": "J",
+      "title": "LP J1 (rules 2)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          2
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "C5",
+      "family": "C",
+      "title": "LP C5 (rules 3)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          3
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "G3",
+      "family": "G",
+      "title": "LP G3 (rules 3)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          3
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "G4",
+      "family": "G",
+      "title": "LP G4 (rules 3)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          3
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "C1",
+      "family": "C",
+      "title": "LP C1 (rules 3, 4)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H24",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          3,
+          4
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "B3",
+      "family": "B",
+      "title": "LP B3 (rules 4, 9)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          4,
+          9
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "D3",
+      "family": "D",
+      "title": "LP D3 (rules 4, 9)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H08",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          4,
+          9
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "D1",
+      "family": "D",
+      "title": "LP D1 (rules 5)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          5
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "F1",
+      "family": "F",
+      "title": "LP F1 (rules 5)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          5
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "F2",
+      "family": "F",
+      "title": "LP F2 (rules 5)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          5
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "B2",
+      "family": "B",
+      "title": "LP B2 (rules 5)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          5
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "E2",
+      "family": "E",
+      "title": "LP E2 (rules 5, 10)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09",
+        "H11"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          5,
+          10
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "B5",
+      "family": "B",
+      "title": "LP B5 (rules 6)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          6
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "B4",
+      "family": "B",
+      "title": "LP B4 (rules 6)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          6
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "E3",
+      "family": "E",
+      "title": "LP E3 (rules 7)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          7
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "D6",
+      "family": "D",
+      "title": "LP D6 (rules 7, 8)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09",
+        "H10"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          7,
+          8
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "E4",
+      "family": "E",
+      "title": "LP E4 (rules 7, 10)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09",
+        "H11"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          7,
+          10
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "D7",
+      "family": "D",
+      "title": "LP D7 (rules 8)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H10"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          8
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "H2",
+      "family": "H",
+      "title": "LP H2 (rules 8, 9)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H10"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          8,
+          9
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "H1",
+      "family": "H",
+      "title": "LP H1 (rules 9)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          9
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "C7",
+      "family": "C",
+      "title": "LP C7 (rules 9)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          9
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "E1",
+      "family": "E",
+      "title": "LP E1 (rules 10)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H11",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          10
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "K1",
+      "family": "K",
+      "title": "LP K1 (rules 11)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          11
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "K2",
+      "family": "K",
+      "title": "LP K2 (rules 11)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          11
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "D5",
+      "family": "D",
+      "title": "LP D5 (rules 11)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          11
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "A5",
+      "family": "A",
+      "title": "LP A5 (rules 12)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H05",
+        "H03"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          12
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "A7",
+      "family": "A",
+      "title": "LP A7 (rules 12)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H05",
+        "H03"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          12
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "A6",
+      "family": "A",
+      "title": "LP A6 (rules 13)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H24",
+        "H03"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          13
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "A2",
+      "family": "A",
+      "title": "LP A2 (rules 13)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H24",
+        "H03"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          13
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "L1",
+      "family": "L",
+      "title": "LP L1 (rules 13)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H24",
+        "H03"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          13
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "F4",
+      "family": "F",
+      "title": "LP F4 (rules 14)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H14"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          14
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "F3",
+      "family": "F",
+      "title": "LP F3 (rules 14)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H14"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          14
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "F7",
+      "family": "F",
+      "title": "LP F7 (rules 14)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H14"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          14
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "P1",
+      "family": "P",
+      "title": "LP P1 (rules 15)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          15
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "P2",
+      "family": "P",
+      "title": "LP P2 (rules 16)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          16
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "P3",
+      "family": "P",
+      "title": "LP P3 (rules 17)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          17
+        ]
+      },
+      "spec": {}
+    },
+    {
+      "id": "P4",
+      "family": "P",
+      "title": "LP P4 (rules 18)",
+      "requirement_keys": [
+        "H01",
+        "H02",
+        "H23",
+        "M05",
+        "H09"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "",
+      "source_ref": "lp-strategies.md",
+      "scope": "page",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": {
+        "module": "strategy-triggers",
+        "rules": [
+          18
+        ]
+      },
+      "spec": {}
+    }
+  ]
+}

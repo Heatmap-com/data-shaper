@@ -1,0 +1,9 @@
+{
+  "id": "pdp",
+  "subject_type": "page",
+  "label": "Product detail pages",
+  "selector": { "use": "page-by-kind", "criteria": { "kinds": ["product"], "minEntrySessions": 100 } },
+  "datasets": { "include": ["provides"], "exclude": ["ad-creative"] },
+  "catalogs": ["PI", "PG"],
+  "steps": ["qualify", "capture-gate", "page-datasets", "descriptors", "site-datasets", "analysis"]
+}

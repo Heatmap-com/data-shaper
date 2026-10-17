@@ -1,0 +1,15 @@
+[Unit]
+Description=Analysis engine capture consumer
+After=network-online.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/home/ec2-user/analysis-engine
+EnvironmentFile=/home/ec2-user/analysis-engine/.env
+ExecStart=/usr/local/bin/node src/cli.js --capture --agents 3
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

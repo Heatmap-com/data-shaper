@@ -1,0 +1,6 @@
+{
+  "id": "order-value-hist",
+  "purpose": "Shows the spread of order values for this page's entry sessions.",
+  "data": "Order counts by $10 bucket through $200, plus the 25th, 50th, and 75th percentile.",
+  "replay": "keep"
+}

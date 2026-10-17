@@ -1,0 +1,441 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "q20261013t060517437-sayiioficial-com",
+      "domain": "sayiioficial.com",
+      "url": "https://sayiioficial.com/",
+      "process": "full",
+      "priority": "high",
+      "resilience": "standard",
+      "status": "done",
+      "created_at": "2026-10-13T06:05:17.437Z",
+      "updated_at": "2026-10-13T09:08:41.976Z",
+      "started_at": "2026-10-13T06:29:37.597Z",
+      "finished_at": "2026-10-13T09:08:41.976Z",
+      "current_step": null,
+      "blocker": null,
+      "note": "Same ask as tennispremium.co: one next A/B test from Heatmap on the product page, collections, and cart, with screenshots or numbers for design. Hair care, Colombia. Domain as given: sayiioficial.com.",
+      "journal": "process/journal/q20261013t060517437-sayiioficial-com.md",
+      "steps": [
+        {
+          "id": "naming",
+          "phase": "analyze",
+          "label": "Name the site",
+          "skill": "skills/resilient-naming/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:29:37.597Z",
+          "finished_at": "2026-10-13T06:33:51.885Z",
+          "note": "Seed exited 0. dataset/5680/landing/index has 705 names, both renders, and naming.complete."
+        },
+        {
+          "id": "analysis",
+          "phase": "analyze",
+          "label": "Analyze and store the site data",
+          "skill": "skills/site-analysis/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T07:05:18.954Z",
+          "finished_at": "2026-10-13T08:28:38.871Z",
+          "note": "Focus page https://sayiioficial.com/products/coctel-capilar-complex-hyaluron-en-frio (idsitehsr 42334083). Capture 768 names. Descriptors 18 operator rows. Replay 473. Trends 14112 then 15792, check.ok. Tag-trend 9600 rows, utm_content and ad_id, check.ok."
+        },
+        {
+          "id": "bundle",
+          "phase": "export",
+          "label": "Full analyst export",
+          "skill": "skills/analyst-data-bundle/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T08:28:38.872Z",
+          "finished_at": "2026-10-13T08:29:39.456Z",
+          "note": "Full bundle ~/work/analysis/sayii is 912 KB. Window 2026-09-13 through 2026-10-12. Anchors match: 201 orders, revenue 6404.73, median 33.14, high-value 16 at line 50, high-value revenue 931.40."
+        },
+        {
+          "id": "bundle-4mb",
+          "phase": "export",
+          "label": "Trimmed 4 MB export",
+          "skill": "skills/analyst-data-bundle-4mb/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T08:29:39.457Z",
+          "finished_at": "2026-10-13T08:29:39.532Z",
+          "note": "Trimmed ~/work/analysis/sayii-4mb is 804 KB. Orders stay one row per order (d dropped, date from t_utc). Same anchors match."
+        },
+        {
+          "id": "site-opportunity-report",
+          "phase": "report",
+          "label": "Site Opportunity Report",
+          "skill": "skills/site-opportunity-report/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T08:49:13.637Z",
+          "finished_at": "2026-10-13T09:05:56.381Z",
+          "note": "Site Opportunity Report written at docs/analysis/sayii/Sayii — Site Opportunity Report.md. Six opportunities. Social lands on the hyaluron product; kits collection is the page beside it."
+        },
+        {
+          "id": "today-opportunities",
+          "phase": "report",
+          "label": "Today Opportunities",
+          "skill": "skills/today-opportunities/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T09:05:56.382Z",
+          "finished_at": "2026-10-13T09:08:41.900Z",
+          "note": "Today Opportunities written. Week of 5 October: move ad 120244737977210566 toward 120244737977220566, pause two zero-order names, and tag untagged Meta."
+        },
+        {
+          "id": "user-journey",
+          "phase": "report",
+          "label": "User Journey Opportunity Analysis",
+          "skill": "skills/user-journey-opportunity-analysis/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T09:08:41.901Z",
+          "finished_at": "2026-10-13T09:08:41.976Z",
+          "note": "User Journey Opportunity Analysis written. Classes are other only. Landing leaks are the hyaluron product and three other social URLs."
+        }
+      ]
+    },
+    {
+      "id": "q20261013t060517360-jormands-com-co",
+      "domain": "jormands.com.co",
+      "url": "https://jormands.com.co/",
+      "process": "full",
+      "priority": "high",
+      "resilience": "standard",
+      "status": "done",
+      "created_at": "2026-10-13T06:05:17.360Z",
+      "updated_at": "2026-10-13T09:00:36.984Z",
+      "started_at": "2026-10-13T06:25:40.548Z",
+      "finished_at": "2026-10-13T09:00:36.983Z",
+      "current_step": null,
+      "blocker": null,
+      "note": "Same ask as tennispremium.co: one next A/B test from Heatmap on the product page, collections, and cart, with screenshots or numbers for design. Fashion, Colombia.",
+      "journal": "process/journal/q20261013t060517360-jormands-com-co.md",
+      "steps": [
+        {
+          "id": "naming",
+          "phase": "analyze",
+          "label": "Name the site",
+          "skill": "skills/resilient-naming/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:25:40.548Z",
+          "finished_at": "2026-10-13T06:29:37.595Z",
+          "note": "Seed exited 0. dataset/6136/landing/index has 704 names, both renders, and naming.complete."
+        },
+        {
+          "id": "analysis",
+          "phase": "analyze",
+          "label": "Analyze and store the site data",
+          "skill": "skills/site-analysis/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:48:54.656Z",
+          "finished_at": "2026-10-13T07:05:18.952Z",
+          "note": "Focus page https://jormands.com.co/collections/promo (idsitehsr 64389009). Capture 716 names. Descriptors 18 operator rows. Replay 474. Trends 9408 then 11088, check.ok. Tag-trend 21600 rows, 5 keys, check.ok."
+        },
+        {
+          "id": "bundle",
+          "phase": "export",
+          "label": "Full analyst export",
+          "skill": "skills/analyst-data-bundle/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T07:05:18.954Z",
+          "finished_at": "2026-10-13T07:06:38.465Z",
+          "note": "Full bundle ~/work/analysis/jormands is 1.4 MB. Window 2026-09-13 through 2026-10-12. Anchors match: 643 orders, revenue 48038.72, median 69.47, high-value 42 at line 120, high-value revenue 6447.76."
+        },
+        {
+          "id": "bundle-4mb",
+          "phase": "export",
+          "label": "Trimmed 4 MB export",
+          "skill": "skills/analyst-data-bundle-4mb/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T07:06:38.466Z",
+          "finished_at": "2026-10-13T07:06:38.542Z",
+          "note": "Trimmed ~/work/analysis/jormands-4mb is 1.2 MB. Orders stay one row per order (d dropped, date from t_utc). Same anchors match."
+        },
+        {
+          "id": "site-opportunity-report",
+          "phase": "report",
+          "label": "Site Opportunity Report",
+          "skill": "skills/site-opportunity-report/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T07:06:38.543Z",
+          "finished_at": "2026-10-13T08:49:13.636Z",
+          "note": "Site Opportunity Report written at docs/analysis/jormands/Jormands — Site Opportunity Report.md. Eight opportunities from the full bundle."
+        },
+        {
+          "id": "today-opportunities",
+          "phase": "report",
+          "label": "Today Opportunities",
+          "skill": "skills/today-opportunities/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T08:49:13.637Z",
+          "finished_at": "2026-10-13T08:49:13.710Z",
+          "note": "Today Opportunities written. Latest week 5-11 October: move always_on and pause rebajas_jormands toward instagram_bio, and tag untagged Meta."
+        },
+        {
+          "id": "user-journey",
+          "phase": "report",
+          "label": "User Journey Opportunity Analysis",
+          "skill": "skills/user-journey-opportunity-analysis/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T08:49:13.712Z",
+          "finished_at": "2026-10-13T09:00:36.983Z",
+          "note": "User Journey Opportunity Analysis written. Classes are other and cart. Landing leaks are cabin-luggage social and promo social."
+        }
+      ]
+    },
+    {
+      "id": "q20261013t060517284-vitasei-com-co",
+      "domain": "vitasei.com.co",
+      "url": "https://vitasei.com.co/",
+      "process": "full",
+      "priority": "high",
+      "resilience": "standard",
+      "status": "done",
+      "created_at": "2026-10-13T06:05:17.284Z",
+      "updated_at": "2026-10-13T07:02:29.815Z",
+      "started_at": "2026-10-13T06:21:05.588Z",
+      "finished_at": "2026-10-13T07:02:29.814Z",
+      "current_step": null,
+      "blocker": null,
+      "note": "Same ask as tennispremium.co: one next A/B test from Heatmap on the product page, collections, and cart, with screenshots or numbers for design. Supplements, Colombia.",
+      "journal": "process/journal/q20261013t060517284-vitasei-com-co.md",
+      "steps": [
+        {
+          "id": "naming",
+          "phase": "analyze",
+          "label": "Name the site",
+          "skill": "skills/resilient-naming/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:21:05.588Z",
+          "finished_at": "2026-10-13T06:25:40.546Z",
+          "note": "Seed exited 0. dataset/5933/landing/index has 2181 names, both renders, and naming.complete."
+        },
+        {
+          "id": "analysis",
+          "phase": "analyze",
+          "label": "Analyze and store the site data",
+          "skill": "skills/site-analysis/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:37:08.565Z",
+          "finished_at": "2026-10-13T06:48:54.654Z",
+          "note": "Batch b689b030-c4e9-4d98-9345-2180ff086691. Homepage 59744352. Capture complete. Run failed 0, pagesAnalyzed 1. Descriptors promoted, replay 311 cards, trends check.ok. Tag-trend selected no keys (values earn alike). Log docs/analysis/vitasei/PROJECT-LOG.md."
+        },
+        {
+          "id": "bundle",
+          "phase": "export",
+          "label": "Full analyst export",
+          "skill": "skills/analyst-data-bundle/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:48:54.656Z",
+          "finished_at": "2026-10-13T06:54:04.184Z",
+          "note": "Full bundle ~/work/analysis/vitasei is 1.7 MB. Window 2026-09-13 through 2026-10-12. udp_conversions has no rows for idsite 5933, so the order file is header-only: 0 orders, revenue $0, median anchor null. Those anchors match."
+        },
+        {
+          "id": "bundle-4mb",
+          "phase": "export",
+          "label": "Trimmed 4 MB export",
+          "skill": "skills/analyst-data-bundle-4mb/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:54:04.185Z",
+          "finished_at": "2026-10-13T06:54:32.090Z",
+          "note": "Trimmed copy ~/work/analysis/vitasei-4mb is 1.4 MB. Orders stay one row per order (no d column; the file is header-only). Same anchors: 0 orders, $0, median null."
+        },
+        {
+          "id": "site-opportunity-report",
+          "phase": "report",
+          "label": "Site Opportunity Report",
+          "skill": "skills/site-opportunity-report/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:54:32.091Z",
+          "finished_at": "2026-10-13T07:01:19.194Z",
+          "note": "Site Opportunity Report written from the full bundle. Order table is empty, so revenue is not sized. docs/analysis/vitasei/Vitasei — Site Opportunity Report.md"
+        },
+        {
+          "id": "today-opportunities",
+          "phase": "report",
+          "label": "Today Opportunities",
+          "skill": "skills/today-opportunities/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T07:01:19.196Z",
+          "finished_at": "2026-10-13T07:01:48.781Z",
+          "note": "Today Opportunities written. One switch qualifies: tag Meta. Orders are missing, so no campaign is paused. docs/analysis/vitasei/Vitasei — Today Opportunities.md"
+        },
+        {
+          "id": "user-journey",
+          "phase": "report",
+          "label": "User Journey Opportunity Analysis",
+          "skill": "skills/user-journey-opportunity-analysis/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T07:01:48.783Z",
+          "finished_at": "2026-10-13T07:02:29.814Z",
+          "note": "User Journey written from the full bundle. No orders, so paths are ranked on cart and checkout. docs/analysis/vitasei/Vitasei — User Journey Opportunity Analysis.md"
+        }
+      ]
+    },
+    {
+      "id": "q20261013t060517208-tennispremium-co",
+      "domain": "tennispremium.co",
+      "url": "https://tennispremium.co/",
+      "process": "full",
+      "priority": "high",
+      "resilience": "standard",
+      "status": "done",
+      "created_at": "2026-10-13T06:05:17.208Z",
+      "updated_at": "2026-10-13T06:57:51.412Z",
+      "started_at": "2026-10-13T06:19:28.993Z",
+      "finished_at": "2026-10-13T06:57:51.411Z",
+      "current_step": null,
+      "blocker": null,
+      "note": "Sofia asked for one next A/B test from Heatmap on the product page, collections, and cart (scroll depth, clicks, rage clicks, drop-off), with screenshots or numbers for design. Shopify, Colombia, mostly mobile. Intelligems round 1 is already testing installments in the product cards, what each order includes on the product page, and installments in the cart. Promised first.",
+      "journal": "process/journal/q20261013t060517208-tennispremium-co.md",
+      "steps": [
+        {
+          "id": "naming",
+          "phase": "analyze",
+          "label": "Name the site",
+          "skill": "skills/resilient-naming/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:19:28.993Z",
+          "finished_at": "2026-10-13T06:21:05.587Z",
+          "note": "Seed exited 0. dataset/6213/landing/index has 831 names, both renders, and naming.complete."
+        },
+        {
+          "id": "analysis",
+          "phase": "analyze",
+          "label": "Analyze and store the site data",
+          "skill": "skills/site-analysis/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:21:05.588Z",
+          "finished_at": "2026-10-13T06:37:08.563Z",
+          "note": "Batch d7b79e2f-d947-4b4c-b947-cfb0571f0a17. Search page 65706970. Capture complete. Run failed 0, pagesAnalyzed 1. Descriptors promoted, replay 311 cards, trends and tag-trend check.ok. Log docs/analysis/tennispremium/PROJECT-LOG.md."
+        },
+        {
+          "id": "bundle",
+          "phase": "export",
+          "label": "Full analyst export",
+          "skill": "skills/analyst-data-bundle/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:37:08.564Z",
+          "finished_at": "2026-10-13T06:38:47.544Z",
+          "note": "Full bundle ~/work/analysis/tennispremium is 1.2 MB. Window 2026-09-13 through 2026-10-12. 739 orders, revenue $55,342.86. Anchors match."
+        },
+        {
+          "id": "bundle-4mb",
+          "phase": "export",
+          "label": "Trimmed 4 MB export",
+          "skill": "skills/analyst-data-bundle-4mb/SKILL.md",
+          "also": [],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:38:47.545Z",
+          "finished_at": "2026-10-13T06:38:59.927Z",
+          "note": "Trimmed copy ~/work/analysis/tennispremium-4mb is 1.0 MB. Orders stay one row per order. Same anchors: 739 orders, $55,342.86."
+        },
+        {
+          "id": "site-opportunity-report",
+          "phase": "report",
+          "label": "Site Opportunity Report",
+          "skill": "skills/site-opportunity-report/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:38:59.929Z",
+          "finished_at": "2026-10-13T06:48:54.919Z",
+          "note": "Site Opportunity Report written from the full bundle at docs/analysis/tennispremium/Tennis Premium — Site Opportunity Report.md."
+        },
+        {
+          "id": "today-opportunities",
+          "phase": "report",
+          "label": "Today Opportunities",
+          "skill": "skills/today-opportunities/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:48:54.920Z",
+          "finished_at": "2026-10-13T06:55:42.456Z",
+          "note": "Today Opportunities written from the full bundle at docs/analysis/tennispremium/Tennis Premium — Today Opportunities.md. Latest week is 5 October."
+        },
+        {
+          "id": "user-journey",
+          "phase": "report",
+          "label": "User Journey Opportunity Analysis",
+          "skill": "skills/user-journey-opportunity-analysis/SKILL.md",
+          "also": [
+            "skills/analysis-doc-standards.md"
+          ],
+          "status": "done",
+          "attempts": 1,
+          "started_at": "2026-10-13T06:55:42.458Z",
+          "finished_at": "2026-10-13T06:57:51.411Z",
+          "note": "User Journey Opportunity Analysis written from the full bundle. Journey classes are other, search, and cart."
+        }
+      ]
+    }
+  ]
+}

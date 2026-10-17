@@ -1,0 +1,6 @@
+{
+  "id": "sister-pages",
+  "purpose": "Compares entry sessions across the pages selected for this site.",
+  "data": "Sessions, orders, and revenue per selected page and referrer.",
+  "replay": "keep"
+}

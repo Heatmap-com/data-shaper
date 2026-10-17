@@ -1,0 +1,17 @@
+{
+  "id": "kimi-cli",
+  "adapter": "kimi-cli",
+  "description": "Kimi Code CLI in non-interactive prompt mode. -p already runs without asking; kimi 2.0.1 rejects --auto and --yolo together with -p, so mode is recorded here and not sent.",
+  "command": "kimi",
+  "model": null,
+  "mode": "prompt",
+  "outputFormat": "stream-json",
+  "promptDelivery": "file",
+  "skillsDirs": ["skills"],
+  "env": {
+    "pass": ["PATH", "HOME", "CLICKHOUSE_HOST", "CLICKHOUSE_PORT", "CLICKHOUSE_USER", "CLICKHOUSE_PASSWORD", "CLICKHOUSE_DATABASE", "CNN_AI_BOT_DIR", "NAMING_ENGINE_ASSETS", "NAMING_CONTAINER", "NAMING_DOCKER_CONTAINER"],
+    "set": { "NO_COLOR": "1" }
+  },
+  "timeoutMs": 2700000,
+  "killGraceMs": 10000
+}

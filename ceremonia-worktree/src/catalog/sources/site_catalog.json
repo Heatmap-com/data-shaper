@@ -1,0 +1,20 @@
+{
+  "id": "site_catalog",
+  "label": "Site catalog",
+  "purpose": "What each page of the client's site sells, so sessions can be read by the product type, collection, or price band of the page they landed on.",
+  "data": "One row per URL path of the storefront, from the store's catalog export: the product type, collection, and price band of the product or collection at that path.",
+  "role": "lookup",
+  "columns": {
+    "path": "string",
+    "product_type": "string",
+    "collection": "string",
+    "price_band": "string"
+  },
+  "key": { "column": "path", "attribute": "landing_path", "transform": ["trim", "lower"] },
+  "attributes": {
+    "product_type": { "label": "Landing product type", "data": "The product type of the landing path in the site catalog; (unmatched) when the catalog does not list the path." },
+    "collection": { "label": "Landing collection", "data": "The collection of the landing path in the site catalog; (unmatched) when the catalog does not list the path." },
+    "price_band": { "label": "Landing price band", "data": "The price band of the landing path in the site catalog; (unmatched) when the catalog does not list the path." }
+  },
+  "fallback": "(unmatched)"
+}

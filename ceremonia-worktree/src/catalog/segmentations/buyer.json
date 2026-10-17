@@ -1,0 +1,10 @@
+{
+  "id": "buyer",
+  "label": "Buyer",
+  "purpose": "Whether the visit placed an order in the window. It describes what buyers did on the way, and is not a rate to optimize: every buyer row converts by definition.",
+  "data": "buyer when the visit has at least one order in the window; non_buyer otherwise.",
+  "rules": [
+    { "value": "buyer", "when": { "field": "has_order", "eq": 1 } }
+  ],
+  "fallback": "non_buyer"
+}

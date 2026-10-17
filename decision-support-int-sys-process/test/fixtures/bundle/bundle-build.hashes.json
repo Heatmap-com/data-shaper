@@ -1,0 +1,67 @@
+{
+  "recordedWith": {
+    "python": "3.14.5",
+    "pandas": "2.3.3",
+    "numpy": "2.4.2"
+  },
+  "full": {
+    "files": [
+      "00_README_data_guide.md",
+      "00_site_profile.json",
+      "01_orders.csv",
+      "02_daily_and_campaigns.txt",
+      "03_weekly_channels.txt",
+      "04_products.txt",
+      "05_pages_and_high_value.txt",
+      "06_shoppers_and_cohorts.txt",
+      "07_page_clicks.txt",
+      "08_page_layout_engagement.txt",
+      "09_page_channels_and_pipeline.txt",
+      "10_SITE-NOTES.md"
+    ],
+    "sha256": {
+      "00_README_data_guide.md": "42ff2b37c2b04a936e35e5a7fa6aa0d6d2e28f01fcc168e6675e2e7c8e81b507",
+      "00_site_profile.json": "5351ad511e3482bc1f3ea0d26cd235a23fa9c9ffc6319b43edac8d720d34a00d",
+      "01_orders.csv": "0ff533ac18ab2c04a2354e93f07abcca74343eaf899615eebdf84a9e04ce2839",
+      "02_daily_and_campaigns.txt": "e6dc7bfb084dc56e08deccf8be1d161647e85c6c760db1c02b37ed0a6364e557",
+      "03_weekly_channels.txt": "aa7f2204ba35d395344a60e0b5f4f5679cc7d4d91297577bdaa94fd797e2a61c",
+      "04_products.txt": "df2129a9d340410a4eeecadd6e02d15732076f8dbee40b503560c07db770ac3c",
+      "05_pages_and_high_value.txt": "77f1bf22ba923b4c25a000f287cda9080cd0c8438b791dd608ccf33ca273aa8d",
+      "06_shoppers_and_cohorts.txt": "1b27f67c0ec7394de7c931d730e46760582bbc4b0c7d1e41cff04ca026f75488",
+      "07_page_clicks.txt": "cc76f52aefe4930f79c5445d9e92a5599700273694a3816c010fd7704001f279",
+      "08_page_layout_engagement.txt": "bfc06e7507a7093863b45917ae5bdb8f1d95139ef148726598c007ee34007013",
+      "09_page_channels_and_pipeline.txt": "03294531289670edc7bf12fc2927ad6f3a57885391ef6f5a436a6ff83cc7b5fd",
+      "10_SITE-NOTES.md": "ad5162f00e8be55dbe9f81733260c2c3c4d24cf17aef57ef0d59e2e9359a1e84"
+    }
+  },
+  "sayii-4mb": {
+    "files": [
+      "00_README_data_guide.md",
+      "00_site_profile.json",
+      "01_orders.csv",
+      "02_daily_and_campaigns.txt",
+      "03_weekly_channels.txt",
+      "04_products.txt",
+      "05_pages_and_high_value.txt",
+      "06_shoppers_and_cohorts.txt",
+      "07_page_clicks.txt",
+      "08_page_layout_engagement.txt",
+      "09_page_channels_and_pipeline.txt",
+      "10_SITE-NOTES.md"
+    ],
+    "sha256": {
+      "00_README_data_guide.md": "ffdeaed73709a56c61a608b09ede1f373860a9f7e71aa36b7c2a40434037d7a2",
+      "00_site_profile.json": "5351ad511e3482bc1f3ea0d26cd235a23fa9c9ffc6319b43edac8d720d34a00d",
+      "01_orders.csv": "de5ed216f5fac8056772c23891f9956a5c2f8fdcf7221b8e04c72701f4a5d6dc",
+      "02_daily_and_campaigns.txt": "4e6c0d41951ecef51e48c9999b2e69a2b48f8fa6893014678d8df237b8ca86bb",
+      "03_weekly_channels.txt": "aa7f2204ba35d395344a60e0b5f4f5679cc7d4d91297577bdaa94fd797e2a61c",
+      "04_products.txt": "e83a9734a694d15123783f9b0256a8272b44c5de9247475b67af6b9c7b9acc7f",
+      "05_pages_and_high_value.txt": "ead37402ed1236ffb9294f36fe957062a470e105ead5ab25498a319e1c2d0d84",
+      "06_shoppers_and_cohorts.txt": "1b27f67c0ec7394de7c931d730e46760582bbc4b0c7d1e41cff04ca026f75488",
+      "07_page_clicks.txt": "81aea7aac490c6aee18f259d69f0c088bd8a5db077fb18db1a9e1e72f7dc926b",
+      "08_page_layout_engagement.txt": "0334f11bc4483eb74e85a31f158ebfc32b5846cc5afd8394bc5150e80b5fc06b",
+      "09_page_channels_and_pipeline.txt": "03294531289670edc7bf12fc2927ad6f3a57885391ef6f5a436a6ff83cc7b5fd",
+      "10_SITE-NOTES.md": "ad5162f00e8be55dbe9f81733260c2c3c4d24cf17aef57ef0d59e2e9359a1e84"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "ad-creative",
+  "purpose": "Reads the site's stored ad creatives.",
+  "data": "One row per ad: platform, source, temperature, and the ad id. An empty table means no creatives have been loaded.",
+  "replay": "keep"
+}

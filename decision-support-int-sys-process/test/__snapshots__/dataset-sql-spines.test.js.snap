@@ -1,0 +1,452 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`dataset SQL spines > line-items, order-value-hist, viewport-weekly, and clicks send the same SQL 1`] = `
+{
+  "clicks": [
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+    {
+      "label": "clicks:page",
+      "params": [
+        "day",
+        "hsr",
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), clicks AS ( SELECT idvisit, idloghsr, idselector, idsite, idsitehsr, server_date, toDateTime(concat(date, ' ', hour, ':00:00')) AS server_time, meta1, a_x, a_y, time_since_load FROM default.udp_clicksce_clicks WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date = {day:Date} ) SELECT toString(c.idvisit) AS idvisit, toString(c.idloghsr) AS idloghsr, c.idselector AS selector, toMonday(c.server_date) AS week, toString(c.server_date) AS date, toString(c.server_time) AS server_time, c.meta1 AS meta1, c.a_x AS x, c.a_y AS y, ifNull(c.time_since_load, -1) AS time_since_load FROM clicks c INNER JOIN entry e ON e.idvisit = CAST(c.idvisit AS UInt64)",
+    },
+  ],
+  "lineItems": [
+    {
+      "label": "line-items:orders",
+      "params": [
+        "hsr",
+        "idsite",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), orders AS ( SELECT idvisit, idorder, any(revenue) AS revenue FROM default.udp_conversions FINAL WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit, idorder ) SELECT toString(o.idvisit) AS idvisit, o.idorder AS idorder, ifNull(o.revenue, 0) AS revenue FROM orders o INNER JOIN entry e ON e.idvisit = CAST(o.idvisit AS UInt64)",
+    },
+    {
+      "label": "line-items:product-items",
+      "params": [
+        "hsr",
+        "idsite",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ) SELECT toString(i.idvisit) AS idvisit, i.sku AS sku, any(i.title) AS product_name, sum(ifNull(i.quantity, 0)) AS quantity, round(sum(ifNull(i.quantity, 0) * ifNull(i.price, 0)), 2) AS line_revenue FROM default.udp_conversion_product_items i INNER JOIN entry e ON e.idvisit = CAST(i.idvisit AS UInt64) WHERE i.idsite = {idsite:UInt32} GROUP BY i.idvisit, i.sku",
+    },
+  ],
+  "orderValueHist": [
+    {
+      "label": "order-value-hist:orders",
+      "params": [
+        "hsr",
+        "idsite",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH entry AS ( SELECT idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), orders AS ( SELECT idvisit, idorder, any(revenue) AS revenue FROM default.udp_conversions FINAL WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit, idorder ) SELECT o.idorder AS idorder, ifNull(o.revenue, 0) AS revenue FROM orders o INNER JOIN entry e ON e.idvisit = o.idvisit",
+    },
+  ],
+  "viewportWeekly": [
+    {
+      "label": "bot:fingerprints",
+      "params": [
+        "idsite",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH visit_tags AS ( SELECT idsite, idvisit, argMinIf(tag_utm_source, tag_row, tag_utm_source != '') AS utm_source, argMinIf(tag_utm_medium, tag_row, tag_utm_medium != '') AS utm_medium, argMinIf(tag_utm_campaign, tag_row, tag_utm_campaign != '') AS utm_campaign FROM ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, toUInt64(idloghsr) AS tag_row, JSONExtractKeysAndValues(session_tags, 'String') AS tag_pairs, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_source', tag_pairs).2)) AS tag_utm_source, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_medium', tag_pairs).2)) AS tag_utm_medium, trim(arrayFirst(kv -> lower(kv.1) = 'utm_campaign', tag_pairs).2) AS tag_utm_campaign FROM default.udp_session_tags WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND session_tags NOT IN ('{}', '') ) GROUP BY idsite, idvisit ), visit_rows AS ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, min(server_date) AS first_date, toMonday(min(server_date)) AS week_start, toUInt8(argMin(config_device_type, visit_first_action_time)) AS device_type, toInt32(argMin(referer_type, visit_first_action_time)) AS referer_type, toUInt8(ifNull(argMin(visitor_returning, visit_first_action_time), false)) AS visitor_returning, trim(toString(argMin(location_country, visit_first_action_time))) AS location_country, trim(toString(argMin(location_city, visit_first_action_time))) AS location_city, trim(toString(argMin(config_resolution, visit_first_action_time))) AS config_resolution, trim(toString(argMin(config_browser_name, visit_first_action_time))) AS config_browser_name, trim(toString(argMin(config_browser_version, visit_first_action_time))) AS config_browser_version, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr, lower(trim(toString(argMin(custom_var_k5, visit_first_action_time)))) AS utm_source FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idsite, idvisit ), visits AS ( SELECT r.* REPLACE (if(ifNull(t.utm_source, '') != '', t.utm_source, r.utm_source) AS utm_source) FROM visit_rows AS r LEFT JOIN visit_tags AS t ON t.idsite = r.idsite AND t.idvisit = r.idvisit ), fp_n AS ( SELECT idsite, week_start, location_country, location_city, config_resolution, config_browser_name, config_browser_version, device_type, count() AS n FROM visits GROUP BY idsite, week_start, location_country, location_city, config_resolution, config_browser_name, config_browser_version, device_type ), events AS ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, max(event_type = 'product_viewed') AS saw_product, max(event_type = 'add_to_cart') AS saw_atc, max(event_type = 'checkout_started') AS saw_checkout, max(event_type = 'checkout_completed') AS saw_purchase FROM default.journey_events_map WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND event_type IN ('product_viewed', 'add_to_cart', 'checkout_started', 'checkout_completed') GROUP BY idsite, idvisit ), orders AS ( SELECT CAST(idvisit AS UInt64) AS idvisit, uniqExact(idorder) AS orders_udp, sum(revenue) AS revenue_udp FROM ( SELECT idvisit, idorder, max(revenue) AS revenue FROM default.udp_conversions FINAL WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit, idorder ) GROUP BY idvisit ), pages AS ( SELECT CAST(idvisit AS UInt64) AS idvisit, count() AS pageviews, sum(least(toUInt64(ifNull(time_on_page, 0)), 1800000)) AS capped_ms FROM default.udp_hsrce_pageviews WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ), tagged AS ( SELECT v.idsite AS idsite, v.week_start AS week_start, if(f.n >= 50, v.location_country, '(other)') AS location_country, if(f.n >= 50, v.location_city, '(other)') AS location_city, if(f.n >= 50, v.config_resolution, '(other)') AS config_resolution, if(f.n >= 50, v.config_browser_name, '(other)') AS config_browser_name, if(f.n >= 50, v.config_browser_version, '(other)') AS config_browser_version, if(f.n >= 50, toString(v.device_type), '(other)') AS device_type, if(f.n >= 50, cityHash64(location_country, location_city, config_resolution, config_browser_name, config_browser_version, toString(device_type)), toUInt64(0)) AS fp_hash, ifNull(e.saw_product, 0) AS saw_product, ifNull(e.saw_atc, 0) AS saw_atc, ifNull(o.orders_udp, 0) AS orders_udp, ifNull(p.pageviews, 0) AS pageviews FROM visits v INNER JOIN fp_n f ON f.idsite = v.idsite AND f.week_start = v.week_start AND f.location_country = v.location_country AND f.location_city = v.location_city AND f.config_resolution = v.config_resolution AND f.config_browser_name = v.config_browser_name AND f.config_browser_version = v.config_browser_version AND f.device_type = v.device_type LEFT JOIN events e ON e.idsite = v.idsite AND e.idvisit = v.idvisit LEFT JOIN orders o ON o.idvisit = v.idvisit LEFT JOIN pages p ON p.idvisit = v.idvisit ) SELECT toString(week_start) AS week, location_country AS country, location_city AS city, config_resolution AS resolution, config_browser_name AS browser, config_browser_version AS version, device_type AS device, toString(any(fp_hash)) AS fp_hash, count() AS sessions, countIf(pageviews = 1) AS single_pageview_sessions, countIf(saw_product = 1) AS product_viewed_sessions, countIf(saw_atc = 1) AS add_to_cart_sessions, sum(orders_udp) AS orders_udp FROM tagged GROUP BY week_start, location_country, location_city, config_resolution, config_browser_name, config_browser_version, device_type",
+    },
+    {
+      "label": "bot:version-lookback",
+      "params": [
+        "idsite",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH visit_tags AS ( SELECT idsite, idvisit, argMinIf(tag_utm_source, tag_row, tag_utm_source != '') AS utm_source, argMinIf(tag_utm_medium, tag_row, tag_utm_medium != '') AS utm_medium, argMinIf(tag_utm_campaign, tag_row, tag_utm_campaign != '') AS utm_campaign FROM ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, toUInt64(idloghsr) AS tag_row, JSONExtractKeysAndValues(session_tags, 'String') AS tag_pairs, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_source', tag_pairs).2)) AS tag_utm_source, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_medium', tag_pairs).2)) AS tag_utm_medium, trim(arrayFirst(kv -> lower(kv.1) = 'utm_campaign', tag_pairs).2) AS tag_utm_campaign FROM default.udp_session_tags WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND session_tags NOT IN ('{}', '') ) GROUP BY idsite, idvisit ), visit_rows AS ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, min(server_date) AS first_date, toMonday(min(server_date)) AS week_start, toUInt8(argMin(config_device_type, visit_first_action_time)) AS device_type, toInt32(argMin(referer_type, visit_first_action_time)) AS referer_type, toUInt8(ifNull(argMin(visitor_returning, visit_first_action_time), false)) AS visitor_returning, trim(toString(argMin(location_country, visit_first_action_time))) AS location_country, trim(toString(argMin(location_city, visit_first_action_time))) AS location_city, trim(toString(argMin(config_resolution, visit_first_action_time))) AS config_resolution, trim(toString(argMin(config_browser_name, visit_first_action_time))) AS config_browser_name, trim(toString(argMin(config_browser_version, visit_first_action_time))) AS config_browser_version, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr, lower(trim(toString(argMin(custom_var_k5, visit_first_action_time)))) AS utm_source FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idsite, idvisit ), visits AS ( SELECT r.* REPLACE (if(ifNull(t.utm_source, '') != '', t.utm_source, r.utm_source) AS utm_source) FROM visit_rows AS r LEFT JOIN visit_tags AS t ON t.idsite = r.idsite AND t.idvisit = r.idvisit ) SELECT toString(week_start) AS week, config_browser_version AS version, count() AS sessions FROM visits GROUP BY week, version",
+    },
+    {
+      "label": "bot:version-shares",
+      "params": [
+        "idsite",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH visit_tags AS ( SELECT idsite, idvisit, argMinIf(tag_utm_source, tag_row, tag_utm_source != '') AS utm_source, argMinIf(tag_utm_medium, tag_row, tag_utm_medium != '') AS utm_medium, argMinIf(tag_utm_campaign, tag_row, tag_utm_campaign != '') AS utm_campaign FROM ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, toUInt64(idloghsr) AS tag_row, JSONExtractKeysAndValues(session_tags, 'String') AS tag_pairs, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_source', tag_pairs).2)) AS tag_utm_source, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_medium', tag_pairs).2)) AS tag_utm_medium, trim(arrayFirst(kv -> lower(kv.1) = 'utm_campaign', tag_pairs).2) AS tag_utm_campaign FROM default.udp_session_tags WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND session_tags NOT IN ('{}', '') ) GROUP BY idsite, idvisit ), visit_rows AS ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, min(server_date) AS first_date, toMonday(min(server_date)) AS week_start, toUInt8(argMin(config_device_type, visit_first_action_time)) AS device_type, toInt32(argMin(referer_type, visit_first_action_time)) AS referer_type, toUInt8(ifNull(argMin(visitor_returning, visit_first_action_time), false)) AS visitor_returning, trim(toString(argMin(location_country, visit_first_action_time))) AS location_country, trim(toString(argMin(location_city, visit_first_action_time))) AS location_city, trim(toString(argMin(config_resolution, visit_first_action_time))) AS config_resolution, trim(toString(argMin(config_browser_name, visit_first_action_time))) AS config_browser_name, trim(toString(argMin(config_browser_version, visit_first_action_time))) AS config_browser_version, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr, lower(trim(toString(argMin(custom_var_k5, visit_first_action_time)))) AS utm_source FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idsite, idvisit ), visits AS ( SELECT r.* REPLACE (if(ifNull(t.utm_source, '') != '', t.utm_source, r.utm_source) AS utm_source) FROM visit_rows AS r LEFT JOIN visit_tags AS t ON t.idsite = r.idsite AND t.idvisit = r.idvisit ) SELECT toString(week_start) AS week, config_browser_version AS version, count() AS sessions FROM visits GROUP BY week, version",
+    },
+    {
+      "label": "sessions:entry",
+      "params": [
+        "idsite",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH visit_tags AS ( SELECT idsite, idvisit, argMinIf(tag_utm_source, tag_row, tag_utm_source != '') AS utm_source, argMinIf(tag_utm_medium, tag_row, tag_utm_medium != '') AS utm_medium, argMinIf(tag_utm_campaign, tag_row, tag_utm_campaign != '') AS utm_campaign FROM ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, toUInt64(idloghsr) AS tag_row, JSONExtractKeysAndValues(session_tags, 'String') AS tag_pairs, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_source', tag_pairs).2)) AS tag_utm_source, lower(trim(arrayFirst(kv -> lower(kv.1) = 'utm_medium', tag_pairs).2)) AS tag_utm_medium, trim(arrayFirst(kv -> lower(kv.1) = 'utm_campaign', tag_pairs).2) AS tag_utm_campaign FROM default.udp_session_tags WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND session_tags NOT IN ('{}', '') ) GROUP BY idsite, idvisit ), visit_rows AS ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, min(server_date) AS first_date, toMonday(min(server_date)) AS week_start, toUInt8(argMin(config_device_type, visit_first_action_time)) AS device_type, toInt32(argMin(referer_type, visit_first_action_time)) AS referer_type, toUInt8(ifNull(argMin(visitor_returning, visit_first_action_time), false)) AS visitor_returning, trim(toString(argMin(location_country, visit_first_action_time))) AS location_country, trim(toString(argMin(location_city, visit_first_action_time))) AS location_city, trim(toString(argMin(config_resolution, visit_first_action_time))) AS config_resolution, trim(toString(argMin(config_browser_name, visit_first_action_time))) AS config_browser_name, trim(toString(argMin(config_browser_version, visit_first_action_time))) AS config_browser_version, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr, lower(trim(toString(argMin(custom_var_k5, visit_first_action_time)))) AS utm_source FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idsite, idvisit ), visits AS ( SELECT r.* REPLACE (if(ifNull(t.utm_source, '') != '', t.utm_source, r.utm_source) AS utm_source) FROM visit_rows AS r LEFT JOIN visit_tags AS t ON t.idsite = r.idsite AND t.idvisit = r.idvisit ), events AS ( SELECT CAST(idsite AS UInt32) AS idsite, CAST(idvisit AS UInt64) AS idvisit, max(event_type = 'product_viewed') AS saw_product, max(event_type = 'add_to_cart') AS saw_atc, max(event_type = 'checkout_started') AS saw_checkout, max(event_type = 'checkout_completed') AS saw_purchase FROM default.journey_events_map WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND event_type IN ('product_viewed', 'add_to_cart', 'checkout_started', 'checkout_completed') GROUP BY idsite, idvisit ), orders AS ( SELECT CAST(idvisit AS UInt64) AS idvisit, uniqExact(idorder) AS orders_udp, sum(revenue) AS revenue_udp FROM ( SELECT idvisit, idorder, max(revenue) AS revenue FROM default.udp_conversions FINAL WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit, idorder ) GROUP BY idvisit ), pages AS ( SELECT CAST(idvisit AS UInt64) AS idvisit, count() AS pageviews, sum(least(toUInt64(ifNull(time_on_page, 0)), 1800000)) AS capped_ms FROM default.udp_hsrce_pageviews WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) SELECT toString(v.idvisit) AS idvisit, toString(v.first_date) AS first_date, toString(v.week_start) AS week, v.device_type AS device, v.referer_type AS referer, v.visitor_returning AS returning, v.entry_hsr AS entry_hsr, v.location_country AS country, v.config_browser_name AS browser, toString(cityHash64(v.location_country, v.location_city, v.config_resolution, v.config_browser_name, v.config_browser_version, toString(v.device_type))) AS fp_hash, v.utm_source AS utm_source, ifNull(p.pageviews, 0) AS pageviews, ifNull(p.capped_ms, 0) AS capped_ms, ifNull(e.saw_product, 0) AS saw_product, ifNull(e.saw_atc, 0) AS saw_atc, ifNull(e.saw_checkout, 0) AS saw_checkout, ifNull(e.saw_purchase, 0) AS saw_purchase, ifNull(o.orders_udp, 0) AS orders, ifNull(o.revenue_udp, 0) AS revenue FROM visits v LEFT JOIN events e ON e.idsite = v.idsite AND e.idvisit = v.idvisit LEFT JOIN orders o ON o.idvisit = v.idvisit LEFT JOIN pages p ON p.idvisit = v.idvisit",
+    },
+    {
+      "label": "viewport:heights",
+      "params": [
+        "idsite",
+        "idsitehsr",
+        "w0",
+        "w1",
+      ],
+      "sql": "WITH viewports AS ( SELECT CAST(idvisit AS UInt64) AS idvisit, viewport_h_px AS h FROM default.udp_hsrce_pageviews WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND viewport_h_px IS NOT NULL AND CAST(idvisit AS UInt64) IN ( SELECT CAST(idvisit AS UInt64) FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND visit_entry_idaction_url = toString({idsitehsr:UInt64}) UNION DISTINCT SELECT CAST(idvisit AS UInt64) FROM default.udp_hsrce_pageviews WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND idsitehsr = {idsitehsr:UInt64} ) ), viewport AS ( SELECT idvisit, argMax(h, (n, h)) AS h FROM ( SELECT idvisit, h, count() AS n FROM viewports GROUP BY idvisit, h ) GROUP BY idvisit ) SELECT toString(idvisit) AS idvisit, h FROM viewport",
+    },
+  ],
+}
+`;
+
+exports[`dataset SQL spines > strategy-triggers sends the same entry-viewport SQL 1`] = `
+[
+  {
+    "label": "check:scroll-scale",
+    "params": [
+      "idsite",
+      "idsitehsr",
+      "w0",
+      "w1",
+    ],
+    "sql": "SELECT max(scroll_y_max_relative) AS mx FROM default.udp_hsrce_pageviews WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date BETWEEN {w0:Date} AND {w1:Date}",
+  },
+  {
+    "label": "strategy-triggers:hero-fold",
+    "params": [
+      "hsr",
+      "idsite",
+      "idsitehsr",
+      "w0",
+      "w1",
+    ],
+    "sql": "WITH entry AS ( SELECT CAST(idvisit AS UInt64) AS idvisit FROM ( SELECT idvisit, toString(argMin(visit_entry_idaction_url, visit_first_action_time)) AS entry_hsr FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) WHERE entry_hsr = {hsr:String} ), heights AS ( SELECT CAST(idvisit AS UInt64) AS idvisit, viewport_h_px AS h, count() AS n FROM default.udp_hsrce_pageviews WHERE idsite = {idsite:UInt32} AND idsitehsr = {idsitehsr:UInt64} AND server_date BETWEEN {w0:Date} AND {w1:Date} AND viewport_h_px > 0 GROUP BY idvisit, viewport_h_px ), dominant AS ( SELECT idvisit, argMax(h, (n, h)) AS h FROM heights GROUP BY idvisit ), device AS ( SELECT CAST(idvisit AS UInt64) AS idvisit, toUInt8(argMin(config_device_type, visit_first_action_time)) AS device_type FROM default.udp_hsrce_visits WHERE idsite = {idsite:UInt32} AND server_date BETWEEN {w0:Date} AND {w1:Date} GROUP BY idvisit ) SELECT d.device_type AS device_type, p.h AS h, count() AS sessions FROM dominant AS p INNER JOIN entry AS e ON e.idvisit = p.idvisit INNER JOIN device AS d ON d.idvisit = p.idvisit GROUP BY device_type, h",
+  },
+]
+`;

@@ -1,0 +1,10 @@
+{
+  "id": "rager",
+  "label": "Rage clicker",
+  "purpose": "Whether the visit hit something that did not respond. Shows where frustrated visitors go and whether they still buy.",
+  "data": "rager when the visit has at least one click the tracker marked as a rage click in the window; non_rager otherwise.",
+  "rules": [
+    { "value": "rager", "when": { "field": "has_rage_click", "eq": 1 } }
+  ],
+  "fallback": "non_rager"
+}

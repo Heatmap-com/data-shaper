@@ -1,0 +1,6 @@
+{
+  "id": "page-country",
+  "purpose": "Splits this page's entry sessions by country.",
+  "data": "Sessions, orders, and revenue per country that has at least 30 entry sessions.",
+  "replay": "keep"
+}

@@ -1,0 +1,14 @@
+{
+  "slug": "mellow",
+  "name": "Mellow",
+  "domain": "mellowsleep.com",
+  "origin": "https://mellowsleep.com/",
+  "idsite": 4879,
+  "platform": "shopify",
+  "currency": "USD",
+  "focus": {
+    "path": "/products/marshmellow-comforter",
+    "label": "Marshmellow Comforter",
+    "idsitehsr": 25897912
+  }
+}

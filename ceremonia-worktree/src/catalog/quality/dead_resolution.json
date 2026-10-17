@@ -1,0 +1,13 @@
+{
+  "id": "dead_resolution",
+  "label": "Dead screen resolutions",
+  "purpose": "A screen resolution that brings a large share of sessions and almost no checkouts or sales is usually a headless browser, a monitor, or a broken tag; left in, it lowers every rate on the site.",
+  "subject": { "kind": "groups", "by": "resolution" },
+  "method": { "adapter": "dead-cohort", "params": { "minSessions": 1000, "minShare": 0.01, "maxConversionRatio": 0.1, "maxCheckoutRatio": 0.2 } },
+  "triage": { "adapter": "impact", "params": { "ask": { "sessionShare": 0.01, "conversionShift": 0.02, "orderShare": null, "revenueShare": null, "buyerShare": null, "aovShift": null } } },
+  "propose": "exclude",
+  "pending": "include",
+  "auto": "exclude",
+  "scope": "session",
+  "question": "You have {{sessions}} sessions with a {{attribute}} of {{value}} ({{sessionShare}} of the site). They have {{progressed}} checkout sessions and {{orders}} orders, a {{conversion}} conversion rate against {{restConversion}} for the rest of the site. Excluding them moves the site's conversion rate from {{conversionWith}} to {{conversionWithout}}. Exclude them?"
+}

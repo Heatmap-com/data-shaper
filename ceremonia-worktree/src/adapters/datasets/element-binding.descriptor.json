@@ -1,0 +1,6 @@
+{
+  "id": "element-binding",
+  "purpose": "Reads the names already stored for this page's elements.",
+  "data": "One row per selector and element class, with the display name and the taxonomy version the name was written under.",
+  "replay": "recollect"
+}

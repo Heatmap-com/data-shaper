@@ -1,0 +1,6 @@
+{
+  "id": "journey-path",
+  "purpose": "Reads out one selected journey subject: how the window's sessions follow its page-type path template.",
+  "data": "Per journey subject, week (and the whole window), and bot filter: per template step, the sessions whose page-type path opens with the template up to that step, the share that continued from the step before, and their orders, revenue, and conversion; and one site row with every session's conversion.",
+  "replay": "keep"
+}

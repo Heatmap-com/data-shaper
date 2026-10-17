@@ -1,0 +1,28 @@
+{
+  "id": "meta_ads",
+  "label": "Meta Ads",
+  "purpose": "Daily spend, delivery, and Meta-attributed purchases per campaign, so revenue the tracker saw can be read against what the campaign cost and what Meta claims.",
+  "data": "One row per day and campaign from the ad account. spend is in the account currency. purchases and purchase_value are Meta's own attribution (its window, its identity), not orders the tracker matched.",
+  "role": "facts",
+  "grain": "day",
+  "columns": {
+    "date": "date",
+    "campaign_id": "string",
+    "campaign_name": "string",
+    "spend": "number",
+    "impressions": "number",
+    "clicks": "number",
+    "purchases": "number",
+    "purchase_value": "number"
+  },
+  "keys": [
+    { "column": "campaign_name", "attribute": "utm_campaign", "transform": ["trim"] }
+  ],
+  "measures": {
+    "spend": { "label": "Meta spend", "data": "Ad spend summed over the period's days, in the account currency." },
+    "impressions": { "label": "Meta impressions", "data": "Impressions summed over the period's days." },
+    "clicks": { "label": "Meta link clicks", "data": "Link clicks summed over the period's days." },
+    "purchases": { "label": "Meta-attributed purchases", "data": "Purchases Meta attributes to the campaign, summed over the period's days." },
+    "purchase_value": { "label": "Meta-attributed purchase value", "data": "Purchase value Meta attributes to the campaign, summed over the period's days." }
+  }
+}

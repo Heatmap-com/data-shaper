@@ -1,0 +1,85 @@
+{
+  "catalog_version": "2026-10-14.1",
+  "catalog_id": "FN",
+  "source": "docs/plans/execution-profiles.md",
+  "strategies": [
+    {
+      "id": "FN:A1",
+      "family": "A",
+      "title": "Fix the funnel step that keeps the smallest share of the step before it",
+      "requirement_keys": [
+        "H12"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H12",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "bottleneck",
+        "threshold": 0.3,
+        "metric": "continued_rate"
+      }
+    },
+    {
+      "id": "FN:A2",
+      "family": "A",
+      "title": "Shorten the funnel step sessions take longest to reach",
+      "requirement_keys": [
+        "H12"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H12",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "slow-step",
+        "threshold": 30,
+        "metric": "median_minutes_from_previous"
+      }
+    },
+    {
+      "id": "FN:A3",
+      "family": "A",
+      "title": "Find what changed in the week the funnel completion dropped",
+      "requirement_keys": [
+        "H12"
+      ],
+      "descriptor_refs": [],
+      "requires_raw": "H12",
+      "source_ref": "docs/plans/execution-profiles.md",
+      "scope": "site",
+      "surface": "",
+      "tools": [],
+      "prerequisites": [],
+      "exclusions": [],
+      "confounds": [],
+      "kill_metric": null,
+      "guardrails": [],
+      "test_design": null,
+      "trigger": null,
+      "spec": {
+        "rule": "weekly-drop",
+        "threshold": 0.2,
+        "metric": "completion_drop"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "id": "primary-only",
+  "purpose": "Keeps the qualifier's page as the only page this run will analyze.",
+  "data": "One page target: the page id, URL, page type, and the qualifier's sessions, orders, and revenue."
+}

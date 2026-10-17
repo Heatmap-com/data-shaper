@@ -1,0 +1,7 @@
+{
+  "id": "full",
+  "description": "Name and analyze.",
+  "defaults": { "window": { "days": 30, "end": "yesterday" }, "priority": "normal", "resilience": "standard" },
+  "pages": { "source": "site", "fallback": "home" },
+  "stages": ["naming", "analysis"]
+}

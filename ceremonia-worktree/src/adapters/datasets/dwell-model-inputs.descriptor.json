@@ -1,0 +1,6 @@
+{
+  "id": "dwell-model-inputs",
+  "purpose": "Builds one row per entry session for the dwell-to-revenue model.",
+  "data": "Per session: dwell by depth band, engaged time on the page, orders, and revenue.",
+  "replay": "keep"
+}

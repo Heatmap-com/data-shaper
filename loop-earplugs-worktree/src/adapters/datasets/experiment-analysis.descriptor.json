@@ -1,0 +1,9 @@
+{
+  "id": "experiment-analysis",
+  "purpose": "Detects the site's partner A/B tests, folds raw tags into experiments with canonical arms, dates each one from its daily traffic, and reads out the running and recently ended ones.",
+  "data": "One lifecycle row per experiment seen in the last 60 days (kind, status, observed start and end, scope), and one readout row per analyzed experiment, arm, and basis (assigned or exposed): sessions, assigned share against the declared allocation, sample-ratio p-value, conversion and revenue per session, and lift with p-value against the control. Section rows give each arm's section-capture rate with a balance test, and per rollup section the seen and click rates and the seen visitors' conversion. Element rows give each selector's click rate and clicker conversion, with its rollup section. Daily rows by page, section, selector, viewport, and segment are in ae_experiment_row.",
+  "factTables": {
+    "section_level_data": { "date": "server_date", "idsite": true, "idsitehsr": true }
+  },
+  "replay": "keep"
+}

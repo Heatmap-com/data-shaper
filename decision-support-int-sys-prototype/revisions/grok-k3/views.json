@@ -1,0 +1,2930 @@
+{
+ "title": "Analysis query tool",
+ "subtitle": "Grok - K3 concept. Reads a local snapshot of one site's bundle and warehouse rows.",
+ "measures": {
+  "sessions": {
+   "label": "Sessions",
+   "sum": "sessions",
+   "format": "int"
+  },
+  "buyers": {
+   "label": "Buyers",
+   "sum": "buyers",
+   "format": "int"
+  },
+  "orders": {
+   "label": "Orders",
+   "sum": "orders",
+   "format": "int"
+  },
+  "revenue": {
+   "label": "Revenue",
+   "sum": "revenue",
+   "format": "money"
+  },
+  "clicks": {
+   "label": "Clicks",
+   "sum": "clicks",
+   "format": "int"
+  },
+  "progressed": {
+   "label": "Reached checkout",
+   "sum": "progressed",
+   "format": "int"
+  },
+  "cvr": {
+   "label": "Order rate (orders ÷ sessions)",
+   "ratio": [
+    "orders",
+    "sessions"
+   ],
+   "format": "pct",
+   "help": "Orders per session."
+  },
+  "rps": {
+   "label": "Revenue per session",
+   "ratio": [
+    "revenue",
+    "sessions"
+   ],
+   "format": "money"
+  },
+  "aov": {
+   "label": "Average order",
+   "ratio": [
+    "revenue",
+    "orders"
+   ],
+   "format": "money"
+  },
+  "progress_rate": {
+   "label": "Progress rate",
+   "ratio": [
+    "progressed",
+    "sessions"
+   ],
+   "format": "pct",
+   "help": "Share of sessions that reached checkout_started."
+  },
+  "session_share": {
+   "label": "Share of sessions",
+   "share": "sessions",
+   "format": "pct"
+  },
+  "visits": {
+   "label": "Visits",
+   "sum": "visits",
+   "format": "int"
+  },
+  "buyer_visits": {
+   "label": "Buying visits",
+   "sum": "buyer_visits",
+   "format": "int"
+  },
+  "visit_cvr": {
+   "label": "Visit conversion",
+   "ratio": [
+    "buyer_visits",
+    "visits"
+   ],
+   "format": "pct",
+   "help": "Visits that placed an order, over visits."
+  },
+  "rpv": {
+   "label": "Revenue per visit",
+   "ratio": [
+    "revenue",
+    "visits"
+   ],
+   "format": "money"
+  },
+  "atc_rate": {
+   "label": "Add-to-cart rate",
+   "ratio": [
+    "atc_visits",
+    "visits"
+   ],
+   "format": "pct"
+  },
+  "checkout_rate": {
+   "label": "Checkout rate",
+   "ratio": [
+    "checkout_visits",
+    "visits"
+   ],
+   "format": "pct"
+  },
+  "visit_share": {
+   "label": "Share of visits",
+   "share": "visits",
+   "format": "pct"
+  },
+  "orders_all": {
+   "label": "Orders (all)",
+   "sum": "orders_all",
+   "format": "int",
+   "help": "Every order the store recorded, including those without a tracked visit."
+  },
+  "revenue_all": {
+   "label": "Revenue (all)",
+   "sum": "revenue_all",
+   "format": "money"
+  },
+  "visits_all": {
+   "label": "Visits incl. dead",
+   "sum": "visits_all",
+   "format": "int"
+  },
+  "bot_share": {
+   "label": "Dead-session share",
+   "ratio": [
+    "bot_visits",
+    "visits_all"
+   ],
+   "format": "pct",
+   "help": "Visits with no human signal, over all visits."
+  },
+  "returning_share": {
+   "label": "Returning share",
+   "ratio": [
+    "returning_visits",
+    "visits"
+   ],
+   "format": "pct"
+  },
+  "mobile_share": {
+   "label": "Mobile share",
+   "ratio": [
+    "visits_mobile",
+    "visits"
+   ],
+   "format": "pct"
+  },
+  "hv_order_share": {
+   "label": "High-value order share",
+   "ratio": [
+    "orders_ge_hv",
+    "orders_all"
+   ],
+   "format": "pct"
+  },
+  "markdown_order_share": {
+   "label": "Marked-down order share",
+   "ratio": [
+    "orders_marked_down",
+    "orders_all"
+   ],
+   "format": "pct"
+  },
+  "entries": {
+   "label": "Entries",
+   "sum": "entries",
+   "format": "int"
+  },
+  "entry_cvr": {
+   "label": "Entry conversion",
+   "ratio": [
+    "entry_buyer_visits",
+    "entries"
+   ],
+   "format": "pct"
+  },
+  "buyer_reach": {
+   "label": "Buyers who saw it",
+   "ratio": [
+    "buyer_visits",
+    "visits"
+   ],
+   "format": "pct",
+   "help": "Share of visits to this page that bought in the same visit. The order is not attributed to the page."
+  },
+  "m_sessions": {
+   "label": "Sessions",
+   "sum": "m_sessions",
+   "format": "int"
+  },
+  "m_entry_sessions": {
+   "label": "Entry sessions",
+   "sum": "m_entry_sessions",
+   "format": "int"
+  },
+  "m_orders_udp": {
+   "label": "Orders",
+   "sum": "m_orders_udp",
+   "format": "int"
+  },
+  "m_revenue_udp": {
+   "label": "Revenue",
+   "sum": "m_revenue_udp",
+   "format": "money"
+  },
+  "page_cvr": {
+   "label": "Order rate",
+   "ratio": [
+    "m_orders_udp",
+    "m_sessions"
+   ],
+   "format": "pct"
+  },
+  "page_rps": {
+   "label": "Revenue per session",
+   "ratio": [
+    "m_revenue_udp",
+    "m_sessions"
+   ],
+   "format": "money"
+  },
+  "single_pv_share": {
+   "label": "Single-page share",
+   "ratio": [
+    "m_single_pageview_sessions",
+    "m_sessions"
+   ],
+   "format": "pct",
+   "help": "Sessions that saw only this page."
+  },
+  "scroll50": {
+   "label": "Scrolled 50%",
+   "ratio": [
+    "m_sessions_scroll_ge_50pct",
+    "m_sessions"
+   ],
+   "format": "pct"
+  },
+  "atc_share": {
+   "label": "Added to cart",
+   "ratio": [
+    "m_add_to_cart_sessions",
+    "m_sessions"
+   ],
+   "format": "pct"
+  },
+  "sub5s_share": {
+   "label": "Left within 5 s",
+   "ratio": [
+    "m_sub_5s_sessions",
+    "m_sessions"
+   ],
+   "format": "pct"
+  },
+  "m_clicks": {
+   "label": "Clicks",
+   "sum": "m_clicks",
+   "format": "int"
+  },
+  "m_clicking_sessions": {
+   "label": "Clicking sessions",
+   "sum": "m_clicking_sessions",
+   "format": "int"
+  },
+  "clicker_order_rate": {
+   "label": "Clicker order rate",
+   "ratio": [
+    "m_sessions_with_order",
+    "m_clicking_sessions"
+   ],
+   "format": "pct",
+   "help": "Correlational. Clickers who also ordered."
+  },
+  "rev_per_clicker": {
+   "label": "Revenue per clicking session (not caused)",
+   "ratio": [
+    "m_revenue_udp",
+    "m_clicking_sessions"
+   ],
+   "format": "money"
+  },
+  "clicking_sessions": {
+   "label": "Clicking sessions",
+   "sum": "clicking_sessions",
+   "format": "int"
+  },
+  "rage_sessions": {
+   "label": "Rage sessions",
+   "sum": "rage_sessions",
+   "format": "int"
+  },
+  "rage_share": {
+   "label": "Rage share",
+   "ratio": [
+    "rage_sessions",
+    "clicking_sessions"
+   ],
+   "format": "pct"
+  },
+  "reach_share": {
+   "label": "Reached this depth",
+   "ratio": [
+    "m_sessions_reached",
+    "m_entry_sessions"
+   ],
+   "format": "pct"
+  },
+  "m_exposed_sessions": {
+   "label": "Exposed sessions",
+   "sum": "m_exposed_sessions",
+   "format": "int"
+  },
+  "rpes": {
+   "label": "Revenue per exposed session",
+   "ratio": [
+    "m_exposed_revenue",
+    "m_exposed_sessions"
+   ],
+   "format": "money"
+  },
+  "dwell": {
+   "label": "Dwell per exposed (s)",
+   "ratio": [
+    "m_dwell_seconds",
+    "m_exposed_sessions"
+   ],
+   "format": "num"
+  },
+  "m_reached_sessions": {
+   "label": "Reached step",
+   "sum": "m_reached_sessions",
+   "format": "int"
+  },
+  "ckout_no_atc": {
+   "label": "Checkout without cart add",
+   "sum": "m_checkout_without_atc_sessions",
+   "format": "int"
+  },
+  "chains": {
+   "label": "Chains",
+   "sum": "chains",
+   "format": "int"
+  },
+  "chain_revenue": {
+   "label": "Revenue",
+   "sum": "revenue",
+   "format": "money"
+  },
+  "return_rate": {
+   "label": "Came back",
+   "ratio": [
+    "returned",
+    "chains"
+   ],
+   "format": "pct"
+  },
+  "purchase_rate": {
+   "label": "Bought",
+   "ratio": [
+    "purchased",
+    "chains"
+   ],
+   "format": "pct"
+  },
+  "recovery_rate": {
+   "label": "Recovered",
+   "ratio": [
+    "recovered",
+    "chains"
+   ],
+   "format": "pct"
+  },
+  "rev_per_chain": {
+   "label": "Revenue per chain",
+   "ratio": [
+    "revenue",
+    "chains"
+   ],
+   "format": "money"
+  },
+  "devices": {
+   "label": "Devices",
+   "sum": "devices",
+   "format": "int"
+  },
+  "device_buy_rate": {
+   "label": "Devices that bought",
+   "ratio": [
+    "buyers",
+    "devices"
+   ],
+   "format": "pct"
+  },
+  "m_orders": {
+   "label": "Orders",
+   "sum": "m_orders",
+   "format": "int"
+  },
+  "m_revenue": {
+   "label": "Revenue",
+   "sum": "m_revenue",
+   "format": "money"
+  },
+  "prod_aov": {
+   "label": "Revenue per order",
+   "ratio": [
+    "revenue",
+    "orders"
+   ],
+   "format": "money"
+  },
+  "markdown_share": {
+   "label": "Marked-down share",
+   "ratio": [
+    "marked_down_orders",
+    "orders"
+   ],
+   "format": "pct"
+  },
+  "start_sessions": {
+   "label": "Started the journey",
+   "sum": "start_sessions",
+   "format": "int"
+  },
+  "end_sessions": {
+   "label": "Reached the end",
+   "sum": "end_sessions",
+   "format": "int"
+  },
+  "end_revenue": {
+   "label": "Revenue at the end",
+   "sum": "end_revenue",
+   "format": "money"
+  },
+  "completion": {
+   "label": "Completion",
+   "ratio": [
+    "end_sessions",
+    "start_sessions"
+   ],
+   "format": "pct",
+   "help": "Sessions that reached a journey's last page, over those that started it."
+  },
+  "end_checkout_rate": {
+   "label": "Checkout started, at the end",
+   "ratio": [
+    "checkout",
+    "end_sessions"
+   ],
+   "format": "pct"
+  },
+  "end_buy_rate": {
+   "label": "Bought, at the end",
+   "ratio": [
+    "bought",
+    "end_sessions"
+   ],
+   "format": "pct",
+   "help": "Of the sessions that reached a journey's last page, the share that bought."
+  },
+  "end_rps": {
+   "label": "Revenue per session, at the end",
+   "ratio": [
+    "end_revenue",
+    "end_sessions"
+   ],
+   "format": "money"
+  },
+  "product_viewed": {
+   "label": "Product viewed",
+   "sum": "product_viewed",
+   "format": "int"
+  },
+  "added_to_cart": {
+   "label": "Added to cart",
+   "sum": "added_to_cart",
+   "format": "int"
+  },
+  "checkout_started": {
+   "label": "Checkout started",
+   "sum": "checkout_started",
+   "format": "int"
+  },
+  "step_pv": {
+   "label": "Viewed a product",
+   "ratio": [
+    "product_viewed",
+    "sessions"
+   ],
+   "format": "pct"
+  },
+  "step_cart": {
+   "label": "Viewed → cart count ratio",
+   "ratio": [
+    "added_to_cart",
+    "product_viewed"
+   ],
+   "format": "pct",
+   "help": "Sessions that added to cart ÷ sessions that viewed a product. Steps are counted separately, so this is a ratio of counts, not a continuation rate."
+  },
+  "step_checkout": {
+   "label": "Cart → checkout count ratio",
+   "ratio": [
+    "checkout_started",
+    "added_to_cart"
+   ],
+   "format": "pct",
+   "help": "Sessions that started checkout ÷ sessions that added to cart. A ratio of counts, not a continuation rate."
+  },
+  "step_buy": {
+   "label": "Checkout → bought count ratio",
+   "ratio": [
+    "buyers",
+    "checkout_started"
+   ],
+   "format": "pct",
+   "help": "Sessions that bought ÷ sessions that started checkout. A ratio of counts, not a continuation rate."
+  },
+  "session_conversion": {
+   "label": "Sessions that bought",
+   "ratio": [
+    "buyers",
+    "sessions"
+   ],
+   "format": "pct",
+   "help": "The funnel end to end: sessions with an order, over all sessions."
+  },
+  "count": {
+   "label": "Rows",
+   "count": true,
+   "format": "int"
+  },
+  "click_revenue": {
+   "label": "Revenue of clicking sessions (not caused)",
+   "sum": "m_revenue_udp",
+   "format": "money",
+   "help": "Revenue of sessions that clicked the element. Shows association, not cause."
+  }
+ },
+ "fields": {
+  "week": "Week (Monday)",
+  "dim_week": "Week",
+  "d": "Day",
+  "server_date": "Day",
+  "segment_value": "Segment",
+  "tag_value": "Value",
+  "tag_key": "Tag key",
+  "row_key_1": "Subject",
+  "row_key_2": "Page",
+  "page_url": "Page",
+  "viewport_type": "Device",
+  "dim_device": "Device",
+  "dev_s": "Device",
+  "dev": "Device",
+  "ch": "Channel",
+  "link_ch": "Link channel",
+  "entry": "Entry page type",
+  "ret": "New or returning",
+  "src": "Source",
+  "med": "Medium",
+  "camp": "Campaign",
+  "utm_content": "Ad (utm_content)",
+  "period": "Period",
+  "family": "Cohort family",
+  "value": "Cohort",
+  "url": "Page",
+  "pc": "Page class",
+  "m_url": "Entry page",
+  "dim_source": "Channel",
+  "x_returning": "Returning",
+  "x_viewport_class": "Viewport",
+  "x_country": "Country",
+  "selector": "Selector",
+  "name": "Element name",
+  "dim_element_class": "Element class",
+  "x_element": "Element",
+  "x_depth_band": "Depth band",
+  "x_depth_bin": "Scroll depth",
+  "x_next_page_type": "Next page",
+  "x_step": "Step",
+  "x_from_step": "From",
+  "x_to_step": "To",
+  "trigger_key": "Trigger",
+  "level": "Level",
+  "hist30": "History (30 days)",
+  "email_visits_band": "Email visits",
+  "x_bucket": "Order value",
+  "title": "Product",
+  "entry_path": "Entry page",
+  "experiment": "Experiment",
+  "arm": "Arm",
+  "is_control": "Control",
+  "basis": "Basis",
+  "catalog_id": "Catalog",
+  "strategy_id": "Strategy",
+  "verdict": "Verdict",
+  "requirement_key": "Requirement",
+  "status": "Status",
+  "domain": "Domain",
+  "dataset_id": "Dataset",
+  "x_strategy_id": "Rule",
+  "m_state": "State",
+  "m_metric": "Metric",
+  "m_value": "Value",
+  "m_threshold": "Threshold",
+  "m_rules": "Rules",
+  "m_detail": "Detail",
+  "trigger_state": "Trigger",
+  "gate_failed": "Gate failed",
+  "missing": "Missing",
+  "metric": "Metric",
+  "threshold": "Threshold",
+  "partner": "Partner",
+  "kind": "Journeys",
+  "scope": "Scope",
+  "observed_start": "First seen",
+  "observed_end": "Last seen",
+  "assigned_visits": "Assigned visits",
+  "over_index": "Over-index",
+  "hv_share": "High-value share",
+  "all_share": "All-visitor share",
+  "visitors": "Visitors",
+  "hv_visitors": "High-value visitors",
+  "x_url": "Page",
+  "x_role": "Role",
+  "x_channel": "Channel",
+  "m_rps": "Revenue per session",
+  "m_single_pageview_share": "Single-page share",
+  "reason": "Reason",
+  "tagged_sessions": "Tagged sessions",
+  "distinct_values": "Values",
+  "rps_z": "RPS z",
+  "aov_z": "AOV z",
+  "m_median_minutes_to_step": "Median minutes",
+  "conversion_rate_visits": "Visit conversion",
+  "avg_order": "Average order",
+  "path": "Journey",
+  "step": "Step"
+ },
+ "valueLabels": {
+  "all": "All",
+  "traffic_source": "Traffic source",
+  "returning": "Returning",
+  "buyer": "Buyer",
+  "rager": "Rager",
+  "return_intent": "Return intent",
+  "desktop": "Desktop",
+  "mobile": "Mobile",
+  "tablet": "Tablet",
+  "pre": "Lead-in",
+  "first": "First half",
+  "second": "Second half",
+  "peak": "Peak",
+  "utm_source": "utm_source",
+  "journey3": "First three page classes",
+  "n_prod": "Products viewed",
+  "dev_s": "Device",
+  "link_ch": "Link channel",
+  "ch": "Channel",
+  "ret": "New or returning",
+  "entry": "Entry page type",
+  "hist30": "History (30 days)",
+  "hist14": "History (14 days)",
+  "assigned": "Assigned",
+  "exposed": "Exposed",
+  "general": "General journeys (page types)",
+  "page": "Page-specific journeys (URLs)",
+  "pdp": "Product page",
+  "plp": "Collection",
+  "home": "Home",
+  "content": "Content",
+  "cart": "Cart",
+  "checkout": "Checkout",
+  "account": "Account",
+  "other": "Other",
+  "(no page view)": "No page view",
+  "new": "New",
+  "meta": "Meta",
+  "search": "Search",
+  "direct": "Direct",
+  "social": "Social",
+  "campaign": "Campaign",
+  "website": "Website",
+  "null": "(no value)",
+  "__other": "Other"
+ },
+ "glossary": [
+  {
+   "term": "Usual weekly wobble",
+   "text": "Twice the median week-to-week change of that row over the whole weeks before the judged week. A change bigger than that \"moved\"; smaller is \"within wobble\"."
+  },
+  {
+   "term": "Can't say",
+   "text": "The week is partial, there is no comparison week, or there are fewer than four whole weeks to learn the wobble from."
+  },
+  {
+   "term": "Thin",
+   "text": "Fewer sessions than the volume floor (100 for order rate). Read as directional."
+  },
+  {
+   "term": "Placeholder names",
+   "text": "Campaign, ad, element and test-arm names in this prototype are made up so screens read naturally. Hover a name to see its ID."
+  },
+  {
+   "term": "Session",
+   "text": "One kept, human visit in the warehouse. Dead sessions (no human signal) are removed before anything is counted."
+  },
+  {
+   "term": "Visit",
+   "text": "The bundle's word for a session. Bundle tables and warehouse tables can differ slightly because they filter differently."
+  },
+  {
+   "term": "Order rate",
+   "text": "Orders over sessions. A session can hold more than one order, so this can be higher than the buying-visit rate."
+  },
+  {
+   "term": "Revenue per session (RPS)",
+   "text": "Revenue over sessions. The best single number for comparing two segments of different sizes."
+  },
+  {
+   "term": "Segmentation",
+   "text": "One way of splitting sessions: traffic source, returning, buyer, rager or return intent. The values of one segmentation add up to the all row. Never add values across two segmentations."
+  },
+  {
+   "term": "Device = all",
+   "text": "A total, not a fourth device. Do not add it to desktop, tablet and mobile."
+  },
+  {
+   "term": "Buyer segment",
+   "text": "Sessions that bought. It describes buyers; its order rate is 100% by construction and is not a performance figure."
+  },
+  {
+   "term": "Channel",
+   "text": "Last touch. The source recorded on the visit, not the first ad the person saw."
+  },
+  {
+   "term": "Element revenue",
+   "text": "Revenue of sessions that clicked the element. Correlational. It does not mean the element caused the order."
+  },
+  {
+   "term": "Entry sessions",
+   "text": "Sessions that started on the page. A different denominator from all visits to the page."
+  },
+  {
+   "term": "Chain",
+   "text": "A follow-up window after a trigger (for example an abandoned cart). Count only final = 1 rows, or the same chain is counted at each level."
+  },
+  {
+   "term": "Floor",
+   "text": "The smallest volume at which a rate is worth reading. Rows under the floor are greyed out."
+  },
+  {
+   "term": "Partial weeks",
+   "text": "The first and last week of a window can be partial. Compare whole weeks."
+  },
+  {
+   "term": "Returning era",
+   "text": "Returning-visitor flags changed on 7 September 2026. Do not compare returning shares across that date."
+  }
+ ],
+ "tabs": [
+  {
+   "id": "homework",
+   "label": "Ideas: \"What needs my attention this week?\"",
+   "intro": "This week's heatmap ideas, one card at a time. Swipe right to act on a card, left to set it aside, and say why in a few taps. All the detail is one tap away on the back of each card. Your answers shape next week's deck.",
+   "panels": [
+    {
+     "id": "hw-deck",
+     "title": "Your heatmap ideas",
+     "question": "What changed, and what can I change?",
+     "view": "homework",
+     "dataset": "funnel",
+     "also": [
+      "journeys",
+      "journey_summary",
+      "weekly_source_campaign",
+      "experiment_rows"
+     ],
+     "entities": {
+      "camp": "campaign"
+     }
+    }
+   ]
+  },
+  {
+   "id": "home",
+   "label": "This week: \"Is the site OK, and what moved?\"",
+   "intro": "One answer for the week in the context bar, the few things that moved beyond their usual weekly wobble, and where the revenue change came from. Click anything to see its evidence.",
+   "panels": [
+    {
+     "id": "hm-answer",
+     "title": "The answer",
+     "question": "Is this week different from normal?",
+     "view": "answerline",
+     "dataset": "funnel"
+    },
+    {
+     "id": "hm-movers",
+     "title": "What moved",
+     "question": "Which segments moved beyond their own usual wobble?",
+     "view": "movers",
+     "dataset": "funnel",
+     "also": [
+      "journey_summary"
+     ],
+     "limit": 5
+    },
+    {
+     "id": "hm-contrast",
+     "title": "Segments that stand out",
+     "question": "Within each split, did one value behave differently from the rest?",
+     "view": "contraststrip",
+     "dataset": "funnel"
+    },
+    {
+     "id": "hm-decomp",
+     "title": "Where the revenue change came from",
+     "question": "Was it more traffic, a shift in mix, or better conversion?",
+     "view": "decompose",
+     "dataset": "funnel"
+    },
+    {
+     "id": "hm-verdicts",
+     "title": "What the rules say",
+     "question": "Did any rule fire on the analysed page?",
+     "view": "verdictsummary",
+     "dataset": "strategy-triggers"
+    }
+   ]
+  },
+  {
+   "id": "change",
+   "label": "What moved?: \"Where did the change come from?\"",
+   "intro": "The same movers as the home tab, laid out by measure and by breakdown, and the revenue change split by any segmentation.",
+   "panels": [
+    {
+     "id": "ch-by-measure",
+     "title": "Movers by measure",
+     "question": "For each measure, what moved most?",
+     "view": "moverlists",
+     "mode": "measure",
+     "dataset": "funnel",
+     "also": [
+      "journey_summary"
+     ]
+    },
+    {
+     "id": "ch-by-split",
+     "title": "Movers by breakdown",
+     "question": "Within each breakdown, which value moved?",
+     "view": "moverlists",
+     "mode": "split",
+     "dataset": "funnel",
+     "also": [
+      "journey_summary"
+     ]
+    },
+    {
+     "id": "ch-contrast",
+     "title": "Segment against the rest",
+     "question": "Which value of a split pulled away from the others, changed on its own, or always sits apart?",
+     "view": "contrastgrid",
+     "dataset": "funnel",
+     "caveats": [
+      "Each value is compared with everyone else in the same split, summed over landing pages unless you pick one.",
+      "Money is rough: the segment-specific change × the segment's volume × revenue per unit. Structural gaps are an upper bound."
+     ]
+    },
+    {
+     "id": "ch-split",
+     "title": "Split the change",
+     "question": "How much came from traffic, mix and rates?",
+     "view": "decompose",
+     "ownSplit": true,
+     "dataset": "funnel"
+    },
+    {
+     "id": "ch-annotations",
+     "title": "Change log",
+     "question": "What did we change, and when?",
+     "view": "annotations",
+     "dataset": "funnel"
+    }
+   ]
+  },
+  {
+   "id": "health",
+   "label": "Site health: \"Am I OK?\"",
+   "intro": "Week by week, is the site taking the traffic it used to, and turning it into the same revenue? Start here, then follow the segment that moved.",
+   "verdictMetrics": [
+    "single_pageview_share",
+    "mobile_to_desktop_rps",
+    "rps"
+   ],
+   "panels": [
+    {
+     "id": "health-weekly",
+     "title": "Weekly snapshot",
+     "question": "Is this week better or worse than the weeks before it, and which segment moved?",
+     "view": "weekly",
+     "dataset": "tag_trend",
+     "filter": {
+      "tag_key": "utm_source"
+     },
+     "pickers": [
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "traffic_source"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "segment_value",
+     "columns": "week",
+     "measures": [
+      "sessions",
+      "orders",
+      "revenue",
+      "cvr",
+      "rps",
+      "aov",
+      "progress_rate"
+     ],
+     "total": true,
+     "mix": "sessions",
+     "floor": {
+      "measure": "sessions",
+      "min": 100
+     },
+     "caveats": [
+      "Site totals come from one tag key's values, which partition every kept session.",
+      "Pick one segmentation at a time. Values of different segmentations overlap.",
+      "Under Split by buyer, the order rate is 100% by construction."
+     ],
+     "inherit": [
+      "week",
+      "device",
+      "split"
+     ],
+     "drill": {
+      "tab": "journeys",
+      "panel": "jr-flow",
+      "picker": "segment_value",
+      "carry": [
+       "segment"
+      ],
+      "pickers": {
+       "kind": "general"
+      },
+      "text": "journeys for this segment"
+     },
+     "contrast": "funnel",
+     "also": [
+      "funnel"
+     ]
+    },
+    {
+     "id": "health-daily",
+     "title": "Day by day",
+     "question": "Was the change one bad day or a steady slide?",
+     "view": "series",
+     "dataset": "daily_site",
+     "x": "d",
+     "measures": [
+      "revenue_all",
+      "orders_all",
+      "visits",
+      "visit_cvr",
+      "rpv",
+      "bot_share",
+      "returning_share",
+      "mobile_share"
+     ],
+     "caveats": [
+      "Orders (all) and Revenue (all) include orders without a tracked visit. Visits exclude dead sessions."
+     ]
+    },
+    {
+     "id": "health-periods",
+     "title": "The month against the lead-in",
+     "question": "Is the analysis month different from the weeks just before it?",
+     "view": "table",
+     "dataset": "visit_cohorts",
+     "filter": {
+      "family": "dev_s"
+     },
+     "pickers": [
+      {
+       "field": "value",
+       "label": "Device",
+       "allowAll": true
+      }
+     ],
+     "groupBy": [
+      "period"
+     ],
+     "measures": [
+      "visits",
+      "buyer_visits",
+      "revenue",
+      "visit_cvr",
+      "rpv",
+      "atc_rate",
+      "checkout_rate"
+     ],
+     "rowOrder": {
+      "field": "period",
+      "order": [
+       "pre",
+       "first",
+       "second",
+       "peak"
+      ]
+     },
+     "caveats": [
+      "Pre is the lead-in, first and second are the two halves of the month, and peak overlaps them."
+     ]
+    },
+    {
+     "id": "health-peak",
+     "title": "Best days",
+     "question": "Which days carried the month?",
+     "view": "table",
+     "dataset": "daily_site",
+     "show": [
+      "d",
+      "revenue_all",
+      "orders_all",
+      "visits",
+      "conversion_rate_visits",
+      "avg_order"
+     ],
+     "formats": {
+      "revenue_all": "money",
+      "orders_all": "int",
+      "visits": "int",
+      "conversion_rate_visits": "pct",
+      "avg_order": "money"
+     },
+     "sort": {
+      "field": "revenue_all",
+      "dir": "desc"
+     },
+     "limit": 7,
+     "hidden": true
+    }
+   ]
+  },
+  {
+   "id": "acquisition",
+   "label": "Acquisition: \"Who is coming, and are they worth it?\"",
+   "intro": "Which sources, campaigns and ads bring traffic, and what is that traffic worth once it arrives? Ad spend is not in this data, so this is value per visit, not return on spend.",
+   "verdictMetrics": [
+    "segment_rps_lag",
+    "sister_page_rps"
+   ],
+   "panels": [
+    {
+     "id": "acq-changes",
+     "title": "Important changes",
+     "question": "Which campaigns changed in a way that matters since the week before?",
+     "view": "campaignchanges",
+     "dataset": "weekly_source_campaign",
+     "pickers": [
+      {
+       "field": "link_ch",
+       "label": "Link channel",
+       "allowAll": true
+      },
+      {
+       "field": "week",
+       "label": "Week",
+       "allowAll": false,
+       "default": "latestFull"
+      }
+     ],
+     "groupBy": [
+      "src",
+      "camp"
+     ],
+     "entities": {
+      "camp": "campaign"
+     },
+     "floor": {
+      "measure": "visits",
+      "min": 100
+     },
+     "changes": {
+      "volume": "visits",
+      "money": "revenue",
+      "metrics": [
+       "visits",
+       "orders",
+       "revenue",
+       "visit_cvr",
+       "rpv"
+      ],
+      "material": 0.005,
+      "stopShare": 0.1
+     },
+     "caveats": [
+      "Meta ads are not here: their data has two periods, not weeks, so there is no weekly wobble to judge against."
+     ]
+    },
+    {
+     "id": "acq-tags",
+     "title": "Tagged traffic by week",
+     "question": "Which source, medium or campaign tag is growing, and is it worth the visit?",
+     "view": "weekly",
+     "dataset": "tag_trend",
+     "pickers": [
+      {
+       "field": "tag_key",
+       "label": "Tag",
+       "default": "utm_source"
+      },
+      {
+       "field": "segment",
+       "label": "Segment",
+       "default": "all"
+      },
+      {
+       "field": "segment_value",
+       "label": "Value",
+       "default": "all"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "tag_value",
+     "columns": "week",
+     "measures": [
+      "sessions",
+      "revenue",
+      "orders",
+      "cvr",
+      "rps",
+      "session_share"
+     ],
+     "total": true,
+     "floor": {
+      "measure": "sessions",
+      "min": 100
+     },
+     "limit": 25,
+     "caveats": [
+      "(none) is sessions without this tag. Channel is last touch."
+     ],
+     "hidden": true
+    },
+    {
+     "id": "acq-cube",
+     "title": "Channel, entry and device",
+     "question": "Which channel's visits convert, and where do they land?",
+     "view": "table",
+     "dataset": "weekly_entry_cube",
+     "pickers": [
+      {
+       "field": "week",
+       "label": "Week",
+       "allowAll": true,
+       "default": "latestFull"
+      },
+      {
+       "field": "dev_s",
+       "label": "Device",
+       "allowAll": true
+      }
+     ],
+     "groupByOptions": [
+      "ch",
+      "link_ch",
+      "entry",
+      "ret",
+      "dev_s",
+      "week"
+     ],
+     "measures": [
+      "visits",
+      "visit_share",
+      "buyer_visits",
+      "revenue",
+      "visit_cvr",
+      "rpv",
+      "atc_rate"
+     ],
+     "sort": {
+      "measure": "visits",
+      "dir": "desc"
+     },
+     "floor": {
+      "measure": "visits",
+      "min": 100
+     },
+     "caveats": [
+      "The first and last week can be partial."
+     ]
+    },
+    {
+     "id": "acq-campaigns",
+     "title": "Campaigns",
+     "question": "Which campaigns stand out: far more or less per visit than a typical campaign, or no orders where some were due?",
+     "view": "table",
+     "dataset": "weekly_source_campaign",
+     "pickers": [
+      {
+       "field": "link_ch",
+       "label": "Link channel",
+       "allowAll": true
+      },
+      {
+       "field": "week",
+       "label": "Week",
+       "allowAll": true,
+       "default": "latestFull"
+      }
+     ],
+     "groupBy": [
+      "src",
+      "camp"
+     ],
+     "measures": [
+      "visits",
+      "orders",
+      "revenue",
+      "visit_cvr",
+      "rpv"
+     ],
+     "sort": {
+      "measure": "visits",
+      "dir": "desc"
+     },
+     "limit": 40,
+     "floor": {
+      "measure": "visits",
+      "min": 100
+     },
+     "highlight": {
+      "measure": "orders",
+      "equals": 0,
+      "whenAtLeast": {
+       "measure": "visits",
+       "min": 100
+      },
+      "label": "Volume, no orders"
+     },
+     "entities": {
+      "camp": "campaign"
+     },
+     "outliers": {
+      "default": "outliers",
+      "volume": "visits",
+      "rate": "visit_cvr",
+      "value": "rpv",
+      "z": 3,
+      "count": "orders",
+      "spread": 2,
+      "expectZero": 7,
+      "material": 0.005,
+      "history": false
+     }
+    },
+    {
+     "id": "acq-creatives",
+     "title": "Meta ads",
+     "question": "Which ads stand out: far more or less per visit than a typical ad, or no orders where some were due?",
+     "view": "table",
+     "dataset": "meta_creative_period",
+     "pickers": [
+      {
+       "field": "period",
+       "label": "Period",
+       "default": "second"
+      },
+      {
+       "field": "dev_s",
+       "label": "Device",
+       "allowAll": true
+      }
+     ],
+     "groupBy": [
+      "utm_content"
+     ],
+     "measures": [
+      "visits",
+      "orders",
+      "revenue",
+      "visit_cvr",
+      "rpv"
+     ],
+     "sort": {
+      "measure": "visits",
+      "dir": "desc"
+     },
+     "limit": 30,
+     "floor": {
+      "measure": "visits",
+      "min": 50
+     },
+     "highlight": {
+      "measure": "orders",
+      "equals": 0,
+      "whenAtLeast": {
+       "measure": "visits",
+       "min": 100
+      },
+      "label": "Volume, no orders"
+     },
+     "entities": {
+      "utm_content": "creative"
+     },
+     "outliers": {
+      "default": "outliers",
+      "volume": "visits",
+      "rate": "visit_cvr",
+      "value": "rpv",
+      "z": 3,
+      "history": false,
+      "count": "orders",
+      "spread": 2,
+      "expectZero": 7,
+      "material": 0.005
+     }
+    },
+    {
+     "id": "acq-tag-selection",
+     "title": "Which tags the platform tracks",
+     "question": "Why is a tag in the weekly table or left out?",
+     "view": "table",
+     "dataset": "tag_selection",
+     "show": [
+      "tag_key",
+      "family",
+      "status",
+      "reason",
+      "tagged_sessions",
+      "distinct_values",
+      "rps_z",
+      "aov_z"
+     ],
+     "formats": {
+      "tagged_sessions": "int",
+      "distinct_values": "int",
+      "rps_z": "num",
+      "aov_z": "num"
+     },
+     "sort": {
+      "field": "tagged_sessions",
+      "dir": "desc"
+     },
+     "hidden": true
+    },
+    {
+     "id": "acq-country",
+     "title": "Countries on the analysed page",
+     "question": "Is one country carrying the page's revenue?",
+     "view": "table",
+     "dataset": "page-country",
+     "groupBy": [
+      "x_country"
+     ],
+     "measures": [
+      "m_sessions",
+      "m_revenue_udp",
+      "page_cvr",
+      "page_rps"
+     ],
+     "sort": {
+      "measure": "m_sessions",
+      "dir": "desc"
+     },
+     "limit": 20,
+     "floor": {
+      "measure": "m_sessions",
+      "min": 50
+     },
+     "caveats": [
+      "The analysed page only, not the whole site."
+     ],
+     "demoted": true
+    }
+   ]
+  },
+  {
+   "id": "journeys",
+   "label": "Journeys: \"How do visitors move, and which paths make money?\"",
+   "intro": "The five top journeys through page types (home, collection, product page, content) and the five top journeys through specific URLs, each followed to checkout and purchase. Pick a segment to see the same journeys for one kind of visitor, and a week to compare.",
+   "verdictMetrics": [
+    "single_pageview_share",
+    "drawer_close_vs_checkout"
+   ],
+   "panels": [
+    {
+     "id": "jr-flow",
+     "title": "Top journeys",
+     "question": "Where do visitors on each top journey drop off, and did it change this week?",
+     "view": "journey",
+     "dataset": "journeys",
+     "pickers": [
+      {
+       "field": "kind",
+       "label": "Journeys",
+       "options": [
+        "general",
+        "page"
+       ],
+       "default": "general"
+      },
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "all"
+      },
+      {
+       "field": "segment_value",
+       "label": "Segment",
+       "default": "all"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "join": {
+      "dataset": "funnel",
+      "on": [
+       "segment",
+       "segment_value",
+       "viewport_type"
+      ]
+     },
+     "floor": {
+      "measure": "sessions",
+      "min": 300
+     },
+     "caveats": [
+      "A journey's first node counts sessions that landed on its first page and either stopped there or went to its second page.",
+      "Each later node counts sessions that reached it along the journey. The orange stub is sessions that ended the visit or went to a page off the journey.",
+      "The top five are ranked by revenue across all visitors, as the trend run ranks them, and keep that rank when you pick a segment. Lanes with fewer than 300 starters are greyed: read their rates as directional."
+     ],
+     "lead": "Top 5 only — chosen once by site-wide revenue; the long tail isn't here.",
+     "inherit": [
+      "week",
+      "device"
+     ],
+     "drillHint": {
+      "tab": "funnels",
+      "text": "Where in the funnel do they drop?"
+     }
+    },
+    {
+     "id": "jr-trend",
+     "title": "Journeys over time, by segment",
+     "question": "Is a journey getting better or worse, and for which visitors?",
+     "view": "trendlines",
+     "dataset": "journey_summary",
+     "pickers": [
+      {
+       "field": "kind",
+       "label": "Journeys",
+       "options": [
+        "general",
+        "page"
+       ],
+       "default": "general"
+      },
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "traffic_source"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "facet": "path",
+     "series": "segment_value",
+     "volume": "start_sessions",
+     "measures": [
+      "completion",
+      "end_buy_rate",
+      "end_rps",
+      "end_sessions",
+      "start_sessions"
+     ],
+     "floor": {
+      "measure": "end_sessions",
+      "min": 30
+     },
+     "caveats": [
+      "Rates of a segment with few sessions on a journey jump from week to week. Hover a point for its volume."
+     ]
+    },
+    {
+     "id": "jr-weekly",
+     "title": "Journeys by week",
+     "question": "Which journey's numbers moved most since last week?",
+     "view": "weekly",
+     "dataset": "journey_summary",
+     "pickers": [
+      {
+       "field": "kind",
+       "label": "Journeys",
+       "options": [
+        "general",
+        "page"
+       ],
+       "default": "general"
+      },
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "all"
+      },
+      {
+       "field": "segment_value",
+       "label": "Segment",
+       "default": "all"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "path",
+     "columns": "week",
+     "rowSort": {
+      "field": "rank"
+     },
+     "measures": [
+      "completion",
+      "end_buy_rate",
+      "end_rps",
+      "start_sessions",
+      "end_sessions",
+      "end_revenue"
+     ],
+     "floor": {
+      "measure": "end_sessions",
+      "min": 30
+     },
+     "inherit": [
+      "week",
+      "device"
+     ]
+    },
+    {
+     "id": "jr-cohorts",
+     "title": "Behaviour cohorts",
+     "question": "Do visitors who do X buy more often than those who don't?",
+     "view": "table",
+     "dataset": "visit_cohorts",
+     "pickers": [
+      {
+       "field": "family",
+       "label": "Cohort family",
+       "default": "journey3"
+      },
+      {
+       "field": "period",
+       "label": "Period",
+       "default": "second"
+      }
+     ],
+     "groupBy": [
+      "value"
+     ],
+     "measures": [
+      "visits",
+      "visit_share",
+      "buyer_visits",
+      "visit_cvr",
+      "rpv",
+      "atc_rate"
+     ],
+     "sort": {
+      "measure": "visits",
+      "dir": "desc"
+     },
+     "limit": 30,
+     "floor": {
+      "measure": "visits",
+      "min": 100
+     },
+     "caveats": [
+      "journey3 is the first three page classes of the visit, repeats collapsed.",
+      "These are descriptions of visitors who did something, not proof that doing it causes buying."
+     ],
+     "demoted": true
+    }
+   ]
+  },
+  {
+   "id": "funnels",
+   "label": "Funnels: \"Where do visitors drop out on the way to buying?\"",
+   "intro": "The purchase funnel, week by week: sessions, product viewed, added to cart, checkout started, bought. Narrow it to visitors who landed on one page type, then split it by a segment to see whose funnel moved.",
+   "verdictMetrics": [
+    "drawer_close_vs_checkout",
+    "hero_cta_order_rate"
+   ],
+   "panels": [
+    {
+     "id": "fn-funnel",
+     "title": "Purchase funnel",
+     "question": "At which step do most sessions drop, and did that step get better or worse?",
+     "view": "funnel",
+     "dataset": "funnel",
+     "pickers": [
+      {
+       "field": "entry",
+       "label": "Landed on",
+       "allowAll": true
+      },
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "all"
+      },
+      {
+       "field": "segment_value",
+       "label": "Segment",
+       "default": "all"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "steps": [
+      {
+       "label": "All sessions",
+       "short": "Sessions",
+       "col": "sessions"
+      },
+      {
+       "label": "Product viewed",
+       "short": "Viewed",
+       "col": "product_viewed"
+      },
+      {
+       "label": "Added to cart",
+       "short": "Cart",
+       "col": "added_to_cart"
+      },
+      {
+       "label": "Checkout started",
+       "short": "Checkout",
+       "col": "checkout_started"
+      },
+      {
+       "label": "Purchased",
+       "short": "Bought",
+       "col": "buyers"
+      }
+     ],
+     "caveats": [
+      "A step counts sessions that did it at any point in the visit, so a session can start checkout without a cart add in the data.",
+      "Purchased is sessions with an order."
+     ],
+     "contrast": true
+    },
+    {
+     "id": "fn-segments",
+     "title": "Funnel by segment",
+     "question": "Whose funnel is weakest, and whose moved this week?",
+     "view": "minifunnels",
+     "dataset": "funnel",
+     "pickers": [
+      {
+       "field": "entry",
+       "label": "Landed on",
+       "allowAll": true
+      },
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "traffic_source"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "series": "segment_value",
+     "steps": [
+      {
+       "label": "All sessions",
+       "short": "Sessions",
+       "col": "sessions"
+      },
+      {
+       "label": "Product viewed",
+       "short": "Viewed",
+       "col": "product_viewed"
+      },
+      {
+       "label": "Added to cart",
+       "short": "Cart",
+       "col": "added_to_cart"
+      },
+      {
+       "label": "Checkout started",
+       "short": "Checkout",
+       "col": "checkout_started"
+      },
+      {
+       "label": "Purchased",
+       "short": "Bought",
+       "col": "buyers"
+      }
+     ],
+     "floor": {
+      "measure": "sessions",
+      "min": 200
+     },
+     "drill": {
+      "tab": "journeys",
+      "panel": "jr-flow",
+      "picker": "segment_value",
+      "carry": [
+       "segment"
+      ],
+      "pickers": {
+       "kind": "general"
+      }
+     },
+     "contrast": true
+    },
+    {
+     "id": "fn-trend",
+     "title": "Funnel steps over time, by segment",
+     "question": "Which step is trending, and is it one segment or everyone?",
+     "view": "trendlines",
+     "dataset": "funnel",
+     "pickers": [
+      {
+       "field": "entry",
+       "label": "Landed on",
+       "allowAll": true
+      },
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "traffic_source"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "series": "segment_value",
+     "facetMeasures": [
+      "session_conversion",
+      "step_pv",
+      "step_cart",
+      "step_checkout",
+      "step_buy",
+      "rps"
+     ],
+     "floor": {
+      "measure": "sessions",
+      "min": 200
+     }
+    },
+    {
+     "id": "fn-weekly",
+     "title": "Step rates by week",
+     "question": "Which segment's step rate changed most since last week?",
+     "view": "weekly",
+     "dataset": "funnel",
+     "pickers": [
+      {
+       "field": "entry",
+       "label": "Landed on",
+       "allowAll": true
+      },
+      {
+       "field": "segment",
+       "label": "Split by",
+       "default": "traffic_source"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "segment_value",
+     "columns": "week",
+     "measures": [
+      "sessions",
+      "orders",
+      "revenue",
+      "cvr",
+      "rps",
+      "session_conversion",
+      "step_pv",
+      "step_cart",
+      "step_checkout",
+      "step_buy"
+     ],
+     "total": true,
+     "mix": "sessions",
+     "floor": {
+      "measure": "sessions",
+      "min": 200
+     },
+     "drill": {
+      "tab": "journeys",
+      "panel": "jr-flow",
+      "picker": "segment_value",
+      "carry": [
+       "segment"
+      ],
+      "pickers": {
+       "kind": "general"
+      },
+      "text": "journeys for this segment"
+     },
+     "inherit": [
+      "week",
+      "device",
+      "split"
+     ],
+     "modes": {
+      "label": "Rows",
+      "default": "segment",
+      "options": {
+       "segment": {
+        "modeLabel": "By segment"
+       },
+       "entry": {
+        "modeLabel": "By landing page type",
+        "rows": "entry",
+        "pickers": [
+         {
+          "field": "segment",
+          "label": "Split by",
+          "default": "all"
+         },
+         {
+          "field": "segment_value",
+          "label": "Segment",
+          "default": "all"
+         },
+         {
+          "field": "viewport_type",
+          "label": "Device",
+          "default": "all"
+         }
+        ],
+        "drill": null,
+        "inherit": [
+         "week",
+         "device"
+        ],
+        "contrast": false
+       }
+      }
+     },
+     "contrast": true
+    },
+    {
+     "id": "fn-sequence",
+     "title": "Funnel sequence",
+     "question": "How long does each step take, and who skips the cart?",
+     "view": "table",
+     "dataset": "funnel-sequence-weekly",
+     "pickers": [
+      {
+       "field": "dim_week",
+       "label": "Week",
+       "default": "latestFull"
+      }
+     ],
+     "show": [
+      "x_from_step",
+      "x_to_step",
+      "x_step",
+      "m_sessions",
+      "m_reached_sessions",
+      "m_median_minutes_to_step",
+      "m_checkout_without_atc_sessions"
+     ],
+     "formats": {
+      "m_sessions": "int",
+      "m_reached_sessions": "int",
+      "m_median_minutes_to_step": "num",
+      "m_checkout_without_atc_sessions": "int"
+     },
+     "caveats": [
+      "The analysed page's bundle table: ordered steps, no segments."
+     ],
+     "hidden": true
+    }
+   ]
+  },
+  {
+   "id": "pages",
+   "label": "Pages: \"Which pages take traffic, and which convert it?\"",
+   "intro": "The pages that carry the traffic, the pages visitors land on, and the one page the platform analysed in depth.",
+   "verdictMetrics": [
+    "single_pageview_share",
+    "scroll_reach_25",
+    "rps",
+    "sister_page_rps",
+    "mobile_to_desktop_rps"
+   ],
+   "panels": [
+    {
+     "id": "pg-top",
+     "title": "Top pages by week",
+     "question": "Which pages take the traffic, and is their revenue per session holding?",
+     "view": "weekly",
+     "dataset": "trend",
+     "filter": {
+      "row_type": "page"
+     },
+     "pickers": [
+      {
+       "field": "segment",
+       "label": "Segment",
+       "default": "all"
+      },
+      {
+       "field": "segment_value",
+       "label": "Value",
+       "default": "all"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "row_key_1",
+     "rowLabel": "row_key_2",
+     "columns": "week",
+     "rowSort": {
+      "field": "rank"
+     },
+     "measures": [
+      "sessions",
+      "revenue",
+      "orders",
+      "cvr",
+      "rps"
+     ],
+     "floor": {
+      "measure": "sessions",
+      "min": 50
+     },
+     "caveats": [
+      "A session that saw the page counts once. Its revenue is the session's, not attributed to the page."
+     ],
+     "lead": "Top pages only — chosen once by site-wide revenue; the long tail isn't here."
+    },
+    {
+     "id": "pg-landing",
+     "title": "Landing pages",
+     "question": "Which landing pages lose visitors at once, and which convert?",
+     "view": "table",
+     "dataset": "entry-by-channel",
+     "pickers": [
+      {
+       "field": "dim_source",
+       "label": "Channel",
+       "allowAll": true
+      }
+     ],
+     "groupBy": [
+      "m_url"
+     ],
+     "measures": [
+      "m_sessions",
+      "single_pv_share",
+      "page_cvr",
+      "page_rps",
+      "m_revenue_udp"
+     ],
+     "sort": {
+      "measure": "m_sessions",
+      "dir": "desc"
+     },
+     "limit": 30,
+     "floor": {
+      "measure": "m_sessions",
+      "min": 30
+     },
+     "caveats": [
+      "Entry sessions, not all visits to the page."
+     ],
+     "scatter": true,
+     "modes": {
+      "label": "Count",
+      "default": "entry",
+      "options": {
+       "entry": {
+        "modeLabel": "Entry sessions (visits that started here)",
+        "modeNote": "Counts visits that started on the page. Use this to judge a page as a landing page."
+       },
+       "visits": {
+        "modeLabel": "Visits that saw this page",
+        "modeNote": "Counts every visit that saw the page, wherever it started. Use this to see which pages buyers pass through.",
+        "dataset": "page_period",
+        "pickers": [
+         {
+          "field": "period",
+          "label": "Period",
+          "default": "second"
+         },
+         {
+          "field": "dev",
+          "label": "Device",
+          "allowAll": true
+         }
+        ],
+        "groupBy": [
+         "url",
+         "pc"
+        ],
+        "measures": [
+         "visits",
+         "buyer_reach",
+         "entries",
+         "entry_cvr"
+        ],
+        "sort": {
+         "measure": "visits",
+         "dir": "desc"
+        },
+        "limit": 30,
+        "floor": {
+         "measure": "visits",
+         "min": 50
+        },
+        "caveats": [],
+        "scatter": false
+       }
+      }
+     }
+    },
+    {
+     "id": "pg-analysed",
+     "title": "The analysed page",
+     "question": "On the page the platform studied, which segment underperforms?",
+     "view": "table",
+     "dataset": "page-segment-weekly",
+     "pickers": [
+      {
+       "field": "dim_week",
+       "label": "Week",
+       "allowAll": true,
+       "default": "latestFull"
+      }
+     ],
+     "groupByOptions": [
+      "dim_device",
+      "dim_source",
+      "x_returning",
+      "x_viewport_class",
+      "dim_week"
+     ],
+     "measures": [
+      "m_sessions",
+      "single_pv_share",
+      "sub5s_share",
+      "scroll50",
+      "atc_share",
+      "page_cvr",
+      "page_rps"
+     ],
+     "sort": {
+      "measure": "m_sessions",
+      "dir": "desc"
+     },
+     "floor": {
+      "measure": "m_sessions",
+      "min": 50
+     },
+     "caveats": [
+      "Returning flags changed on 7 September 2026. Do not compare returning splits across that date."
+     ]
+    },
+    {
+     "id": "pg-hv",
+     "title": "Pages high-value buyers over-visit",
+     "question": "Which pages do high-value buyers see more than everyone else?",
+     "view": "table",
+     "dataset": "high_value_page_reach",
+     "show": [
+      "url",
+      "pc",
+      "visitors",
+      "hv_visitors",
+      "all_share",
+      "hv_share",
+      "over_index"
+     ],
+     "formats": {
+      "visitors": "int",
+      "hv_visitors": "int",
+      "all_share": "pct",
+      "hv_share": "pct",
+      "over_index": "num"
+     },
+     "sort": {
+      "field": "over_index",
+      "dir": "desc"
+     },
+     "limit": 25,
+     "demoted": true
+    },
+    {
+     "id": "pg-sisters",
+     "title": "Sister pages",
+     "question": "Does a similar page earn more per session than the analysed one?",
+     "view": "table",
+     "dataset": "sister-pages",
+     "show": [
+      "x_url",
+      "x_role",
+      "x_channel",
+      "m_entry_sessions",
+      "m_rps",
+      "m_single_pageview_share"
+     ],
+     "formats": {
+      "m_entry_sessions": "int",
+      "m_rps": "money",
+      "m_single_pageview_share": "pct"
+     },
+     "demoted": true
+    }
+   ]
+  },
+  {
+   "id": "elements",
+   "label": "Elements: \"What on the page earns, and what is broken?\"",
+   "intro": "Clicks, scroll and exposure on the analysed page. Revenue on an element is the revenue of sessions that touched it, which shows association, not cause.",
+   "verdictMetrics": [
+    "same_class_gap",
+    "hero_cta_order_rate",
+    "hero_above_fold",
+    "clicks_with_zero_revenue",
+    "rage_sessions",
+    "nav_click_share",
+    "product_tile_promotion",
+    "above_fold_promotion",
+    "faq_item_promotion",
+    "nav_link_promotion"
+   ],
+   "panels": [
+    {
+     "id": "el-trend",
+     "title": "Tracked elements by week",
+     "question": "Are clicks on the key elements holding, and do clickers still buy?",
+     "view": "weekly",
+     "dataset": "trend",
+     "filter": {
+      "row_type": "element"
+     },
+     "pickers": [
+      {
+       "field": "page_url",
+       "label": "Page"
+      },
+      {
+       "field": "segment",
+       "label": "Segment",
+       "default": "all"
+      },
+      {
+       "field": "segment_value",
+       "label": "Value",
+       "default": "all"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "row_key_1",
+     "columns": "week",
+     "rowSort": {
+      "field": "rank"
+     },
+     "measures": [
+      "clicks",
+      "sessions",
+      "revenue",
+      "cvr",
+      "rps"
+     ],
+     "caveats": [
+      "Element revenue is correlational."
+     ],
+     "lead": "Top elements only — chosen once by site-wide revenue; the long tail isn't here."
+    },
+    {
+     "id": "el-selectors",
+     "title": "Every clicked element",
+     "question": "Which elements get clicks but no revenue?",
+     "view": "table",
+     "dataset": "selector-weekly",
+     "pickers": [
+      {
+       "field": "dim_device",
+       "label": "Device",
+       "allowAll": true
+      },
+      {
+       "field": "dim_week",
+       "label": "Week",
+       "allowAll": true,
+       "default": "latestFull"
+      }
+     ],
+     "groupBy": [
+      "selector_id"
+     ],
+     "groupByOptions": [
+      "(none)",
+      "dim_element_class"
+     ],
+     "measures": [
+      "m_clicks",
+      "m_clicking_sessions",
+      "clicker_order_rate",
+      "rev_per_clicker",
+      "click_revenue"
+     ],
+     "sort": {
+      "measure": "m_clicks",
+      "dir": "desc"
+     },
+     "limit": 40,
+     "floor": {
+      "measure": "m_clicking_sessions",
+      "min": 20
+     },
+     "highlight": {
+      "measure": "m_revenue_udp",
+      "equals": 0,
+      "whenAtLeast": {
+       "measure": "m_clicking_sessions",
+       "min": 20
+      },
+      "label": "Clicks, no revenue"
+     },
+     "caveats": [
+      "Clicking sessions add up across weeks, not across elements: one session can click many elements."
+     ],
+     "entities": {
+      "selector_id": "selector"
+     }
+    },
+    {
+     "id": "el-rage",
+     "title": "Rage clicks",
+     "question": "Which kind of element frustrates visitors?",
+     "view": "table",
+     "dataset": "rage-clicks:totals",
+     "pickers": [
+      {
+       "field": "dim_device",
+       "label": "Device",
+       "allowAll": true
+      }
+     ],
+     "groupByOptions": [
+      "dim_element_class",
+      "dim_week"
+     ],
+     "measures": [
+      "clicking_sessions",
+      "rage_sessions",
+      "rage_share"
+     ],
+     "sort": {
+      "measure": "rage_sessions",
+      "dir": "desc"
+     }
+    },
+    {
+     "id": "el-scroll",
+     "title": "Scroll depth",
+     "question": "How far down the page do entry visitors get?",
+     "view": "series",
+     "dataset": "scroll-decile",
+     "pickers": [
+      {
+       "field": "dim_device",
+       "label": "Device",
+       "allowAll": true
+      },
+      {
+       "field": "dim_source",
+       "label": "Channel",
+       "allowAll": true
+      },
+      {
+       "field": "dim_week",
+       "label": "Week",
+       "allowAll": true,
+       "default": "latestFull"
+      }
+     ],
+     "x": "x_depth_bin",
+     "measures": [
+      "reach_share",
+      "m_entry_sessions"
+     ]
+    },
+    {
+     "id": "el-exposure",
+     "title": "Sections seen",
+     "question": "Which sections do visitors actually see, and do those sessions buy?",
+     "view": "table",
+     "dataset": "exposure-weekly",
+     "pickers": [
+      {
+       "field": "dim_device",
+       "label": "Device",
+       "allowAll": true
+      }
+     ],
+     "groupBy": [
+      "x_element",
+      "x_depth_band"
+     ],
+     "measures": [
+      "m_exposed_sessions",
+      "dwell",
+      "rpes"
+     ],
+     "sort": {
+      "measure": "m_exposed_sessions",
+      "dir": "desc"
+     },
+     "limit": 30,
+     "hidden": true
+    },
+    {
+     "id": "el-nav",
+     "title": "Where clicks lead",
+     "question": "After a click, which kind of page comes next?",
+     "view": "table",
+     "dataset": "nav-next-page",
+     "groupBy": [
+      "x_next_page_type"
+     ],
+     "groupByOptions": [
+      "(none)",
+      "dim_element_class"
+     ],
+     "measures": [
+      "m_clicking_sessions",
+      "clicker_order_rate",
+      "m_revenue_udp"
+     ],
+     "sort": {
+      "measure": "m_clicking_sessions",
+      "dir": "desc"
+     }
+    }
+   ]
+  },
+  {
+   "id": "returning",
+   "label": "Visitors over time: \"Do they come back and buy?\"",
+   "intro": "What happens after a first visit, an abandoned cart or an email click. Everything here is counted per browser, and one person can use several.",
+   "verdictMetrics": [],
+   "panels": [
+    {
+     "id": "rt-chains",
+     "title": "Follow-up after a trigger",
+     "question": "After an abandoned cart or browse, how many come back and buy?",
+     "view": "table",
+     "dataset": "trigger-chains",
+     "filter": {
+      "final": 1
+     },
+     "pickers": [
+      {
+       "field": "dim_device",
+       "label": "Device",
+       "allowAll": true
+      }
+     ],
+     "groupBy": [
+      "trigger_key"
+     ],
+     "groupByOptions": [
+      "(none)",
+      "dim_device",
+      "level"
+     ],
+     "measures": [
+      "chains",
+      "return_rate",
+      "purchase_rate",
+      "recovery_rate",
+      "rev_per_chain",
+      "chain_revenue"
+     ],
+     "sort": {
+      "measure": "chains",
+      "dir": "desc"
+     },
+     "caveats": [
+      "Only final = 1 rows are counted, so each chain is counted once.",
+      "Chains started late in the window have less time to come back."
+     ],
+     "lead": "Closed 14-day windows only (final = 1). One browser is not one person.",
+     "chainsLead": true
+    },
+    {
+     "id": "rt-chains-daily",
+     "title": "Chains by start day",
+     "question": "Is recovery steady, or did one day's batch skew it?",
+     "view": "series",
+     "dataset": "trigger-chains",
+     "filter": {
+      "final": 1
+     },
+     "pickers": [
+      {
+       "field": "trigger_key",
+       "label": "Trigger"
+      }
+     ],
+     "x": "server_date",
+     "measures": [
+      "chains",
+      "purchase_rate",
+      "return_rate"
+     ]
+    },
+    {
+     "id": "rt-intent",
+     "title": "Return intent by week",
+     "question": "Do returning visitors with intent convert better, and is that share growing?",
+     "view": "weekly",
+     "dataset": "tag_trend",
+     "filter": {
+      "tag_key": "utm_source",
+      "segment": "return_intent"
+     },
+     "pickers": [
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "segment_value",
+     "columns": "week",
+     "measures": [
+      "sessions",
+      "cvr",
+      "rps",
+      "revenue"
+     ],
+     "total": true,
+     "mix": "sessions",
+     "caveats": [
+      "Return intent looks back 30 days on the same browser."
+     ]
+    },
+    {
+     "id": "rt-history",
+     "title": "30-day history",
+     "question": "Do visitors with recent history convert better?",
+     "view": "table",
+     "dataset": "shopper_history_30d",
+     "pickers": [
+      {
+       "field": "dev_s",
+       "label": "Device",
+       "allowAll": true
+      },
+      {
+       "field": "link_ch",
+       "label": "Link channel",
+       "allowAll": true
+      }
+     ],
+     "groupBy": [
+      "hist30"
+     ],
+     "measures": [
+      "visits",
+      "visit_share",
+      "buyer_visits",
+      "visit_cvr",
+      "rpv"
+     ],
+     "sort": {
+      "measure": "visits",
+      "dir": "desc"
+     },
+     "caveats": [
+      "A buying visit can be labelled bought_before because of its own earlier order in the window. Read bought_before as history, not as a loyal-buyer segment."
+     ]
+    },
+    {
+     "id": "rt-email",
+     "title": "Email clicks per device",
+     "question": "Do devices that click several emails buy more?",
+     "view": "table",
+     "dataset": "email_multi_click",
+     "groupBy": [
+      "period",
+      "email_visits_band"
+     ],
+     "measures": [
+      "devices",
+      "buyers",
+      "device_buy_rate"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "orders",
+   "label": "Orders and products: \"What do they buy, and at what price?\"",
+   "intro": "Order values, products and markdowns. Orders here come from the store, so they include orders without a tracked visit.",
+   "verdictMetrics": [
+    "modal_revenue_bucket"
+   ],
+   "panels": [
+    {
+     "id": "or-hist",
+     "title": "Order value",
+     "question": "Where do order values cluster, and where does revenue come from?",
+     "view": "series",
+     "dataset": "order-value-hist",
+     "x": "x_bucket",
+     "measures": [
+      "m_orders",
+      "m_revenue"
+     ]
+    },
+    {
+     "id": "or-products",
+     "title": "Products",
+     "question": "Which products carry revenue, and how much of it is discounted?",
+     "view": "table",
+     "dataset": "product_daily",
+     "pickers": [
+      {
+       "field": "week",
+       "label": "Week",
+       "allowAll": true,
+       "default": "latestFull"
+      }
+     ],
+     "groupBy": [
+      "title"
+     ],
+     "measures": [
+      "orders",
+      "revenue",
+      "prod_aov",
+      "markdown_share"
+     ],
+     "sort": {
+      "measure": "revenue",
+      "dir": "desc"
+     },
+     "limit": 30,
+     "caveats": [
+      "An order is filed under its highest-priced line."
+     ]
+    },
+    {
+     "id": "or-daily-mix",
+     "title": "High-value and marked-down orders by day",
+     "question": "Is the order mix shifting towards discounts?",
+     "view": "series",
+     "dataset": "daily_site",
+     "x": "d",
+     "measures": [
+      "hv_order_share",
+      "markdown_order_share",
+      "orders_all"
+     ],
+     "demoted": true
+    },
+    {
+     "id": "or-entry",
+     "title": "Product entry pages",
+     "question": "Which product landing pages convert?",
+     "view": "table",
+     "dataset": "product_entry_period",
+     "pickers": [
+      {
+       "field": "period",
+       "label": "Period",
+       "default": "second"
+      },
+      {
+       "field": "link_ch",
+       "label": "Link channel",
+       "allowAll": true
+      }
+     ],
+     "groupBy": [
+      "entry_path"
+     ],
+     "measures": [
+      "visits",
+      "buyer_visits",
+      "visit_cvr",
+      "rpv"
+     ],
+     "sort": {
+      "measure": "visits",
+      "dir": "desc"
+     },
+     "limit": 25,
+     "floor": {
+      "measure": "visits",
+      "min": 50
+     },
+     "demoted": true
+    }
+   ]
+  },
+  {
+   "id": "experiments",
+   "label": "Experiments: \"Is the test real, and is it winning?\"",
+   "intro": "Tests the platform found on the site, how their arms compare, and whether the split looks healthy week by week.",
+   "verdictMetrics": [],
+   "panels": [
+    {
+     "id": "xp-arms",
+     "title": "Arm readout",
+     "question": "Which arm is ahead, and by how much?",
+     "view": "table",
+     "dataset": "experiment_rows",
+     "pickers": [
+      {
+       "field": "experiment",
+       "label": "Experiment",
+       "default": "latestReal"
+      },
+      {
+       "field": "basis",
+       "label": "Basis",
+       "default": "assigned"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "groupBy": [
+      "arm",
+      "is_control"
+     ],
+     "measures": [
+      "sessions",
+      "session_share",
+      "orders",
+      "cvr",
+      "rps",
+      "aov",
+      "revenue"
+     ],
+     "sort": {
+      "measure": "sessions",
+      "dir": "desc"
+     },
+     "caveats": [
+      "This prototype does not test significance or sample ratio. Use the share column to eyeball the split."
+     ],
+     "entities": {
+      "arm": "experiment_arm"
+     }
+    },
+    {
+     "id": "xp-weekly",
+     "title": "Arms by week",
+     "question": "Is the gap stable, or did one week make it?",
+     "view": "weekly",
+     "dataset": "experiment_rows",
+     "pickers": [
+      {
+       "field": "experiment",
+       "label": "Experiment",
+       "default": "latestReal"
+      },
+      {
+       "field": "basis",
+       "label": "Basis",
+       "default": "assigned"
+      },
+      {
+       "field": "viewport_type",
+       "label": "Device",
+       "default": "all"
+      }
+     ],
+     "rows": "arm",
+     "columns": "week",
+     "measures": [
+      "rps",
+      "cvr",
+      "sessions",
+      "revenue"
+     ],
+     "mix": "sessions",
+     "entities": {
+      "arm": "experiment_arm"
+     }
+    },
+    {
+     "id": "xp-list",
+     "title": "Experiments found",
+     "question": "Which tests ran, when, and how big were they?",
+     "view": "table",
+     "dataset": "experiments",
+     "show": [
+      "name",
+      "partner",
+      "status",
+      "kind",
+      "scope",
+      "observed_start",
+      "observed_end",
+      "assigned_visits"
+     ],
+     "labels": {
+      "name": "Experiment"
+     },
+     "formats": {
+      "assigned_visits": "int"
+     },
+     "sort": {
+      "field": "assigned_visits",
+      "dir": "desc"
+     },
+     "limit": 40,
+     "entities": {
+      "name": "experiment"
+     }
+    }
+   ]
+  },
+  {
+   "id": "verdicts",
+   "label": "Verdicts: \"What does the platform think I should do?\"",
+   "intro": "What fired on the analysed page, what it is worth, and what to do next. Then what would let the blocked rules run.",
+   "verdictMetrics": [],
+   "panels": [
+    {
+     "id": "vd-actions",
+     "title": "What to do",
+     "question": "Which findings matter most, and what is the next move?",
+     "view": "actions",
+     "dataset": "strategy-triggers",
+     "also": [
+      "selector-weekly",
+      "entry-by-channel",
+      "cards"
+     ]
+    },
+    {
+     "id": "vd-unblock",
+     "title": "Unblock",
+     "question": "Which missing inputs hold back the most test ideas?",
+     "view": "unblock",
+     "dataset": "requirements",
+     "also": [
+      "cards"
+     ]
+    },
+    {
+     "id": "vd-triggers",
+     "title": "Rules on the analysed page",
+     "question": "Which rules fired, and on what numbers?",
+     "view": "cards",
+     "dataset": "strategy-triggers",
+     "groupBy": "m_state",
+     "groupOrder": [
+      "triggered",
+      "below_floor",
+      "silent",
+      "blocked"
+     ],
+     "cardTitle": "x_strategy_id",
+     "cardSubtitle": "m_metric",
+     "cardFields": [
+      "m_value",
+      "m_threshold",
+      "m_rules",
+      "m_detail"
+     ],
+     "demoted": true
+    },
+    {
+     "id": "vd-cards",
+     "title": "Strategy cards",
+     "question": "Which cards made the cut, and what blocked the rest?",
+     "view": "cards",
+     "dataset": "cards",
+     "pickers": [
+      {
+       "field": "catalog_id",
+       "label": "Catalog",
+       "default": "LP"
+      }
+     ],
+     "groupBy": "verdict",
+     "groupOrder": [
+      "include",
+      "conditional",
+      "silent",
+      "blocked"
+     ],
+     "cardTitle": "strategy_id",
+     "cardSubtitle": "name",
+     "cardFields": [
+      "trigger_state",
+      "metric",
+      "value",
+      "threshold",
+      "gate_failed",
+      "missing"
+     ],
+     "demoted": true
+    },
+    {
+     "id": "vd-req-summary",
+     "title": "Data requirements",
+     "question": "How much of what the strategies need is available?",
+     "view": "table",
+     "dataset": "requirements",
+     "groupBy": [
+      "status"
+     ],
+     "groupByOptions": [
+      "(none)",
+      "domain"
+     ],
+     "measures": [
+      "count"
+     ],
+     "sort": {
+      "measure": "count",
+      "dir": "desc"
+     }
+    },
+    {
+     "id": "vd-req",
+     "title": "Requirement detail",
+     "question": "What exactly is missing?",
+     "view": "table",
+     "dataset": "requirements",
+     "pickers": [
+      {
+       "field": "status",
+       "label": "Status",
+       "default": "missing"
+      }
+     ],
+     "show": [
+      "requirement_key",
+      "title",
+      "domain",
+      "dataset_id",
+      "detail"
+     ],
+     "hidden": true
+    }
+   ]
+  }
+ ],
+ "revision": "Grok - K3",
+ "wobble": {
+  "bandScope": "self",
+  "bandMult": 2,
+  "minChanges": 3
+ },
+ "measureFloors": {
+  "order_rate": 100,
+  "journey_completion": 100,
+  "default": 100
+ },
+ "contextBar": {
+  "defaults": {
+   "compare": "prev",
+   "split": "traffic_source",
+   "device": "all"
+  }
+ }
+}

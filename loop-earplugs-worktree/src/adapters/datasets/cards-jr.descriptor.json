@@ -1,0 +1,8 @@
+{
+  "id": "cards-jr",
+  "purpose": "Builds the journey strategy cards for one journey subject from its path readout.",
+  "data": "One card per JR strategy: the template step that keeps the smallest share of the step before it, the completers' conversion against the site's, and the latest week's completion drop, each with its value, threshold, and missing requirements.",
+  "role": "card",
+  "catalogId": "JR",
+  "replay": "recollect"
+}

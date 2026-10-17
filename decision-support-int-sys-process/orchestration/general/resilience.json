@@ -1,0 +1,10 @@
+{
+  "standard": {
+    "fallbackAttempts": 1,
+    "repairScope": "Rerun the step, fix inputs and configuration in this repository, and stop stuck processes. Do not edit the naming bot or the Chrome extension unless the stage skill tells you to."
+  },
+  "top": {
+    "fallbackAttempts": 3,
+    "repairScope": "Use whatever repair the stage needs, including patches to the naming bot and the Chrome extension engine. Fail only when blocked. List every file you change."
+  }
+}

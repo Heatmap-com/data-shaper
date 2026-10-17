@@ -1,0 +1,8 @@
+{
+  "id": "cards-po",
+  "purpose": "Builds the page-optimization strategy cards after the gates and requirements pass.",
+  "data": "One card per PO strategy with its gate result. The trigger evaluation arrives with the trigger module.",
+  "role": "card",
+  "catalogId": "PO",
+  "replay": "recollect"
+}

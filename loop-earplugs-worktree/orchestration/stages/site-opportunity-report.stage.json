@@ -1,0 +1,50 @@
+{
+  "id": "site-opportunity-report",
+  "label": "Site Opportunity Report",
+  "phase": "report",
+  "skill": "skills/site-opportunity-report/SKILL.md",
+  "timeoutMs": 3600000,
+  "report": {
+    "title": "Site Opportunity Report",
+    "order": 1,
+    "job": "the month: what happened, the opportunities, and the 30-day plan"
+  },
+  "charts": {
+    "sor-fig1-daily-orders": { "type": "daily-orders" },
+    "sor-fig2-device-funnel": { "type": "device-funnel" },
+    "sor-fig3-channel-rpv": {
+      "type": "channel-rpv",
+      "labels": { "email_sms": "Email / SMS", "meta_untagged": "Meta, no campaign name", "meta_paid": "Meta paid", "search": "Search", "direct": "Direct", "other": "Other" }
+    },
+    "sor-fig4-pdp-scroll": { "type": "scroll-depth", "device": "mobile" },
+    "sor-fig5-cart-recovery": { "type": "cart-recovery" }
+  },
+  "handler": {
+    "use": "agent",
+    "agent": "kimi-cli",
+    "prompt": "report/site-opportunity-report.md",
+    "addDirs": ["{{paths.analysis}}/{{site.slug}}", "{{paths.reports}}/{{site.slug}}"]
+  },
+  "check": {
+    "use": "markdown-report",
+    "file": "{{paths.reports}}/{{site.slug}}/{{site.name}} — {{stage.report.title}}.md",
+    "bundle": "{{paths.analysis}}/{{site.slug}}",
+    "rules": {
+      "minWords": 1500,
+      "sections": ["Contents", "The biggest wins", "At a glance", "The month in numbers", "Worth watching", "What's working", "Suggested next 30 days", "Method and caveats"],
+      "headingCount": [{ "name": "Opportunity N", "match": "^Opportunity \\d+", "min": 3 }],
+      "placeholders": true,
+      "figures": true,
+      "anchors": ["orders in report window", "revenue in report window"],
+      "windowEnd": true,
+      "fresh": true
+    }
+  },
+  "fallback": {
+    "agent": "kimi-cli",
+    "prompt": "fallback/stage.md",
+    "maxAttempts": { "standard": 1, "top": 2 },
+    "timeoutMs": 3600000,
+    "addDirs": ["{{paths.analysis}}/{{site.slug}}", "{{paths.reports}}/{{site.slug}}"]
+  }
+}

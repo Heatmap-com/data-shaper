@@ -1,0 +1,13 @@
+{
+  "idsite": 6277,
+  "defaults": {
+    "trend": ["traffic_source", "returning", "buyer", "rager", "channel"]
+  },
+  "overrides": {
+    "channel": {
+      "prepend": [
+        { "value": "meta_paid", "when": { "all": [{ "field": "referer_name", "in": "@meta_referers" }, { "field": "utm_medium", "startsWith": "paidsocial" }] } }
+      ]
+    }
+  }
+}

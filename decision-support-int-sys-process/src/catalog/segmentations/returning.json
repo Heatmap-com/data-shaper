@@ -1,0 +1,10 @@
+{
+  "id": "returning",
+  "label": "New or returning",
+  "purpose": "Whether the tracker had seen the visitor before. Compares how first visits and repeat visits move through the same pages.",
+  "data": "returning when the visit's returning flag is set at its first action; new otherwise, including when the flag is missing.",
+  "rules": [
+    { "value": "returning", "when": { "field": "returning", "eq": 1 } }
+  ],
+  "fallback": "new"
+}

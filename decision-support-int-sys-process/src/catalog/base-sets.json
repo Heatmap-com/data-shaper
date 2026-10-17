@@ -1,0 +1,36 @@
+{
+  "BASE-PAGE": {
+    "requirements": [
+      "H01",
+      "H02",
+      "H03",
+      "H23",
+      "H26",
+      "M05",
+      "page descriptor current (gate)",
+      "capture current (gate)",
+      "change log in window (S15/O06)"
+    ],
+    "applies_to": "every `LP`, `PO`, `PI`, `PG` strategy"
+  },
+  "BASE-SITE": {
+    "requirements": [
+      "H01",
+      "H02",
+      "S01",
+      "S02",
+      "S15",
+      "V13",
+      "store descriptor current (gate)",
+      "source connection status (`ae_source_connection`)"
+    ],
+    "applies_to": "every `TI`, `TD`, `TG` strategy"
+  },
+  "BASE-SEG": {
+    "requirements": [
+      "segment cuts device × new/returning × source (H01",
+      "H03); for tool strategies also payment bucket (S02) and returner history (S05)"
+    ],
+    "applies_to": "every strategy whose catalog mandates segment cuts (all six)"
+  }
+}

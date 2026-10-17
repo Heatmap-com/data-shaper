@@ -1,0 +1,1427 @@
+{
+  "registry_version": "2026-10-04.1",
+  "requirements": [
+    {
+      "key": "H01",
+      "domain": "heatmap",
+      "title": "Session spine: entry sessions, bot tiers (`none`, `exclude_confirmed`) and weekly bot share, device, referrer group, new/returning with the 2026-09-07 era split",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_hsrce_visits`, bot flag",
+      "datasets": [
+        "page-segment-weekly"
+      ],
+      "today": "Live",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H02",
+      "domain": "heatmap",
+      "title": "Order truth on sessions: deduplicated orders and revenue, CVR and AOV kept separate, order → session → entry page join",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_conversions FINAL`",
+      "datasets": [
+        "page-segment-weekly",
+        "order-session-map"
+      ],
+      "today": "Live (join map is new)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H03",
+      "domain": "heatmap",
+      "title": "Source and campaign: referrer group, `utm_source`/`medium`/`campaign`, tagged share",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_session_tags`",
+      "datasets": [
+        "entry-by-channel",
+        "campaign-weekly",
+        "campaign-coverage"
+      ],
+      "today": "Live",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H04",
+      "domain": "heatmap",
+      "title": "Campaign detail: `utm_content`, `utm_term`, campaign and ad ids, internal-referrer context (collection handle, filter params, search query in URL)",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_session_tags` JSON, pageview URLs",
+      "datasets": [
+        "campaign-weekly",
+        "journey-weekly"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H05",
+      "domain": "heatmap",
+      "title": "Country per session",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "visits",
+      "datasets": [
+        "page-country"
+      ],
+      "today": "Live",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H06",
+      "domain": "heatmap",
+      "title": "Browser family and version, OS",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "visits (columns confirmed by probe, §12 P0)",
+      "datasets": [
+        "dimension on page-segment-weekly",
+        "selector-weekly",
+        "rage-clicks"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H07",
+      "domain": "heatmap",
+      "title": "Viewport size per pageview; dominant viewport; viewport-height class",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_hsrce_pageviews.viewport_w_px/h_px`",
+      "datasets": [
+        "dimension on page-segment-weekly; viewport-weekly"
+      ],
+      "today": "Probe (row count only)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H08",
+      "domain": "heatmap",
+      "title": "Scroll depth: max relative scroll with fold floor (`greatest(scroll_y_max_relative, fold_y_relative)`), deciles, reach to depth bands, no-scroll share",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_hsrce_pageviews`",
+      "datasets": [
+        "scroll-decile"
+      ],
+      "today": "Live (extend)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H09",
+      "domain": "heatmap",
+      "title": "Click inventory per selector: clicks, clicking sessions, clickers' orders and revenue, RPC (clicks denominator), median x/y, time since load",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_clicksce_clicks`",
+      "datasets": [
+        "selector-weekly"
+      ],
+      "today": "Live",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H10",
+      "domain": "heatmap",
+      "title": "Rage clicks: engine rule (3+ in 2 s) and portal rule (`meta1 = 'rage'`), by device and browser",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "clicks",
+      "datasets": [
+        "rage-clicks"
+      ],
+      "today": "Live (extend)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H11",
+      "domain": "heatmap",
+      "title": "Next page and exit destination after a click (including off-site)",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "pageviews",
+      "datasets": [
+        "nav-next-page v2 (all classes",
+        "not only nav)"
+      ],
+      "today": "Live (extend)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H12",
+      "domain": "heatmap",
+      "title": "Funnel events with timestamps: `product_viewed`, `collection_viewed`, `add_to_cart`, `cart_viewed`, `checkout_started`, `checkout_completed`; checkout-without-ATC share",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`journey_events_map`",
+      "datasets": [
+        "funnel-sequence-weekly"
+      ],
+      "today": "Live as flags; sequence is Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H13",
+      "domain": "heatmap",
+      "title": "Order line items",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_conversion_product_items` / `conversion_item`",
+      "datasets": [
+        "line-items"
+      ],
+      "today": "Live",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H14",
+      "domain": "heatmap",
+      "title": "Order-value distribution",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "conversions",
+      "datasets": [
+        "order-value-hist"
+      ],
+      "today": "Live",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H15",
+      "domain": "heatmap",
+      "title": "Page speed per page and device",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`journey_events.page_speed_cache`",
+      "datasets": [
+        "page-speed"
+      ],
+      "today": "Probe (row count only)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H16",
+      "domain": "heatmap",
+      "title": "A/B arms and assignment counts (for sample-ratio checks)",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_partner_tags`",
+      "datasets": [
+        "experiments-weekly"
+      ],
+      "today": "Probe (row count only)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H17",
+      "domain": "heatmap",
+      "title": "Recordings index, sampled to a named population (for example, mobile paid-social long-dwell non-buyers on section 6)",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`recordings_new1`",
+      "datasets": [
+        "recordings-sample"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H18",
+      "domain": "heatmap",
+      "title": "Measured exposure and dwell: element attention (`udp_am_elements`), zone attention (`udp_am_zones`, 20 bands), `udp_am_pageviews`; exposed sessions, dwell, RPeS, dwell-to-RPS inputs, band traverse speed",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_am_*`",
+      "datasets": [
+        "exposure-weekly",
+        "dwell-model-inputs"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H19",
+      "domain": "heatmap",
+      "title": "Form-level events `form_filled`, `form_submitted`",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`journey_events_map`",
+      "datasets": [
+        "forms-weekly"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H20",
+      "domain": "heatmap",
+      "title": "Journey sequences: prior page, entry vs internal, session depth, \"already saw\" flags (price, proof, offer, cart, returns or policy page, comparison content), multi-PDP oscillation, loops and u-turns, back-to-prior within 10 s, path clusters",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "pageviews + `journey_events_map`",
+      "datasets": [
+        "journey-weekly"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H21",
+      "domain": "heatmap",
+      "title": "First-click element and time-to-first-click per session",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "clicks",
+      "datasets": [
+        "selector-weekly"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H22",
+      "domain": "heatmap",
+      "title": "Tap geometry: click position relative to element bounds, off-target taps within 24 px, correction pairs within 2 s",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "clicks + M02",
+      "datasets": [
+        "tap-geometry-weekly"
+      ],
+      "today": "Probe + Render",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H23",
+      "domain": "heatmap",
+      "title": "Session quality shares: single-pageview, sub-5-second, zero-time",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`page-segment-weekly`",
+      "datasets": [
+        "page-segment-weekly"
+      ],
+      "today": "Live",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H24",
+      "domain": "heatmap",
+      "title": "Comparison baselines: other entry URLs, sister pages in the same channel and week, single-CTA pages, site exit rates, site pogo rate",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "visits, pageviews",
+      "datasets": [
+        "entry-by-channel",
+        "sister-pages",
+        "site-baselines"
+      ],
+      "today": "Live (partial)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H25",
+      "domain": "heatmap",
+      "title": "Template-family and cross-page element-kind aggregation",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "all of the above by `template_family`",
+      "datasets": [
+        "template-weekly",
+        "kind-fleet-weekly"
+      ],
+      "today": "New",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H26",
+      "domain": "heatmap",
+      "title": "Weekly series and prior-batch history (step-change detection, multi-period confidence)",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "weekly grains + `ae_strategy_card` history",
+      "datasets": [
+        "every weekly dataset; card-history"
+      ],
+      "today": "Live (weekly); history is new",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H27",
+      "domain": "heatmap",
+      "title": "Cross-session visitor history: return visit within 72 h of cart abandonment, prior-session journey state",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "visits by visitor id (column confirmed by probe)",
+      "datasets": [
+        "returning-history"
+      ],
+      "today": "Probe",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "H28",
+      "domain": "heatmap",
+      "title": "Inventory of custom events as currently emitted: names, coverage by page and week, first/last seen",
+      "source_layer": "L1",
+      "mechanism": "query",
+      "source_tables": "`udp_custom_events`, `journey_custom_map`",
+      "datasets": [
+        "custom-event-inventory"
+      ],
+      "today": "Live (count only)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T01",
+      "domain": "tracker",
+      "title": "Disclosure modules: expand/collapse per item (FAQ, accordion, size guide, spec row, comparison row, policy panel) with item id, index, default-expanded flag, timestamp, answer-visible milliseconds",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T02",
+      "domain": "tracker",
+      "title": "Rotating and multi-state media: tab switch (from → to), carousel slide impression and rotation, gallery image view, swipe and zoom with position, auto-advance flag, horizontal scroll in tables",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T03",
+      "domain": "tracker",
+      "title": "Choice controls: variant, quantity, subscription toggle, tier or bundle option, sort mode, filter facet; value, default flag, switch-away; ATC attempted without a valid selection",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T04",
+      "domain": "tracker",
+      "title": "Review interactions: per-review click and expand, helpful vote, filter or theme chip, jump-to-reviews, rating-distribution click",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T05",
+      "domain": "tracker",
+      "title": "Navigation menus: open method (hover vs click), submenu open and close without click, timestamps",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T06",
+      "domain": "tracker",
+      "title": "Desktop hover dwell per named element (thresholded)",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "hover-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T07",
+      "domain": "tracker",
+      "title": "Pop-ups and interstitials: impression, dismiss, submit; time since load, trigger type, offer id, holdout flag",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "popup-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T08",
+      "domain": "tracker",
+      "title": "Video: play and quartiles reached",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T09",
+      "domain": "tracker",
+      "title": "Cart state: drawer open/close, drawer dwell, cart item count and value at open, continue-shopping after ATC, empty-cart view, post-ATC state, upsell slot position relative to the checkout button, checkout button below the drawer fold",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "cart-state-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T10",
+      "domain": "tracker",
+      "title": "Sticky ATC exposure and click; upward scroll reversal (scroll-back) before ATC",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly",
+        "scroll-reversal-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T11",
+      "domain": "tracker",
+      "title": "Form fields: focus, blur, refocus, validation error, delete-and-retype, last field before abandon; coupon field focus and code apply success or failure",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "form-field-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T12",
+      "domain": "tracker",
+      "title": "Site search and null states: search open, query, zero results, refilter within 20 s, quick-add, out-of-stock view, 404 view",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "search-nullstate-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T13",
+      "domain": "tracker",
+      "title": "Dead-click detection: a click followed by no navigation, no DOM mutation in the clicked subtree and no network request within 1,000 ms",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "click-derived-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T14",
+      "domain": "tracker",
+      "title": "Element exposure outside the attention ration (IntersectionObserver per named element: first-in-view, visible milliseconds) and page-visibility state (tab hidden)",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "exposure-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T15",
+      "domain": "tracker",
+      "title": "Offer events (on-site, checkout, post-purchase, thank-you): impression, accept click, line added, decline; placement, offer id, offer type, anchor product, rank, exposure index in session, checkout token or order id, payment method",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "offer-events-weekly"
+      ],
+      "today": "Tracker (web pixel)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T16",
+      "domain": "tracker",
+      "title": "Checkout steps: contact, shipping, payment reached; shipping-cost reveal; payment method selected; express or wallet path; extension render; on- vs off-domain checkout flag",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "checkout-funnel-weekly"
+      ],
+      "today": "Tracker (web pixel)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T17",
+      "domain": "tracker",
+      "title": "Identity resolved: surface, method (cookie, email match, login, order lookup), timestamp (to order resolution against exposure)",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "identity-resolution"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T18",
+      "domain": "tracker",
+      "title": "On-site recommendation slots: impression and click with slot rank, product id, price band",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "rec-slots-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T19",
+      "domain": "tracker",
+      "title": "First-party tool surfaces (tracking page, thank-you page, returns portal when proxied): block impression and click, portal step reached and outcome, help-item click",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "tool-surface-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T20",
+      "domain": "tracker",
+      "title": "Urgency widget impression with displayed value; BNPL widget interaction",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "module-events-weekly"
+      ],
+      "today": "Tracker",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "T21",
+      "domain": "tracker",
+      "title": "Event taxonomy registry: per event, name, scope (session, click, order, request), owner, version, and recording-validation status",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [
+        "custom-event-inventory + ae_review_verdict"
+      ],
+      "today": "Tracker + Operator",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "M01",
+      "domain": "render",
+      "title": "Render per page and device class: screenshot, viewport, page height, fold, content hash and DOM hash (structural drift)",
+      "source_layer": "L3",
+      "mechanism": "render",
+      "source_tables": "",
+      "datasets": [
+        "render-snapshot"
+      ],
+      "today": "Render",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "M02",
+      "domain": "render",
+      "title": "Geometry: section boundaries (top, height, type), element bounding boxes, DOM order, first-viewport element list, sticky elements, interstitials",
+      "source_layer": "L3",
+      "mechanism": "render",
+      "source_tables": "",
+      "datasets": [
+        "render-snapshot"
+      ],
+      "today": "Render",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "M03",
+      "domain": "render",
+      "title": "Content attributes: element visual class (face, logo, text, high contrast, motion, offer-bearing), word count per block, heading inventory, image type (packshot, lifestyle, in-scale, human model)",
+      "source_layer": "L3",
+      "mechanism": "render",
+      "source_tables": "",
+      "datasets": [
+        "render-snapshot"
+      ],
+      "today": "Render",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "M04",
+      "domain": "render",
+      "title": "Predicted saliency share per element and within-page, within-viewport quartile, with model id and version",
+      "source_layer": "L3",
+      "mechanism": "render",
+      "source_tables": "",
+      "datasets": [
+        "saliency"
+      ],
+      "today": "Render (model is net-new)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "M05",
+      "domain": "render",
+      "title": "Element binding: `element_class` (taxonomy v2), `element_role`, position index, template family, naming provenance, AI confidence, human vouch, rollup grain (including \"decline: cannot support this grain\"), attention enrollment",
+      "source_layer": "L3",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "ae_element_binding via element-binding"
+      ],
+      "today": "Live for 19 classes; v2 is new",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "M06",
+      "domain": "render",
+      "title": "DOM-detected structure for the descriptor draft: commerce controls present (for page-type rescue), competing primary CTAs, clickable-looking non-controls, collapsed information, form field inventory (count, required or optional)",
+      "source_layer": "L3",
+      "mechanism": "render",
+      "source_tables": "",
+      "datasets": [
+        "render-snapshot"
+      ],
+      "today": "Render",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S01",
+      "domain": "commerce",
+      "title": "Shop state: plan (Plus), checkout extensibility and checkout profile `updatedAt`, payment settings (wallets, BNPL, processor), Shop Pay accelerated-checkout inclusion per app, headless or Hydrogen, markets, platform type",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "shop-state"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S02",
+      "domain": "commerce",
+      "title": "Orders: gateway names, transaction payment details (card wallet), presentment currency, duties, `source_name`, landing site, discount codes, tags (including OCU tags), cancellation, shipping charged, country, selling-plan allocation, POS location",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "payment-eligibility-weekly",
+        "orders-weekly",
+        "order-session-map"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S03",
+      "domain": "commerce",
+      "title": "Order lines: variant, quantity, price, line discount, refunded quantity, offer attribution tag",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "line-items",
+        "offer-outcomes-weekly"
+      ],
+      "today": "API (heatmap line items are Live but lack variant and discount)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S04",
+      "domain": "commerce",
+      "title": "Refunds and returns: refund amounts and lines, Shopify return objects, exchange line items",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "returns-weekly",
+        "returns-requests"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S05",
+      "domain": "commerce",
+      "title": "Customers (hashed key): order history and count, first order date, email and SMS marketing consent state, account present; repeat-purchase cohorts; replenishment interval per SKU; serial-returner history",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "customer-cohorts"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S06",
+      "domain": "commerce",
+      "title": "Catalog: products, variants, options, SKU count, variant depth, sibling and substitute groups, pack sizes, collections, product type, tags (consumable, regulated, warranty-eligible, HSA/FSA, final sale)",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "catalog-shape"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S07",
+      "domain": "commerce",
+      "title": "Inventory available per variant per location (including 3PL and POS), daily snapshot",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "inventory-availability"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S08",
+      "domain": "commerce",
+      "title": "Unit cost (COGS) per variant",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "catalog-shape",
+        "return-economics"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S09",
+      "domain": "commerce",
+      "title": "Selling plans, subscription contracts, billing attempts",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "subscription-contracts",
+        "subscription-lifecycle"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S10",
+      "domain": "commerce",
+      "title": "Fulfillments: shipment id (hashed tracking number), carrier, status timeline, fulfilled and delivered times; fulfillment latency; edit-window close time",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "fulfillment-weekly"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S11",
+      "domain": "commerce",
+      "title": "Disputes (Shopify Payments): kind, reason, status, outcome, amount",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "disputes-weekly"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S12",
+      "domain": "commerce",
+      "title": "Abandoned checkouts: value, contact present (flags only), recovered order",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "abandoned-checkouts-weekly"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S13",
+      "domain": "commerce",
+      "title": "Store credit and gift cards: issue, redeem, expire transactions with origin (return, bonus, loyalty, manual) and redemption order",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "credit-ledger"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S14",
+      "domain": "commerce",
+      "title": "Delivery profiles: shipping rates, free-shipping threshold, delivery-date display",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "shop-state"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S15",
+      "domain": "commerce",
+      "title": "Theme id and role, app installations where the API exposes them, nightly diff → change log",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "shop-state",
+        "change-log"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "S16",
+      "domain": "commerce",
+      "title": "POS: locations, POS orders and returns by processing path",
+      "source_layer": "L4",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "pos-returns-weekly"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V01",
+      "domain": "vendor",
+      "title": "Returns: request-level records (reason raw and canonical, resolution, exchange type, bonus offered and taken, items with SKU and value, fraud score, disposition, label cost and payer, arm or flow variant, agent used), portal step events, agent recommendations shown and accepted with slot, policy configuration and its version history",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "returns-requests",
+        "returns-weekly",
+        "portal-funnel-weekly",
+        "returns-config"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V02",
+      "domain": "vendor",
+      "title": "Protection, claims and warranty: widget render and attach, registrations, claims filed and resolved, carrier, claim cost, claim fraud",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "claims-warranty-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V03",
+      "domain": "vendor",
+      "title": "Offer tools: offer inventory (placement, type, anchor product, targeting rule, AI-selected flag, funnel step, subscription flag), impressions, accepts and declines per offer, order-level claimed revenue, holdout and split-test history, allocation, placement on/off timeline, PostProfit RPM",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "offer-inventory",
+        "offer-events-weekly",
+        "tool-attribution-claims"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V04",
+      "domain": "vendor",
+      "title": "Subscription apps: cancel-flow entries, reasons, treatments offered and taken, saves by type, save offers configured, app version, portal type, reason-capture flag, treatment cost",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "subscription-saves-weekly",
+        "subscription-lifecycle"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V05",
+      "domain": "vendor",
+      "title": "ESP, SMS and recovery: flows (trigger, type, destination URL, suppression filters, owner), recipient-level sends, opens, clicks, unsubscribes, variant arm, order-level attributed conversions, recovery codes and fee, revenue per recipient",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "message-flows",
+        "message-recipients-weekly",
+        "recovery-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V06",
+      "domain": "vendor",
+      "title": "Helpdesk: tickets by intent (pre-sale, WISMO, return, cancel, fit), channel, order link, actions taken (cancel, edit, refund), CX complaints, conversion after chat",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "support-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V07",
+      "domain": "vendor",
+      "title": "Reviews and UGC: review text, rating, attributes (size, skin type), incentivized and verified flags, helpful votes, count, widget owner",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "reviews-themes"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V08",
+      "domain": "vendor",
+      "title": "Tracking tools: tracking-page sessions, shipment status at view, module impressions and clicks, WISMO deflection, offer shown per shipment email, tracking domain mode",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "tracking-page-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V09",
+      "domain": "vendor",
+      "title": "Disputes and fraud screening: pre-chargeback alerts, reasons, outcomes, win rate, representment cost; fraud-screen decisions, approval rate at fixed guarantee, false-decline cost",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "disputes-weekly",
+        "fraud-screen-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V10",
+      "domain": "vendor",
+      "title": "Loyalty and store-credit apps: issuance, redemption, issuer per flow",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "credit-ledger"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V11",
+      "domain": "vendor",
+      "title": "Recommendation and search vendors: slot attribution, search queries, no-result rate, query → order",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "rec-slots-weekly",
+        "search-nullstate-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V12",
+      "domain": "vendor",
+      "title": "Builders and checkout optimizers: Zipify Pages analytics and split tests, Redo Conversion Cloud exposures, variants and shipping option selected",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "builder-weekly",
+        "checkout-funnel-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V13",
+      "domain": "vendor",
+      "title": "Tool registry facts per site: installed, modules enabled, plan tier, pricing basis, parent company, surfaces owned (observed), identity key, revenue-join class (tool event vs order only), event-taxonomy status (documented, observed, undocumented), API availability, journey-walk verification date",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "tool-registry"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V14",
+      "domain": "vendor",
+      "title": "Attribution claims per tool, per placement and offer, and at order level (for reconciliation and cross-tool dedup)",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "tool-attribution-claims"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "V15",
+      "domain": "vendor",
+      "title": "Order editing and rescue: edit sessions, cancel intents with stated intent, edits by type, items added and value, edit errors, edit-abandon, save module configured",
+      "source_layer": "L5",
+      "mechanism": "query",
+      "source_tables": "",
+      "datasets": [
+        "rescue-events-weekly"
+      ],
+      "today": "",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "A01",
+      "domain": "ads_external",
+      "title": "Ad creative per campaign and ad: product, variant, offer text, claim, creator, code presence, message angle; destination URL; traffic temperature (cold paid-social, retargeting, email, organic); offer-led flag. Fallback: operator UTM-to-promise map",
+      "source_layer": "L6",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "ad-creative"
+      ],
+      "today": "API or Operator",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "A02",
+      "domain": "ads_external",
+      "title": "Search Console queries per landing page, flagged for comparison terms (\"[product] vs\")",
+      "source_layer": "L6",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "search-console-weekly"
+      ],
+      "today": "API",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "A03",
+      "domain": "ads_external",
+      "title": "Field performance per page and device (LCP, INP, CLS, TTFB)",
+      "source_layer": "L6",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "page-speed"
+      ],
+      "today": "API (+ Probe)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "A04",
+      "domain": "ads_external",
+      "title": "JS errors and control latency by element and browser",
+      "source_layer": "L6",
+      "mechanism": "api",
+      "source_tables": "",
+      "datasets": [
+        "js-errors-weekly"
+      ],
+      "today": "API (Sentry or RUM)",
+      "grain": "",
+      "human_required": 0
+    },
+    {
+      "key": "O01",
+      "domain": "operator",
+      "title": "Page descriptor fields no system supplies: page job, industry and purchase context, offer economics (price points, margin band, discount posture), constraints with owners (brand, legal or regulated claims, platform, speed budget, inventory position, consent, competitor naming), narrative order and \"must precede\" pairs, section movability and app ownership, SEO or legal function per section, proof assets, policy terms, comparison claims, push or pull tag per section",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "O02",
+      "domain": "operator",
+      "title": "Store descriptor fields no API supplies: region owners where detection is ambiguous, policy as configured where no config API exists, margin legs (label payer, processing cost, outbound exchange shipping, recovery losses, protection revenue share, churn-and-reacquire cost, PostProfit economics), fraud and disposition policy, team capacity, TCPA and legal review status, routing capability",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "O03",
+      "domain": "operator",
+      "title": "Promo and sale calendar, business cycle, seasonality flags",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "O04",
+      "domain": "operator",
+      "title": "Experiment registry: experiment id, arms, allocation, unit, segment scope, MDE, analysis plan (fixed or sequential), holdouts, rotations, destination splits, price tests, start and stop, result",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator (+ H16 for heatmap-tracked arms)",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "O05",
+      "domain": "operator",
+      "title": "Review verdicts: recording review of a named population, deterministic reproduction, legal or copy sign-off, reason-taxonomy validation sample and agreement rate, journey walk (test order, test return, tracking email)",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "O06",
+      "domain": "operator",
+      "title": "Changes not auto-detectable: tracking changes, vendor configuration changes, template freeze or pending redesign",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "O07",
+      "domain": "operator",
+      "title": "Theme taxonomy for review, FAQ and ticket text (benefit, objection, persona, mechanism, safety or provenance, comparison, use case), classifier output and validation",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator + model",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "O08",
+      "domain": "operator",
+      "title": "Effort class and owner per card; recommendation-engine contract limits",
+      "source_layer": "L8",
+      "mechanism": "operator",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Operator",
+      "grain": "",
+      "human_required": 1
+    },
+    {
+      "key": "Q01",
+      "domain": "tracker",
+      "title": "Quiz step states: one event per step view and per step answer, so each step's reach, exit, and time read per session",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Missing: the event contract has no quiz family",
+      "grain": "quiz step",
+      "human_required": 0
+    },
+    {
+      "key": "Q02",
+      "domain": "tracker",
+      "title": "Quiz completion: one event when a session reaches the quiz result, with the recommended product",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Missing: the event contract has no quiz family",
+      "grain": "quiz step",
+      "human_required": 0
+    },
+    {
+      "key": "Q03",
+      "domain": "tracker",
+      "title": "Quiz restart: one event when a session returns to the first step after answering one",
+      "source_layer": "L2",
+      "mechanism": "tracker",
+      "source_tables": "",
+      "datasets": [],
+      "today": "Missing: the event contract has no quiz family",
+      "grain": "quiz step",
+      "human_required": 0
+    }
+  ]
+}

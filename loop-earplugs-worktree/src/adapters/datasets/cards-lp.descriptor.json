@@ -1,0 +1,8 @@
+{
+  "id": "cards-lp",
+  "purpose": "Builds the landing-page strategy cards after the gates and requirements pass.",
+  "data": "One card per LP strategy: include, conditional, blocked, or silent, with the trigger state that produced it.",
+  "role": "card",
+  "catalogId": "LP",
+  "replay": "recollect"
+}

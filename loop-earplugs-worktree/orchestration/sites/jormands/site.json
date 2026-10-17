@@ -1,0 +1,17 @@
+{
+  "slug": "jormands",
+  "name": "Jormands",
+  "domain": "jormands.com.co",
+  "origin": "https://jormands.com.co/",
+  "idsite": 6136,
+  "platform": "shopify",
+  "currency": "USD",
+  "run": "naming-only",
+  "pages": {
+    "include": [
+      { "url": "https://jormands.com.co/", "role": "home" },
+      { "url": "https://jormands.com.co/collections/promo", "role": "focus" }
+    ]
+  },
+  "focus": { "path": "/collections/promo", "label": "Promo collection", "idsitehsr": 64389009 }
+}

@@ -1,0 +1,28 @@
+{
+  "bounds": {
+    "log_visit": { "date": "server_date", "idsite": true },
+    "log_hsr": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "log_hsr_event": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "log_conversion": { "date": "server_date", "idsite": true },
+    "journey_events_map": { "date": "server_date", "idsite": true },
+    "udp_hsrce_visits": { "date": "server_date", "idsite": true },
+    "udp_hsrce_pageviews": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "udp_clicksce_clicks": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "udp_conversions": { "date": "server_date", "idsite": true },
+    "journey_custom_map": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "session_tags": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "udp_session_tags": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "partner_tags": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "udp_partner_tags": { "date": "server_date", "idsite": true },
+    "udp_am_zones": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "udp_am_elements": { "date": "server_date", "idsite": true, "idsitehsr": true },
+    "conversion_item": { "date": "server_time", "idsite": true },
+    "industry_insight": { "date": "server_date" },
+    "site_hsr": { "idsite": true, "idsitehsr": true },
+    "page_speed_cache": { "date": "fetched_at", "idsite": true }
+  },
+  "notes": {
+    "udp_partner_tags": "A udp tag is written on whichever pageview the partner script assigned the visit, so a page-known scan must not narrow assignment to a page.",
+    "udp_session_tags": "The session's UTMs are on whichever pageviews carry its tags, so the session UTM read (tagUtmCte in src/adapters/_lib/sql.js) does not narrow to a page, even in a page-known query."
+  }
+}

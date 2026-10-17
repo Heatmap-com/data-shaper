@@ -1,0 +1,6 @@
+{
+  "id": "render-snapshot",
+  "purpose": "Reads the latest captured render of this page.",
+  "data": "One row per device render (viewport, fold, hashes) and one row per section or element node.",
+  "replay": "recollect"
+}

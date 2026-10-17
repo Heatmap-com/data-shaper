@@ -1,0 +1,30 @@
+{
+  "idsite": 6277,
+  "rules": {
+    "whale_orders": { "method": { "params": { "k": 4 } } },
+    "dead_resolution": { "method": { "params": { "minSessions": 5000 } } }
+  },
+  "add": [
+    {
+      "id": "zero_viewport_orders",
+      "label": "Orders from a 0x0 viewport",
+      "purpose": "An order from a session with no viewport is more often a server-side or app checkout than a shopper on the site; a person decides whether it counts.",
+      "subject": { "kind": "groups", "by": "resolution", "measure": "orders" },
+      "method": { "adapter": "dead-cohort", "params": { "minSessions": 1000, "maxConversionRatio": 1, "maxCheckoutRatio": 1 } },
+      "triage": { "adapter": "always-ask", "params": {} },
+      "propose": "include",
+      "pending": "include",
+      "auto": "include",
+      "scope": "session",
+      "question": "{{sessions}} sessions with a {{attribute}} of {{value}} placed {{orders}} orders ({{revenue}}). Are they shoppers on the site?"
+    }
+  ],
+  "datasets": {
+    "revenue_weeks": {
+      "rules": { "whale_orders": { "method": { "params": { "k": 3 } }, "propose": "exclude" } }
+    },
+    "traffic_mix": {
+      "rules": { "whale_orders": { "enabled": false } }
+    }
+  }
+}

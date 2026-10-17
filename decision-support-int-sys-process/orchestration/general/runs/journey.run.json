@@ -1,0 +1,6 @@
+{
+  "id": "journey",
+  "extends": "general:analysis-only",
+  "description": "Analyze the site under the journey profile. Its cards are the output.",
+  "patch": { "analysis": { "params": { "profile": "journey" } } }
+}

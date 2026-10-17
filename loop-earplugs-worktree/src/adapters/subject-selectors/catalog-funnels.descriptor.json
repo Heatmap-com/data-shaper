@@ -1,0 +1,14 @@
+{
+  "id": "catalog-funnels",
+  "purpose": "Selects the funnel catalog's funnels for a site: one funnel by id, or every funnel whose first step holds a session floor.",
+  "data": "Funnel subjects, most first-step sessions first, each with its catalog steps and first-step sessions after the confirmed-bot filter.",
+  "criteria": {
+    "type": "object",
+    "properties": {
+      "funnel": { "type": "string", "enum": ["purchase", "browse", "checkout"], "description": "a funnel id from src/catalog/funnels.json, chosen whatever its volume" },
+      "minSessions": { "type": "integer", "minimum": 0, "description": "first-step sessions a funnel needs; 100 when absent" },
+      "limitPerSite": { "type": "integer", "minimum": 1, "description": "3 when absent" }
+    },
+    "additionalProperties": false
+  }
+}

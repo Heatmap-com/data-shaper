@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+here=$(cd "$(dirname "$0")/.." && pwd)
+exec node --disable-warning=ExperimentalWarning "$here/src/orchestrator/cli.js" "$@"

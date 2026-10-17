@@ -1,0 +1,7 @@
+{
+  "id": "quiz-full",
+  "extends": "general:full",
+  "description": "Name the site, analyze it under the quiz profile, bundle, chart, write the site opportunity report, and style it as a PDF.",
+  "remove": ["today-opportunities", "user-journey"],
+  "patch": { "analysis": { "params": { "profile": "quiz" } } }
+}

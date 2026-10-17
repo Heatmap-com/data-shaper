@@ -1,0 +1,37 @@
+{
+  "id": "naming",
+  "label": "Name the site",
+  "phase": "analyze",
+  "skill": "skills/resilient-naming/SKILL.md",
+  "concurrency": 1,
+  "resources": ["chromium"],
+  "forEach": "pages",
+  "leaseMs": 120000,
+  "timeoutMs": 1800000,
+  "handler": {
+    "use": "command",
+    "command": "bin/seed-named-page.sh",
+    "args": ["{{unit.page.url}}", "{{site.idsite}}"],
+    "env": {
+      "CNN_AI_BOT_DIR": "{{config.naming.botDir}}",
+      "NAMING_ENGINE_ASSETS": "{{config.naming.assetsDir}}"
+    }
+  },
+  "check": { "use": "naming-complete", "datasetRoot": "{{config.naming.datasetRoot}}" },
+  "retry": { "maxAttempts": 2, "backoffMs": 60000, "factor": 2, "maxBackoffMs": 900000 },
+  "errors": [
+    { "match": "ERR_NAME_NOT_RESOLVED|ENOTFOUND|net::ERR_CONNECTION_REFUSED", "class": "transient", "reason": "merchant site not reachable" },
+    { "match": "login required|password protected|/account/login", "class": "blocked", "reason": "login wall" },
+    { "match": "unknown idsite|idsite .* not found", "class": "blocked", "reason": "unknown idsite" },
+    { "match": "missing config|\\bexit 3\\b", "class": "blocked", "reason": "naming config is missing" },
+    { "match": "\\bexit 2\\b", "class": "defect", "reason": "naming command usage error" }
+  ],
+  "fallback": {
+    "agent": "kimi-cli",
+    "prompt": "fallback/naming.md",
+    "maxAttempts": { "standard": 1, "top": 3 },
+    "timeoutMs": 2700000,
+    "rerunPrimary": true,
+    "addDirs": ["{{config.naming.botDir}}", "{{config.naming.engineDir}}"]
+  }
+}

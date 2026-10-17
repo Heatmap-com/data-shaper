@@ -1,0 +1,15 @@
+{
+  "id": "page-by-kind",
+  "purpose": "Selects a site's highest-entry pages of the asked page kinds, above an entry-session floor, optionally by a part of the URL.",
+  "data": "Page subjects, most exclude_confirmed entry sessions first, each with its URL, page type, entry sessions, orders, and revenue.",
+  "criteria": {
+    "type": "object",
+    "properties": {
+      "kinds": { "type": "array", "items": { "type": "string", "enum": ["home", "product", "collection", "cart", "search", "content", "checkout", "account", "other", "unknown"] }, "description": "page types; all when absent" },
+      "minEntrySessions": { "type": "integer", "minimum": 0 },
+      "urlContains": { "type": "string" },
+      "limitPerSite": { "type": "integer", "minimum": 1 }
+    },
+    "additionalProperties": false
+  }
+}

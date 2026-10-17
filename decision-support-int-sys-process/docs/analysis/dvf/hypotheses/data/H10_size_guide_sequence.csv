@@ -1,0 +1,5 @@
+device,pageviews_with_size_guide_open,share_used_size_table,share_also_opened_size_fit,share_added_to_bag_after_guide,share_waitlist,median_seconds_guide_to_add,share_left_page_without_adding,purchase_in_visit
+desktop,948,0.0559,0.1751,0.2743,0.0169,20.2270,0.6983,0.1055
+mobile,2595,0.0370,0.1121,0.2293,0.0277,19.4470,0.7491,0.0778
+tablet,64,0.0312,0.1094,0.2656,0.0000,18.3850,0.7344,0.1094
+all,3607,0.0419,0.1286,0.2418,0.0244,19.6600,0.7355,0.0857

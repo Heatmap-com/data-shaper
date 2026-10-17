@@ -1,0 +1,6 @@
+{
+  "id": "kind-fleet-weekly",
+  "purpose": "Rolls selector clicks up to element kind across the site's pages.",
+  "data": "Clicks and revenue per element class and week, using the names stored for those selectors.",
+  "replay": "recollect"
+}

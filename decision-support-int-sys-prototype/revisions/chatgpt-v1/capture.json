@@ -1,0 +1,14 @@
+{
+  "lead": "mellow",
+  "variants": [
+    { "name": "variant-brief", "tab": "brief", "what": "Brief, default context" },
+    { "name": "variant-brief-meta", "tab": "brief", "params": { "seg": "traffic_source", "segv": "meta" }, "what": "Brief with traffic source Meta" },
+    { "name": "variant-channels", "tab": "channels", "what": "Channels" },
+    { "name": "variant-paths-mobile-pdp", "tab": "paths", "params": { "dev": "mobile" }, "state": { "fn-event-reach": { "entry": "pdp" } }, "what": "Paths, mobile, product-page entry" },
+    { "name": "variant-paths-meta", "tab": "paths", "params": { "seg": "traffic_source", "segv": "meta", "focus": "content > pdp" }, "what": "Paths, Meta, content to product page expanded" },
+    { "name": "variant-explain-device", "tab": "explain", "state": { "why-mix": { "partition": "device" } }, "what": "Explain, mix and rate by device" },
+    { "name": "variant-evidence-meta", "tab": "channels", "before": "document.querySelector('[data-evidence=meta-rate]')?.click()", "what": "Evidence drawer on Meta sessions that bought" },
+    { "name": "variant-unsupported", "tab": "paths", "params": { "seg": "returning", "segv": "returning" }, "before": "document.querySelector('[data-evidence=reach-product]')?.click()", "what": "Unsupported cut: returning, then a traffic-source cross" },
+    { "name": "variant-client-brief", "tab": "client-brief", "before": "(() => { const snap = document.body.dataset.snap; const key = 'qt:chatgpt-v1:mellow:' + snap; localStorage.setItem(key, JSON.stringify({ findings: [ { id: 'a', claim: 'Product viewed: 51.95% of sessions, down 7.36 points.', caveats: ['Actions recorded anywhere in the session. Not an ordered sequence.'], evidenceRef: { snap, measure: 'product_viewed' }, pinnedAt: '2026-10-15T12:00:00.000Z' }, { id: 'b', claim: 'Meta: 66.4% of sessions, 0.79% of them bought.', caveats: ['Last touch.'], evidenceRef: { snap, measure: 'session_conversion' }, pinnedAt: '2026-10-15T12:01:00.000Z' } ], action: '' })); window.__qtRefresh && window.__qtRefresh(); })()", "what": "Client brief with two pins" }
+  ]
+}

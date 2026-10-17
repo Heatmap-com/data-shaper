@@ -1,0 +1,9 @@
+{
+  "adapters": [
+    {
+      "id": "clickhouse",
+      "purpose": "Runs read-only analysis SQL against ClickHouse with bound parameters and refuses fact-table queries that are not scoped to one site.",
+      "data": "Each row is one result row of the query, as JSONEachRow."
+    }
+  ]
+}

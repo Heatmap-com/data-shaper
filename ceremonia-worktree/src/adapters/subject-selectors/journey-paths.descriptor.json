@@ -1,0 +1,16 @@
+{
+  "id": "journey-paths",
+  "purpose": "Selects page-type path templates for a site: one named template, or the path clusters of its multi-page sessions over a session floor and a share floor.",
+  "data": "Journey subjects, most sessions first, each with its template steps, its sessions after the confirmed-bot filter, and its share of the multi-page sessions.",
+  "criteria": {
+    "type": "object",
+    "properties": {
+      "path": { "type": "string", "description": "a template of 2 to 6 page types joined by >, such as home>collection>product; types: home, product, collection, cart, search, content, checkout, account, other, unknown" },
+      "depth": { "type": "integer", "minimum": 2, "description": "the steps a cluster keeps; 3 when absent" },
+      "minSessions": { "type": "integer", "minimum": 0, "description": "100 when absent" },
+      "minClusterShare": { "type": "number", "minimum": 0, "description": "share of multi-page sessions; 0.02 when absent" },
+      "limitPerSite": { "type": "integer", "minimum": 1, "description": "5 when absent" }
+    },
+    "additionalProperties": false
+  }
+}

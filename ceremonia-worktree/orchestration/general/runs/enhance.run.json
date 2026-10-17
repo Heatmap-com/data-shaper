@@ -1,0 +1,6 @@
+{
+  "id": "enhance",
+  "description": "Upload the full bundle and the three finished reports to a remote project and save its enhanced copies.",
+  "defaults": { "window": { "days": 30, "end": "yesterday" }, "priority": "normal", "resilience": "standard" },
+  "stages": ["remote-enhance"]
+}

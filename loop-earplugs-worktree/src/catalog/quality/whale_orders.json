@@ -1,0 +1,13 @@
+{
+  "id": "whale_orders",
+  "label": "Whale orders",
+  "purpose": "A few orders worth many times the store's usual order can carry revenue, AOV, and revenue per session on their own; a person decides whether they are real demand, a wholesale or staff order, or a test.",
+  "subject": { "kind": "orders", "measure": "revenue" },
+  "method": { "adapter": "iqr-fence", "params": { "k": 3, "side": "upper", "minRows": 30 } },
+  "triage": { "adapter": "impact", "params": { "ask": { "revenueShare": 0.01, "aovShift": 0.02, "orderShare": null, "sessionShare": null, "buyerShare": null, "conversionShift": null } } },
+  "propose": "exclude",
+  "pending": "include",
+  "auto": "include",
+  "scope": "order",
+  "question": "{{count}} orders sit above {{fence}}, the far fence of this store's order values (the median order is {{median}}). They run from {{low}} to {{high}} and hold {{revenueShare}} of revenue. Excluding them moves AOV from {{aovWith}} to {{aovWithout}}. Exclude them?"
+}
